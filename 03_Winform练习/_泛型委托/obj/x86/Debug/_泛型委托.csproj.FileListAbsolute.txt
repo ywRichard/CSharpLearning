@@ -1,0 +1,10 @@
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_泛型委托\bin\Debug\_泛型委托.exe
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_泛型委托\bin\Debug\_泛型委托.pdb
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_泛型委托\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_泛型委托\obj\x86\Debug\_泛型委托.exe
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_泛型委托\obj\x86\Debug\_泛型委托.pdb
+C:\Users\yao\Desktop\VS Demo\Winform练习\_泛型委托\bin\Debug\_泛型委托.exe
+C:\Users\yao\Desktop\VS Demo\Winform练习\_泛型委托\bin\Debug\_泛型委托.pdb
+C:\Users\yao\Desktop\VS Demo\Winform练习\_泛型委托\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\VS Demo\Winform练习\_泛型委托\obj\x86\Debug\_泛型委托.exe
+C:\Users\yao\Desktop\VS Demo\Winform练习\_泛型委托\obj\x86\Debug\_泛型委托.pdb

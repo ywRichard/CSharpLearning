@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Users>
+  <user id="001">
+    <!--id的值用户输入有可能重复,这是不允许重复的,为了简单操作咱们不判断了-->
+    <name>周星驰</name>
+    <password>xingye</password>
+  </user>
+  <user id="009">
+    <name>老牛</name>
+    <password>123</password>
+  </user>
+  <user id="008">
+    <name>灰太狼</name>
+    <password>ml</password>
+  </user>
+  <user id="020">
+    <name>老羊羊</name>
+    <password>ly</password>
+  </user>
+</Users>

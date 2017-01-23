@@ -1,0 +1,10 @@
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_委托的练习2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_委托的练习2\bin\Debug\_委托的练习2.exe
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_委托的练习2\bin\Debug\_委托的练习2.pdb
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_委托的练习2\obj\x86\Debug\_委托的练习2.exe
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_委托的练习2\obj\x86\Debug\_委托的练习2.pdb
+C:\Users\yao\Desktop\VS Demo\Winform练习\_委托的练习2\bin\Debug\_委托的练习2.exe
+C:\Users\yao\Desktop\VS Demo\Winform练习\_委托的练习2\bin\Debug\_委托的练习2.pdb
+C:\Users\yao\Desktop\VS Demo\Winform练习\_委托的练习2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\VS Demo\Winform练习\_委托的练习2\obj\x86\Debug\_委托的练习2.exe
+C:\Users\yao\Desktop\VS Demo\Winform练习\_委托的练习2\obj\x86\Debug\_委托的练习2.pdb

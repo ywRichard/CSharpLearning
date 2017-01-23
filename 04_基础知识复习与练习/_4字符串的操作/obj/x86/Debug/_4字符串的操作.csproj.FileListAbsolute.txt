@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_4字符串的操作\bin\Debug\_4字符串的操作.exe
+C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_4字符串的操作\bin\Debug\_4字符串的操作.pdb
+C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_4字符串的操作\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_4字符串的操作\obj\x86\Debug\_4字符串的操作.exe
+C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_4字符串的操作\obj\x86\Debug\_4字符串的操作.pdb

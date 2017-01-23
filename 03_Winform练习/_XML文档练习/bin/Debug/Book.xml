@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Books>
+  <Book>
+    <Name>水浒传</Name>
+    <Price>90</Price>
+    <des>108个好汉</des>
+  </Book>
+  <Book>
+    <Name>金瓶梅</Name>
+    <Price>10</Price>
+    <Des>好看</Des>
+  </Book>
+  <Book>
+    <Name>C#开发大全</Name>
+    <Price>120</Price>
+    <Des>天书</Des>
+  </Book>
+</Books>

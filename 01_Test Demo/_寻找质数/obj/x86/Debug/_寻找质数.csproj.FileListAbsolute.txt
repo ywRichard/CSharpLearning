@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_寻找质数\bin\Debug\_寻找质数.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_寻找质数\bin\Debug\_寻找质数.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_寻找质数\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_寻找质数\obj\x86\Debug\_寻找质数.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_寻找质数\obj\x86\Debug\_寻找质数.pdb

@@ -1,0 +1,7 @@
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\Test\bin\Debug\Test.exe
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\Test\bin\Debug\Test.pdb
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\Test\bin\Debug\DemoForLabView.dll
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\Test\bin\Debug\DemoForLabView.pdb
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\Test\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\Test\obj\x86\Debug\Test.exe
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\Test\obj\x86\Debug\Test.pdb

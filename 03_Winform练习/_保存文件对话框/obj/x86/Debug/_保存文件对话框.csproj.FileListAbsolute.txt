@@ -1,0 +1,18 @@
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_保存文件对话框\bin\Debug\_保存文件对话框.exe
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_保存文件对话框\bin\Debug\_保存文件对话框.pdb
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_保存文件对话框\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_保存文件对话框\obj\x86\Debug\_保存文件对话框.Form1.resources
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_保存文件对话框\obj\x86\Debug\_保存文件对话框.Properties.Resources.resources
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_保存文件对话框\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_保存文件对话框\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_保存文件对话框\obj\x86\Debug\_保存文件对话框.exe
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_保存文件对话框\obj\x86\Debug\_保存文件对话框.pdb
+C:\Users\yao\Desktop\VS Demo\Winform练习\_保存文件对话框\bin\Debug\_保存文件对话框.exe
+C:\Users\yao\Desktop\VS Demo\Winform练习\_保存文件对话框\bin\Debug\_保存文件对话框.pdb
+C:\Users\yao\Desktop\VS Demo\Winform练习\_保存文件对话框\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\VS Demo\Winform练习\_保存文件对话框\obj\x86\Debug\_保存文件对话框.Form1.resources
+C:\Users\yao\Desktop\VS Demo\Winform练习\_保存文件对话框\obj\x86\Debug\_保存文件对话框.Properties.Resources.resources
+C:\Users\yao\Desktop\VS Demo\Winform练习\_保存文件对话框\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\yao\Desktop\VS Demo\Winform练习\_保存文件对话框\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\yao\Desktop\VS Demo\Winform练习\_保存文件对话框\obj\x86\Debug\_保存文件对话框.exe
+C:\Users\yao\Desktop\VS Demo\Winform练习\_保存文件对话框\obj\x86\Debug\_保存文件对话框.pdb

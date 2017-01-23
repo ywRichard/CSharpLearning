@@ -1,0 +1,10 @@
+C:\Users\S2I\Documents\Visual Studio 2010\Projects\Demo_Review\19_XML读取练习\obj\x86\Debug\_19_XML读取练习.Form1.resources
+C:\Users\S2I\Documents\Visual Studio 2010\Projects\Demo_Review\19_XML读取练习\obj\x86\Debug\_19_XML读取练习.Properties.Resources.resources
+C:\Users\S2I\Documents\Visual Studio 2010\Projects\Demo_Review\19_XML读取练习\obj\x86\Debug\19_XML读取练习.csproj.GenerateResource.Cache
+C:\Users\S2I\Documents\Visual Studio 2010\Projects\Demo_Review\19_XML读取练习\bin\Debug\19_XML读取练习.exe
+C:\Users\S2I\Documents\Visual Studio 2010\Projects\Demo_Review\19_XML读取练习\bin\Debug\19_XML读取练习.pdb
+C:\Users\S2I\Documents\Visual Studio 2010\Projects\Demo_Review\19_XML读取练习\obj\x86\Debug\19_XML读取练习.exe
+C:\Users\S2I\Documents\Visual Studio 2010\Projects\Demo_Review\19_XML读取练习\obj\x86\Debug\19_XML读取练习.pdb
+C:\Users\S2I\Documents\Visual Studio 2010\Projects\Demo_Review\19_XML读取练习\obj\x86\Debug\19_XML读取练习.csprojResolveAssemblyReference.cache
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\19_XML读取练习\obj\x86\Debug\19_XML读取练习.exe
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\19_XML读取练习\obj\x86\Debug\19_XML读取练习.pdb

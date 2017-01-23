@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_8计算字符串字符个数\bin\Debug\_8计算字符串字符个数.exe
+C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_8计算字符串字符个数\bin\Debug\_8计算字符串字符个数.pdb
+C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_8计算字符串字符个数\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_8计算字符串字符个数\obj\x86\Debug\_8计算字符串字符个数.exe
+C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_8计算字符串字符个数\obj\x86\Debug\_8计算字符串字符个数.pdb

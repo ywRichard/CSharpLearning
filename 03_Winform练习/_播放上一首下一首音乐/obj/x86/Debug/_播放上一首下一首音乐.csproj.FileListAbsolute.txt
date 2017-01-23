@@ -1,0 +1,18 @@
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_播放上一首下一首音乐\bin\Debug\_播放上一首下一首音乐.exe
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_播放上一首下一首音乐\bin\Debug\_播放上一首下一首音乐.pdb
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_播放上一首下一首音乐\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_播放上一首下一首音乐\obj\x86\Debug\_播放上一首下一首音乐.Form1.resources
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_播放上一首下一首音乐\obj\x86\Debug\_播放上一首下一首音乐.Properties.Resources.resources
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_播放上一首下一首音乐\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_播放上一首下一首音乐\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_播放上一首下一首音乐\obj\x86\Debug\_播放上一首下一首音乐.exe
+C:\Users\Richard\Documents\My Test Demo\Winform练习\_播放上一首下一首音乐\obj\x86\Debug\_播放上一首下一首音乐.pdb
+C:\Users\yao\Desktop\VS Demo\Winform练习\_播放上一首下一首音乐\bin\Debug\_播放上一首下一首音乐.exe
+C:\Users\yao\Desktop\VS Demo\Winform练习\_播放上一首下一首音乐\bin\Debug\_播放上一首下一首音乐.pdb
+C:\Users\yao\Desktop\VS Demo\Winform练习\_播放上一首下一首音乐\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\VS Demo\Winform练习\_播放上一首下一首音乐\obj\x86\Debug\_播放上一首下一首音乐.Form1.resources
+C:\Users\yao\Desktop\VS Demo\Winform练习\_播放上一首下一首音乐\obj\x86\Debug\_播放上一首下一首音乐.Properties.Resources.resources
+C:\Users\yao\Desktop\VS Demo\Winform练习\_播放上一首下一首音乐\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\yao\Desktop\VS Demo\Winform练习\_播放上一首下一首音乐\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\yao\Desktop\VS Demo\Winform练习\_播放上一首下一首音乐\obj\x86\Debug\_播放上一首下一首音乐.exe
+C:\Users\yao\Desktop\VS Demo\Winform练习\_播放上一首下一首音乐\obj\x86\Debug\_播放上一首下一首音乐.pdb

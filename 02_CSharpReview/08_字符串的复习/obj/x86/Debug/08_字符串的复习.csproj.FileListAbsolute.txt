@@ -1,0 +1,5 @@
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\08_字符串的复习\bin\Debug\08_字符串的复习.exe
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\08_字符串的复习\bin\Debug\08_字符串的复习.pdb
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\08_字符串的复习\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\08_字符串的复习\obj\x86\Debug\08_字符串的复习.exe
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\08_字符串的复习\obj\x86\Debug\08_字符串的复习.pdb

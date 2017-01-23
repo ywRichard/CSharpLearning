@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_模拟移动硬盘_U盘_MP3插入电脑\bin\Debug\_模拟移动硬盘_U盘_MP3插入电脑.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_模拟移动硬盘_U盘_MP3插入电脑\bin\Debug\_模拟移动硬盘_U盘_MP3插入电脑.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_模拟移动硬盘_U盘_MP3插入电脑\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_模拟移动硬盘_U盘_MP3插入电脑\obj\x86\Debug\_模拟移动硬盘_U盘_MP3插入电脑.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_模拟移动硬盘_U盘_MP3插入电脑\obj\x86\Debug\_模拟移动硬盘_U盘_MP3插入电脑.pdb

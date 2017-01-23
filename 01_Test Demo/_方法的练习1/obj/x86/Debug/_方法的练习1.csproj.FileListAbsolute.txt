@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_方法的练习1\bin\Debug\_方法的练习1.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_方法的练习1\bin\Debug\_方法的练习1.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_方法的练习1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_方法的练习1\obj\x86\Debug\_方法的练习1.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_方法的练习1\obj\x86\Debug\_方法的练习1.pdb

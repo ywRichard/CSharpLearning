@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_三元表达式\bin\Debug\_三元表达式.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_三元表达式\bin\Debug\_三元表达式.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_三元表达式\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_三元表达式\obj\x86\Debug\_三元表达式.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_三元表达式\obj\x86\Debug\_三元表达式.pdb

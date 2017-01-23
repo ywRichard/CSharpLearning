@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_11接受用户输入\bin\Debug\_11接受用户输入.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_11接受用户输入\bin\Debug\_11接受用户输入.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_11接受用户输入\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_11接受用户输入\obj\x86\Debug\_11接受用户输入.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_11接受用户输入\obj\x86\Debug\_11接受用户输入.pdb

@@ -1,0 +1,5 @@
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\13_读写文件\bin\Debug\13_读写文件.exe
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\13_读写文件\bin\Debug\13_读写文件.pdb
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\13_读写文件\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\13_读写文件\obj\x86\Debug\13_读写文件.exe
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\13_读写文件\obj\x86\Debug\13_读写文件.pdb

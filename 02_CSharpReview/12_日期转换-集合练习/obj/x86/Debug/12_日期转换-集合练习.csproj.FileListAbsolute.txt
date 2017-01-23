@@ -1,0 +1,9 @@
+C:\Users\SESA435900\documents\visual studio 2010\Projects\Demo_Review\12_日期转换-集合练习\bin\Debug\12_日期转换-集合练习.exe
+C:\Users\SESA435900\documents\visual studio 2010\Projects\Demo_Review\12_日期转换-集合练习\bin\Debug\12_日期转换-集合练习.pdb
+C:\Users\SESA435900\documents\visual studio 2010\Projects\Demo_Review\12_日期转换-集合练习\obj\x86\Debug\12_日期转换-集合练习.exe
+C:\Users\SESA435900\documents\visual studio 2010\Projects\Demo_Review\12_日期转换-集合练习\obj\x86\Debug\12_日期转换-集合练习.pdb
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\12_日期转换-集合练习\bin\Debug\12_日期转换-集合练习.exe
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\12_日期转换-集合练习\bin\Debug\12_日期转换-集合练习.pdb
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\12_日期转换-集合练习\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\12_日期转换-集合练习\obj\x86\Debug\12_日期转换-集合练习.exe
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\12_日期转换-集合练习\obj\x86\Debug\12_日期转换-集合练习.pdb

@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\My First Demo\bin\Debug\My First Demo.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\My First Demo\bin\Debug\My First Demo.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\My First Demo\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\My First Demo\obj\x86\Debug\My First Demo.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\My First Demo\obj\x86\Debug\My First Demo.pdb

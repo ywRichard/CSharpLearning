@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_17冒泡法排序\bin\Debug\_17冒泡法排序.exe
+C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_17冒泡法排序\bin\Debug\_17冒泡法排序.pdb
+C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_17冒泡法排序\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_17冒泡法排序\obj\x86\Debug\_17冒泡法排序.exe
+C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_17冒泡法排序\obj\x86\Debug\_17冒泡法排序.pdb

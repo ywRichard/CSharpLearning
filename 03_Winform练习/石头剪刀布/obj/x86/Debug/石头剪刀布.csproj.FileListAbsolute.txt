@@ -1,0 +1,18 @@
+C:\Users\Richard\Documents\My Test Demo\Winform练习\石头剪刀布\bin\Debug\石头剪刀布.exe
+C:\Users\Richard\Documents\My Test Demo\Winform练习\石头剪刀布\bin\Debug\石头剪刀布.pdb
+C:\Users\Richard\Documents\My Test Demo\Winform练习\石头剪刀布\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Winform练习\石头剪刀布\obj\x86\Debug\石头剪刀布.Form1.resources
+C:\Users\Richard\Documents\My Test Demo\Winform练习\石头剪刀布\obj\x86\Debug\石头剪刀布.Properties.Resources.resources
+C:\Users\Richard\Documents\My Test Demo\Winform练习\石头剪刀布\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Richard\Documents\My Test Demo\Winform练习\石头剪刀布\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Richard\Documents\My Test Demo\Winform练习\石头剪刀布\obj\x86\Debug\石头剪刀布.exe
+C:\Users\Richard\Documents\My Test Demo\Winform练习\石头剪刀布\obj\x86\Debug\石头剪刀布.pdb
+C:\Users\yao\Desktop\VS Demo\Winform练习\石头剪刀布\bin\Debug\石头剪刀布.exe
+C:\Users\yao\Desktop\VS Demo\Winform练习\石头剪刀布\bin\Debug\石头剪刀布.pdb
+C:\Users\yao\Desktop\VS Demo\Winform练习\石头剪刀布\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\VS Demo\Winform练习\石头剪刀布\obj\x86\Debug\石头剪刀布.Form1.resources
+C:\Users\yao\Desktop\VS Demo\Winform练习\石头剪刀布\obj\x86\Debug\石头剪刀布.Properties.Resources.resources
+C:\Users\yao\Desktop\VS Demo\Winform练习\石头剪刀布\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\yao\Desktop\VS Demo\Winform练习\石头剪刀布\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\yao\Desktop\VS Demo\Winform练习\石头剪刀布\obj\x86\Debug\石头剪刀布.exe
+C:\Users\yao\Desktop\VS Demo\Winform练习\石头剪刀布\obj\x86\Debug\石头剪刀布.pdb

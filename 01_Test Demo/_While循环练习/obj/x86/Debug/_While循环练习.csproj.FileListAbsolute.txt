@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_While循环练习\bin\Debug\_While循环练习.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_While循环练习\bin\Debug\_While循环练习.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_While循环练习\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_While循环练习\obj\x86\Debug\_While循环练习.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_While循环练习\obj\x86\Debug\_While循环练习.pdb

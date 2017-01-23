@@ -1,0 +1,14 @@
+\\mac\home\documents\visual studio 2010\Projects\Review the basic Grammar\01_继承\bin\Debug\01_继承.exe
+\\mac\home\documents\visual studio 2010\Projects\Review the basic Grammar\01_继承\bin\Debug\01_继承.pdb
+\\mac\home\documents\visual studio 2010\Projects\Review the basic Grammar\01_继承\obj\x86\Debug\ResolveAssemblyReference.cache
+\\mac\home\documents\visual studio 2010\Projects\Review the basic Grammar\01_继承\obj\x86\Debug\01_继承.exe
+\\mac\home\documents\visual studio 2010\Projects\Review the basic Grammar\01_继承\obj\x86\Debug\01_继承.pdb
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\01_继承\obj\x86\Debug\01_继承.exe
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\01_继承\obj\x86\Debug\01_继承.pdb
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\01_继承\bin\Debug\01_继承.exe
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\01_继承\bin\Debug\01_继承.pdb
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\01_继承\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\S2I\Documents\Visual Studio 2010\Projects\02_CSharpReview\01_继承\obj\x86\Debug\01_继承.exe
+C:\Users\S2I\Documents\Visual Studio 2010\Projects\02_CSharpReview\01_继承\obj\x86\Debug\01_继承.pdb
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\01_继承\obj\x86\Debug\01_继承.exe
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\01_继承\obj\x86\Debug\01_继承.pdb

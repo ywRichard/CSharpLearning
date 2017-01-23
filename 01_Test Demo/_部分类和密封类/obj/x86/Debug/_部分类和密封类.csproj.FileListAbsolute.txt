@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_部分类和密封类\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_部分类和密封类\bin\Debug\_部分类和密封类.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_部分类和密封类\bin\Debug\_部分类和密封类.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_部分类和密封类\obj\x86\Debug\_部分类和密封类.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_部分类和密封类\obj\x86\Debug\_部分类和密封类.pdb
