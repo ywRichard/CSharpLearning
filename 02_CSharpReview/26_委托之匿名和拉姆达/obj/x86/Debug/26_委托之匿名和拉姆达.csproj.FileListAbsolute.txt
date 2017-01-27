@@ -3,3 +3,5 @@ C:\Users\yao\Desktop\VS Demo\02_CSharpReview\26_委托之匿名和拉姆达\bin\
 C:\Users\yao\Desktop\VS Demo\02_CSharpReview\26_委托之匿名和拉姆达\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\yao\Desktop\VS Demo\02_CSharpReview\26_委托之匿名和拉姆达\obj\x86\Debug\26_委托之匿名和拉姆达.exe
 C:\Users\yao\Desktop\VS Demo\02_CSharpReview\26_委托之匿名和拉姆达\obj\x86\Debug\26_委托之匿名和拉姆达.pdb
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\26_委托之匿名和拉姆达\obj\x86\Debug\26_委托之匿名和拉姆达.exe
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\26_委托之匿名和拉姆达\obj\x86\Debug\26_委托之匿名和拉姆达.pdb

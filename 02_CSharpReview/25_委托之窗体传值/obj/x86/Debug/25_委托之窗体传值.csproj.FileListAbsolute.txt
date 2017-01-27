@@ -8,3 +8,5 @@ C:\Users\yao\Desktop\VS Demo\02_CSharpReview\25_委托之窗体传值\bin\Debug\
 C:\Users\yao\Desktop\VS Demo\02_CSharpReview\25_委托之窗体传值\bin\Debug\25_委托之窗体传值.pdb
 C:\Users\yao\Desktop\VS Demo\02_CSharpReview\25_委托之窗体传值\obj\x86\Debug\25_委托之窗体传值.exe
 C:\Users\yao\Desktop\VS Demo\02_CSharpReview\25_委托之窗体传值\obj\x86\Debug\25_委托之窗体传值.pdb
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\25_委托之窗体传值\obj\x86\Debug\25_委托之窗体传值.exe
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\25_委托之窗体传值\obj\x86\Debug\25_委托之窗体传值.pdb

@@ -14,3 +14,5 @@ C:\Users\yao\Desktop\VS Demo\02_CSharpReview\21_Xml版大项目查询\obj\x86\De
 C:\Users\yao\Desktop\VS Demo\02_CSharpReview\21_Xml版大项目查询\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\yao\Desktop\VS Demo\02_CSharpReview\21_Xml版大项目查询\obj\x86\Debug\21_Xml版大项目查询.exe
 C:\Users\yao\Desktop\VS Demo\02_CSharpReview\21_Xml版大项目查询\obj\x86\Debug\21_Xml版大项目查询.pdb
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\21_Xml版大项目查询\obj\x86\Debug\21_Xml版大项目查询.exe
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\21_Xml版大项目查询\obj\x86\Debug\21_Xml版大项目查询.pdb

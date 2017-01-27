@@ -1,0 +1,4 @@
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\28_委托之多播委托\bin\Debug\28_委托之多播委托.exe
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\28_委托之多播委托\bin\Debug\28_委托之多播委托.pdb
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\28_委托之多播委托\obj\x86\Debug\28_委托之多播委托.exe
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\28_委托之多播委托\obj\x86\Debug\28_委托之多播委托.pdb

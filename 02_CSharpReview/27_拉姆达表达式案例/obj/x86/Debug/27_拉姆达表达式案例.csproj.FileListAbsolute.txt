@@ -3,3 +3,7 @@ C:\Users\yao\Desktop\VS Demo\02_CSharpReview\27_拉姆达表达式案例\bin\Deb
 C:\Users\yao\Desktop\VS Demo\02_CSharpReview\27_拉姆达表达式案例\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\yao\Desktop\VS Demo\02_CSharpReview\27_拉姆达表达式案例\obj\x86\Debug\27_拉姆达表达式案例.exe
 C:\Users\yao\Desktop\VS Demo\02_CSharpReview\27_拉姆达表达式案例\obj\x86\Debug\27_拉姆达表达式案例.pdb
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\27_拉姆达表达式案例\obj\x86\Debug\27_拉姆达表达式案例.exe
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\27_拉姆达表达式案例\obj\x86\Debug\27_拉姆达表达式案例.pdb
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\27_拉姆达表达式案例\bin\Debug\27_拉姆达表达式案例.exe
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\27_拉姆达表达式案例\bin\Debug\27_拉姆达表达式案例.pdb

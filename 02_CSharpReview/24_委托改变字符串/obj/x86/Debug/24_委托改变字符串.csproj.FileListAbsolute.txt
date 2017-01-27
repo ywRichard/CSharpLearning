@@ -5,3 +5,5 @@ C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\24_委托改变字符串\o
 C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\24_委托改变字符串\obj\x86\Debug\24_委托改变字符串.pdb
 C:\Users\yao\Desktop\VS Demo\02_CSharpReview\24_委托改变字符串\obj\x86\Debug\24_委托改变字符串.exe
 C:\Users\yao\Desktop\VS Demo\02_CSharpReview\24_委托改变字符串\obj\x86\Debug\24_委托改变字符串.pdb
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\24_委托改变字符串\obj\x86\Debug\24_委托改变字符串.exe
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\24_委托改变字符串\obj\x86\Debug\24_委托改变字符串.pdb
