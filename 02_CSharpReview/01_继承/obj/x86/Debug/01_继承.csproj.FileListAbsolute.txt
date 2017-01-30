@@ -12,3 +12,5 @@ C:\Users\S2I\Documents\Visual Studio 2010\Projects\02_CSharpReview\01_继承\obj
 C:\Users\S2I\Documents\Visual Studio 2010\Projects\02_CSharpReview\01_继承\obj\x86\Debug\01_继承.pdb
 C:\Users\yao\Desktop\VS Demo\02_CSharpReview\01_继承\obj\x86\Debug\01_继承.exe
 C:\Users\yao\Desktop\VS Demo\02_CSharpReview\01_继承\obj\x86\Debug\01_继承.pdb
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\01_继承\obj\x86\Debug\01_继承.exe
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\01_继承\obj\x86\Debug\01_继承.pdb
