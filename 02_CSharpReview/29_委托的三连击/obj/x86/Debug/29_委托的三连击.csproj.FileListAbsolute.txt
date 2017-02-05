@@ -1,0 +1,8 @@
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\29_委托的三连击\bin\Debug\29_委托的三连击.exe
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\29_委托的三连击\bin\Debug\29_委托的三连击.pdb
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\29_委托的三连击\obj\x86\Debug\_29_委托的三连击.Form1.resources
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\29_委托的三连击\obj\x86\Debug\_29_委托的三连击.Properties.Resources.resources
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\29_委托的三连击\obj\x86\Debug\_29_委托的三连击.UserThreeClick.resources
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\29_委托的三连击\obj\x86\Debug\29_委托的三连击.csproj.GenerateResource.Cache
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\29_委托的三连击\obj\x86\Debug\29_委托的三连击.exe
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\29_委托的三连击\obj\x86\Debug\29_委托的三连击.pdb

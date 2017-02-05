@@ -1,0 +1,8 @@
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\30_事件的三连击\bin\Debug\30_事件的三连击.exe
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\30_事件的三连击\bin\Debug\30_事件的三连击.pdb
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\30_事件的三连击\obj\x86\Debug\_30_事件的三连击.EvenThrClick.resources
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\30_事件的三连击\obj\x86\Debug\_30_事件的三连击.Properties.Resources.resources
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\30_事件的三连击\obj\x86\Debug\30_事件的三连击.csproj.GenerateResource.Cache
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\30_事件的三连击\obj\x86\Debug\30_事件的三连击.exe
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\30_事件的三连击\obj\x86\Debug\30_事件的三连击.pdb
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\30_事件的三连击\obj\x86\Debug\_30_事件的三连击.Form1.resources
