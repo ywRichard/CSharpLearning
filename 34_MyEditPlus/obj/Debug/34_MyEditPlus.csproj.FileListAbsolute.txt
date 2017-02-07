@@ -1,0 +1,8 @@
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\34_MyEditPlus\bin\Debug\MyEditPlus.dll
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\34_MyEditPlus\bin\Debug\MyEditPlus.pdb
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\34_MyEditPlus\obj\Debug\MyEditPlus.dll
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\34_MyEditPlus\obj\Debug\MyEditPlus.pdb
+Y:\CSharpLearning\02_CSharpReview\34_MyEditPlus\bin\Debug\MyEditPlus.dll
+Y:\CSharpLearning\02_CSharpReview\34_MyEditPlus\bin\Debug\MyEditPlus.pdb
+Y:\CSharpLearning\02_CSharpReview\34_MyEditPlus\obj\Debug\MyEditPlus.dll
+Y:\CSharpLearning\02_CSharpReview\34_MyEditPlus\obj\Debug\MyEditPlus.pdb

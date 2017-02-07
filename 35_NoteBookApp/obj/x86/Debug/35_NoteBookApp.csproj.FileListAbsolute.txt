@@ -1,0 +1,10 @@
+C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_NoteBookApp\bin\Debug\35_NoteBookApp.exe
+C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_NoteBookApp\bin\Debug\35_NoteBookApp.pdb
+C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_NoteBookApp\bin\Debug\ToolInterface.dll
+C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_NoteBookApp\bin\Debug\ToolInterface.pdb
+C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_NoteBookApp\obj\x86\Debug\35_NoteBookApp.csprojResolveAssemblyReference.cache
+C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_NoteBookApp\obj\x86\Debug\_35_NoteBookApp.Form1.resources
+C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_NoteBookApp\obj\x86\Debug\_35_NoteBookApp.Properties.Resources.resources
+C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_NoteBookApp\obj\x86\Debug\35_NoteBookApp.csproj.GenerateResource.Cache
+C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_NoteBookApp\obj\x86\Debug\35_NoteBookApp.exe
+C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_NoteBookApp\obj\x86\Debug\35_NoteBookApp.pdb
