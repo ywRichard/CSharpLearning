@@ -28,16 +28,32 @@ namespace _34_插件开发之记事本
 
             for (int i = 0; i < files.Length; i++)
             {
-                Assembly asb = Assembly.LoadFrom(files[i]);//获取程序集
+                Assembly asb = Assembly.LoadFile(files[i]);
                 Type[] tps = asb.GetTypes();//得到类型
                 Type iEdi = typeof(IEditPlus);//获取接口的类型
 
                 for (int j = 0; j < tps.Length; j++)
                 {
-                    
+                    if (iEdi.IsAssignableFrom(tps[j]) && !(tps[i].IsAbstract))
+                    {
+                        IEditPlus plus = (IEditPlus)Activator.CreateInstance(tps[j]);
+                        ToolStripItem tsi = tmi.DropDownItems.Add(plus.Name);
+
+                        tsi.Tag = plus;
+
+                        tsi.Click+=new EventHandler(tsi_Click);
+                    }
                 }//判断插件是否符合规范
             }
             
+        }
+
+        void tsi_Click(object sender, EventArgs e)
+        {
+            ToolStripItem tsi = sender as ToolStripItem;
+            IEditPlus iep = tsi.Tag as IEditPlus;
+
+            textBox1.Text = iep.ChangeString(textBox1);
         }
     }
 }

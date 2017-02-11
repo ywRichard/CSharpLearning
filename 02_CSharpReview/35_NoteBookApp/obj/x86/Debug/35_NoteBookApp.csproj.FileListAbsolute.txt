@@ -8,3 +8,5 @@ C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_NoteBookApp\obj\x86\Debug
 C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_NoteBookApp\obj\x86\Debug\35_NoteBookApp.csproj.GenerateResource.Cache
 C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_NoteBookApp\obj\x86\Debug\35_NoteBookApp.exe
 C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_NoteBookApp\obj\x86\Debug\35_NoteBookApp.pdb
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\35_NoteBookApp\obj\x86\Debug\35_NoteBookApp.exe
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\35_NoteBookApp\obj\x86\Debug\35_NoteBookApp.pdb
