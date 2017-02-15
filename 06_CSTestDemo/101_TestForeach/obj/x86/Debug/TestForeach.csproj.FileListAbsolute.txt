@@ -1,0 +1,4 @@
+c:\users\s2i\documents\visual studio 2010\Projects\TestForFunction\TestForeach\bin\Debug\TestForeach.exe
+c:\users\s2i\documents\visual studio 2010\Projects\TestForFunction\TestForeach\bin\Debug\TestForeach.pdb
+c:\users\s2i\documents\visual studio 2010\Projects\TestForFunction\TestForeach\obj\x86\Debug\TestForeach.exe
+c:\users\s2i\documents\visual studio 2010\Projects\TestForFunction\TestForeach\obj\x86\Debug\TestForeach.pdb
