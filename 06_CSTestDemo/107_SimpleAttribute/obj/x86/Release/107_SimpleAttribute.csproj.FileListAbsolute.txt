@@ -1,0 +1,4 @@
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\107_SimpleAttribute\bin\Release\107_SimpleAttribute.exe
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\107_SimpleAttribute\bin\Release\107_SimpleAttribute.pdb
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\107_SimpleAttribute\obj\x86\Release\107_SimpleAttribute.exe
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\107_SimpleAttribute\obj\x86\Release\107_SimpleAttribute.pdb
