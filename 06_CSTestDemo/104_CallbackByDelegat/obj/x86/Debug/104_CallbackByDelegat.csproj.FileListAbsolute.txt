@@ -2,3 +2,5 @@ C:\Users\S2I\Desktop\06_CSTestDemo\104_CallbackByDelegat\bin\Debug\104_CallbackB
 C:\Users\S2I\Desktop\06_CSTestDemo\104_CallbackByDelegat\bin\Debug\104_CallbackByDelegat.pdb
 C:\Users\S2I\Desktop\06_CSTestDemo\104_CallbackByDelegat\obj\x86\Debug\104_CallbackByDelegat.exe
 C:\Users\S2I\Desktop\06_CSTestDemo\104_CallbackByDelegat\obj\x86\Debug\104_CallbackByDelegat.pdb
+Z:\Documents\GitHub\CSharpLearning\06_CSTestDemo\104_CallbackByDelegat\obj\x86\Debug\104_CallbackByDelegat.exe
+Z:\Documents\GitHub\CSharpLearning\06_CSTestDemo\104_CallbackByDelegat\obj\x86\Debug\104_CallbackByDelegat.pdb

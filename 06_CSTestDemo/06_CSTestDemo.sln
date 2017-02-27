@@ -13,6 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "103_ReadXML", "103_ReadXML\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "104_CallbackByDelegat", "104_CallbackByDelegat\104_CallbackByDelegat.csproj", "{4201A6FB-6720-4CF2-9C12-77B17C6E5DBC}"
 EndProject
+<<<<<<< Updated upstream
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "104_CallDelegate2", "104_CallDelegate2\104_CallDelegate2.csproj", "{EB991AC4-1BBA-4956-8DCD-7C2B0050C895}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "104_CallEvent", "104_CallEvent\104_CallEvent.csproj", "{9F1A327C-098C-4E72-A7B9-173BA7655761}"
@@ -23,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "104_CallByLamda", "104_Call
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "002_PathDirectory", "002_PathDirectory\002_PathDirectory.csproj", "{5721BE97-5699-44A4-B24F-6745823DB7D5}"
 EndProject
+=======
+>>>>>>> Stashed changes
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "003_ClassIndex", "003_ClassIndex\003_ClassIndex.csproj", "{05B4740C-4779-475F-B77A-D0C1EB4BDE70}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "003_IndexByInterface", "003_IndexByInterface\003_IndexByInterface.csproj", "{9E410713-1905-468D-AB1D-4A56A08D15F4}"
@@ -31,6 +34,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "105_EventSyntax", "105_Even
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "106_GenericTemplate", "106_GenericTemplate\106_GenericTemplate.csproj", "{A12D0D47-ED52-4967-88BC-B1F583DE111F}"
 EndProject
+<<<<<<< Updated upstream
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "106_GenericInMethod", "106_GenericInMethod\106_GenericInMethod.csproj", "{06036477-6F80-440B-B536-349C90304079}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "106_GenericInDelegate", "106_GenericInDelegate\106_GenericInDelegate.csproj", "{5DB9E462-590B-45FB-AA32-40998F11DEAF}"
@@ -41,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "107_CustomAttribute", "107_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "108_GetTypeByReflection", "108_GetTypeByReflection\108_GetTypeByReflection.csproj", "{1B73601A-64CA-4357-AA1B-F846F504EB8A}"
 EndProject
+=======
+>>>>>>> Stashed changes
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -71,6 +77,7 @@ Global
 		{4201A6FB-6720-4CF2-9C12-77B17C6E5DBC}.Debug|x86.Build.0 = Debug|x86
 		{4201A6FB-6720-4CF2-9C12-77B17C6E5DBC}.Release|x86.ActiveCfg = Release|x86
 		{4201A6FB-6720-4CF2-9C12-77B17C6E5DBC}.Release|x86.Build.0 = Release|x86
+<<<<<<< Updated upstream
 		{EB991AC4-1BBA-4956-8DCD-7C2B0050C895}.Debug|x86.ActiveCfg = Debug|x86
 		{EB991AC4-1BBA-4956-8DCD-7C2B0050C895}.Debug|x86.Build.0 = Debug|x86
 		{EB991AC4-1BBA-4956-8DCD-7C2B0050C895}.Release|x86.ActiveCfg = Release|x86
@@ -91,6 +98,8 @@ Global
 		{5721BE97-5699-44A4-B24F-6745823DB7D5}.Debug|x86.Build.0 = Debug|x86
 		{5721BE97-5699-44A4-B24F-6745823DB7D5}.Release|x86.ActiveCfg = Release|x86
 		{5721BE97-5699-44A4-B24F-6745823DB7D5}.Release|x86.Build.0 = Release|x86
+=======
+>>>>>>> Stashed changes
 		{05B4740C-4779-475F-B77A-D0C1EB4BDE70}.Debug|x86.ActiveCfg = Debug|x86
 		{05B4740C-4779-475F-B77A-D0C1EB4BDE70}.Debug|x86.Build.0 = Debug|x86
 		{05B4740C-4779-475F-B77A-D0C1EB4BDE70}.Release|x86.ActiveCfg = Release|x86
@@ -107,6 +116,7 @@ Global
 		{A12D0D47-ED52-4967-88BC-B1F583DE111F}.Debug|x86.Build.0 = Debug|x86
 		{A12D0D47-ED52-4967-88BC-B1F583DE111F}.Release|x86.ActiveCfg = Release|x86
 		{A12D0D47-ED52-4967-88BC-B1F583DE111F}.Release|x86.Build.0 = Release|x86
+<<<<<<< Updated upstream
 		{06036477-6F80-440B-B536-349C90304079}.Debug|x86.ActiveCfg = Debug|x86
 		{06036477-6F80-440B-B536-349C90304079}.Debug|x86.Build.0 = Debug|x86
 		{06036477-6F80-440B-B536-349C90304079}.Release|x86.ActiveCfg = Release|x86
@@ -127,6 +137,8 @@ Global
 		{1B73601A-64CA-4357-AA1B-F846F504EB8A}.Debug|x86.Build.0 = Debug|x86
 		{1B73601A-64CA-4357-AA1B-F846F504EB8A}.Release|x86.ActiveCfg = Release|x86
 		{1B73601A-64CA-4357-AA1B-F846F504EB8A}.Release|x86.Build.0 = Release|x86
+=======
+>>>>>>> Stashed changes
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

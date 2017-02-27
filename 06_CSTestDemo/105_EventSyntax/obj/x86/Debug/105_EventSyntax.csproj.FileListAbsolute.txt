@@ -2,3 +2,5 @@ C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\105_EventSyntax\bin\Debug\105_
 C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\105_EventSyntax\bin\Debug\105_EventSyntax.pdb
 C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\105_EventSyntax\obj\x86\Debug\105_EventSyntax.exe
 C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\105_EventSyntax\obj\x86\Debug\105_EventSyntax.pdb
+Z:\Documents\GitHub\CSharpLearning\06_CSTestDemo\105_EventSyntax\obj\x86\Debug\105_EventSyntax.exe
+Z:\Documents\GitHub\CSharpLearning\06_CSTestDemo\105_EventSyntax\obj\x86\Debug\105_EventSyntax.pdb
