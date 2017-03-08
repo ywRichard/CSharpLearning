@@ -1,4 +1,0 @@
-Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\31_关于程序集\bin\Debug\31_关于程序集.exe
-Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\31_关于程序集\bin\Debug\31_关于程序集.pdb
-Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\31_关于程序集\obj\x86\Debug\31_关于程序集.exe
-Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\31_关于程序集\obj\x86\Debug\31_关于程序集.pdb

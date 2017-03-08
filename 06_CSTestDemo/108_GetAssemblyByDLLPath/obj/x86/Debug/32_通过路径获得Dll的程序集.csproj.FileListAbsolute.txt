@@ -1,4 +1,0 @@
-Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\32_通过路径获得Dll的程序集\bin\Debug\32_通过路径获得Dll的程序集.exe
-Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\32_通过路径获得Dll的程序集\bin\Debug\32_通过路径获得Dll的程序集.pdb
-Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\32_通过路径获得Dll的程序集\obj\x86\Debug\32_通过路径获得Dll的程序集.exe
-Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\32_通过路径获得Dll的程序集\obj\x86\Debug\32_通过路径获得Dll的程序集.pdb

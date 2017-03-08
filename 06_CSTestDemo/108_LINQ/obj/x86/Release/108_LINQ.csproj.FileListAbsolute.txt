@@ -1,4 +1,0 @@
-C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\108_LINQ\bin\Release\108_LINQ.exe
-C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\108_LINQ\bin\Release\108_LINQ.pdb
-C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\108_LINQ\obj\x86\Release\108_LINQ.exe
-C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\108_LINQ\obj\x86\Release\108_LINQ.pdb
