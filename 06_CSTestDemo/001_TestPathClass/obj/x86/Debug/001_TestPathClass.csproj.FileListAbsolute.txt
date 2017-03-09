@@ -1,0 +1,2 @@
+Z:\Documents\GitHub\CSharpLearning\06_CSTestDemo\001_TestPathClass\obj\x86\Debug\01_TestPathClass.exe
+Z:\Documents\GitHub\CSharpLearning\06_CSTestDemo\001_TestPathClass\obj\x86\Debug\01_TestPathClass.pdb

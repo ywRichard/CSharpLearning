@@ -1,0 +1,9 @@
+C:\Users\S2I\Documents\Visual Studio 2010\Projects\Demo_Review\18_WriteXml\bin\Debug\18_WriteXml.exe
+C:\Users\S2I\Documents\Visual Studio 2010\Projects\Demo_Review\18_WriteXml\bin\Debug\18_WriteXml.pdb
+C:\Users\S2I\Documents\Visual Studio 2010\Projects\Demo_Review\18_WriteXml\obj\x86\Debug\18_WriteXml.exe
+C:\Users\S2I\Documents\Visual Studio 2010\Projects\Demo_Review\18_WriteXml\obj\x86\Debug\18_WriteXml.pdb
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\18_WriteXml\bin\Debug\18_WriteXml.exe
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\18_WriteXml\bin\Debug\18_WriteXml.pdb
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\18_WriteXml\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\18_WriteXml\obj\x86\Debug\18_WriteXml.exe
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\18_WriteXml\obj\x86\Debug\18_WriteXml.pdb

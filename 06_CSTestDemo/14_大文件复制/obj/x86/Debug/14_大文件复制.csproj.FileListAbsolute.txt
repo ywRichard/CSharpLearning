@@ -1,0 +1,4 @@
+C:\Users\SESA435900\documents\visual studio 2010\Projects\Demo_Review\14_大文件复制\bin\Debug\14_大文件复制.exe
+C:\Users\SESA435900\documents\visual studio 2010\Projects\Demo_Review\14_大文件复制\bin\Debug\14_大文件复制.pdb
+C:\Users\SESA435900\documents\visual studio 2010\Projects\Demo_Review\14_大文件复制\obj\x86\Debug\14_大文件复制.exe
+C:\Users\SESA435900\documents\visual studio 2010\Projects\Demo_Review\14_大文件复制\obj\x86\Debug\14_大文件复制.pdb

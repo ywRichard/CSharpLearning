@@ -1,0 +1,9 @@
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\03_石头剪刀布\bin\Release\03_石头剪刀布.exe
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\03_石头剪刀布\bin\Release\03_石头剪刀布.pdb
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\03_石头剪刀布\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\03_石头剪刀布\obj\x86\Release\_03_石头剪刀布.Form1.resources
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\03_石头剪刀布\obj\x86\Release\_03_石头剪刀布.Properties.Resources.resources
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\03_石头剪刀布\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\03_石头剪刀布\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\03_石头剪刀布\obj\x86\Release\03_石头剪刀布.exe
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\03_石头剪刀布\obj\x86\Release\03_石头剪刀布.pdb

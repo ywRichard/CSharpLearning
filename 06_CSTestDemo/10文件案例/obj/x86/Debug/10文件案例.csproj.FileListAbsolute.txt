@@ -1,0 +1,5 @@
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\10文件案例\bin\Debug\10文件案例.exe
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\10文件案例\bin\Debug\10文件案例.pdb
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\10文件案例\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\10文件案例\obj\x86\Debug\10文件案例.exe
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\10文件案例\obj\x86\Debug\10文件案例.pdb

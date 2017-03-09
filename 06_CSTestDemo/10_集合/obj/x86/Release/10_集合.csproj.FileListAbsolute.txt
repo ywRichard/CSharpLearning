@@ -1,0 +1,5 @@
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\10_集合\bin\Release\10_集合.exe
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\10_集合\bin\Release\10_集合.pdb
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\10_集合\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\10_集合\obj\x86\Release\10_集合.exe
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\10_集合\obj\x86\Release\10_集合.pdb

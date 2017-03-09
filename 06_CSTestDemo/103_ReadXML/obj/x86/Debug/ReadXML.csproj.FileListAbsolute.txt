@@ -1,0 +1,4 @@
+c:\users\s2i\documents\visual studio 2010\Projects\ReadXML\ReadXML\bin\Debug\ReadXML.exe
+c:\users\s2i\documents\visual studio 2010\Projects\ReadXML\ReadXML\bin\Debug\ReadXML.pdb
+c:\users\s2i\documents\visual studio 2010\Projects\ReadXML\ReadXML\obj\x86\Debug\ReadXML.exe
+c:\users\s2i\documents\visual studio 2010\Projects\ReadXML\ReadXML\obj\x86\Debug\ReadXML.pdb

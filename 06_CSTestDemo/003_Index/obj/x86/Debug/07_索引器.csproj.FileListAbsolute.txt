@@ -1,0 +1,5 @@
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\07_索引器\bin\Debug\07_索引器.exe
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\07_索引器\bin\Debug\07_索引器.pdb
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\07_索引器\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\07_索引器\obj\x86\Debug\07_索引器.exe
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\07_索引器\obj\x86\Debug\07_索引器.pdb

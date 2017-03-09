@@ -1,0 +1,7 @@
+C:\Users\S2I\documents\visual studio 2010\Projects\06_ControlAndClassDemo\02_Combobox\bin\Debug\02_Combobox.exe
+C:\Users\S2I\documents\visual studio 2010\Projects\06_ControlAndClassDemo\02_Combobox\bin\Debug\02_Combobox.pdb
+C:\Users\S2I\documents\visual studio 2010\Projects\06_ControlAndClassDemo\02_Combobox\obj\x86\Debug\_02_Combobox.Form1.resources
+C:\Users\S2I\documents\visual studio 2010\Projects\06_ControlAndClassDemo\02_Combobox\obj\x86\Debug\_02_Combobox.Properties.Resources.resources
+C:\Users\S2I\documents\visual studio 2010\Projects\06_ControlAndClassDemo\02_Combobox\obj\x86\Debug\02_Combobox.csproj.GenerateResource.Cache
+C:\Users\S2I\documents\visual studio 2010\Projects\06_ControlAndClassDemo\02_Combobox\obj\x86\Debug\02_Combobox.exe
+C:\Users\S2I\documents\visual studio 2010\Projects\06_ControlAndClassDemo\02_Combobox\obj\x86\Debug\02_Combobox.pdb

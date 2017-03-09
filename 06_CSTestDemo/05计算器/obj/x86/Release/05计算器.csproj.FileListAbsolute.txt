@@ -1,0 +1,7 @@
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\05计算器\bin\Release\05计算器.exe
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\05计算器\bin\Release\05计算器.pdb
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\05计算器\bin\Release\Calculator.dll
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\05计算器\bin\Release\Calculator.pdb
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\05计算器\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\05计算器\obj\x86\Release\05计算器.exe
+C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\05计算器\obj\x86\Release\05计算器.pdb

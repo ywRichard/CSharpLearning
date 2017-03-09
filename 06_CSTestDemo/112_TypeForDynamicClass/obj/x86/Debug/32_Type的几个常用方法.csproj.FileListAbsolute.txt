@@ -1,0 +1,4 @@
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\32_Type的几个常用方法\bin\Debug\32_Type的几个常用方法.exe
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\32_Type的几个常用方法\bin\Debug\32_Type的几个常用方法.pdb
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\32_Type的几个常用方法\obj\x86\Debug\32_Type的几个常用方法.exe
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\32_Type的几个常用方法\obj\x86\Debug\32_Type的几个常用方法.pdb

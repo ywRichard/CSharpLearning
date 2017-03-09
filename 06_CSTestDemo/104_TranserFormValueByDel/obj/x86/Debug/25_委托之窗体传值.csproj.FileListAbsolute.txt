@@ -1,0 +1,12 @@
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\25_委托之窗体传值\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\25_委托之窗体传值\obj\x86\Debug\_25_委托之窗体传值.Form1.resources
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\25_委托之窗体传值\obj\x86\Debug\_25_委托之窗体传值.Form2.resources
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\25_委托之窗体传值\obj\x86\Debug\_25_委托之窗体传值.Properties.Resources.resources
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\25_委托之窗体传值\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\25_委托之窗体传值\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\25_委托之窗体传值\bin\Debug\25_委托之窗体传值.exe
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\25_委托之窗体传值\bin\Debug\25_委托之窗体传值.pdb
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\25_委托之窗体传值\obj\x86\Debug\25_委托之窗体传值.exe
+C:\Users\yao\Desktop\VS Demo\02_CSharpReview\25_委托之窗体传值\obj\x86\Debug\25_委托之窗体传值.pdb
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\25_委托之窗体传值\obj\x86\Debug\25_委托之窗体传值.exe
+Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\25_委托之窗体传值\obj\x86\Debug\25_委托之窗体传值.pdb

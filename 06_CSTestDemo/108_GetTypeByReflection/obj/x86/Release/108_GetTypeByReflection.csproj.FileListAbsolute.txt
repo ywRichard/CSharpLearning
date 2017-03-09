@@ -1,0 +1,4 @@
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\108_GetTypeByReflection\bin\Release\108_GetTypeByReflection.exe
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\108_GetTypeByReflection\bin\Release\108_GetTypeByReflection.pdb
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\108_GetTypeByReflection\obj\x86\Release\108_GetTypeByReflection.exe
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\108_GetTypeByReflection\obj\x86\Release\108_GetTypeByReflection.pdb
