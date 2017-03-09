@@ -1,5 +1,0 @@
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\Calculator\bin\Release\Calculator.dll
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\Calculator\bin\Release\Calculator.pdb
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\Calculator\obj\Release\ResolveAssemblyReference.cache
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\Calculator\obj\Release\Calculator.dll
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\Calculator\obj\Release\Calculator.pdb

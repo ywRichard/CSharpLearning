@@ -1,8 +1,0 @@
-C:\Users\S2I\Documents\Visual Studio 2010\Projects\Demo_Review\20_Xml文件登录\obj\x86\Debug\_20_Xml文件登录.Form1.resources
-C:\Users\S2I\Documents\Visual Studio 2010\Projects\Demo_Review\20_Xml文件登录\obj\x86\Debug\_20_Xml文件登录.Properties.Resources.resources
-C:\Users\S2I\Documents\Visual Studio 2010\Projects\Demo_Review\20_Xml文件登录\obj\x86\Debug\20_Xml文件登录.csproj.GenerateResource.Cache
-C:\Users\yao\Desktop\VS Demo\02_CSharpReview\20_Xml文件登录\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\yao\Desktop\VS Demo\02_CSharpReview\20_Xml文件登录\obj\x86\Debug\_20_Xml文件登录.Form1.resources
-C:\Users\yao\Desktop\VS Demo\02_CSharpReview\20_Xml文件登录\obj\x86\Debug\_20_Xml文件登录.Properties.Resources.resources
-C:\Users\yao\Desktop\VS Demo\02_CSharpReview\20_Xml文件登录\obj\x86\Debug\GenerateResource.read.1.tlog
-C:\Users\yao\Desktop\VS Demo\02_CSharpReview\20_Xml文件登录\obj\x86\Debug\GenerateResource.write.1.tlog

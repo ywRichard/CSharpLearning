@@ -1,6 +1,0 @@
-C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\003_ClassIndex\bin\Debug\003_ClassIndex.exe
-C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\003_ClassIndex\bin\Debug\003_ClassIndex.pdb
-C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\003_ClassIndex\obj\x86\Debug\003_ClassIndex.exe
-C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\003_ClassIndex\obj\x86\Debug\003_ClassIndex.pdb
-Z:\Documents\GitHub\CSharpLearning\06_CSTestDemo\003_ClassIndex\obj\x86\Debug\003_ClassIndex.exe
-Z:\Documents\GitHub\CSharpLearning\06_CSTestDemo\003_ClassIndex\obj\x86\Debug\003_ClassIndex.pdb

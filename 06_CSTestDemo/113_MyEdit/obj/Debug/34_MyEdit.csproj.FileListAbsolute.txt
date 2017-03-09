@@ -1,6 +1,0 @@
-Y:\CSharpLearning\02_CSharpReview\34_MyEdit\bin\Debug\MyNoteBook.dll
-Y:\CSharpLearning\02_CSharpReview\34_MyEdit\bin\Debug\MyNoteBook.pdb
-Y:\CSharpLearning\02_CSharpReview\34_MyEdit\bin\Debug\MyEditPlus.dll
-Y:\CSharpLearning\02_CSharpReview\34_MyEdit\bin\Debug\MyEditPlus.pdb
-Y:\CSharpLearning\02_CSharpReview\34_MyEdit\obj\Debug\MyNoteBook.dll
-Y:\CSharpLearning\02_CSharpReview\34_MyEdit\obj\Debug\MyNoteBook.pdb

@@ -1,7 +1,0 @@
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\13_提取邮箱\bin\Debug\13_提取邮箱.exe
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\13_提取邮箱\bin\Debug\13_提取邮箱.pdb
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\13_提取邮箱\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\13_提取邮箱\obj\x86\Debug\13_提取邮箱.exe
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\13_提取邮箱\obj\x86\Debug\13_提取邮箱.pdb
-C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\13_提取邮箱\obj\x86\Debug\13_提取邮箱.exe
-C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\13_提取邮箱\obj\x86\Debug\13_提取邮箱.pdb

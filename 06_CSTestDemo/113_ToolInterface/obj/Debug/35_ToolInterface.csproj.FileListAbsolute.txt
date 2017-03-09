@@ -1,4 +1,0 @@
-C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_ToolInterface\bin\Debug\ToolInterface.dll
-C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_ToolInterface\bin\Debug\ToolInterface.pdb
-C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_ToolInterface\obj\Debug\ToolInterface.dll
-C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\35_ToolInterface\obj\Debug\ToolInterface.pdb

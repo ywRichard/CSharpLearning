@@ -1,5 +1,0 @@
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\06文件案例\bin\Release\06文件案例.exe
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\06文件案例\bin\Release\06文件案例.pdb
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\06文件案例\obj\x86\Release\ResolveAssemblyReference.cache
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\06文件案例\obj\x86\Release\06文件案例.exe
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\06文件案例\obj\x86\Release\06文件案例.pdb

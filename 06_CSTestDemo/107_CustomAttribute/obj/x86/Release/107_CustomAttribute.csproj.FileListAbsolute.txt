@@ -1,4 +1,0 @@
-C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\107_CustomAttribute\bin\Release\107_CustomAttribute.exe
-C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\107_CustomAttribute\bin\Release\107_CustomAttribute.pdb
-C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\107_CustomAttribute\obj\x86\Release\107_CustomAttribute.exe
-C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\107_CustomAttribute\obj\x86\Release\107_CustomAttribute.pdb

@@ -1,5 +1,0 @@
-C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\106_GenericTemplate\bin\Debug\106_GenericTemplate.exe
-C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\106_GenericTemplate\bin\Debug\106_GenericTemplate.pdb
-C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\106_GenericTemplate\obj\x86\Debug\106_GenericTemplate.exe
-C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\106_GenericTemplate\obj\x86\Debug\106_GenericTemplate.pdb
-Z:\Documents\GitHub\CSharpLearning\06_CSTestDemo\106_GenericTemplate\obj\x86\Debug\106_GenericTemplate.exe

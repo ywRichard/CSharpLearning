@@ -1,7 +1,0 @@
-C:\Users\yao\Desktop\VS Demo\02_CSharpReview\15_下载图片\bin\Debug\15_下载图片.exe
-C:\Users\yao\Desktop\VS Demo\02_CSharpReview\15_下载图片\bin\Debug\15_下载图片.pdb
-C:\Users\yao\Desktop\VS Demo\02_CSharpReview\15_下载图片\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\yao\Desktop\VS Demo\02_CSharpReview\15_下载图片\obj\x86\Debug\15_下载图片.exe
-C:\Users\yao\Desktop\VS Demo\02_CSharpReview\15_下载图片\obj\x86\Debug\15_下载图片.pdb
-C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\15_下载图片\obj\x86\Debug\15_下载图片.exe
-C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\15_下载图片\obj\x86\Debug\15_下载图片.pdb

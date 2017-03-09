@@ -1,5 +1,0 @@
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\DemoForLabView\bin\Release\DemoForLabView.dll
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\DemoForLabView\bin\Release\DemoForLabView.pdb
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\DemoForLabView\obj\Release\ResolveAssemblyReference.cache
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\DemoForLabView\obj\Release\DemoForLabView.dll
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\DemoForLabView\obj\Release\DemoForLabView.pdb

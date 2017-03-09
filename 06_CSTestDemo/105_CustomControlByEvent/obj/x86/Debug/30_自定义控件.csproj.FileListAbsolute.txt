@@ -1,8 +1,0 @@
-Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\30_自定义控件\bin\Debug\30_自定义控件.exe
-Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\30_自定义控件\bin\Debug\30_自定义控件.pdb
-Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\30_自定义控件\obj\x86\Debug\_30_自定义控件.Properties.Resources.resources
-Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\30_自定义控件\obj\x86\Debug\_30_自定义控件.UserLogin.resources
-Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\30_自定义控件\obj\x86\Debug\30_自定义控件.csproj.GenerateResource.Cache
-Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\30_自定义控件\obj\x86\Debug\30_自定义控件.exe
-Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\30_自定义控件\obj\x86\Debug\30_自定义控件.pdb
-Z:\Documents\GitHub\CSharpLearning\02_CSharpReview\30_自定义控件\obj\x86\Debug\_30_自定义控件.Form1.resources
