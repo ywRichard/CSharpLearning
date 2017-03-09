@@ -1,5 +1,0 @@
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\09_Ref和Out\bin\Release\09_Ref和Out.exe
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\09_Ref和Out\bin\Release\09_Ref和Out.pdb
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\09_Ref和Out\obj\x86\Release\ResolveAssemblyReference.cache
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\09_Ref和Out\obj\x86\Release\09_Ref和Out.exe
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\09_Ref和Out\obj\x86\Release\09_Ref和Out.pdb

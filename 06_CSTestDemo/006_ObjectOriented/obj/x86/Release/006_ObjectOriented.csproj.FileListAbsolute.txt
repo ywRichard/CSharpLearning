@@ -1,0 +1,2 @@
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\03_石头剪刀布\obj\x86\Release\03_石头剪刀布.exe
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\03_石头剪刀布\obj\x86\Release\03_石头剪刀布.pdb

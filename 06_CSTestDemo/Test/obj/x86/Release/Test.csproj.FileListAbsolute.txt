@@ -5,3 +5,5 @@ C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\Test\bin\Release\DemoForLa
 C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\Test\obj\x86\Release\ResolveAssemblyReference.cache
 C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\Test\obj\x86\Release\Test.exe
 C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\Test\obj\x86\Release\Test.pdb
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\Test\obj\x86\Release\Test.exe
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\Test\obj\x86\Release\Test.pdb

@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_文件流\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_文件流\bin\Debug\_文件流.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_文件流\bin\Debug\_文件流.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_文件流\obj\x86\Debug\_文件流.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_文件流\obj\x86\Debug\_文件流.pdb

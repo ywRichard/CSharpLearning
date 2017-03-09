@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_序列化和反序列化\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_序列化和反序列化\bin\Debug\_序列化和反序列化.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_序列化和反序列化\bin\Debug\_序列化和反序列化.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_序列化和反序列化\obj\x86\Debug\_序列化和反序列化.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_序列化和反序列化\obj\x86\Debug\_序列化和反序列化.pdb

@@ -10,8 +10,11 @@ using MyEditPlus;
 using System.Reflection;
 using System.IO;
 
-namespace _34_插件开发之记事本
+namespace _113_NoteBookApp
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class Form1 : Form
     {
         public Form1()

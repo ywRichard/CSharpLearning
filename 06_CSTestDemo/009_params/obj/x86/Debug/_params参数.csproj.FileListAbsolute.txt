@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_params参数\bin\Debug\_params参数.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_params参数\bin\Debug\_params参数.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_params参数\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_params参数\obj\x86\Debug\_params参数.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_params参数\obj\x86\Debug\_params参数.pdb

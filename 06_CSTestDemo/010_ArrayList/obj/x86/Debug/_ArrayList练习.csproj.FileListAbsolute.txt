@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_ArrayList练习\bin\Debug\_ArrayList练习.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_ArrayList练习\bin\Debug\_ArrayList练习.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_ArrayList练习\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_ArrayList练习\obj\x86\Debug\_ArrayList练习.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_ArrayList练习\obj\x86\Debug\_ArrayList练习.pdb

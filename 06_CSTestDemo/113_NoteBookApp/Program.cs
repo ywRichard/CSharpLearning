@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace _34_插件开发之记事本
+namespace _113_NoteBookApp
 {
     static class Program
     {

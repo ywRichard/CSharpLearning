@@ -1,4 +1,4 @@
-﻿namespace _34_插件开发之记事本
+﻿namespace _113_NoteBookApp
 {
     partial class Form1
     {

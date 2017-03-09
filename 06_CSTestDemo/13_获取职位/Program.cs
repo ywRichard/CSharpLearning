@@ -14,7 +14,7 @@ namespace _13_获取职位
             WebClient wc = new WebClient();
             string html = wc.DownloadString("");
 
-            MatchCollection mc = Regex.Matches(html, "");
+            MatchCollection mc = Regex.Matches(html, "");//正则表达式，匹配文件类型
 
             foreach (Match item in mc)
             {

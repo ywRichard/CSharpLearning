@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_13转义符的使用\bin\Debug\_13转义符的使用.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_13转义符的使用\bin\Debug\_13转义符的使用.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_13转义符的使用\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_13转义符的使用\obj\x86\Debug\_13转义符的使用.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_13转义符的使用\obj\x86\Debug\_13转义符的使用.pdb

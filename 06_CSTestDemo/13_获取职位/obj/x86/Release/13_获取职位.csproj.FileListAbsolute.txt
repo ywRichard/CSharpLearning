@@ -1,0 +1,4 @@
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\13_获取职位\bin\Release\13_获取职位.exe
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\13_获取职位\bin\Release\13_获取职位.pdb
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\13_获取职位\obj\x86\Release\13_获取职位.exe
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\13_获取职位\obj\x86\Release\13_获取职位.pdb

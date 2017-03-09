@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_重写ToString方法\bin\Debug\_重写ToString方法.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_重写ToString方法\bin\Debug\_重写ToString方法.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_重写ToString方法\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_重写ToString方法\obj\x86\Debug\_重写ToString方法.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_重写ToString方法\obj\x86\Debug\_重写ToString方法.pdb

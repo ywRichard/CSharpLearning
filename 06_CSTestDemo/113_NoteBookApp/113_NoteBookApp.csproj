@@ -8,8 +8,8 @@
     <ProjectGuid>{ACE2C65C-18F8-481E-B82A-B4CCBCB14D9F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_34_插件开发之记事本</RootNamespace>
-    <AssemblyName>34_插件开发之记事本</AssemblyName>
+    <RootNamespace>_113_NoteBookApp</RootNamespace>
+    <AssemblyName>113_NoteBookApp</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -68,6 +68,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

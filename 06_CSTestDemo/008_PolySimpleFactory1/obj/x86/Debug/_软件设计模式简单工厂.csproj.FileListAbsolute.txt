@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_软件设计模式简单工厂\bin\Debug\_软件设计模式简单工厂.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_软件设计模式简单工厂\bin\Debug\_软件设计模式简单工厂.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_软件设计模式简单工厂\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_软件设计模式简单工厂\obj\x86\Debug\_软件设计模式简单工厂.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_软件设计模式简单工厂\obj\x86\Debug\_软件设计模式简单工厂.pdb

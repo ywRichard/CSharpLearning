@@ -1,5 +1,0 @@
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\11_集合的练习\bin\Debug\11_集合的练习.exe
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\11_集合的练习\bin\Debug\11_集合的练习.pdb
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\11_集合的练习\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\11_集合的练习\obj\x86\Debug\11_集合的练习.exe
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\11_集合的练习\obj\x86\Debug\11_集合的练习.pdb

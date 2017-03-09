@@ -1,0 +1,5 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_简体繁体转换\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_简体繁体转换\bin\Debug\_简体繁体转换.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_简体繁体转换\bin\Debug\_简体繁体转换.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_简体繁体转换\obj\x86\Debug\_简体繁体转换.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_简体繁体转换\obj\x86\Debug\_简体繁体转换.pdb
