@@ -1,0 +1,7 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_超市收银项目\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_超市收银项目\bin\Debug\_超市收银项目.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_超市收银项目\bin\Debug\_超市收银项目.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_超市收银项目\obj\x86\Debug\_超市收银项目.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_超市收银项目\obj\x86\Debug\_超市收银项目.pdb
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\_超市收银项目\obj\x86\Debug\_超市收银项目.exe
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\_超市收银项目\obj\x86\Debug\_超市收银项目.pdb

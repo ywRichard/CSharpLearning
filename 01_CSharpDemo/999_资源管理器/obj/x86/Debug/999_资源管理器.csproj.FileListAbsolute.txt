@@ -1,0 +1,2 @@
+C:\Users\S2I\Desktop\CSharpLearning\01_CSTestDemo\999_资源管理器\obj\x86\Debug\16_资源管理器.exe
+C:\Users\S2I\Desktop\CSharpLearning\01_CSTestDemo\999_资源管理器\obj\x86\Debug\16_资源管理器.pdb

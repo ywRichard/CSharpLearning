@@ -1,5 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_超市收银项目练习第二遍\bin\Debug\_超市收银项目练习第二遍.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_超市收银项目练习第二遍\bin\Debug\_超市收银项目练习第二遍.pdb
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_超市收银项目练习第二遍\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_超市收银项目练习第二遍\obj\x86\Debug\_超市收银项目练习第二遍.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_超市收银项目练习第二遍\obj\x86\Debug\_超市收银项目练习第二遍.pdb

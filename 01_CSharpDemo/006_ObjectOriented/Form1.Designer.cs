@@ -1,4 +1,4 @@
-﻿namespace _03_石头剪刀布
+﻿namespace _002_OOP
 {
     partial class Form1
     {

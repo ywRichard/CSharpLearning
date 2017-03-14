@@ -1,0 +1,7 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_输出99乘法表\bin\Debug\_输出99乘法表.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_输出99乘法表\bin\Debug\_输出99乘法表.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_输出99乘法表\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_输出99乘法表\obj\x86\Debug\_输出99乘法表.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_输出99乘法表\obj\x86\Debug\_输出99乘法表.pdb
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\_输出99乘法表\obj\x86\Debug\_输出99乘法表.exe
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\_输出99乘法表\obj\x86\Debug\_输出99乘法表.pdb

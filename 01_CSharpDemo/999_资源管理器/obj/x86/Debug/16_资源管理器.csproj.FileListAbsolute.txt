@@ -1,0 +1,14 @@
+C:\Users\SESA435900\documents\visual studio 2010\Projects\Demo_Review\16_资源管理器\bin\Debug\16_资源管理器.exe
+C:\Users\SESA435900\documents\visual studio 2010\Projects\Demo_Review\16_资源管理器\bin\Debug\16_资源管理器.pdb
+C:\Users\SESA435900\documents\visual studio 2010\Projects\Demo_Review\16_资源管理器\obj\x86\Debug\_16_资源管理器.Form1.resources
+C:\Users\SESA435900\documents\visual studio 2010\Projects\Demo_Review\16_资源管理器\obj\x86\Debug\_16_资源管理器.Properties.Resources.resources
+C:\Users\SESA435900\documents\visual studio 2010\Projects\Demo_Review\16_资源管理器\obj\x86\Debug\16_资源管理器.csproj.GenerateResource.Cache
+C:\Users\SESA435900\documents\visual studio 2010\Projects\Demo_Review\16_资源管理器\obj\x86\Debug\16_资源管理器.exe
+C:\Users\SESA435900\documents\visual studio 2010\Projects\Demo_Review\16_资源管理器\obj\x86\Debug\16_资源管理器.pdb
+C:\Users\SESA435900\documents\visual studio 2010\Projects\Demo_Review\16_资源管理器\obj\x86\Debug\16_资源管理器.csprojResolveAssemblyReference.cache
+C:\Users\S2I\Documents\Visual Studio 2010\Projects\Demo_Review\16_资源管理器\obj\x86\Debug\16_资源管理器.exe
+C:\Users\S2I\Documents\Visual Studio 2010\Projects\Demo_Review\16_资源管理器\obj\x86\Debug\16_资源管理器.pdb
+C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\16_资源管理器\obj\x86\Debug\16_资源管理器.exe
+C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\16_资源管理器\obj\x86\Debug\16_资源管理器.pdb
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\16_资源管理器\obj\x86\Debug\16_资源管理器.exe
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\16_资源管理器\obj\x86\Debug\16_资源管理器.pdb

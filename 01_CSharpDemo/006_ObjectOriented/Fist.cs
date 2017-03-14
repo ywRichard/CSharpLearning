@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace _006_ObjectOriented
+namespace _002_OOP
 {
     public class Fist
     {

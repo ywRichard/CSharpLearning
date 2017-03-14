@@ -1,5 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_虚方法的练习\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_虚方法的练习\bin\Debug\_虚方法的练习.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_虚方法的练习\bin\Debug\_虚方法的练习.pdb
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_虚方法的练习\obj\x86\Debug\_虚方法的练习.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_虚方法的练习\obj\x86\Debug\_虚方法的练习.pdb

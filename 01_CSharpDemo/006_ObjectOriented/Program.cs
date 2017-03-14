@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace _006_ObjectOriented
+namespace _002_OOP
 {
     static class Program
     {

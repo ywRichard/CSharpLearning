@@ -1,0 +1,7 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_枚举类型\bin\Debug\_枚举类型.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_枚举类型\bin\Debug\_枚举类型.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_枚举类型\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_枚举类型\obj\x86\Debug\_枚举类型.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_枚举类型\obj\x86\Debug\_枚举类型.pdb
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\_枚举类型\obj\x86\Debug\_枚举类型.exe
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\_枚举类型\obj\x86\Debug\_枚举类型.pdb

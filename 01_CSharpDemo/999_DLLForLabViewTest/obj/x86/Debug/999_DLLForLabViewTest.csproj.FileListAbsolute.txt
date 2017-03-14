@@ -1,0 +1,2 @@
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\Test\obj\x86\Debug\Test.exe
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\Test\obj\x86\Debug\Test.pdb

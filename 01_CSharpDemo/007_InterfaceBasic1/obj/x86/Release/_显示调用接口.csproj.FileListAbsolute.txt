@@ -1,0 +1,4 @@
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\_显示调用接口\bin\Release\007_InterfaceBasic.exe
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\_显示调用接口\bin\Release\007_InterfaceBasic.pdb
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\_显示调用接口\obj\x86\Release\007_InterfaceBasic.exe
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\_显示调用接口\obj\x86\Release\007_InterfaceBasic.pdb

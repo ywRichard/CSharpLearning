@@ -1,0 +1,7 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\ConsoleApplication2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\ConsoleApplication2\bin\Debug\ConsoleApplication2.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\ConsoleApplication2\obj\x86\Debug\ConsoleApplication2.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\ConsoleApplication2\obj\x86\Debug\ConsoleApplication2.pdb
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\ConsoleApplication2\obj\x86\Debug\ConsoleApplication2.exe
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\ConsoleApplication2\obj\x86\Debug\ConsoleApplication2.pdb

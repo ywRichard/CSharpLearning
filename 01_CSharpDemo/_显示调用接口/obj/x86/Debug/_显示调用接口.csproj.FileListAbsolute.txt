@@ -1,5 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_显示调用接口\bin\Debug\_显示调用接口.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_显示调用接口\bin\Debug\_显示调用接口.pdb
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_显示调用接口\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_显示调用接口\obj\x86\Debug\_显示调用接口.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_显示调用接口\obj\x86\Debug\_显示调用接口.pdb

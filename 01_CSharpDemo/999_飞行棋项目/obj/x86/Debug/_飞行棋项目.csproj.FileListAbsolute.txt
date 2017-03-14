@@ -1,0 +1,6 @@
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_飞行棋项目\bin\Debug\_飞行棋项目.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_飞行棋项目\bin\Debug\_飞行棋项目.pdb
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_飞行棋项目\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_飞行棋项目\obj\x86\Debug\_飞行棋项目.exe
+C:\Users\Richard\Documents\My Test Demo\Test Demo\_飞行棋项目\obj\x86\Debug\_飞行棋项目.pdb
+C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\_飞行棋项目\obj\x86\Debug\_飞行棋项目.exe

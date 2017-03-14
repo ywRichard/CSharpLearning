@@ -20,6 +20,7 @@ namespace _008_PolyByAbstract
             Console.ReadKey();
         }
     }
+
     #region 多态的练习
     //public abstract class Shape
     //{

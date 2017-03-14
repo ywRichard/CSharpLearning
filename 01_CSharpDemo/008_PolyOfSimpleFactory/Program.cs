@@ -8,6 +8,8 @@ namespace _008_PolyOfSimpleFactory
     /// <summary>
     /// 文件案例:了解简单工厂模式，加深理解多态的概念。
     /// 通过抽象类实现
+    /// 简单工厂核兴：根据用户输入，返回一个父类对象。
+    /// 难点：如何抽象一个类。
     /// </summary>
     class Program
     {

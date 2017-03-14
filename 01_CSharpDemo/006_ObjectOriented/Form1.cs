@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace _006_ObjectOriented
+namespace _002_OOP
 {
     /// <summary>
     /// 石头剪刀布案例，学习面向对象的概念。

@@ -1,0 +1,4 @@
+C:\Users\S2I\Desktop\CSharpLearning\01_CSharpDemo\110_RegexMethds\bin\Debug\110_RegexMethds.exe
+C:\Users\S2I\Desktop\CSharpLearning\01_CSharpDemo\110_RegexMethds\bin\Debug\110_RegexMethds.pdb
+C:\Users\S2I\Desktop\CSharpLearning\01_CSharpDemo\110_RegexMethds\obj\x86\Debug\110_RegexMethds.exe
+C:\Users\S2I\Desktop\CSharpLearning\01_CSharpDemo\110_RegexMethds\obj\x86\Debug\110_RegexMethds.pdb

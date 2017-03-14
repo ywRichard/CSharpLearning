@@ -38,9 +38,17 @@ namespace _27_拉姆达表达式案例
             //Console.WriteLine(n.ToString()); 
             #endregion
 
+            LamdaExpres();
+
             Console.ReadLine();
 
+        }
 
+        private static void LamdaExpres()
+        {
+            Func<int, bool> test = x => x == 5;
+
+            Console.WriteLine(test(4));
         }
     }
 }

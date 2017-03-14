@@ -1,0 +1,2 @@
+C:\Users\S2I\Desktop\CSharpLearning\01_CSTestDemo\104_ChangeStringByDel\obj\x86\Debug\24_委托改变字符串.exe
+C:\Users\S2I\Desktop\CSharpLearning\01_CSTestDemo\104_ChangeStringByDel\obj\x86\Debug\24_委托改变字符串.pdb
