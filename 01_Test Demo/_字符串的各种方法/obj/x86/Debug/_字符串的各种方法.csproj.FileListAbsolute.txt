@@ -1,5 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_字符串的各种方法\bin\Debug\_字符串的各种方法.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_字符串的各种方法\bin\Debug\_字符串的各种方法.pdb
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_字符串的各种方法\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_字符串的各种方法\obj\x86\Debug\_字符串的各种方法.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_字符串的各种方法\obj\x86\Debug\_字符串的各种方法.pdb

@@ -1,5 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_异常捕获\bin\Debug\_异常捕获.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_异常捕获\bin\Debug\_异常捕获.pdb
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_异常捕获\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_异常捕获\obj\x86\Debug\_异常捕获.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_异常捕获\obj\x86\Debug\_异常捕获.pdb

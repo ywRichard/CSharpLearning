@@ -1,0 +1,5 @@
+\\mac\home\documents\visual studio 2010\Projects\03大项目\04注意事项\bin\Debug\04注意事项.exe
+\\mac\home\documents\visual studio 2010\Projects\03大项目\04注意事项\bin\Debug\04注意事项.pdb
+\\mac\home\documents\visual studio 2010\Projects\03大项目\04注意事项\obj\x86\Debug\ResolveAssemblyReference.cache
+\\mac\home\documents\visual studio 2010\Projects\03大项目\04注意事项\obj\x86\Debug\04注意事项.exe
+\\mac\home\documents\visual studio 2010\Projects\03大项目\04注意事项\obj\x86\Debug\04注意事项.pdb

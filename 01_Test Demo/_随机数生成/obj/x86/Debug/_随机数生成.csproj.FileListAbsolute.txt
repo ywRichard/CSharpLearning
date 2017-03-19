@@ -1,5 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_随机数生成\bin\Debug\_随机数生成.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_随机数生成\bin\Debug\_随机数生成.pdb
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_随机数生成\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_随机数生成\obj\x86\Debug\_随机数生成.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_随机数生成\obj\x86\Debug\_随机数生成.pdb

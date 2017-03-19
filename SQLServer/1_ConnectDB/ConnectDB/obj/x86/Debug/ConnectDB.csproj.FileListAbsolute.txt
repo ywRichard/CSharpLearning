@@ -1,0 +1,7 @@
+\\mac\home\documents\visual studio 2010\Projects\ConnectDB\ConnectDB\bin\Debug\ConnectDB.exe
+\\mac\home\documents\visual studio 2010\Projects\ConnectDB\ConnectDB\bin\Debug\ConnectDB.pdb
+\\mac\home\documents\visual studio 2010\Projects\ConnectDB\ConnectDB\obj\x86\Debug\ResolveAssemblyReference.cache
+\\mac\home\documents\visual studio 2010\Projects\ConnectDB\ConnectDB\obj\x86\Debug\ConnectDB.exe
+\\mac\home\documents\visual studio 2010\Projects\ConnectDB\ConnectDB\obj\x86\Debug\ConnectDB.pdb
+C:\Users\yao\Desktop\SqlDemo\ConnectDB\ConnectDB\obj\x86\Debug\ConnectDB.exe
+C:\Users\yao\Desktop\SqlDemo\ConnectDB\ConnectDB\obj\x86\Debug\ConnectDB.pdb

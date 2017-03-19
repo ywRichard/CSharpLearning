@@ -1,7 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_命名空间\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_命名空间\bin\Debug\_命名空间.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_命名空间\bin\Debug\_命名空间.pdb
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_命名空间\bin\Debug\_类的练习复习.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_命名空间\bin\Debug\_类的练习复习.pdb
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_命名空间\obj\x86\Debug\_命名空间.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_命名空间\obj\x86\Debug\_命名空间.pdb

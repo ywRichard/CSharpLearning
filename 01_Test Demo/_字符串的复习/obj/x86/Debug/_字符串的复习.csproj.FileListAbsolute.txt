@@ -1,5 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_字符串的复习\bin\Debug\_字符串的复习.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_字符串的复习\bin\Debug\_字符串的复习.pdb
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_字符串的复习\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_字符串的复习\obj\x86\Debug\_字符串的复习.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_字符串的复习\obj\x86\Debug\_字符串的复习.pdb

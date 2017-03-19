@@ -1,0 +1,18 @@
+\\mac\home\documents\visual studio 2010\Projects\1011解决方案\01登录案例\bin\Debug\01登录案例.exe
+\\mac\home\documents\visual studio 2010\Projects\1011解决方案\01登录案例\bin\Debug\01登录案例.pdb
+\\mac\home\documents\visual studio 2010\Projects\1011解决方案\01登录案例\obj\x86\Debug\ResolveAssemblyReference.cache
+\\mac\home\documents\visual studio 2010\Projects\1011解决方案\01登录案例\obj\x86\Debug\_01登录案例.Form1.resources
+\\mac\home\documents\visual studio 2010\Projects\1011解决方案\01登录案例\obj\x86\Debug\_01登录案例.Properties.Resources.resources
+\\mac\home\documents\visual studio 2010\Projects\1011解决方案\01登录案例\obj\x86\Debug\GenerateResource.read.1.tlog
+\\mac\home\documents\visual studio 2010\Projects\1011解决方案\01登录案例\obj\x86\Debug\GenerateResource.write.1.tlog
+\\mac\home\documents\visual studio 2010\Projects\1011解决方案\01登录案例\obj\x86\Debug\01登录案例.exe
+\\mac\home\documents\visual studio 2010\Projects\1011解决方案\01登录案例\obj\x86\Debug\01登录案例.pdb
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\01登录案例\obj\x86\Debug\01登录案例.exe
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\01登录案例\obj\x86\Debug\01登录案例.pdb
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\01登录案例\bin\Debug\01登录案例.exe
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\01登录案例\bin\Debug\01登录案例.pdb
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\01登录案例\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\01登录案例\obj\x86\Debug\_01登录案例.Form1.resources
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\01登录案例\obj\x86\Debug\_01登录案例.Properties.Resources.resources
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\01登录案例\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\01登录案例\obj\x86\Debug\GenerateResource.write.1.tlog

@@ -1,5 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_FileStream读取多媒体文件\bin\Debug\_FileStream读取多媒体文件.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_FileStream读取多媒体文件\bin\Debug\_FileStream读取多媒体文件.pdb
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_FileStream读取多媒体文件\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_FileStream读取多媒体文件\obj\x86\Debug\_FileStream读取多媒体文件.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_FileStream读取多媒体文件\obj\x86\Debug\_FileStream读取多媒体文件.pdb

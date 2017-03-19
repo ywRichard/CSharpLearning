@@ -1,5 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_Out参数练习1\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_Out参数练习1\bin\Debug\_Out参数练习1.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_Out参数练习1\bin\Debug\_Out参数练习1.pdb
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_Out参数练习1\obj\x86\Debug\_Out参数练习1.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_Out参数练习1\obj\x86\Debug\_Out参数练习1.pdb

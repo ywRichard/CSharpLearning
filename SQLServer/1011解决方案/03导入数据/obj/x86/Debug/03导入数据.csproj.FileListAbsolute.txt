@@ -1,0 +1,5 @@
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\03导入数据\bin\Debug\03导入数据.exe
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\03导入数据\bin\Debug\03导入数据.pdb
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\03导入数据\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\03导入数据\obj\x86\Debug\03导入数据.exe
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\03导入数据\obj\x86\Debug\03导入数据.pdb

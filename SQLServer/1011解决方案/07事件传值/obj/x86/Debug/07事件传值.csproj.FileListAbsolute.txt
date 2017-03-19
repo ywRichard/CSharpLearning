@@ -1,0 +1,10 @@
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\07事件传值\bin\Debug\07事件传值.exe
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\07事件传值\bin\Debug\07事件传值.pdb
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\07事件传值\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\07事件传值\obj\x86\Debug\_07事件传值.Form1.resources
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\07事件传值\obj\x86\Debug\_07事件传值.Form2.resources
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\07事件传值\obj\x86\Debug\_07事件传值.Properties.Resources.resources
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\07事件传值\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\07事件传值\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\07事件传值\obj\x86\Debug\07事件传值.exe
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\07事件传值\obj\x86\Debug\07事件传值.pdb

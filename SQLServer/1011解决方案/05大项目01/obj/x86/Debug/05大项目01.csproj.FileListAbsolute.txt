@@ -1,0 +1,11 @@
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\05大项目01\bin\Debug\05大项目01.exe.config
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\05大项目01\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\05大项目01\obj\x86\Debug\_05大项目01.Form1.resources
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\05大项目01\obj\x86\Debug\_05大项目01.Properties.Resources.resources
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\05大项目01\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\05大项目01\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\05大项目01\bin\Debug\05大项目01.exe
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\05大项目01\bin\Debug\05大项目01.pdb
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\05大项目01\obj\x86\Debug\05大项目01.exe
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\05大项目01\obj\x86\Debug\05大项目01.pdb
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\05大项目01\obj\x86\Debug\_05大项目01.Form2.resources

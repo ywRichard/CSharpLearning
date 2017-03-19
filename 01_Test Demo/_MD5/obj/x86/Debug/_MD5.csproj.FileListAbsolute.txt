@@ -1,5 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_MD5\bin\Debug\_MD5.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_MD5\bin\Debug\_MD5.pdb
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_MD5\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_MD5\obj\x86\Debug\_MD5.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_MD5\obj\x86\Debug\_MD5.pdb

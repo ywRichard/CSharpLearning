@@ -1,5 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\Test Demo\My Second Demo\bin\Debug\My Second Demo.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\My Second Demo\bin\Debug\My Second Demo.pdb
-C:\Users\Richard\Documents\My Test Demo\Test Demo\My Second Demo\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\Test Demo\My Second Demo\obj\x86\Debug\My Second Demo.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\My Second Demo\obj\x86\Debug\My Second Demo.pdb

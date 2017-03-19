@@ -2,3 +2,5 @@ C:\Users\S2I\Desktop\CSharpLearning\01_CSharpDemo\019_Initializer\bin\Debug\019_
 C:\Users\S2I\Desktop\CSharpLearning\01_CSharpDemo\019_Initializer\bin\Debug\019_Initializer.pdb
 C:\Users\S2I\Desktop\CSharpLearning\01_CSharpDemo\019_Initializer\obj\x86\Debug\019_Initializer.exe
 C:\Users\S2I\Desktop\CSharpLearning\01_CSharpDemo\019_Initializer\obj\x86\Debug\019_Initializer.pdb
+Z:\Documents\GitHub\CSharpLearning\01_CSharpDemo\019_Initializer\obj\x86\Debug\019_Initializer.exe
+Z:\Documents\GitHub\CSharpLearning\01_CSharpDemo\019_Initializer\obj\x86\Debug\019_Initializer.pdb

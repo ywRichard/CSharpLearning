@@ -1,0 +1,10 @@
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\04省市联动\bin\Debug\04省市联动.exe.config
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\04省市联动\bin\Debug\04省市联动.exe
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\04省市联动\bin\Debug\04省市联动.pdb
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\04省市联动\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\04省市联动\obj\x86\Debug\_04省市联动.Form1.resources
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\04省市联动\obj\x86\Debug\_04省市联动.Properties.Resources.resources
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\04省市联动\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\04省市联动\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\04省市联动\obj\x86\Debug\04省市联动.exe
+C:\Users\yao\Desktop\SqlDemo\1011解决方案\04省市联动\obj\x86\Debug\04省市联动.pdb

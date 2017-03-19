@@ -1,7 +1,0 @@
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\02_外设读取\bin\Debug\02_外设读取.exe
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\02_外设读取\bin\Debug\02_外设读取.pdb
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\02_外设读取\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\02_外设读取\obj\x86\Debug\02_外设读取.exe
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\02_外设读取\obj\x86\Debug\02_外设读取.pdb
-C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\02_外设读取\obj\x86\Debug\02_外设读取.exe
-C:\Users\S2I\Desktop\CSharpLearning\02_CSharpReview\02_外设读取\obj\x86\Debug\02_外设读取.pdb

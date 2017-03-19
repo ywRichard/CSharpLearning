@@ -1,5 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_StreamRead+Write\bin\Debug\_StreamRead+Write.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_StreamRead+Write\bin\Debug\_StreamRead+Write.pdb
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_StreamRead+Write\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_StreamRead+Write\obj\x86\Debug\_StreamRead+Write.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_StreamRead+Write\obj\x86\Debug\_StreamRead+Write.pdb

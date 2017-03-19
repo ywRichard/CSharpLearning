@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectDB", "ConnectDB\ConnectDB.csproj", "{1C4823F0-5E97-4932-AFA3-D476A5131652}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "连接字符串3", "连接字符串3\连接字符串3.csproj", "{16252C42-2B6E-4B5F-843D-845B94C60F9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "连接字符串2", "连接字符串2\连接字符串2.csproj", "{728C5330-8551-4812-AEF5-0067AA1B698A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C4823F0-5E97-4932-AFA3-D476A5131652}.Debug|x86.ActiveCfg = Debug|x86
+		{1C4823F0-5E97-4932-AFA3-D476A5131652}.Debug|x86.Build.0 = Debug|x86
+		{1C4823F0-5E97-4932-AFA3-D476A5131652}.Release|x86.ActiveCfg = Release|x86
+		{1C4823F0-5E97-4932-AFA3-D476A5131652}.Release|x86.Build.0 = Release|x86
+		{16252C42-2B6E-4B5F-843D-845B94C60F9C}.Debug|x86.ActiveCfg = Debug|x86
+		{16252C42-2B6E-4B5F-843D-845B94C60F9C}.Debug|x86.Build.0 = Debug|x86
+		{16252C42-2B6E-4B5F-843D-845B94C60F9C}.Release|x86.ActiveCfg = Release|x86
+		{16252C42-2B6E-4B5F-843D-845B94C60F9C}.Release|x86.Build.0 = Release|x86
+		{728C5330-8551-4812-AEF5-0067AA1B698A}.Debug|x86.ActiveCfg = Debug|x86
+		{728C5330-8551-4812-AEF5-0067AA1B698A}.Debug|x86.Build.0 = Debug|x86
+		{728C5330-8551-4812-AEF5-0067AA1B698A}.Release|x86.ActiveCfg = Release|x86
+		{728C5330-8551-4812-AEF5-0067AA1B698A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
