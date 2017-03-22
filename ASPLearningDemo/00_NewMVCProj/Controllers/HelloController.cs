@@ -28,10 +28,17 @@ namespace _00_NewMVCProj.Controllers
         //    return "Welcome!";
         //}
 
-        public string Welcome(string name = "China")
+        //public string Welcome(string name = "China")
+        //{
+        //    return "Welcome" + Server.HtmlEncode(name);
+        //    //return "Welcome" + HttpUtility.HtmlEncode(name);
+        //}
+
+        public ActionResult Welcome(string name ="binghai Middle School", int numTimes = 2)
         {
-            return "Welcome" + Server.HtmlEncode(name);
-            //return "Welcome" + HttpUtility.HtmlEncode(name);
+            ViewBag.Message = "Hello"+name;
+            ViewBag.NumTimes = numTimes;
+            return View();
         }
 	}
 }
