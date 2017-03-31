@@ -15,57 +15,11 @@ namespace _00_NewMVCProj.Controllers
         private MovieDBContext db = new MovieDBContext();
 
         // GET: /Movie/
-        //public ActionResult Index()
-        //{
-        //    return View(db.Movies.ToList());
-        //}
-
-        #region //用参数搜索
-        public ActionResult Index(string movieGenre, string searchString)//用参数搜索
+        public ActionResult Index()
         {
-            var GenreList = new List<string>();
-            var GenreQuery = from m in db.Movies
-                             orderby m.Genre
-                             select m.Genre;
-
-            GenreList.AddRange(GenreQuery.Distinct());
-            ViewBag.movieGenre = new SelectList(GenreList);
-
-            var movies = from m in db.Movies
-                         select m;
-
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                movies = movies.Where(s => s.title.Contains(searchString));
-            }
-            if (!String.IsNullOrEmpty(movieGenre))
-            {
-                movies = movies.Where(s => s.Genre == movieGenre);
-            }
-            return View(movies);
+            return View(db.Movies.ToList());
         }
-        #endregion
 
-        [HttpPost]
-        public string Index(FormCollection fc, string searchString)
-        {
-            return "<h3> From [HttpPost] Index " + searchString + " </h3>";
-        }
-        #region 用路由ID搜索
-        //public ActionResult Index(string Id)//用路由ID搜索
-        //{
-        //    string searchString = Id;
-
-        //    var movies = from m in db.Movies
-        //                 select m;
-        //    if (!String.IsNullOrEmpty(searchString))
-        //    {
-        //        movies = movies.Where(s => s.title.Contains(searchString));
-        //    }
-
-        //    return View(movies);
-        //}
-        #endregion
         // GET: /Movie/Details/5
         public ActionResult Details(int? id)
         {
@@ -92,7 +46,7 @@ namespace _00_NewMVCProj.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,title,ReleaseDate,Genre,Price")] Movie movie)
+        public ActionResult Create([Bind(Include="ID,title,ReleaseDate,Genre,Price")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -124,7 +78,7 @@ namespace _00_NewMVCProj.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,title,ReleaseDate,Genre,Price")] Movie movie)
+        public ActionResult Edit([Bind(Include="ID,title,ReleaseDate,Genre,Price")] Movie movie)
         {
             if (ModelState.IsValid)
             {
