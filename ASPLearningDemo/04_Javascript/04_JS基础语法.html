@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        /*----------------for循环-------------------*/
+        //var sum = 0;
+        //for (var i = 0; i < 100; i++) {
+        //    sum = sum + i;
+        //}
+        //alert(sum);
+
+        //==和===
+        //var n1 = 10;
+        //var n2 = '10';
+        //alert(n1 == n2);
+        //alert(n1 === n2);
+
+        //var n1 = true;
+        //var n2 = 'false';
+        //alert(n1 == n2);
+        //alert(n1 === n2);
+
+        //var n1 = null;
+        //var n2;
+        //alert(n1 == n2);
+        //alert(n1 === n2);
+
+        /*------switch内部使用的是===（严格等于）来判断------*/
+        //var s = 123;
+        //switch (s) {
+        //    case '123':
+        //        alert('等于字符串123');
+        //        break;
+        //    case 123:
+        //        alert('等于数字123');
+        //        break;
+        //    default:
+        //        alert('判断失败');
+        //        break;
+        //}
+        //var s = 123;
+
+        /*----------------undefined---------------*/
+        //1.变量声明了，但未赋值，值为
+        //var s;
+        //alert(s);
+        ////2.未声明的变量，通过typeof()，返回
+        ////使用未声明的变量，浏览器会报错。可以先检验变量
+        //if (typeof(w)=='undefined') {
+        //    alert('变量不可用！');
+        //} else {
+        //    alert(w);
+        //}
+        ////3.方法没有返回值时，返回
+        //var n = func1();
+        //alert(typeof (n));
+
+        //function func1() {
+
+        //}
+
+        /*----------------null---------------*/
+        //null是一个指向为空的有意义的值，
+        //在对象调用结束之后可以将对象赋值为null，释放对象，垃圾回收机制回收内存。
+        //变量不是null或者undefined，即可用
+        //var m= null;
+        //if (m==null||m=='undefined') {
+        //    alert('变量不可用');
+        //} else {
+        //    alert('变量可用，'+m);
+        //}
+
+        /*----------------作用域---------------*/
+        //js中没有块级作用域范围，(if/ while/ for)
+        //所以在方法内部任何一个地方声明变量，在整个方法内部有效
+        //function func1() {
+        //    var x = 10;
+        //    if (x>5) {
+        //        var y = 20;
+        //        alert(y);//
+        //    }
+        //    alert(y);//可用
+        //}
+        //func1();
+        //alert(y);//报错，未定义
+
+        function func2() {
+            var sum = 0;
+            for (var i = 0; i < 10; i++) {
+                sum = sum + 1;
+            }
+            for (; i < 5; i++) {
+
+            }
+            alert(i);
+        }
+        func2();
+    </script>
+</body>
+</html>

@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace _02_EFCodeFirst
 {
     public class Blog
     {
         public int BlogId { get; set; }
+
+        [StringLength(50)]
         public string Name { get; set; }
         public string Url { get; set; }
 

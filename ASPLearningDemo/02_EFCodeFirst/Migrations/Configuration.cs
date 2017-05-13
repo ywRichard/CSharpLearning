@@ -10,7 +10,7 @@ namespace _02_EFCodeFirst.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            //ContextKey = "_02_EFCodeFirst.BloggingContext";
+            ContextKey = "_02_EFCodeFirst.BloggingContext";
         }
 
         protected override void Seed(_02_EFCodeFirst.BloggingContext context)

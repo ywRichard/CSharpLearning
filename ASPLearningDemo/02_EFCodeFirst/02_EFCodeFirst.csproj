@@ -60,6 +60,10 @@
     <Compile Include="Migrations\201704051051101_AddUrl.Designer.cs">
       <DependentUpon>201704051051101_AddUrl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704060837328_AddAnnotion.cs" />
+    <Compile Include="Migrations\201704060837328_AddAnnotion.Designer.cs">
+      <DependentUpon>201704060837328_AddAnnotion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
     <Compile Include="Program.cs" />
@@ -75,6 +79,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704051051101_AddUrl.resx">
       <DependentUpon>201704051051101_AddUrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704060837328_AddAnnotion.resx">
+      <DependentUpon>201704060837328_AddAnnotion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

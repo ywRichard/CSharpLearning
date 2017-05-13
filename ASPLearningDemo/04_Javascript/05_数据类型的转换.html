@@ -1,0 +1,65 @@
+﻿ <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        ////1.那字符串转换为数字类型
+        //var n = '101';
+        //n = parseInt(n);
+        //alert(n + 2);
+
+        ////var m = 'p123asdf';//NaN: Not a Number。也是一种Number类型
+        //var m = '123ad';
+        //m = parseInt(m);
+        //alert(typeof (m));
+        //alert(m + 2);
+
+        ////2.将字符串数字装换成8进制
+        //var k = '15';
+        //k = parseInt(k, 8);
+        //alert(k);
+
+        ////3.字符串转换浮点数
+        //var j = 45.67;
+        //alert(parseInt(j));
+        //alert(parseFloat(j));
+
+        ////4.将任意类型转换数字类型
+        ////先判断是否为一个完整的数字，不是——>NaN
+        //alert(Number('99.3'));
+        //alert(Number('a99.3'));
+        //alert(Number(true));
+        //alert(Number(false));
+        //alert(Number(null));
+        //alert(Number(undefined));
+        //alert(Number(new Object()));
+        ////判断一个值是不是NaN，不能用==或者！=。要用isNan()
+        var n = parseInt('a134c');
+        if (isNaN(n)) {
+            alert('不是NaN');
+        } else {
+            alert('是NaN');
+        }
+
+        ////5.任意类型转换为Boolean类型
+        ////被转换对象只要不是非空，就是true；否则false
+        //alert('99.3:' + Boolean(99.3));
+        //alert('0:' + Boolean(0));
+        //alert('null:' + Boolean(null));
+        //alert('hello:' + Boolean('hello'));
+        //alert('new Object:' + Boolean(new Object));
+        //alert('NaN:' + Boolean(NaN));
+
+        ////5.任意类型转换为String类型，类似.toString();
+        //var n=123;
+        //n=n.toString()
+        //alert(typeof(n)+':'+n);
+        //alert(String(123));
+        //alert(String(null));
+        //alert(null.toString());//调用失败
+
+    </script>
+</body>
+</html>
