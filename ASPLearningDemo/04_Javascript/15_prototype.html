@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        /*****************1、原型对象 prototype******************/
+        /*由同一个构造函数创建的对象，在内存上都是一个完全独立的对象，对象和对象之间没有关系。类似于C#中的对象
+        优点：实现了数据安全。
+        缺点：由于新建一个对象都会在内存中单独开一块内存保存所有，所以对于一切可以重用的函数就会被反复保存，造成内存浪费。
+        所以可以将可重用的函数保存到ptototype中，实现类的继承
+        */
+        //function Person(name, age, email) {
+        //    this.user_name = name;
+        //    this.user_age = age;
+        //    this.user_email = email;
+        //}
+
+        ////在原型对象中增加一个sayHi方法
+        //Person.prototype.sayHi = function () {
+        //    alert(this.user_name + '  ' + this.user_age + '   ' + this.user_email);
+        //}
+
+        //var p1 = new Person("紫衫龙王", 45, 'zsdragon@163.com');
+        //p1.sayHi();
+        //var p2 = new Person("白眉鹰王", 68, 'bmbird@163.com');
+        //p2.sayHi();
+
+        /*****************2、原型对象中的成员是只读的******************/
+        function Person(name) {
+            this.user_name = name;
+        }
+
+        Person.prototype.user_email = 'sample@163.com';
+        Person.prototype.friends = ['张三', '李四', '王五'];
+        Person.prototype.sayHi = function () {
+            alert('大家好，我是' + this.user_name + '，我的邮箱是：' + this.user_email);
+        }
+
+        var p1 = new Person('田七');
+        //并未更改原型对象中的内容，而是在p1对象中新增了user_email并赋值'tianqi@163.com'，然后p1.sayHi调用。
+        p1.user_email = 'tianqi@163.com';
+        p1.friends[0] = '我要看看';//__proto__.friend=['我要看看', '李四', '王五']，引用类型在原型对象中储存的是内存地址，该操作没有更改内存地址（只读），而是更改了地址指向的内容。
+        //p1.friends = ['你妹', '李四', '王五'];//在p1对象中新增friends=['你妹', '李四', '王五']，原型类型中的friends未变。
+        p1.friends = ['你妹', '草泥马', '草泥大爷'];//同上，在对象中新增friends。
+
+        alert(p1.friends);
+        p1.sayHi();
+
+        var p2 = new Person('王八');
+        p2.sayHi();
+    </script>
+</body>
+</html>
