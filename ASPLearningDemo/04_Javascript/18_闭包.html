@@ -9,7 +9,7 @@
         //闭包由作用域链实现，
 
         //function Person(name) {
-        //    this.user_name = name;
+          //    this.user_name = name;
 
         //    //通过这种方式可以模拟私有成员
         //    var user_age = 18;//没有用this.，不能被外部访问；类似于私有成员
@@ -45,22 +45,40 @@
         //fn();//x=101;
 
         ///***************思考题二*******************/
-        var x = 100;
+        //var x = 100;
 
+        //function f1() {
+        //    var y = 12;
+
+        //    alert(x);//x调用了外层作用域的x=100；
+        //    alert(y);//y=12
+        //    return function f2() {
+        //        var y = 22;
+        //        alert(x);//x=100
+        //        alert(y);//y=22
+        //    }
+        //}
+
+        //var fn = f1();
+        //fn();
+
+        /***************思考题三*******************/
         function f1() {
-            var y = 12;
+            var funs = new Array();
 
-            alert(x);//x调用了外层作用域的x=100；
-            alert(y);//y=12
-            return function f2() {
-                var y = 22;
-                alert(x);//x=100
-                alert(y);//y=22
+            for (var i = 0; i < 5; i++) {
+                funs[i] = function () {
+                    alert(i);
+                }
             }
+            return funs;
         }
 
-        var fn = f1();
-        fn();
+        var myFuns = f1();
+
+        for (var n = 0; n < myFuns.length; n++) {
+            myFuns[n](n);
+        }
 
     </script>
 </body>
