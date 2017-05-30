@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        //window.onload = function () {
+        //    document.getElementById('btn1').onclick = function () {
+        //        //在事件处理程序中，当前事件是那个元素的事件，那么this表示的就是那个对象
+        //        //在当前的按钮的单击事件中this表示的就是btn1这个按钮
+        //        alert(this.value + '  ,   ' + this.id + ' ,   ' + this.type + '   ,   ' + this.name);
+
+        //        //在事件处理函数使用window.event.srcElement, 看起来与直接使用this差不多。但事实上两者不相同的。
+        //        alert(window.event.srcElement.value + '  ,   ' + window.event.srcElement.id + ' ,   ' + window.event.srcElement.type + '   ,   ' + window.event.srcElement.name);
+        //        alert(this + '===' + window.event.srcElement);
+        //    }
+        //}
+        /***************事件冒泡*****************/
+        //事件冒泡：当某个元素的事件被触发之后，从当前元素的该事件到包含它的最外层元素的相同事件会被由内向外依次触发。
+        window.onload = function () {
+            document.getElementById('dv').onclick = function () {
+                alert(this.id);//表示当前引发事件的对象
+                //alert(window.event.srcElement.id);//一直表示最初引发事件的对象，冒泡继续,只兼容IE
+                
+            }
+
+            document.getElementById('p1').onclick = function (e) {
+                alert(this.id);
+                //alert(window.event.srcElement.id);
+                //window.event.cancelBubble = true;//阻止事件冒泡，从当前元素开始，只兼容IE
+
+                //兼容FF的写法
+                var evt = window.event || e;
+                //evt.cancelBubble = true;
+                //evt.stopPropagation();
+            }
+
+            document.getElementById('sp1').onclick = function (e) {
+                /******************兼容的写法，获取最初引发事件的对象*******************/
+                var evt = window.event || e;
+                //e.srcElement;//IE
+                //e.target;//FF
+                //获得最初引发事件的对象
+                var srcTarget = e.srcElement || e.target;
+
+                //alert(this.id);//不兼容FF
+                //alert(window.event.srcElement.id);
+            }
+
+            document.getElementById('body1').onclick = function () {
+                alert(this.id);
+                //alert(window.event.srcElement.id);
+            }
+        }    
+    </script>
+
+    <style type="text/css">
+        #dv{
+            width:200px;
+            height:200px;
+            background-color:blue;
+        }
+        #p1{
+            width:180px;
+            height:100px;
+            background-color:red;
+        }
+        #sp1{
+            background-color:yellow;
+            color:purple;
+        }
+    </style>
+</head>
+<body id="body1">
+    <!--<input type="button" name="name" value="这是个按钮" id="btn1" />-->
+    <div id="dv">
+        <p id="p1">
+            <span id="sp1">三国群英传之大闹乌巢</span>
+        </p>
+    </div>
+</body>
+</html>
