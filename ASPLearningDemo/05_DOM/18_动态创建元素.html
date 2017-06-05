@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        #dv1{
+            width:450px;
+            height:450px;
+            border:1px solid blue;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            document.getElementById('btn1').onclick = function () {
+                //1.动态创建一个超链接，并显示在div中
+                var aLink = document.createElement('a');
+                aLink.href = 'http://www.baidu.com';
+                aLink.title = '我写的title';
+                aLink.target = '_blank';
+                //3.innerText:兼容IE；textContents:兼容FF的写法; 这两种写法目前貌似都兼容了。
+                //aLink.innerText = 'innerText的百度';
+                //aLink.textContent = '兼容火狐的热文字';
+                //学习兼容写法
+                if (typeof (aLink.innerText) == 'string') {
+                    //变量为undefined，false; string类型变量为空，false.
+                    aLink.innerText = 'innerText的百度';
+                } else if (aLink.contentText) {
+                    aLink.textContent = '兼容火狐的热文字';
+                }
+
+                
+                //2、添加动态创建的元素到网页上
+                //appendChild()表示追加到div的内部
+                //insertBefore()表示添加到前面
+                //document.getElementById('dv1').appendChild(aLink);
+                document.getElementById('dv1').insertBefore(aLink, document.getElementById('dv1').firstChild);
+
+                /*********************添加文本框***********************/
+                var txtObj = document.createElement('input');
+                txtObj.type = 'text';
+                //document.getElementById('dv1').appendChild(txtObj);
+                document.getElementById('dv1').insertBefore(txtObj, document.getElementById('dv1').firstChild);
+            };
+            document.getElementById('btn2').onclick = function () {
+                //获取层
+                var dv1Obj = document.getElementById('dv1');
+                //获取层中的第一个元素,然后删除；依次删除，直到结束
+                while(dv1Obj.firstChild){
+                    dv1Obj.removeChild(dv1Obj.firstChild);
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <input type="button" name="name" value="动态创建元素" id="btn1" />
+    <input type="button" name="name" value="清空动态创建的元素" id="btn2" />
+    <div id="dv1">
+        这是层中的默认内容
+        <p>哈哈</p>
+        <input type="radio" name="name" value=" " />
+        <input type="button" name="name" value="button" />
+    </div>
+</body>
+</html>
