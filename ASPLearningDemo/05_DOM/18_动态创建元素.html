@@ -17,18 +17,19 @@
                 aLink.href = 'http://www.baidu.com';
                 aLink.title = '我写的title';
                 aLink.target = '_blank';
+
                 //3.innerText:兼容IE；textContents:兼容FF的写法; 这两种写法目前貌似都兼容了。
-                //aLink.innerText = 'innerText的百度';
-                //aLink.textContent = '兼容火狐的热文字';
+                //两个属性的作用：设置一对标签的开始和结束之间的内容。
+                //aLink.innerText = 'innerText的百度';//添加两个标签中间的热点文字
+                //aLink.textContent = '兼容火狐的热文字';//FF下类似interText的属性
                 //学习兼容写法
                 if (typeof (aLink.innerText) == 'string') {
                     //变量为undefined，false; string类型变量为空，false.
                     aLink.innerText = 'innerText的百度';
-                } else if (aLink.contentText) {
+                } else if (typeof(aLink.contentText)) {
                     aLink.textContent = '兼容火狐的热文字';
                 }
-
-                
+            
                 //2、添加动态创建的元素到网页上
                 //appendChild()表示追加到div的内部
                 //insertBefore()表示添加到前面
