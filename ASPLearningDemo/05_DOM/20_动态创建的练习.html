@@ -42,8 +42,6 @@
         //练习二：无刷新评论
         window.onload = function () {
             document.getElementById('btn2').onclick = function () {
-                //创建行
-
                 //创建列并添加内容
                 var td1Obj = document.createElement('td');
                 td1Obj.innerHTML = document.getElementById('txt1').value;
@@ -55,9 +53,9 @@
                 trObj.appendChild(td2Obj);
                 //将行添加到表格
                 document.getElementById('tblComments').appendChild(trObj);
-
             };
         };
+
     </script>
 </head>
 <body>

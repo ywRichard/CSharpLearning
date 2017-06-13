@@ -46,9 +46,12 @@
                 //获取层
                 var dv1Obj = document.getElementById('dv1');
                 //获取层中的第一个元素,然后删除；依次删除，直到结束
-                while(dv1Obj.firstChild){
+                while (dv1Obj.firstChild) {
+                    //该方法可以将内容和联系都删除
                     dv1Obj.removeChild(dv1Obj.firstChild);
                 }
+                //删除动态创建元素的第二种方法，将标签之间的内容清除，缺点不能删除元素之间的关联
+                dv1Obj.innerHTML = '';
             }
         };
     </script>
