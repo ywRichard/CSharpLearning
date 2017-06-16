@@ -33,6 +33,10 @@ namespace _27_拉姆达表达式案例
             //Func<int,int,int> Count = delegate(int n1, int n2) { return (n1 * n2); };//匿名方法
             //int n = Count(10, 2);
 
+            //bool为返回值类型，Func<>最后一个参数为返回值类型
+            Func<int, int, bool> Count = delegate (int n1, int n2) { return (n1 == n2); };
+            Console.WriteLine(Count(5,5));
+
             //Func<int, int> Count = x => x * 10;//Func<>，拉姆达表达式
             //int n = Count(10);
             //Console.WriteLine(n.ToString()); 

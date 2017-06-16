@@ -64,11 +64,11 @@ namespace _004_StringMethds
             //}
             //Console.ReadKey();
 
-            string str = "q   qw   df-- ff +++sdfsdf.....";
-            char[] chs = { ' ', '-', '+', '.' };
+            //string str = "q   qw   df-- ff +++sdfsdf.....";
+            //char[] chs = { ' ', '-', '+', '.' };
 
-            string[] str1 = str.Split(chs, StringSplitOptions.RemoveEmptyEntries);
-            Console.ReadKey();
+            //string[] str1 = str.Split(chs, StringSplitOptions.RemoveEmptyEntries);
+            //Console.ReadKey();
 
             //string str = "2008-08-08";
             //char[] chs = { '-' };
@@ -77,6 +77,11 @@ namespace _004_StringMethds
 
             //Console.WriteLine("{0}年{1}月{2}日", date[0], date[1], date[2]);
             //Console.ReadKey();
+
+            string ID = "P1";
+            Console.WriteLine(ID.Remove(0, 1));
+            
+            Console.ReadKey();
         }
     }
 }

@@ -2,3 +2,8 @@ C:\Users\S2I\Desktop\CSharpLearning\01_CSharpDemo\104_LamdaCase\obj\x86\Debug\27
 C:\Users\S2I\Desktop\CSharpLearning\01_CSharpDemo\104_LamdaCase\obj\x86\Debug\27_拉姆达表达式案例.pdb
 C:\Users\S2I\Desktop\CSharpLearning\01_CSharpDemo\104_LamdaCase\bin\Debug\27_拉姆达表达式案例.exe
 C:\Users\S2I\Desktop\CSharpLearning\01_CSharpDemo\104_LamdaCase\bin\Debug\27_拉姆达表达式案例.pdb
+C:\Users\S2I\Desktop\01_CSharpDemo\104_LamdaCase\obj\x86\Debug\27_拉姆达表达式案例.exe
+C:\Users\S2I\Desktop\01_CSharpDemo\104_LamdaCase\obj\x86\Debug\27_拉姆达表达式案例.pdb
+C:\Users\S2I\Desktop\01_CSharpDemo\104_LamdaCase\bin\Debug\27_拉姆达表达式案例.exe
+C:\Users\S2I\Desktop\01_CSharpDemo\104_LamdaCase\bin\Debug\27_拉姆达表达式案例.pdb
+C:\Users\S2I\Desktop\01_CSharpDemo\104_LamdaCase\obj\x86\Debug\104_LamdaCase.csprojResolveAssemblyReference.cache
