@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        //三个文本框，光标离开文本框是有内容设置背景为红，没有内容设置背景为绿。
+        
+        window.onload = function () {
+            var objText = document.getElementById('txt1');
+            objText.onblur = MouseFocus(objText);
+            //objText.onblur = function () {
+            //    if (objText.Value != " ") {
+            //        objText.style.backgroundColor = "red";
+            //    }
+            //};
+
+            function MouseFocus(obj) {
+                if (obj.Value != "") {
+                    obj.style.backgroundColor = "red";
+                } else {
+                    obj.style.backgroundColor = "green";
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <input type="text" name="name" value=" " id="txt1" />
+    <br />
+    <input type="text" name="name" value=" " id="txt2" />
+    <br />
+    <input type="text" name="name" value=" " id="txt3" />
+</body>
+</html>
