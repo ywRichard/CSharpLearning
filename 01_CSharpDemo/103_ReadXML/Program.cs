@@ -11,16 +11,16 @@ namespace ReadXML
         static void Main(string[] args)
         {
             #region
-            XDocument xdoc = XDocument.Load(@"C:\Users\S2I\Desktop\read.xml");
+            //XDocument xdoc = XDocument.Load(@"C:\Users\S2I\Desktop\read.xml");
 
-            IEnumerable<XElement> eles = xdoc.Elements();
+            //IEnumerable<XElement> eles = xdoc.Elements();
 
-            foreach (var item in eles)
-            {
-                Console.WriteLine(item.Name);
-            }
+            //foreach (var item in eles)
+            //{
+            //    Console.WriteLine(item.Name);
+            //}
 
-            Console.WriteLine(xdoc.Root);
+            //Console.WriteLine(xdoc.Root);
             #endregion
 
             #region Root
@@ -47,6 +47,22 @@ namespace ReadXML
             //        //Console.WriteLine(elesStudent.FirstNode);//Student元素第一个节点
             //    }
             //}
+            #endregion
+
+            #region Test Element Value
+            var xml = @"<Project>
+                            <Labels>
+                                <State></State>
+                                <State>2</State>
+                                <State>3</State>
+                                <State>4</State>
+                                <State></State>
+                            </Labels>
+                        </Project>";
+            var element = XElement.Parse(xml);
+
+            element.Elements().ToList().ForEach(child => Console.WriteLine("Name:{0}; Value:{1}", child.Name.LocalName, child.Value));
+            Console.ReadLine();
             #endregion
 
             Console.ReadLine();

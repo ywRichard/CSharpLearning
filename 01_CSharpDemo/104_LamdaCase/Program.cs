@@ -24,7 +24,7 @@ namespace _27_拉姆达表达式案例
 
             #region Action使用方法---声明不带返回值的委托
             //Action Show = delegate() { Console.WriteLine("无参的匿名方法"); };//匿名方法
-            //Action Show = () => Console.Write("Action 是无参的delegate");//拉姆达表达式
+            //action show = () => console.write("action 是无参的delegate");//拉姆达表达式
 
             //Show(); 
             #endregion
@@ -35,7 +35,7 @@ namespace _27_拉姆达表达式案例
 
             //bool为返回值类型，Func<>最后一个参数为返回值类型
             Func<int, int, bool> Count = delegate (int n1, int n2) { return (n1 == n2); };
-            Console.WriteLine(Count(5,5));
+            Console.WriteLine(Count(5, 5));
 
             //Func<int, int> Count = x => x * 10;//Func<>，拉姆达表达式
             //int n = Count(10);

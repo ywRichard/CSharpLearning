@@ -14,7 +14,7 @@ namespace _004_string
         {
             //道墟排列的方法
             //第一题“abc-cba”
-            
+
 
             #region 方法一:for循环倒序排列
             //string str = "abc";
@@ -35,8 +35,8 @@ namespace _004_string
 
             #endregion
 
+            #region 句子顺序不变，单词倒序
             //I Love You- I evoL ouY---重点是句子顺序不变，单词倒序。
-
             string str = "I Love You";
 
             string[] strArray = str.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
@@ -47,24 +47,41 @@ namespace _004_string
             }
 
             string newStr = string.Join(" ", strArray);
-
             Console.WriteLine(newStr);
+            #endregion
+
+            #region 
+            var version = "6.2.4";
+            var initialPanelID = "P1";
+            var fakeDocument = string.Format(
+                @"<Project Version= ""{0}"" >
+                    <TargetProperties InitialPanelID = ""{1}""></TargetProperties>
+                    <Target>
+                        <GraphicalPanels>
+                            <BasePanels></BasePanels>
+                        </GraphicalPanels>
+                    </Target>
+                </Project>", version, initialPanelID);
+
+
+            Console.WriteLine(fakeDocument);
+            #endregion
 
             Console.ReadLine();
         }
 
-            private static string ReversString(string str)
+        private static string ReversString(string str)
+        {
+            char[] strChar = str.ToCharArray();
+
+            for (int i = 0; i < strChar.Length / 2; i++)
             {
-                char[] strChar = str.ToCharArray();
-
-                for (int i = 0; i < strChar.Length/2; i++)
-                {
-                    char temp = strChar[i];
-                    strChar[i] = strChar[strChar.Length - 1 - i];
-                    strChar[strChar.Length - 1 - i] = temp;
-                }
-
-                return new string(strChar);
+                char temp = strChar[i];
+                strChar[i] = strChar[strChar.Length - 1 - i];
+                strChar[strChar.Length - 1 - i] = temp;
             }
+
+            return new string(strChar);
+        }
     }
 }

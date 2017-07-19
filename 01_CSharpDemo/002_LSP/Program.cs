@@ -25,65 +25,69 @@ namespace _002_LSP
             //ss.StudentSayHello();
             //Console.ReadKey();
             #region MyRegion
-	        Person[] per = new Person[10];
-            Random r = new Random();
+            //Person[] per = new Person[10];
+            //   Random r = new Random();
 
-            for (int i = 0; i < 10; i++)
-            {
-                int index = r.Next(1, 7);
-                switch (index)
-                {
-                    case 1:
-                        per[i] = new Person();
-                        break;
-                    case 2:
-                        per[i] = new Student();
-                        break;
-                    case 3:
-                        per[i] = new Teacher();
-                        break;
-                    case 4:
-                        per[i] = new ShuaiGuo();
-                        break;
-                    case 5:
-                        per[i] = new MeiLv();
-                        break;
-                    case 6:
-                        per[i] = new Animal();
-                        break;
-                    default: break;
-                }
-            }
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    int index = r.Next(1, 7);
+            //    switch (index)
+            //    {
+            //        case 1:
+            //            per[i] = new Person();
+            //            break;
+            //        case 2:
+            //            per[i] = new Student();
+            //            break;
+            //        case 3:
+            //            per[i] = new Teacher();
+            //            break;
+            //        case 4:
+            //            per[i] = new ShuaiGuo();
+            //            break;
+            //        case 5:
+            //            per[i] = new MeiLv();
+            //            break;
+            //        case 6:
+            //            per[i] = new Animal();
+            //            break;
+            //        default: break;
+            //    }
+            //}
 
-            for (int i = 0; i < per.Length; i++)
-            {
-                if (per[i] is Student)
-                {
-                    ((Student)per[i]).StudentSayHello();
-                }
-                else if (per[i] is Teacher)
-                {
-                    ((Teacher)per[i]).TeacherSayHello();
-                }
-                else if (per[i] is ShuaiGuo)
-                {
-                    ((ShuaiGuo)per[i]).ShuaiGuoSayHello();
-                }
-                else if (per[i] is MeiLv)
-                {
-                    ((MeiLv)per[i]).MeiLvSayHello();
-                }
-                else if (per[i] is Animal)
-                {
-                    ((Animal)per[i]).AnimalSayHello();
-                }
-                else
-                {
-                    ((Person)per[i]).SayHello();
-                }
-            }
+            //for (int i = 0; i < per.Length; i++)
+            //{
+            //    if (per[i] is Student)
+            //    {
+            //        ((Student)per[i]).StudentSayHello();
+            //    }
+            //    else if (per[i] is Teacher)
+            //    {
+            //        ((Teacher)per[i]).TeacherSayHello();
+            //    }
+            //    else if (per[i] is ShuaiGuo)
+            //    {
+            //        ((ShuaiGuo)per[i]).ShuaiGuoSayHello();
+            //    }
+            //    else if (per[i] is MeiLv)
+            //    {
+            //        ((MeiLv)per[i]).MeiLvSayHello();
+            //    }
+            //    else if (per[i] is Animal)
+            //    {
+            //        ((Animal)per[i]).AnimalSayHello();
+            //    }
+            //    else
+            //    {
+            //        ((Person)per[i]).SayHello();
+            //    }
+            //}
+            #endregion
+
+            var child = (Person)new Student();
+            Console.WriteLine(child.GetType().ToString());
+
             Console.ReadKey();
-	        #endregion
         } 
     }
 
