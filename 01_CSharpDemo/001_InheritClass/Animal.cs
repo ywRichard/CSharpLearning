@@ -9,5 +9,10 @@ namespace _001_InheritClass
     {
         public abstract void Eat();
         public abstract void Shout();
+
+        protected string Test()
+        {
+            return "Test Abstract";
+        }
     }
 }

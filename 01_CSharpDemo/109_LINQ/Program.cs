@@ -58,7 +58,23 @@ namespace _108_LINQ
                     new Customer { ID="T", City="Lima", Country="Peru",
                     Region="South America", Sales=2002 }
                 };//For Complicated Object
-            QueryComplicatedObject(customers);
+            List<Order> orders = new List<Order>
+                                    {
+                                        new Order { ID="P", Amount=100 },
+                                        new Order { ID="Q", Amount=200 },
+                                        new Order { ID="R", Amount=300 },
+                                        new Order { ID="S", Amount=400 },
+                                        new Order { ID="T", Amount=500 },
+                                        new Order { ID="U", Amount=600 },
+                                        new Order { ID="V", Amount=700 },
+                                        new Order { ID="W", Amount=800 },
+                                        new Order { ID="X", Amount=900 },
+                                        new Order { ID="Y", Amount=1000 },
+                                        new Order { ID="Z", Amount=1100 }
+                                    };
+
+            JoinSequences(customers, orders);
+
         }
 
         public static void BasicConcept()
@@ -110,7 +126,6 @@ namespace _108_LINQ
                 Console.WriteLine(i);
             }
         }
-
         public static void QueryStep()
         {
             //1.Data Source
@@ -130,7 +145,6 @@ namespace _108_LINQ
 
             }
         }
-
         public static void QueryOperation()
         {
             int[] numbers = { 0, 1, 2, 4, 6, 7 };
@@ -173,7 +187,6 @@ namespace _108_LINQ
             }
             Console.ReadLine();
         }
-
         public static void QueryKeyword()
         {
             List<LocalCustomer> customers = new List<LocalCustomer>();
@@ -273,16 +286,212 @@ namespace _108_LINQ
             return result;
         }
 
+        /// <summary>
+        /// 查询复杂的数据类型->自定义类
+        /// </summary>
         public static void QueryComplicatedObject(List<Customer> customers)
         {
-            var queryResults =
-                from c in customers
-                where c.Region == "Asia"
-                select c;
+            //var queryResults =
+            //    from c in customers
+            //    where c.Region == "Asia"
+            //    select c;
+
+            var queryResults = customers.Where(c => c.Region == "Asia");
 
             foreach (var c in queryResults)
             {
                 Console.WriteLine(c);
+            }
+        }
+
+        /// <summary>
+        /// 在查询中创建返回新的数据类型
+        /// </summary>
+        public static void SelectNewDate(List<Customer> customers)
+        {
+            //var queryResults =
+            //    from c in customers
+            //    where c.Region == "North America"
+            //    select new { c.City, c.Country, c.Sales };
+
+            var queryResults = customers.Where(c => c.Region == "Asia").Select(c => new { c.City, c.Country, c.Sales });
+
+            foreach (var c in queryResults)
+            {
+                Console.WriteLine(c);
+            }
+        }
+
+        /// <summary>
+        /// 单值选择查询 -> 去除查询结果集的重复值
+        /// </summary>
+        public static void DistinctResults(List<Customer> customers)
+        {
+            var queryResults = customers.Select(c => c.Region).Distinct();
+
+            foreach (var c in queryResults)
+            {
+                Console.WriteLine(c);
+            }
+        }
+
+        /// <summary>
+        /// Any -> 在查询结果集中判断是否存在满足条件的值
+        /// </summary>
+        public static void AnyResults(List<Customer> customers)
+        {
+            var queryResults = customers.Any(c => c.Region == "Eroup");
+
+            Console.WriteLine("Query Result:" + queryResults.ToString());
+        }
+
+        /// <summary>
+        /// All -> 在查询结果集中判断是否存在满足条件的值
+        /// </summary>
+        public static void AllResults(List<Customer> customers)
+        {
+            var queryResults = customers.All(c => c.Region == "USA");
+
+            Console.WriteLine("Query Result:" + queryResults.ToString());
+        }
+
+        /// <summary>
+        /// 多级排序 -> region 和city升序排列，country降序排列
+        /// </summary>
+        public static void MultiOrderbyResults(List<Customer> customers)
+        {
+            //var queryResults =
+            //    from c in customers
+            //    orderby c.Region, c.Country descending, c.City
+            //    select new { c.ID, c.Region, c.Country, c.City };
+
+            var queryResults = customers.OrderBy(c => c.Region)
+                                    .ThenByDescending(c => c.Country)
+                                    .ThenBy(c => c.City)
+                                    .Select(c => new { c.ID, c.Region, c.Country, c.City });
+
+            foreach (var r in queryResults)
+            {
+                Console.WriteLine(r.ToString());
+            }
+        }
+
+        /// <summary>
+        /// 分组查询 -> 依据一个键值来对查询结果集分类
+        /// </summary>
+        public static void GroupResults(List<Customer> customers)
+        {
+            var resultQuerys =
+                from c in customers
+                group c by c.Region into cg
+                select new { TotalSales = cg.Sum(c => c.Sales), Region = cg.Key };
+
+            var resultOrders =
+                from cg in resultQuerys
+                orderby cg.TotalSales descending
+                select cg;
+
+            Console.WriteLine("Total\t: By\nSales\t: Region\n------\t ------");
+            foreach (var item in resultOrders)
+            {
+                Console.WriteLine(item.TotalSales + "\t:" + item.Region);
+            }
+        }
+
+        /// <summary>
+        /// Take & Skip ->选取或者跳过结果集的前n项
+        /// </summary>
+        public static void TakeSkipResults(List<Customer> customers)
+        {
+            var queryResults =
+                from c in customers
+                orderby c.Sales descending
+                select new { c.ID, c.City, c.Country, c.Sales };
+
+            foreach (var item in queryResults.Take(5))
+            {
+                Console.WriteLine(item.ToString());
+            }
+
+            Console.WriteLine("--------------------");
+
+            foreach (var item in queryResults.Skip(5))
+            {
+                Console.WriteLine(item.ToString());
+            }
+        }
+
+        /// <summary>
+        /// 获取结果集中第一个符合条件的值
+        /// </summary>
+        public static void FirstResult(List<Customer> customers)
+        {
+            var queryResults =
+                from c in customers
+                select new { c.City, c.Country, c.Region };
+
+            Console.WriteLine("A customer in Africa");
+            Console.WriteLine(queryResults.First(c => c.Region == "Africa"));
+
+            Console.WriteLine("A customer in Antarctica");
+            Console.WriteLine(queryResults.FirstOrDefault(c => c.Region == "Antartica"));
+        }
+
+        /// <summary>
+        /// Set Operator -> 集运算符
+        /// Intersect -> 返回两个结果集的交集
+        /// Except -> 从customerIDs出去orderIDs包含的值。
+        /// Union -> 返回....的合集
+        /// </summary>
+        public static void SetOperatorsResult(List<Customer> customers, List<Order> orders)
+        {
+            var customerIDs =
+                from c in customers
+                select c.ID;
+
+            var orderIDs =
+                from o in orders
+                select o.ID;
+
+            var customersWithOrders = customerIDs.Intersect(orderIDs);
+            Console.WriteLine("Customers ID with Orders ID:");
+            foreach (var item in customersWithOrders)
+            {
+                Console.Write("{0} ", item);
+            }
+            Console.WriteLine();
+
+            var customersNoOrders = customerIDs.Except(orderIDs);
+            Console.WriteLine("Customers ID no Orders ID:");
+            foreach (var item in customersNoOrders)
+            {
+                Console.Write("{0} ", item);
+            }
+            Console.WriteLine();
+
+            var allCustomersOrders = customerIDs.Union(orderIDs);
+            Console.WriteLine("All Customers ID and Orders ID:");
+            foreach (var item in allCustomersOrders)
+            {
+                Console.Write("{0} ", item);
+            }
+
+            Console.WriteLine();
+        }
+
+        /// <summary>
+        /// join -> 通过共享键字段ID，同时查询customers和orders的数据，将两者ID相同的数据连接起来。通过select创建想要的结果集
+        /// </summary>
+        public static void JoinSequences(List<Customer> customers, List<Order> orders)
+        {
+            var queryResults =
+                from c in customers
+                join o in orders on c.ID equals o.ID
+                select new { c.ID, c.City, SalesBefore = c.Sales, NewOrder = o.Amount, SalesAfter = c.Sales + o.Amount };
+
+            foreach (var item in queryResults)
+            {
+                Console.WriteLine(item);
             }
         }
     }
@@ -312,5 +521,11 @@ namespace _108_LINQ
             return "ID: " + ID + " City: " + City + " Country: " + Country +
             " Region: " + Region + " Sales: " + Sales;
         }
+    }
+
+    class Order
+    {
+        public string ID { get; set; }
+        public decimal Amount { get; set; }
     }
 }

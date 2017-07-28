@@ -15,6 +15,7 @@ namespace _001_InheritClass
         public override void Shout()
         {
             Console.WriteLine("喵喵叫");
+            Console.WriteLine(this.Test());
         }
     }
 }
