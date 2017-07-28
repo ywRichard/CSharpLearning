@@ -1,7 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_方法的练习3\bin\Debug\_方法的练习3.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_方法的练习3\bin\Debug\_方法的练习3.pdb
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_方法的练习3\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_方法的练习3\obj\x86\Debug\_方法的练习3.exe
-C:\Users\Richard\Documents\My Test Demo\Test Demo\_方法的练习3\obj\x86\Debug\_方法的练习3.pdb
-C:\Users\yao\Desktop\VS Demo\01_Test Demo\_方法的练习3\obj\x86\Debug\_方法的练习3.exe
-C:\Users\yao\Desktop\VS Demo\01_Test Demo\_方法的练习3\obj\x86\Debug\_方法的练习3.pdb

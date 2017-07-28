@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace _002_classStaticNon
+namespace _002_Class
 {
     /// <summary>
     #region MyRegion
