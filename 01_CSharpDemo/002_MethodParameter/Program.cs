@@ -10,6 +10,7 @@ namespace _002_MethodParameter
     {
         static void Main(string[] args)
         {
+            
         }
 
         /// <summary>
@@ -41,7 +42,7 @@ namespace _002_MethodParameter
         }
     }
 
-    class Horse:Animal
+    class Horse : Animal
     {
         protected override sealed void Eat()//子类不能重写该方法
         {
@@ -49,12 +50,52 @@ namespace _002_MethodParameter
         }
     }
 
-    class BattleHorse: Horse
+    class BattleHorse : Horse
     {
         //override Eat();不能重写
     }
     #endregion
 
+    #region 隐藏类成员 -> 父类成员被隐藏后，无法使用里氏转换通过父类调用子类的成员。
+    class Parent
+    {
+        public string Who()
+        {
+            return "我是你爹";
+        }
+    }
 
+    class Son : Parent
+    {
+        //new可以显示的声明隐藏父类成员，如果不用会有警告
+        new public string Who()
+        {
+            return "我是你儿子"+base.Who();//base指向父类实例
+        }
+    }
+    #endregion
 
+    #region 虚拟类成员 -> 里氏转换，父类可以调用子类的成员实现。
+    //class Parent
+    //{
+    //    protected virtual string Who()
+    //    {
+    //        return "我是你爹";
+    //    }
+    //}
+
+    //class Son : Parent
+    //{
+    //    //new可以显示的声明隐藏父类成员，如果不用会有警告
+    //    protected override string Who()
+    //    {
+    //        return "我是你儿子";
+    //    }
+
+    //    public string You()
+    //    {
+    //        return Who();
+    //    }
+    //}
+    #endregion
 }

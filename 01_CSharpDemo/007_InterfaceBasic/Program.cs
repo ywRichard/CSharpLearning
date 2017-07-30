@@ -17,24 +17,45 @@ namespace _007_InterfaceBasic
     /// 8、子类实现接口的方法，不需要任何关键字，直接实现即可。
     /// 9、接口存在的意义就是为了多态。
     /// </Common Sense>
-    
+
     /// <成员>
     /// 1、接口成员不允许添加访问修饰符，默认就是public
     /// 2、不允许写具体方法体的函数
     /// 3、不允许有字段
     /// </成员>
-    
+
     class Program
     {
         static void Main(string[] args)
         {
+            #region 接口实现多态
             //麻雀会飞，鹦鹉会飞，鸵鸟会飞，企鹅会飞，直升机会飞
             //用多态来实现，方法，抽象类，接口
-            IFlyable fly = new Helicopper();//new YinWu();//new MaQue();
-            fly.Fly();
+            //IFlyable fly = new Helicopper();//new YinWu();//new MaQue();
+            //fly.Fly();
+            #endregion
+
+            #region 接口的修饰符
+            MyBase mb = new MyBase();
+            MyDerivedClass dc = new MyDerivedClass();
+
+            mb.DoSomething();
+            IMyInterface imb = mb;
+            imb.DoSomethingElse();
+
+            Console.WriteLine("-------------------");
+            dc.DoSomething();
+            dc.DoSomethingElse();
+
+            Console.WriteLine("-------------------");
+            //MyDerivedClass dc1 = (MyDerivedClass) mb;//父类不能赋值给子类
+            
+            #endregion
+
             Console.ReadKey();
         }
 
+        #region 接口实现多态
         public abstract class Bird
         {
             public abstract void Fly();
@@ -84,5 +105,40 @@ namespace _007_InterfaceBasic
                 Console.WriteLine("直升机会飞");
             }
         }
+        #endregion
+
+        #region 接口的修饰符
+        public interface IMyInterface
+        {
+            void DoSomething();
+            void DoSomethingElse();
+        }
+
+        class MyBase : IMyInterface
+        {
+            public virtual void DoSomething()
+            {
+                Console.WriteLine("我是父类的DoSomething");
+            }
+
+            void IMyInterface.DoSomethingElse()
+            {
+                Console.WriteLine("我是父类的DoSomethingElse");
+            }
+        }
+
+        class MyDerivedClass : MyBase
+        {
+            public override void DoSomething()
+            {
+                Console.WriteLine("我是子类的DoSomething");
+            }
+
+            public void DoSomethingElse()
+            {
+                Console.WriteLine("我是子类的DoSomethingElse");
+            }
+        }
+        #endregion
     }
 }

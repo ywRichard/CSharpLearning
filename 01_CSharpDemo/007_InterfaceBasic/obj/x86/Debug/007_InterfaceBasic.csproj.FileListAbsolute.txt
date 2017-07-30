@@ -4,3 +4,8 @@ C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\007_InterfaceBasic\obj\x86\Deb
 C:\Users\S2I\Desktop\CSharpLearning\06_CSTestDemo\007_InterfaceBasic\obj\x86\Debug\007_InterfaceBasic.pdb
 C:\Users\S2I\Desktop\CSharpLearning\01_CSTestDemo\007_InterfaceBasic\obj\x86\Debug\007_InterfaceBasic.exe
 C:\Users\S2I\Desktop\CSharpLearning\01_CSTestDemo\007_InterfaceBasic\obj\x86\Debug\007_InterfaceBasic.pdb
+Y:\Documents\GitHub\CSharpLearning\01_CSharpDemo\007_InterfaceBasic\bin\Debug\007_InterfaceBasic.exe
+Y:\Documents\GitHub\CSharpLearning\01_CSharpDemo\007_InterfaceBasic\bin\Debug\007_InterfaceBasic.pdb
+Y:\Documents\GitHub\CSharpLearning\01_CSharpDemo\007_InterfaceBasic\obj\x86\Debug\007_InterfaceBasic.csprojResolveAssemblyReference.cache
+Y:\Documents\GitHub\CSharpLearning\01_CSharpDemo\007_InterfaceBasic\obj\x86\Debug\007_InterfaceBasic.exe
+Y:\Documents\GitHub\CSharpLearning\01_CSharpDemo\007_InterfaceBasic\obj\x86\Debug\007_InterfaceBasic.pdb
