@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _900_CardModel
 {
-    public class Card
+    public class Card:ICloneable
     {
         public readonly Suit suit;
         public readonly Rank rank;
@@ -25,6 +25,11 @@ namespace _900_CardModel
         public override string ToString()
         {
             return "The" + rank + "of" + suit + "s";
+        }
+
+        public object Clone()
+        {
+            return MemberwiseClone();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "005_Path", "005_Path\005_Path.csproj", "{AF11E6C0-BC3A-44DE-9E40-BC4D1FB52071}"
 EndProject
@@ -250,6 +250,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "900_CardModel", "900_CardModel\900_CardModel.csproj", "{25C65871-42EE-4E49-BD0B-83B82DB929C5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "900_CardClient", "900_CardClient\900_CardClient.csproj", "{C4C1FE52-9909-4B81-8D90-2B85F80A3AE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "010_CollectionIndexer", "010_Collection\010_CollectionIndexer.csproj", "{AE47260F-1F91-4FFA-894E-3355E232463B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "010_CollectionIterator", "010_CollectionIterator\010_CollectionIterator.csproj", "{92699C55-C38E-4212-BDB5-54B8B6E6C5B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1434,6 +1438,30 @@ Global
 		{C4C1FE52-9909-4B81-8D90-2B85F80A3AE6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C4C1FE52-9909-4B81-8D90-2B85F80A3AE6}.Release|x86.ActiveCfg = Release|Any CPU
 		{C4C1FE52-9909-4B81-8D90-2B85F80A3AE6}.Release|x86.Build.0 = Release|Any CPU
+		{AE47260F-1F91-4FFA-894E-3355E232463B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE47260F-1F91-4FFA-894E-3355E232463B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE47260F-1F91-4FFA-894E-3355E232463B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{AE47260F-1F91-4FFA-894E-3355E232463B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{AE47260F-1F91-4FFA-894E-3355E232463B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AE47260F-1F91-4FFA-894E-3355E232463B}.Debug|x86.Build.0 = Debug|Any CPU
+		{AE47260F-1F91-4FFA-894E-3355E232463B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE47260F-1F91-4FFA-894E-3355E232463B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE47260F-1F91-4FFA-894E-3355E232463B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{AE47260F-1F91-4FFA-894E-3355E232463B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{AE47260F-1F91-4FFA-894E-3355E232463B}.Release|x86.ActiveCfg = Release|Any CPU
+		{AE47260F-1F91-4FFA-894E-3355E232463B}.Release|x86.Build.0 = Release|Any CPU
+		{92699C55-C38E-4212-BDB5-54B8B6E6C5B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92699C55-C38E-4212-BDB5-54B8B6E6C5B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92699C55-C38E-4212-BDB5-54B8B6E6C5B3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{92699C55-C38E-4212-BDB5-54B8B6E6C5B3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{92699C55-C38E-4212-BDB5-54B8B6E6C5B3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{92699C55-C38E-4212-BDB5-54B8B6E6C5B3}.Debug|x86.Build.0 = Debug|Any CPU
+		{92699C55-C38E-4212-BDB5-54B8B6E6C5B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92699C55-C38E-4212-BDB5-54B8B6E6C5B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92699C55-C38E-4212-BDB5-54B8B6E6C5B3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{92699C55-C38E-4212-BDB5-54B8B6E6C5B3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{92699C55-C38E-4212-BDB5-54B8B6E6C5B3}.Release|x86.ActiveCfg = Release|Any CPU
+		{92699C55-C38E-4212-BDB5-54B8B6E6C5B3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1507,5 +1535,7 @@ Global
 		{EEF52A1D-77DE-4144-85C3-7A30B59DF601} = {74691C10-CC30-44C5-8A25-FC425F7D4D68}
 		{25C65871-42EE-4E49-BD0B-83B82DB929C5} = {46C7B6F0-DF72-4136-B572-01847A08FAE6}
 		{C4C1FE52-9909-4B81-8D90-2B85F80A3AE6} = {46C7B6F0-DF72-4136-B572-01847A08FAE6}
+		{AE47260F-1F91-4FFA-894E-3355E232463B} = {74691C10-CC30-44C5-8A25-FC425F7D4D68}
+		{92699C55-C38E-4212-BDB5-54B8B6E6C5B3} = {74691C10-CC30-44C5-8A25-FC425F7D4D68}
 	EndGlobalSection
 EndGlobal
