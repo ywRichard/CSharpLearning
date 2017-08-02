@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("011_NullableVector")]
+[assembly: AssemblyTitle("900_AnimalModel")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("011_NullableVector")]
+[assembly: AssemblyProduct("900_AnimalModel")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("600eb766-10bb-45d7-8152-d81911ac27d1")]
+[assembly: Guid("fae37662-78e3-4f58-8f9f-a8d6984ad040")]
 
 // Version information for an assembly consists of the following four values:
 //
