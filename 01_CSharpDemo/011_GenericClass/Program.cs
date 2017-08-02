@@ -27,6 +27,8 @@ namespace _011_GenericClass
                     (dog as SuperDog).Fly();
                 }
             }
+
+            Farm<Animal> newFarm = farm + dairyFarm;
         }
     }
 }

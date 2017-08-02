@@ -61,5 +61,53 @@ namespace _011_GenericClass
 
             return dogFarm;
         }
+
+        //public static implicit operator List<Animal>(Farm<T> farm)
+        //{
+        //    List<Animal> result = new List<Animal>();
+        //    foreach (var animal in farm)
+        //    {
+        //        result.Add(animal);
+        //    }
+
+        //    return result;
+        //}
+
+        public static Farm<T> operator +(Farm<T> farm1, Farm<T> farm2)
+        {
+            Farm<T> result = new Farm<T>();
+
+            foreach (var item in farm1)
+            {
+                result.Animals.Add(item);
+            }
+
+            foreach (var item in farm2)
+            {
+                if (!result.Animals.Contains(item))
+                {
+                    result.Animals.Add(item);
+                }
+            }
+
+            return result;
+        }
+
+        //public static Farm<T> operator +(List<T> farm1, Farm<T> farm2)
+        //{
+        //    return farm1+farm2;
+        //}
+
+        public static implicit operator Farm<Animal>(Farm<T> farm)
+        {
+            Farm<Animal> result = new Farm<Animal>();
+
+            foreach (var animal in farm)
+            {
+                result.Animals.Add(animal);
+            }
+
+            return result;
+        }
     }
 }
