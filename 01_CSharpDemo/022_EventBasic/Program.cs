@@ -9,20 +9,32 @@ namespace _022_EventBasic
 {
     class Program
     {
-        static int counter = 0;
-        static string displayString = "I will be on display! ";
+        #region Event Basic
+        //static int counter = 0;
+        //static string displayString = "I will be on display! ";
+        //static void WriteChar(object source, ElapsedEventArgs e)
+        //{
+        //    Console.Write(displayString[counter++ % displayString.Length]);
+        //}
+        #endregion
+
         static void Main(string[] args)
         {
-            Timer myTimer = new Timer(100);
-            myTimer.Elapsed += WriteChar;
-            myTimer.Start();
+            #region MyRegion
+            //Timer myTimer = new Timer(100);
+            //myTimer.Elapsed += WriteChar;
+            //myTimer.Start();
+            #endregion
 
+            #region Arrived Message
+            Connection myConnection = new Connection();
+            Display myDisplay = new Display();
+            myConnection.MessageArrived += myDisplay.DisplayMessage;
+            myConnection.Connect();
             Console.ReadKey();
+            #endregion
         }
 
-        static void WriteChar(object source, ElapsedEventArgs e)
-        {
-            Console.Write(displayString[counter++ % displayString.Length]);
-        }
+        
     }
 }

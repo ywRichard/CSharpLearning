@@ -30,9 +30,15 @@ namespace _022_EventBasic
             pollTimer.Stop();
         }
 
+        public static Random random = new Random();
+
         private void CheckForMessage(object sender, ElapsedEventArgs e)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Checking for new Message.");
+            if ((random.Next(9) == 0) && (MessageArrived != null))
+            {
+                MessageArrived("Hello Mum!");
+            }
         }
     }
 }
