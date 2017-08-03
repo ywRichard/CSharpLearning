@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace _011_GenericClass
 {
-
+    /// <summary>
+    /// 泛型类
+    /// </summary>
     class Farm<T> : IEnumerable<T>
         where T : Animal
     {
@@ -109,5 +111,21 @@ namespace _011_GenericClass
 
             return result;
         }
+
+        public Farm<U> GetSpecies<U>() where U:T
+        {
+            Farm<U> speciesFarm = new Farm<U>();
+            foreach (T animal in animals)
+            {
+                if (animal is U)
+                {
+                    speciesFarm.Animals.Add(animal as U);
+                }
+            }
+
+            return speciesFarm;
+        }
     }
+
+    
 }
