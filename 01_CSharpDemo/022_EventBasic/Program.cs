@@ -27,14 +27,19 @@ namespace _022_EventBasic
             #endregion
 
             #region Arrived Message
-            Connection myConnection = new Connection();
+            Connection myConnection1 = new Connection { Name = "First connection" };
+            Connection myConnection2 = new Connection { Name = "Second connection" };
             Display myDisplay = new Display();
-            myConnection.MessageArrived += myDisplay.DisplayMessage;
-            myConnection.Connect();
-            Console.ReadKey();
+
+            myConnection1.MessageArrived += new MessageHandler(myDisplay.DisplayMessage);
+            myConnection2.MessageArrived += new MessageHandler(myDisplay.DisplayMessage);
+
+            myConnection1.Connect();
+            myConnection2.Connect();
             #endregion
+            Console.ReadKey();
         }
 
-        
+
     }
 }

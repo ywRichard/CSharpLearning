@@ -17,6 +17,9 @@ namespace _002_NestName
         }
     }
 
+    /// <summary>
+    /// 嵌套类
+    /// </summary>
     class MyClass
     {
         public class MyNestedClass

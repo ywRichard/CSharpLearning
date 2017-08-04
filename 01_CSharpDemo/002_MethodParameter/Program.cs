@@ -10,14 +10,68 @@ namespace _002_MethodParameter
     {
         static void Main(string[] args)
         {
-            
+            #region 可选参数
+            //CaptilizationPara cp = new CaptilizationPara();
+            //cp.GetValue("hello", true);
+            #endregion
+
+
+
+        }
+
+        #region ref, out & params       
+        /* 
+         * ref和out：
+         * 1、传递的是变量在栈上的值。
+         * 2、实现方法的多个返回值。
+         */
+        /// <summary>
+        /// out -> 使方法可以返回多个不同类型的值
+        /// 参数要求在方法内部必须为其赋值
+        /// </summary>
+        public static bool MyTryParse(string input, out int number)
+        {
+            try
+            {
+                number = Convert.ToInt32(input);
+                return true;
+            }
+            catch
+            {
+                number = 0;
+                return false;
+            }
         }
 
         /// <summary>
-        /// 比较字符串的长度
+        /// ref -> 能够将一个变量带入一个方法中进行改变 ，改变完成后在将变量返回到方法中。
+        /// 要求：在方法外必须被赋值，在方法内可以不用赋值。
         /// </summary>
-        /// <param name="index">最长的字符串的长度</param>
-        /// <param name="str">字符串数组</param>
+        public static void Exchange(ref int n1, ref int n2)
+        {
+            int temp = 0;
+            temp = n1;
+            n1 = n2;
+            n2 = temp;
+        }
+
+        /// <summary>
+        /// params -> 将实参列表中跟可变参数数组类型一致的元素都当做数组的元素去处理。
+        /// 只允许有一个params参数,且必须在形参列表的最后一个。
+        /// </summary>
+        public static int ArraySum(params int[] number)
+        {
+            int sum = 0;
+            for (int i = 0; i < number.Length; i++)
+            {
+                sum += number[i];
+            }
+            return sum;
+        }
+
+        /// <summary>
+        /// out & params参数
+        /// </summary>
         public static void JudgeLength(out int index, params string[] str)
         {
             //int index = -1;
@@ -31,6 +85,7 @@ namespace _002_MethodParameter
                 }
             }
         }
+        #endregion
     }
 
     #region 重写virtual
@@ -70,7 +125,7 @@ namespace _002_MethodParameter
         //new可以显示的声明隐藏父类成员，如果不用会有警告
         new public string Who()
         {
-            return "我是你儿子"+base.Who();//base指向父类实例
+            return "我是你儿子" + base.Who();//base指向父类实例
         }
     }
     #endregion
@@ -97,5 +152,22 @@ namespace _002_MethodParameter
     //        return Who();
     //    }
     //}
+    #endregion
+
+    #region 可选参数
+    class CaptilizationPara
+    {
+        public void GetValue(string message, bool option = false)
+        {
+            if (option)
+            {
+                Console.WriteLine(message);
+            }
+            else
+            {
+                Console.WriteLine("option=false");
+            }
+        }
+    }
     #endregion
 }

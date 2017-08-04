@@ -7,12 +7,13 @@ using System.Timers;
 
 namespace _022_EventBasic
 {
-    public delegate void MessageHandler(string messageText);
+    public delegate void MessageHandler(Connection source, MessageArrivedEventArgs e);
 
     public class Connection
     {
         public event MessageHandler MessageArrived;
         private Timer pollTimer;
+        public string Name { get; set; }
 
         public Connection()
         {
@@ -32,12 +33,12 @@ namespace _022_EventBasic
 
         public static Random random = new Random();
 
-        private void CheckForMessage(object sender, ElapsedEventArgs e)
+        private void CheckForMessage(object source, EventArgs e)
         {
             Console.WriteLine("Checking for new Message.");
             if ((random.Next(9) == 0) && (MessageArrived != null))
             {
-                MessageArrived("Hello Mum!");
+                MessageArrived(this, new MessageArrivedEventArgs("Hello Mum!"));
             }
         }
     }
