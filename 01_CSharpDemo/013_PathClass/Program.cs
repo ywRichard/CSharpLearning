@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using System.Collections;
 
 namespace _013_PathClass
 {
@@ -21,7 +22,7 @@ namespace _013_PathClass
     {
         static void Main(string[] args)
         {
-            #region Path类的用法
+            #region Path Method
             //string path = @"C:\Users\Richard\Desktop\Older.txt";            
             ////获得文件名
             //Console.WriteLine(Path.GetFileName(path));
@@ -41,18 +42,18 @@ namespace _013_PathClass
 
             #region 文件类的用法
             ////创建一个文件
-            ////File.Create(@"C:\Users\Richard\Desktop\Older.txt");       
+            //File.Create(@"C:\Users\Richard\Desktop\Older.txt");
             ////写入文本
             //string path = @"C:\Users\Richard\Desktop\Older.txt";
 
-            ////File.AppendAllLines(path, IEnumerable<path> "哈哈哈", Encoding.UTF8);
-            ////File.AppendAllText(path, "哈哈");
+            //File.AppendAllLines(path, IEnumerable<path> "哈哈哈", Encoding.UTF8);
+            //File.AppendAllText(path, "哈哈");
             ////复制文件
-            ////File.Copy(path, @"C:\Users\Richard\Desktop\Older1.txt");
+            //File.Copy(path, @"C:\Users\Richard\Desktop\Older1.txt");
             ////删除文件
-            ////File.Delete(@"C:\Users\Richard\Desktop\Older1.txt");
+            //File.Delete(@"C:\Users\Richard\Desktop\Older1.txt");
             ////剪切文件
-            ////File.Move(path, @"C:\Users\Richard\Desktop\备份\Older.txt"); 
+            //File.Move(path, @"C:\Users\Richard\Desktop\备份\Older.txt");
             #endregion
         }
     }

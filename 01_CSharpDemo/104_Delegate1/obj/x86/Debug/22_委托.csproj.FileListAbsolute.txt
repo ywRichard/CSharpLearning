@@ -1,7 +1,0 @@
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\22_委托\bin\Debug\22_委托.exe
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\22_委托\bin\Debug\22_委托.pdb
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\22_委托\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\22_委托\obj\x86\Debug\22_委托.exe
-C:\Users\yao\Desktop\VS Demo\Review the basic Grammar\22_委托\obj\x86\Debug\22_委托.pdb
-C:\Users\yao\Desktop\VS Demo\02_CSharpReview\22_委托\obj\x86\Debug\22_委托.exe
-C:\Users\yao\Desktop\VS Demo\02_CSharpReview\22_委托\obj\x86\Debug\22_委托.pdb

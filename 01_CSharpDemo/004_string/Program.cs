@@ -14,8 +14,6 @@ namespace _004_string
         {
             //道墟排列的方法
             //第一题“abc-cba”
-
-
             #region 方法一:for循环倒序排列
             //string str = "abc";
             //for (int i = str.Length-1; i >=0; i--)
@@ -62,8 +60,6 @@ namespace _004_string
                         </GraphicalPanels>
                     </Target>
                 </Project>", version, initialPanelID);
-
-
             Console.WriteLine(fakeDocument);
             #endregion
 

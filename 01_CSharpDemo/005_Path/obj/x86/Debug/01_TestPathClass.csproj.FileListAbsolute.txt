@@ -1,6 +1,0 @@
-c:\users\s2i\documents\visual studio 2010\Projects\06_ControlAndClassDemo\01_TestPathClass\bin\Debug\01_TestPathClass.exe
-c:\users\s2i\documents\visual studio 2010\Projects\06_ControlAndClassDemo\01_TestPathClass\bin\Debug\01_TestPathClass.pdb
-c:\users\s2i\documents\visual studio 2010\Projects\06_ControlAndClassDemo\01_TestPathClass\obj\x86\Debug\01_TestPathClass.exe
-c:\users\s2i\documents\visual studio 2010\Projects\06_ControlAndClassDemo\01_TestPathClass\obj\x86\Debug\01_TestPathClass.pdb
-C:\Users\S2I\Desktop\06_CSTestDemo\001_TestPathClass\obj\x86\Debug\01_TestPathClass.exe
-C:\Users\S2I\Desktop\06_CSTestDemo\001_TestPathClass\obj\x86\Debug\01_TestPathClass.pdb

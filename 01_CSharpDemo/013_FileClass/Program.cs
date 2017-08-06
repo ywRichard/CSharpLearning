@@ -6,21 +6,6 @@ using System.IO;
 
 namespace _013_FileClass
 {
-    /// <summary>
-    /// File类：一次性读取，存入内存 。用于读取小文件，几百K一下的。
-    /// </summary>  
-    #region File Useful Methods
-    //File.Create：创建文件
-    //File.AppendAllText：写入文件
-    //File.Copy：复制文件
-    //File.Delete：删除文件
-    //File.Move：剪切文件
-    //File.ReadAllBytes：以字节形式读取，读取非文本文件使用。
-    //File.ReadAllLines：以行的形式读取文本文件，并返回字符串数组。
-    //File.ReadAllText：读取文本文件，返回一个字符串。
-    //File.WriteLine();
-    //File.Write
-    #endregion
     class Program
     {
         static void Main(string[] args)
@@ -50,4 +35,20 @@ namespace _013_FileClass
             Console.ReadKey();
         }
     }
+
+    /// <summary>
+    /// File类：一次性读取，存入内存 。用于读取小文件，几百K一下的。
+    /// </summary>  
+    #region File Methods
+    //File.Create：创建文件
+    //File.AppendAllText：写入文件
+    //File.Copy：复制文件
+    //File.Delete：删除文件
+    //File.Move：剪切文件
+    //File.ReadAllBytes：以字节形式读取，读取非文本文件使用。
+    //File.ReadAllLines：以行的形式读取文本文件，并返回字符串数组。
+    //File.ReadAllText：读取文本文件，返回一个字符串。
+    //File.WriteLine();
+    //File.Write
+    #endregion
 }
