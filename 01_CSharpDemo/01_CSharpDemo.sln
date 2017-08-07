@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "200_Combobox", "200_Combobox\200_Combobox.csproj", "{7D87B70B-4207-49A6-9465-4B9121F0F10F}"
 EndProject
@@ -262,11 +262,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_FileSystemWatcher", "08_FileSystemWatcher\08_FileSystemWatcher.csproj", "{C4D3E408-1EA8-4E8E-8705-0B3AFC1D6B0D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XML", "XML", "{44AAA62D-CB88-410F-98D3-A1E3E0439A0C}"
-	ProjectSection(SolutionItems) = preProject
-		XMLBasic.xml = XMLBasic.xml
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_DOMBasic", "01_DOMBasic\01_DOMBasic.csproj", "{02B5DF44-EAA8-42E4-944E-2AE0961B09E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_XPath", "02_XPath\02_XPath.csproj", "{3D880BA7-26F1-446B-977B-3C76035478EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1565,6 +1564,18 @@ Global
 		{02B5DF44-EAA8-42E4-944E-2AE0961B09E2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{02B5DF44-EAA8-42E4-944E-2AE0961B09E2}.Release|x86.ActiveCfg = Release|Any CPU
 		{02B5DF44-EAA8-42E4-944E-2AE0961B09E2}.Release|x86.Build.0 = Release|Any CPU
+		{3D880BA7-26F1-446B-977B-3C76035478EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D880BA7-26F1-446B-977B-3C76035478EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D880BA7-26F1-446B-977B-3C76035478EA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3D880BA7-26F1-446B-977B-3C76035478EA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3D880BA7-26F1-446B-977B-3C76035478EA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3D880BA7-26F1-446B-977B-3C76035478EA}.Debug|x86.Build.0 = Debug|Any CPU
+		{3D880BA7-26F1-446B-977B-3C76035478EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D880BA7-26F1-446B-977B-3C76035478EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D880BA7-26F1-446B-977B-3C76035478EA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3D880BA7-26F1-446B-977B-3C76035478EA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3D880BA7-26F1-446B-977B-3C76035478EA}.Release|x86.ActiveCfg = Release|Any CPU
+		{3D880BA7-26F1-446B-977B-3C76035478EA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1667,5 +1678,6 @@ Global
 		{7F98A7B7-63F1-4813-9CBC-6833274DAD27} = {C855D1C4-BEA4-430D-A97D-4CC6528052ED}
 		{C4D3E408-1EA8-4E8E-8705-0B3AFC1D6B0D} = {C855D1C4-BEA4-430D-A97D-4CC6528052ED}
 		{02B5DF44-EAA8-42E4-944E-2AE0961B09E2} = {44AAA62D-CB88-410F-98D3-A1E3E0439A0C}
+		{3D880BA7-26F1-446B-977B-3C76035478EA} = {44AAA62D-CB88-410F-98D3-A1E3E0439A0C}
 	EndGlobalSection
 EndGlobal
