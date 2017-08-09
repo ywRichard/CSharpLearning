@@ -17,16 +17,16 @@ namespace _04_XmlNavigator
             Console.WriteLine("Finished");
         }
 
-        private static string IterationXML(XPathNavigator element)
-        {
-            if (element.HasChildren)
-            {
-                foreach (var item in element.SelectChildren(XPathNodeType.All))
-                {
+        //private static string IterationXML(XPathNavigator element)
+        //{
+        //    if (element.HasChildren)
+        //    {
+        //        foreach (var item in element.SelectChildren(XPathNodeType.All))
+        //        {
 
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
     }
 
 }
