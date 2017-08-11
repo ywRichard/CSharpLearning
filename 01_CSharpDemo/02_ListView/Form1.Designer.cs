@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lvFilesFolders = new System.Windows.Forms.ListView();
             this.lblPath = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbLargeIcon = new System.Windows.Forms.RadioButton();
-            this.rbSmallIcon = new System.Windows.Forms.RadioButton();
-            this.rbList = new System.Windows.Forms.RadioButton();
-            this.rbDetails = new System.Windows.Forms.RadioButton();
             this.rbTitle = new System.Windows.Forms.RadioButton();
+            this.rbDetails = new System.Windows.Forms.RadioButton();
+            this.rbList = new System.Windows.Forms.RadioButton();
+            this.rbSmallIcon = new System.Windows.Forms.RadioButton();
+            this.rbLargeIcon = new System.Windows.Forms.RadioButton();
             this.btnBack = new System.Windows.Forms.Button();
             this.imgListSmall = new System.Windows.Forms.ImageList(this.components);
             this.imgListLarge = new System.Windows.Forms.ImageList(this.components);
@@ -45,11 +46,15 @@
             // 
             // lvFilesFolders
             // 
+            this.lvFilesFolders.LargeImageList = this.imgListLarge;
             this.lvFilesFolders.Location = new System.Drawing.Point(26, 34);
             this.lvFilesFolders.Name = "lvFilesFolders";
             this.lvFilesFolders.Size = new System.Drawing.Size(368, 230);
+            this.lvFilesFolders.SmallImageList = this.imgListSmall;
             this.lvFilesFolders.TabIndex = 0;
             this.lvFilesFolders.UseCompatibleStateImageBehavior = false;
+            this.lvFilesFolders.View = System.Windows.Forms.View.Details;
+            this.lvFilesFolders.ItemActivate += new System.EventHandler(this.lvFilesFolders_ItemActivate);
             // 
             // lblPath
             // 
@@ -74,27 +79,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "View Mode";
             // 
-            // rbLargeIcon
+            // rbTitle
             // 
-            this.rbLargeIcon.AutoSize = true;
-            this.rbLargeIcon.Location = new System.Drawing.Point(28, 26);
-            this.rbLargeIcon.Name = "rbLargeIcon";
-            this.rbLargeIcon.Size = new System.Drawing.Size(77, 16);
-            this.rbLargeIcon.TabIndex = 0;
-            this.rbLargeIcon.TabStop = true;
-            this.rbLargeIcon.Text = "LargeIcon";
-            this.rbLargeIcon.UseVisualStyleBackColor = true;
+            this.rbTitle.AutoSize = true;
+            this.rbTitle.Location = new System.Drawing.Point(28, 126);
+            this.rbTitle.Name = "rbTitle";
+            this.rbTitle.Size = new System.Drawing.Size(53, 16);
+            this.rbTitle.TabIndex = 4;
+            this.rbTitle.Text = "Title";
+            this.rbTitle.UseVisualStyleBackColor = true;
+            this.rbTitle.CheckedChanged += new System.EventHandler(this.rbTitle_CheckedChanged);
             // 
-            // rbSmallIcon
+            // rbDetails
             // 
-            this.rbSmallIcon.AutoSize = true;
-            this.rbSmallIcon.Location = new System.Drawing.Point(28, 51);
-            this.rbSmallIcon.Name = "rbSmallIcon";
-            this.rbSmallIcon.Size = new System.Drawing.Size(77, 16);
-            this.rbSmallIcon.TabIndex = 1;
-            this.rbSmallIcon.TabStop = true;
-            this.rbSmallIcon.Text = "SmallIcon";
-            this.rbSmallIcon.UseVisualStyleBackColor = true;
+            this.rbDetails.AutoSize = true;
+            this.rbDetails.Checked = true;
+            this.rbDetails.Location = new System.Drawing.Point(28, 101);
+            this.rbDetails.Name = "rbDetails";
+            this.rbDetails.Size = new System.Drawing.Size(65, 16);
+            this.rbDetails.TabIndex = 3;
+            this.rbDetails.TabStop = true;
+            this.rbDetails.Text = "Details";
+            this.rbDetails.UseVisualStyleBackColor = true;
+            this.rbDetails.CheckedChanged += new System.EventHandler(this.rbDetails_CheckedChanged);
             // 
             // rbList
             // 
@@ -103,31 +110,31 @@
             this.rbList.Name = "rbList";
             this.rbList.Size = new System.Drawing.Size(47, 16);
             this.rbList.TabIndex = 2;
-            this.rbList.TabStop = true;
             this.rbList.Text = "List";
             this.rbList.UseVisualStyleBackColor = true;
+            this.rbList.CheckedChanged += new System.EventHandler(this.rbList_CheckedChanged);
             // 
-            // rbDetails
+            // rbSmallIcon
             // 
-            this.rbDetails.AutoSize = true;
-            this.rbDetails.Location = new System.Drawing.Point(28, 101);
-            this.rbDetails.Name = "rbDetails";
-            this.rbDetails.Size = new System.Drawing.Size(65, 16);
-            this.rbDetails.TabIndex = 3;
-            this.rbDetails.TabStop = true;
-            this.rbDetails.Text = "Details";
-            this.rbDetails.UseVisualStyleBackColor = true;
+            this.rbSmallIcon.AutoSize = true;
+            this.rbSmallIcon.Location = new System.Drawing.Point(28, 51);
+            this.rbSmallIcon.Name = "rbSmallIcon";
+            this.rbSmallIcon.Size = new System.Drawing.Size(77, 16);
+            this.rbSmallIcon.TabIndex = 1;
+            this.rbSmallIcon.Text = "SmallIcon";
+            this.rbSmallIcon.UseVisualStyleBackColor = true;
+            this.rbSmallIcon.CheckedChanged += new System.EventHandler(this.rbSmallIcon_CheckedChanged);
             // 
-            // rbTitle
+            // rbLargeIcon
             // 
-            this.rbTitle.AutoSize = true;
-            this.rbTitle.Location = new System.Drawing.Point(28, 126);
-            this.rbTitle.Name = "rbTitle";
-            this.rbTitle.Size = new System.Drawing.Size(53, 16);
-            this.rbTitle.TabIndex = 4;
-            this.rbTitle.TabStop = true;
-            this.rbTitle.Text = "Title";
-            this.rbTitle.UseVisualStyleBackColor = true;
+            this.rbLargeIcon.AutoSize = true;
+            this.rbLargeIcon.Location = new System.Drawing.Point(28, 26);
+            this.rbLargeIcon.Name = "rbLargeIcon";
+            this.rbLargeIcon.Size = new System.Drawing.Size(77, 16);
+            this.rbLargeIcon.TabIndex = 0;
+            this.rbLargeIcon.Text = "LargeIcon";
+            this.rbLargeIcon.UseVisualStyleBackColor = true;
+            this.rbLargeIcon.CheckedChanged += new System.EventHandler(this.rbLargeIcon_CheckedChanged);
             // 
             // btnBack
             // 
@@ -137,18 +144,21 @@
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // imgListSmall
             // 
-            this.imgListSmall.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imgListSmall.ImageSize = new System.Drawing.Size(32, 32);
+            this.imgListSmall.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgListSmall.ImageStream")));
             this.imgListSmall.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgListSmall.Images.SetKeyName(0, "Folder 16x16.ICO");
+            this.imgListSmall.Images.SetKeyName(1, "Text 16x16.ICO");
             // 
             // imgListLarge
             // 
-            this.imgListLarge.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imgListLarge.ImageSize = new System.Drawing.Size(32, 32);
+            this.imgListLarge.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgListLarge.ImageStream")));
             this.imgListLarge.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgListLarge.Images.SetKeyName(0, "Folder32x32.ICO");
+            this.imgListLarge.Images.SetKeyName(1, "Text 32x32.ICO");
             // 
             // Form1
             // 
