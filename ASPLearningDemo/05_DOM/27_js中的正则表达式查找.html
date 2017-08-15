@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('btn').onclick = function () {
+                var postCode = document.getElementById('txt1').value;
+                //使用正则表达式验证邮编是否合法
+                //创建一个正则表达式
+                var reg_postcode = /^[0-9]{6}$/;//"/正则表达式放置在斜杠中/"
+                var isok = reg_postcode.test(postCode);
+                alert(isok);
+            }
+
+            document.getElementById('btnMail').onclick = function () {
+
+                //-------------匹配-test-----------------
+                var mailbox = document.getElementById('txt1').value;
+                var reg_mailbox = /^\w+@\w+(\.\w+)+$/;//这种方式不用管转义字符
+                var reg1 = new RegExp('^\\w+@\\w+(\\.\\w+)+$');//这种方式要加'\'转义'\'，一般不推荐使用
+                alert(reg_mailbox.test(mailbox));
+            }
+
+            //-------------提取-exec-----------------
+            //var msg = '移动111111联通22222电信333333农行55555555';
+            ////var regCellphone = /\d+/;
+            //var regCellphone = /\d+/g;//g->正则表达式的全局模式。在全局模式下result内部会维护一个index变量，需要重复调用才可以读写所有匹配值。
+
+            //var result = regCellphone.exec(msg);
+            //while (result) {
+            //    alert(result);
+            //    result = regCellphone.exec(msg);
+            //}
+
+            //-------------使用提取组-----------------
+            //var msg = '移动12336664567联通4325434535678电信567890987654农行4567432345677654';
+            ////提取组(\d{3})返回值是匹配字符串数组共有4个元素，
+            ////第一个是完整的匹配项，第二个元素是第一个匹配项的内容，依次类推...
+            //var regCellphone = /(\d{3})(\d{4})(\d{4})/g;//g->正则表达式的全局模式。在全局模式下result内部会维护一个index变量，需要重复调用才可以读写所有匹配值。
+
+            //var result = regCellphone.exec(msg);
+            //while (result) {
+            //    alert(result);
+            //    result = regCellphone.exec(msg);
+            //}
+
+            //-------------字符串的match()方法-----------------
+            //var msg = '移动12336664567联通4325434535678电信567890987654农行4567432345677654';
+            ////该方法不能实现提取组的方法，功能比较单一。推荐使用exec
+            ////var dataResults = strMsg.match(/(\d{3})(\d{4})(\d{4})/g);
+            //var dataResults = msg.match(/\d+/g);
+            //for (var i = 0; i < dataResults.length; i++) {
+            //    alert(dataResults[i]);
+            //}
+
+            //-------------字符串的replace()方法-----------------
+            var msg = '移动12336664567联通4325434535678电信567890987654农行4567432345677654';
+            msg = msg.replace(/\d+/g, '****');//用'****'替换整个匹配项
+            //msg = msg.replace(/(\d{3})(\d{4})(\d{4})/g, '$1****$3');//'****'替换中间4个数字
+            //在字符串替换时，通过$$来转义$符号：$$2*
+            alert(msg);
+
+            //-------------用replace去除字符串空格-----------------
+            var str = '      hello       ';
+            md
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="name" value="" id="txt1" />
+    <input type="button" name="name" value="验证邮编" id="btn" />
+    <input type="button" name="name" value="验证邮箱" id="btnMail" />
+</body>
+</html>

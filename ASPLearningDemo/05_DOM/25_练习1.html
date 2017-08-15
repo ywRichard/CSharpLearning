@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        li {
+            background-color: white;
+            font-size: 20px;
+        }
+
+        #pClock {
+            border: solid;
+            border-color: black;
+            color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            setTime();//设置时间
+            var objs = document.getElementsByTagName('li');
+
+            for (var i = 0; i < objs.length; i++) {
+                objs[i].onmouseover = function () {
+                    this.style.backgroundColor = 'red';
+                }
+
+                objs[i].onmouseout = function () {
+                    this.style.backgroundColor = 'white';
+                }
+
+                objs[i].onclick = function () {
+                    this.style.fontSize = '30px';
+                };
+            }
+
+            /*-------------设置时间--------------*/
+            setInterval(setTime, 1000);
+        };
+
+        var setTime = function () {
+            //获取当前时间
+            var curDate = new Date();
+            //设置当前时间到标签中
+            document.getElementById('pClock').innerText = curDate.toLocaleDateString() + ' ' + curDate.toLocaleTimeString();
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li>曼联</li>
+        <li>皇马</li>
+        <li>巴萨</li>
+    </ul>
+    <p id="pClock">
+        2017 08-24:3:05
+    </p>
+</body>
+</html>

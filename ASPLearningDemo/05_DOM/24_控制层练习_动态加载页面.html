@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        #dvInfo {
+            width: 450px;
+            background-color: pink;
+            display: none;
+            position: absolute;
+        }
+    </style>
+    <script type="text/javascript">
+        var datas = {
+            "images/1-1.jpg": ["images/1.jpg", "丹妮莉丝", "160"],
+            "images/2-1.jpg": ["images/2.jpg", "Sonw", "180"],
+            "images/3-1.jpg": ["images/3.jpg", "Sansa", "170"],
+        };
+
+        window.onload = function () {
+            var dv1Obj = document.getElementById('div1');
+            document.getElementById('btn').onclick = function () {
+                for (var key in datas) {
+                    //动态创建图片
+                    var imgObj = document.createElement('img');
+                    imgObj.src = key;
+                    imgObj.alt = datas[key][1];
+                    imgObj.style.marginRight = '10px';
+                    dv1Obj.appendChild(imgObj);
+
+                    //为每张小图片注册一个mouseover事件
+                    imgObj.onmouseover = function () {
+                        var dvBig = document.getElementById("dvInfo");
+                        //设置层的显示
+                        dvBig.style.display = 'block';
+                        //设置层的坐标
+                        dvBig.style.left = this.offsetLeft + 'px';
+                        dvBig.style.top = this.offsetTop + imgObj.height + 'px';
+
+                        //设置显示信息
+                        //var basicInfo = datas[this.getAttribute('src')];
+                        var basicInfo = datas[key];//如果用key检索，赋值的都是遍历的最后一次结果
+
+                        document.getElementById('pName').innerHTML = basicInfo[1];
+                        document.getElementById('pHeight').innerHTML = basicInfo[2];
+                        document.getElementById('imgBig').src = basicInfo[0];
+
+                        //alert(this.src);//this.src，image的绝对路径
+                        //alert(this.getAttribute('src'));//getAttrbute -> 赋值的相对路径
+                        //document.getElementById('pName');
+                        //document.getElementById('imgBig').src = datas[key][0];
+                    }
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <input type="button" name="name" value="显示图片" id="btn" />
+    <div id="div1">
+
+    </div>
+    <div id="dvInfo">
+        <p id="pName">
+            姓名：
+        </p>
+        <p id="pHeight">
+            身高：
+        </p>
+        <img id="imgBig" src="#" alt="Altnate Text" />
+    </div>
+</body>
+</html>
