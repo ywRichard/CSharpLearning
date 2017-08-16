@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        var pics = ['images/1.jpg',
+            'images/1-1.jpg',
+            'images/2.jpg',
+            'images/2-1.jpg',
+            'images/3.jpg',
+            'images/3-1.jpg'];
+
+        window.onload = function () {
+            var objImg = document.getElementById('img1');
+
+            var indexPic = 0;
+            objImg.src = pics[indexPic];
+            document.getElementById('lastPic').disabled = true;
+
+            document.getElementById('nextPic').onclick = function () {
+                indexPic++;
+                objImg.src = pics[indexPic];
+                
+                if (indexPic==5) {
+                    document.getElementById('nextPic').disabled = true;
+                }
+                document.getElementById('lastPic').disabled = false;
+            }
+
+            document.getElementById('lastPic').onclick = function () {
+                indexPic--;
+                objImg.src = pics[indexPic];
+
+                if (indexPic == 0) {
+                    document.getElementById('lastPic').disabled = true;
+                }
+                document.getElementById('nextPic').disabled = false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <img src="#" alt="Alternate Text" id="img1"/>
+    <div>
+        <input type="button" name="name" value="下一张" id="nextPic" />
+        <input type="button" name="name" value="上一张" id="lastPic" />
+    </div>
+</body>
+</html>

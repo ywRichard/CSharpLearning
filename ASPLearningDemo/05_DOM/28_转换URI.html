@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        var strURI = 'http://localhost:49416/28_转换URI.html';
+        window.onload = function () {
+            var str1 = encodeURI(strURI);//将字符串中中的URI不能识别的字符转换为URI可以识别的字符。
+            alert(str1);
+            alert(decodeURI(str1));
+            alert(encodeURIComponent(strURI));//转换的字符范围更广
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
