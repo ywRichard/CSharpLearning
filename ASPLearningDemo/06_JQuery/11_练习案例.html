@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //-----------------案例一-----------------------
+            $('#btn1').click(function () {
+                $('#tb tr:odd').css('backgroundColor', 'yellow');
+                $('#tb tr:even').css('backgroundColor', 'red');
+            });
+
+            //-----------------案例二-----------------------
+            $('#btn2').click(function () {
+                $('#uu li:lt(3)').css('fontWeight', 'bolder').css('fontSize', '30px');
+            });
+
+             //-----------------案例三-----------------------
+            $('#tb tr').click(function () {
+                $(this).css('backgroundColor', 'yellow').siblings().css('backgroundColor', 'white');
+            });
+
+            
+        });
+    </script>
+</head>
+<body>
+    <p>================案例一====================</p>
+    <input type="button" name="name" value="案例一" id="btn1"/>
+    <table border="1" id="tb">
+        <tr>
+            <td height="30" width="100"></td>
+            <td height="30" width="100"></td>
+            <td height="30" width="100"></td>
+        </tr>
+        <tr>
+            <td height="30" width="100"></td>
+            <td height="30" width="100"></td>
+            <td height="30" width="100"></td>
+        </tr>
+        <tr>
+            <td height="30" width="100"></td>
+            <td height="30" width="100"></td>
+            <td height="30" width="100"></td>
+        </tr>
+        <tr>
+            <td height="30" width="100"></td>
+            <td height="30" width="100"></td>
+            <td height="30" width="100"></td>
+        </tr>
+        <tr>
+            <td height="30" width="100"></td>
+            <td height="30" width="100"></td>
+            <td height="30" width="100"></td>
+        </tr>
+        <tr>
+            <td height="30" width="100"></td>
+            <td height="30" width="100"></td>
+            <td height="30" width="100"></td>
+        </tr>
+        <tr>
+            <td height="30" width="100"></td>
+            <td height="30" width="100"></td>
+            <td height="30" width="100"></td>
+        </tr>
+        <tr>
+            <td height="30" width="100"></td>
+            <td height="30" width="100"></td>
+            <td height="30" width="100"></td>
+        </tr>
+    </table>
+
+    <p>================案例二====================</p>
+    <input type="button" name="name" value="案例二" id="btn2" />
+    <ul id="uu">
+        <li>少林方丈</li>
+        <li>魔教长老</li>
+        <li>武当道长</li>
+        <li>左冷禅</li>
+        <li>君子剑</li>
+        <li>丹青子</li>
+        <li>秃笔翁</li>
+    </ul>
+
+    <p>================案例三====================</p>
+    <input type="button" name="name" value="案例二" id="btn3" />
+</body>
+</html>
