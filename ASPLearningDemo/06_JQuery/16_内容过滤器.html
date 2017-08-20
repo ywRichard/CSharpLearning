@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#btn').click(function () {
+                //表示包含今天的内容的层
+                //$('div:contains(今天)').css('color', 'green');
+
+                //获取div中没有值的元素
+                $('div:empty').css('backgroundColor', 'red');
+
+                //获取div中带有a标签的元素
+                //$('div:has(a)').css('backgroundColor', 'green');
+            });
+        });
+    </script>
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" name="name" value="效果" id="btn" />
+    <div>
+
+        今天天气好晴朗，处处好风光
+    </div>
+    <div>
+        聊止于呵呵
+    </div>
+    <div>
+        <a href="www.baidu.com">content</a>
+    </div>
+    <div></div>
+</body>
+</html>

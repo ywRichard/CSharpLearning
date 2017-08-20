@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+
+        //=================简易计算器=====================
+        $(function () {
+            $('#equalBtn').click(function () {
+                var para1 = parseInt($('#para1').attr('value'));
+                var para2 = parseInt($('#para2').attr('value'));
+                if (isNaN(para1) || isNaN(para2)) {
+                    alert('非法参数');
+                } else {
+                    $('#result').attr('value', parseInt($('#para1').attr('value')) + parseInt($('#para2').attr('value')));
+                }
+
+            });
+        });
+
+        //=================JQeury实现倒计时enable按钮=====================
+        //var num = 0;
+        //var intervalID = 0;
+
+        //$(function () {
+        //    var btnObj = $('#btn');
+
+        //    intervalID = setInterval(function () {
+        //        if (num < 10) {
+        //            btnObj.attr('value', num);
+        //            num++;
+        //        } else {
+        //            btnObj.attr('disabled', false).attr('value', 'Enabled')
+        //            clearInterval(intervalID);
+        //        }
+        //    }, 1000);
+        //});
+    </script>
+</head>
+<body>
+    <input type="text" name="name" value="" id="para1" />+
+    <input type="text" name="name" value="" id="para2" />
+    <input type="button" name="name" value="=" id="equalBtn" />
+    <input type="text" name="name" value="" id="result" />
+    <hr color="red" />
+    <!--JQeury实现倒计时enable按钮-->
+    <input type="button" name="name" value="被禁用了" disabled="disabled" id="btn" />
+</body>
+</html>
