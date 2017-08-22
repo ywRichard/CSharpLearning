@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#btnShow').click(function () {
+                $('div').show(500);
+            });
+
+            $('#btnHide').click(function () {
+                $('div').hide(500);
+            });
+
+            //------------层的显示和隐藏的不同效果----------------
+            $('#btnslideDown').click(function () {
+                $('div').slideDown(500);
+            });
+
+            $('#btnslideUp').click(function () {
+                $('div').slideUp(500);
+            });
+
+            $('#btnslideToggle').click(function () {
+                $('div').slideToggle(500);
+            });
+
+            $('#btnfadeIn').click(function () {
+                $('div').fadeIn(500);
+            });
+
+            $('#btnfadeOut').click(function () {
+                $('div').fadeOut(500);
+            });
+
+            $('#btnfadeToggle').click(function () {
+                $('div').fadeToggle(500);
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <input type="button" name="name" value="显示层" id="btnShow" />
+    <input type="button" name="name" value="隐藏层" id="btnHide" />
+
+    <p>层的显示和隐藏的不同效果</p>
+    <input type="button" name="name" value="slideDown" id="btnslideDown" />
+    <input type="button" name="name" value="slideUp" id="btnslideUp" />
+    <input type="button" name="name" value="slideToggle" id="btnslideToggle" />
+    <input type="button" name="name" value="fadeIn" id="btnfadeIn" />
+    <input type="button" name="name" value="fadeOut" id="btnfadeOut" />
+    <input type="button" name="name" value="fadeToggle" id="btnfadeToggle" />
+    <div style="width:300px;height:200px;background-color:blue;">
+
+    </div>
+
+    <!--层的显示和隐藏的不同效果-->
+</body>
+</html>
