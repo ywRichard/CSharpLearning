@@ -75,5 +75,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ItcastCaterBLL\ItcastCaterBLL.csproj">
+      <Project>{44c9ce45-fc41-4423-8a9f-69ac601d6d8a}</Project>
+      <Name>ItcastCaterBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ItcastCaterModel\ItcastCaterModel.csproj">
+      <Project>{e1e410ac-8ad2-4128-9b76-7e5893d71b8f}</Project>
+      <Name>ItcastCaterModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
