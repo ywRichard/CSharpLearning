@@ -24,14 +24,14 @@ namespace ItcastCater
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (!(string.IsNullOrEmpty(txtName.Text)) || !(string.IsNullOrEmpty(txtPwd.Text)))
+            if (!(string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtPwd.Text)))
             {
                 this.DialogResult = DialogResult.OK;
             }
             else
             {
+                msgDiv1.MsgDivShow("账号或者密码不能为空", 1);
                 this.DialogResult = DialogResult.No;
-                MessageBox.Show("为输入账号或密码");
             }
 
         }
