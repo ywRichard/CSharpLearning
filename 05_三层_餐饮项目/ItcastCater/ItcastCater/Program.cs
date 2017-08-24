@@ -16,7 +16,12 @@ namespace ItcastCater
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            FrmLogin frm = new FrmLogin();
+
+            if (frm.ShowDialog()==DialogResult.OK)
+            {
+                Application.Run(new FrmMain());
+            }
         }
     }
 }
