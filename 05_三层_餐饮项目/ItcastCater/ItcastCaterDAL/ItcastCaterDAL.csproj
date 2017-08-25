@@ -46,8 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sqlitehelper.cs" />
-    <Compile Include="UserInfo.cs" />
+    <Compile Include="SqliteHelper.cs" />
+    <Compile Include="UserInfoDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ItcastCaterModel\ItcastCaterModel.csproj">

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ItcastCater.BLL;
 
 namespace ItcastCater
 {
@@ -24,16 +25,36 @@ namespace ItcastCater
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if (CheckText())
+            {
+                string msg = "";
+                var user = new UserInfoBLL();
+                if (user.IsLoginByName(txtName.Text, txtPwd.Text, out msg))
+                {
+                    msgDiv1.MsgDivShow(msg, 1,Bind);
+                }
+                else
+                {
+                    msgDiv1.MsgDivShow(msg, 1);
+                }
+            }
+        }
+
+        private void Bind()
+        {
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private bool CheckText()
+        {
             if (!(string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtPwd.Text)))
             {
-                this.DialogResult = DialogResult.OK;
+                return true;
             }
             else
             {
-                msgDiv1.MsgDivShow("账号或者密码不能为空", 1);
-                this.DialogResult = DialogResult.No;
+                return false;
             }
-
         }
     }
 }

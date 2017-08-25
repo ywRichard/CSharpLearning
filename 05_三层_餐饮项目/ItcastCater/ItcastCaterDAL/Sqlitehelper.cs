@@ -9,7 +9,7 @@ using System.Data;
 
 namespace ItcastCater.DAL
 {
-    public class Sqlitehelper
+    public class SqliteHelper
     {
         private static readonly string str = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString;
 
