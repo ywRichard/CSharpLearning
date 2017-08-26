@@ -24,9 +24,9 @@ namespace ItcastCater.DAL
 
             if (dt.Rows.Count > 0)
             {
-                foreach (var dr in dt.Rows)
+                foreach (DataRow dr in dt.Rows)
                 {
-                    user = new UserInfo();
+                    user = RowToUserInfo(dr);
                 }
             }
 

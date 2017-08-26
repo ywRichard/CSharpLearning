@@ -30,7 +30,7 @@ namespace ItcastCater.BLL
                 }
                 else
                 {
-                    msg = "登陆失败";
+                    msg = "密码错误";
                 }
             }
             else

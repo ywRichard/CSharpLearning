@@ -85,7 +85,7 @@
             this.msgDiv1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.msgDiv1.Font = new System.Drawing.Font("SimSun", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.msgDiv1.ForeColor = System.Drawing.Color.Red;
-            this.msgDiv1.Location = new System.Drawing.Point(210, 215);
+            this.msgDiv1.Location = new System.Drawing.Point(86, 160);
             this.msgDiv1.MaximumSize = new System.Drawing.Size(980, 525);
             this.msgDiv1.Name = "msgDiv1";
             this.msgDiv1.Padding = new System.Windows.Forms.Padding(7);
