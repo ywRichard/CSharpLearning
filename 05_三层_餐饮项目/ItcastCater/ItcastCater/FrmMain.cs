@@ -16,5 +16,11 @@ namespace ItcastCater
         {
             InitializeComponent();
         }
+
+        private void btnMemberInfo_Click(object sender, EventArgs e)
+        {
+            var frmMenbenInfo = new FrmMemberInfo();
+            frmMenbenInfo.ShowDialog();
+        }
     }
 }
