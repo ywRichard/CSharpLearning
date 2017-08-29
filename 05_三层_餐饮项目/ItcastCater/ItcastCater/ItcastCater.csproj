@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmChangeMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangeMember.Designer.cs">
+      <DependentUpon>FrmChangeMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,8 +78,12 @@
     <Compile Include="FrmMemberInfo.Designer.cs">
       <DependentUpon>FrmMemberInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyEventArgs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmChangeMember.resx">
+      <DependentUpon>FrmChangeMember.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>

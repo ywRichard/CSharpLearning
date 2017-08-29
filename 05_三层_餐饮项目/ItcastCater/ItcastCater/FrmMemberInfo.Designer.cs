@@ -266,6 +266,7 @@
             this.btnUpdateMember.TabIndex = 1;
             this.btnUpdateMember.Text = "修改";
             this.btnUpdateMember.UseVisualStyleBackColor = true;
+            this.btnUpdateMember.Click += new System.EventHandler(this.btnUpdateMember_Click);
             // 
             // btnAddMember
             // 
@@ -275,6 +276,7 @@
             this.btnAddMember.TabIndex = 0;
             this.btnAddMember.Text = "增加";
             this.btnAddMember.UseVisualStyleBackColor = true;
+            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
             // 
             // FrmMemberInfo
             // 

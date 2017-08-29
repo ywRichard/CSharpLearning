@@ -12,6 +12,25 @@ namespace ItcastCater.DAL
     public class MemberInfoDAL
     {
         /// <summary>
+        /// 根据id查对象
+        /// </summary>
+        /// <param name="id">会员的id</param>
+        /// <returns>会员的对象</returns>
+        public MemberInfo GetMemberInfoByMemberId(int id)
+        {
+            var sql = "select * from MemmberInfo where DelFlag=0 and MemmberId="+id;           
+
+            var dt = SqliteHelper.ExecuteTable(sql);
+            MemberInfo mem = null;
+            if (dt.Rows.Count>0)
+            {
+                mem = RowToMemberInfo(dt.Rows[0]);
+            }
+
+            return mem;
+        }
+
+        /// <summary>
         /// 根据id修改会员的删除标识
         /// </summary>
         /// <param name="memberId"></param>
@@ -33,6 +52,7 @@ namespace ItcastCater.DAL
 
             var dt = SqliteHelper.ExecuteTable(sql, new SQLiteParameter("@DelFlag", delFlag));
             List<MemberInfo> list = new List<MemberInfo>();
+
             if (dt.Rows.Count > 0)
             {
                 foreach (DataRow dr in dt.Rows)
