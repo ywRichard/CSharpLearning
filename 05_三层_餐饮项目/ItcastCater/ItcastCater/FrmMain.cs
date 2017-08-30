@@ -22,5 +22,11 @@ namespace ItcastCater
             var frmMenbenInfo = new FrmMemberInfo();
             frmMenbenInfo.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var frmCategory = new FrmCategroy();
+            frmCategory.ShowDialog();
+        }
     }
 }

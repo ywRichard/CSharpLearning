@@ -64,7 +64,7 @@ namespace ItcastCater
             if (dgvMemmber.SelectedRows.Count>0)//是否有选中的行
             {
                 //获取选中行的id，根据id去数据库查询
-                var id = Convert.ToInt32(dgvMemmber.Rows[0].Cells[0].Value.ToString());
+                var id = Convert.ToInt32(dgvMemmber.SelectedRows[0].Cells[0].Value.ToString());
                 //去数据库查询数据
                 mea.obj = bll.GetMemberInfoByMemberId(id);
                 ShowFrmChangeMember(2);
@@ -95,7 +95,6 @@ namespace ItcastCater
                 fcm.FormClosed += new FormClosedEventHandler(fcm_FormClosed);
                 fcm.ShowDialog();
             }
-            //fcm.SetText()
         }
 
         private void fcm_FormClosed(object sender, FormClosedEventArgs e)

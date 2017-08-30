@@ -13,6 +13,26 @@ namespace ItcastCater.BLL
         MemberInfoDAL dal = new MemberInfoDAL();
 
         /// <summary>
+        /// 保存新增或者修改会员的信息
+        /// </summary>
+        /// <param name="mem"></param>
+        /// <param name="temp">1-> Add; 2-> Modify</param>
+        /// <returns>成功或者失败</returns>
+        public bool SaveMemberInfo(MemberInfo mem, int temp)
+        {
+            int r = -1;
+            if (temp == 1)//新增
+            {
+                r = dal.AddMemberInfo(mem);
+            }
+            else if (temp == 2)//修改
+            {
+                r = dal.UpdateMemberInfo(mem);
+            }
+
+            return r > 0;
+        }
+        /// <summary>
         /// 根据id查对象
         /// </summary>
         /// <param name="id">会员的id</param>
@@ -30,7 +50,7 @@ namespace ItcastCater.BLL
         {
             return dal.DeleteMemberInfoByMemberId(memberId) > 0 ? true : false;
         }
-       
+
         /// <summary>
         /// 根据删除标志查询结果
         /// </summary>

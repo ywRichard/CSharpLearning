@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmCategroy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCategroy.Designer.cs">
+      <DependentUpon>FrmCategroy.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmChangeMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <Compile Include="MyEventArgs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCategroy.resx">
+      <DependentUpon>FrmCategroy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmChangeMember.resx">
       <DependentUpon>FrmChangeMember.cs</DependentUpon>
     </EmbeddedResource>

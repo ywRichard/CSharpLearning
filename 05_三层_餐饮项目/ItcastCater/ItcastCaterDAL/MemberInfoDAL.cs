@@ -11,6 +11,57 @@ namespace ItcastCater.DAL
 {
     public class MemberInfoDAL
     {
+
+        //新增
+        public int AddMemberInfo(MemberInfo mem)
+        {
+            var sql = "insert into MemmberInfo(MemName,MemMobilePhone,MemType,MemNum,MemGender,MemDiscount,MemMoney,DelFlag,SubTime,MemIntegral,MemEndServerTime,MemBirthdaty) values(@MemName,@MemMobilePhone,@MemType,@MemNum,@MemGender,@MemDiscount,@MemMoney,@DelFlag,@SubTime,@MemIntegral,@MemEndServerTime,@MemBirthdaty)";
+
+            return AddAndUpdateMemberInfo(1, sql, mem);
+        }
+        //修改
+        public int UpdateMemberInfo(MemberInfo mem)
+        {
+            var sql = "update MemmberInfo set MemName=@MemName,MemMobilePhone=@MemMobilePhone,MemType=@MemType,MemNum=@MemNum,MemGender=@MemGender,MemDiscount=@MemDiscount,MemMoney=@MemMoney,MemIntegral=@MemIntegral,MemEndServerTime=@MemEndServerTime,MemBirthdaty=@MemBirthdaty where MemmberId=@MemmberId";
+
+            return AddAndUpdateMemberInfo(2, sql, mem);
+        }
+
+        private int AddAndUpdateMemberInfo(int temp, string sql, MemberInfo mem)
+        {
+            #region 初始化参数
+            SQLiteParameter[] param =
+                        {
+                new SQLiteParameter("@MemName", mem.MemName),
+                new SQLiteParameter("@MemMobilePhone", mem.MemMobilePhone),
+                new SQLiteParameter("@MemType", mem.MemType),
+                new SQLiteParameter("@MemNum", mem.MemNum),
+                new SQLiteParameter("@MemGender", mem.MemGender),
+                new SQLiteParameter("@MemDiscount", mem.MemDiscount),
+                new SQLiteParameter("@MemMoney", mem.MemMoney),
+                new SQLiteParameter("@MemIntegral", mem.MemIntegral),
+                new SQLiteParameter("@MemEndServerTime", mem.MemEndServerTime),
+                new SQLiteParameter("@MemBirthdaty", mem.MemBirthday),
+            };
+            #endregion
+
+            var list = new List<SQLiteParameter>();
+            list.AddRange(param);
+
+            if (temp == 1)
+            {
+                list.Add(new SQLiteParameter("@DelFlag", mem.DelFlag));
+                list.Add(new SQLiteParameter("@SubTime", mem.SubTime));
+            }
+            else if (temp == 2)
+            {
+                list.Add(new SQLiteParameter("@MemmberId", mem.MemberId));
+            }
+
+            return SqliteHelper.ExecuteNonQuery(sql, list.ToArray());
+        }
+
+
         /// <summary>
         /// 根据id查对象
         /// </summary>
@@ -18,11 +69,11 @@ namespace ItcastCater.DAL
         /// <returns>会员的对象</returns>
         public MemberInfo GetMemberInfoByMemberId(int id)
         {
-            var sql = "select * from MemmberInfo where DelFlag=0 and MemmberId="+id;           
+            var sql = "select * from MemmberInfo where DelFlag=0 and MemmberId=" + id;
 
             var dt = SqliteHelper.ExecuteTable(sql);
             MemberInfo mem = null;
-            if (dt.Rows.Count>0)
+            if (dt.Rows.Count > 0)
             {
                 mem = RowToMemberInfo(dt.Rows[0]);
             }

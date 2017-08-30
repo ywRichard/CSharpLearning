@@ -143,6 +143,7 @@
             this.button5.Size = new System.Drawing.Size(77, 72);
             this.button5.TabIndex = 1;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // splitContainer1
             // 
