@@ -13,7 +13,7 @@ namespace ItcastCater.Model
         private string _catNum;
         private string _remark;
         private int? _delFlag;
-        private DateTime? _subtim;
+        private DateTime? _subtime;
         private int? _subBy;
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace ItcastCater.Model
         /// <summary>
         /// 商品分类提交时间
         /// </summary>
-        public DateTime? Subtim { get => _subtim; set => _subtim = value; }
+        public DateTime? Subtime { get => _subtime; set => _subtime = value; }
 
         /// <summary>
         /// 商品分类提交人 

@@ -30,7 +30,7 @@
         {
             this.btnAddCategory = new System.Windows.Forms.Button();
             this.btnUpdateCategory = new System.Windows.Forms.Button();
-            this.benDeleteCategory = new System.Windows.Forms.Button();
+            this.btnDeleteCategory = new System.Windows.Forms.Button();
             this.btnAddPro = new System.Windows.Forms.Button();
             this.btnUpdatePro = new System.Windows.Forms.Button();
             this.btnDeletePro = new System.Windows.Forms.Button();
@@ -39,12 +39,11 @@
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvCategoryInfo = new System.Windows.Forms.DataGridView();
-            this.dgvProductInfo = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvProductInfo = new System.Windows.Forms.DataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +53,7 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoryInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductInfo)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -67,6 +67,7 @@
             this.btnAddCategory.TabIndex = 0;
             this.btnAddCategory.Text = "添加商品类别";
             this.btnAddCategory.UseVisualStyleBackColor = true;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
             // btnUpdateCategory
             // 
@@ -76,15 +77,17 @@
             this.btnUpdateCategory.TabIndex = 1;
             this.btnUpdateCategory.Text = "修改商品类别";
             this.btnUpdateCategory.UseVisualStyleBackColor = true;
+            this.btnUpdateCategory.Click += new System.EventHandler(this.btnUpdateCategory_Click);
             // 
-            // benDeleteCategory
+            // btnDeleteCategory
             // 
-            this.benDeleteCategory.Location = new System.Drawing.Point(339, 133);
-            this.benDeleteCategory.Name = "benDeleteCategory";
-            this.benDeleteCategory.Size = new System.Drawing.Size(109, 23);
-            this.benDeleteCategory.TabIndex = 2;
-            this.benDeleteCategory.Text = "删除商品类别";
-            this.benDeleteCategory.UseVisualStyleBackColor = true;
+            this.btnDeleteCategory.Location = new System.Drawing.Point(339, 133);
+            this.btnDeleteCategory.Name = "btnDeleteCategory";
+            this.btnDeleteCategory.Size = new System.Drawing.Size(109, 23);
+            this.btnDeleteCategory.TabIndex = 2;
+            this.btnDeleteCategory.Text = "删除商品类别";
+            this.btnDeleteCategory.UseVisualStyleBackColor = true;
+            this.btnDeleteCategory.Click += new System.EventHandler(this.btnDeleteCategory_Click);
             // 
             // btnAddPro
             // 
@@ -94,6 +97,7 @@
             this.btnAddPro.TabIndex = 3;
             this.btnAddPro.Text = "增加产品";
             this.btnAddPro.UseVisualStyleBackColor = true;
+            this.btnAddPro.Click += new System.EventHandler(this.btnAddPro_Click);
             // 
             // btnUpdatePro
             // 
@@ -103,6 +107,7 @@
             this.btnUpdatePro.TabIndex = 4;
             this.btnUpdatePro.Text = "修改产品";
             this.btnUpdatePro.UseVisualStyleBackColor = true;
+            this.btnUpdatePro.Click += new System.EventHandler(this.btnUpdatePro_Click);
             // 
             // btnDeletePro
             // 
@@ -112,6 +117,7 @@
             this.btnDeletePro.TabIndex = 5;
             this.btnDeletePro.Text = "删除产品";
             this.btnDeletePro.UseVisualStyleBackColor = true;
+            this.btnDeletePro.Click += new System.EventHandler(this.btnDeletePro_Click);
             // 
             // label1
             // 
@@ -167,39 +173,6 @@
             this.dgvCategoryInfo.Size = new System.Drawing.Size(312, 164);
             this.dgvCategoryInfo.TabIndex = 10;
             // 
-            // dgvProductInfo
-            // 
-            this.dgvProductInfo.AllowUserToAddRows = false;
-            this.dgvProductInfo.AllowUserToDeleteRows = false;
-            this.dgvProductInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13});
-            this.dgvProductInfo.Location = new System.Drawing.Point(2, 11);
-            this.dgvProductInfo.Name = "dgvProductInfo";
-            this.dgvProductInfo.ReadOnly = true;
-            this.dgvProductInfo.RowHeadersVisible = false;
-            this.dgvProductInfo.RowTemplate.Height = 23;
-            this.dgvProductInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductInfo.Size = new System.Drawing.Size(790, 264);
-            this.dgvProductInfo.TabIndex = 11;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dgvProductInfo);
-            this.groupBox1.Location = new System.Drawing.Point(3, 187);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(795, 280);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
-            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "CatId";
@@ -228,6 +201,30 @@
             this.Column4.HeaderText = "商品备注";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            // 
+            // dgvProductInfo
+            // 
+            this.dgvProductInfo.AllowUserToAddRows = false;
+            this.dgvProductInfo.AllowUserToDeleteRows = false;
+            this.dgvProductInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13});
+            this.dgvProductInfo.Location = new System.Drawing.Point(2, 11);
+            this.dgvProductInfo.Name = "dgvProductInfo";
+            this.dgvProductInfo.ReadOnly = true;
+            this.dgvProductInfo.RowHeadersVisible = false;
+            this.dgvProductInfo.RowTemplate.Height = 23;
+            this.dgvProductInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProductInfo.Size = new System.Drawing.Size(790, 264);
+            this.dgvProductInfo.TabIndex = 11;
             // 
             // Column5
             // 
@@ -293,6 +290,15 @@
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvProductInfo);
+            this.groupBox1.Location = new System.Drawing.Point(3, 187);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(795, 280);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            // 
             // FrmCategroy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -308,7 +314,7 @@
             this.Controls.Add(this.btnDeletePro);
             this.Controls.Add(this.btnUpdatePro);
             this.Controls.Add(this.btnAddPro);
-            this.Controls.Add(this.benDeleteCategory);
+            this.Controls.Add(this.btnDeleteCategory);
             this.Controls.Add(this.btnUpdateCategory);
             this.Controls.Add(this.btnAddCategory);
             this.Name = "FrmCategroy";
@@ -326,7 +332,7 @@
 
         private System.Windows.Forms.Button btnAddCategory;
         private System.Windows.Forms.Button btnUpdateCategory;
-        private System.Windows.Forms.Button benDeleteCategory;
+        private System.Windows.Forms.Button btnDeleteCategory;
         private System.Windows.Forms.Button btnAddPro;
         private System.Windows.Forms.Button btnUpdatePro;
         private System.Windows.Forms.Button btnDeletePro;

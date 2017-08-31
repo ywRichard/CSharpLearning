@@ -13,6 +13,26 @@ namespace ItcastCater.DAL
     public class ProductInfoDAL
     {
         /// <summary>
+        /// 新增
+        /// </summary>
+        public int AddProductInfo(ProductInfo proi)
+        {
+            var sql = "insert into ProductInfo(CatId,ProName,ProCost,ProSpell,ProPrice,ProUnite,Rmark,DelFlag,SubTime,ProStock,ProNum) values(@CatId,@ProName,@ProCost,@ProSpell,@ProPrice,@ProUnite,@Rmark,DelFlag,@SubTime,@ProStock,@ProNum)";
+            return AddAndUpdateProductInfo(1, proi, sql);
+        }
+
+        public int UpdateProductInfo(ProductInfo proi)
+        {
+            var sql = "update ProductInfo set ProName=@ProName,ProCost=@ProCost,ProSpell=@ProSpell,ProPrice=@ProPrice,ProUnite=@ProUnite,Rmark=@Rmark,DelFlag=@DelFlag,SubTime=@SubTime,ProStock=@ProStock,ProNum=@ProNum where ProId=@ProId";
+            return AddAndUpdateProductInfo(1, proi, sql);
+        }
+
+        private int AddAndUpdateProductInfo(int temp, ProductInfo proi, string sql)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// 获得全部的产品信息
         /// </summary>
         /// <param name="delFlag"></param>

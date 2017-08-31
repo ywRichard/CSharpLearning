@@ -15,6 +15,6 @@ namespace ItcastCater
         /// <summary>
         /// 对象
         /// </summary>
-        public object obj { get; set; }
+        public object Obj { get; set; }
     }
 }

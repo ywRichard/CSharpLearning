@@ -66,7 +66,7 @@ namespace ItcastCater
                 //获取选中行的id，根据id去数据库查询
                 var id = Convert.ToInt32(dgvMemmber.SelectedRows[0].Cells[0].Value.ToString());
                 //去数据库查询数据
-                mea.obj = bll.GetMemberInfoByMemberId(id);
+                mea.Obj = bll.GetMemberInfoByMemberId(id);
                 ShowFrmChangeMember(2);
             }
             else

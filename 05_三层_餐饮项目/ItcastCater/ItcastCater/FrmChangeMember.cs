@@ -50,7 +50,7 @@ namespace ItcastCater
             }
             else if (_tp == 2)
             {
-                var mem = mea.obj as MemberInfo;
+                var mem = mea.Obj as MemberInfo;
                 txtBirs.Text = mem.MemBirthday.ToString();//生日
                 txtMemDiscount.Text = mem.MemDiscount.ToString();//折扣
                 txtMemIntegral.Text = mem.MemIntegral.ToString();//积分
