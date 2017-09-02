@@ -15,9 +15,10 @@ namespace ItcastCater
 
     public partial class FrmCategroy : Form
     {
-        CategoryInfoBLL bll = new CategoryInfoBLL();
+        CategoryInfoBLL catBLL = new CategoryInfoBLL();
+        ProductInfoBLL proiBll = new ProductInfoBLL();
 
-        public EventHandler evtCategoryInfo { get; set; }
+        public EventHandler evt { get; set; }
 
         public FrmCategroy()
         {
@@ -27,25 +28,31 @@ namespace ItcastCater
         private void FrmCategroy_Load(object sender, EventArgs e)
         {
             LoadCategoryInfoByDelFlag(0);//加载商品信息
-            LoadProductInfo(0);//加载产品信息
+            LoadProductInfoByDelFlag(0);//加载产品信息
 
+            LoadCategoryInfoToCmb();
         }
 
-        private void LoadProductInfo(int delFlag)
+        private void LoadCategoryInfoToCmb()
         {
-            var bll = new ProductInfoBLL();
+            var list = catBLL.GetAllCategoryInfoByDelFlag(0);
+            list.Insert(0, new CategoryInfo { CatId = -1, CatName = "请选择" });
+            cmbCategory.DataSource = list;
+            cmbCategory.DisplayMember = "CatName";
+            cmbCategory.ValueMember = "CatId";
+        }
 
+        private void LoadProductInfoByDelFlag(int delFlag)
+        {
             dgvProductInfo.AutoGenerateColumns = false;
-            dgvProductInfo.DataSource = bll.GetAllProductInfo(delFlag);
+            dgvProductInfo.DataSource = proiBll.GetAllProductInfoByDelFlag(delFlag);
             dgvProductInfo.SelectedRows[0].Selected = false;
         }
 
         private void LoadCategoryInfoByDelFlag(int delFlag)
         {
-            var bll = new CategoryInfoBLL();
-
             dgvCategoryInfo.AutoGenerateColumns = false;
-            dgvCategoryInfo.DataSource = bll.GetAllCategoryInfoByDelFlag(delFlag);
+            dgvCategoryInfo.DataSource = catBLL.GetAllCategoryInfoByDelFlag(delFlag);
             dgvCategoryInfo.SelectedRows[0].Selected = false;
 
         }
@@ -61,7 +68,7 @@ namespace ItcastCater
             if (dgvCategoryInfo.SelectedRows.Count > 0)
             {
                 var id = Convert.ToInt32(dgvCategoryInfo.SelectedRows[0].Cells[0].Value);
-                mea.Obj = bll.GetCategoryInfoByID(id);
+                mea.Obj = catBLL.GetCategoryInfoByID(id);
                 LoadFrmChangeCategoryInfo(2);//修改
             }
             else
@@ -87,11 +94,12 @@ namespace ItcastCater
             {
                 frm.Text = "修改商品信息";
             }
-            this.evtCategoryInfo += new EventHandler(frm.SetText);
-            mea.Temp = p;
-            if (evtCategoryInfo != null)
+            this.evt += new EventHandler(frm.SetText);
+
+            if (evt != null)
             {
-                evtCategoryInfo(this, mea);
+                mea.Temp = p;
+                evt(this, mea);
                 frm.FormClosed += new FormClosedEventHandler(Frm_Closed);
                 frm.ShowDialog();
             }
@@ -107,10 +115,18 @@ namespace ItcastCater
             if (dgvCategoryInfo.SelectedRows.Count > 0)
             {
                 var id = Convert.ToInt32(dgvCategoryInfo.SelectedRows[0].Cells[0].Value);
-                var msg = bll.DeleteCategoryInfoById(id) ? "删除成功" : "删除失败";
 
-                MessageBox.Show(msg);
-                LoadCategoryInfoByDelFlag(0);
+                if (proiBll.GetProductInfoCountByCatId(id) > 0)
+                {
+                    MessageBox.Show("该商品目录下有产品，不能删除");
+                }
+                else
+                {
+                    var msg = catBLL.DeleteCategoryInfoById(id) ? "删除成功" : "删除失败";
+
+                    MessageBox.Show(msg);
+                    LoadCategoryInfoByDelFlag(0);
+                }
             }
             else
             {
@@ -127,6 +143,8 @@ namespace ItcastCater
         {
             if (dgvProductInfo.SelectedRows.Count > 0)
             {
+                var id = Convert.ToInt32(dgvProductInfo.SelectedRows[0].Cells[0].Value);
+                mea.Obj = proiBll.GetProductInfoById(id);
                 LoadFrmChangeProductInfo(2);
             }
             else
@@ -138,7 +156,27 @@ namespace ItcastCater
         private void LoadFrmChangeProductInfo(int p)
         {
             var fcp = new FrmChangeProductInfo();
-            
+            if (p == 1)//新增
+            {
+                fcp.Text = "新增产品信息";
+            }
+            else if (p == 2)//修改
+            {
+                fcp.Text = "修改产品信息";
+            }
+            this.evt += new EventHandler(fcp.Frm_SetText);
+            if (this.evt != null)
+            {
+                mea.Temp = p;
+                evt(this, mea);
+                fcp.FormClosed += new FormClosedEventHandler(Fcp_Closed);
+                fcp.ShowDialog();
+            }
+        }
+
+        private void Fcp_Closed(object sender, FormClosedEventArgs e)
+        {
+            LoadProductInfoByDelFlag(0);
         }
 
         private void btnDeletePro_Click(object sender, EventArgs e)
@@ -148,13 +186,37 @@ namespace ItcastCater
                 if (DialogResult.OK == MessageBox.Show("确定删除", "删除", MessageBoxButtons.OKCancel))
                 {
                     var proId = Convert.ToInt32(dgvProductInfo.SelectedRows[0].Cells[0].Value);
-                    var msg = bll.DeleteProductInfoById(proId) ? "删除成功" : "删除失败";
+                    var msg = proiBll.DeleteProductInfoById(proId) ? "删除成功" : "删除失败";
                     MessageBox.Show(msg);
+                    LoadProductInfoByDelFlag(0);
                 }
             }
             else
             {
                 MessageBox.Show("未选中要删除的行");
+            }
+        }
+
+        private void cmbCategory_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cmbCategory.SelectedIndex != 0)
+            {
+                var id = Convert.ToInt32(cmbCategory.SelectedValue);
+                dgvProductInfo.DataSource = proiBll.GetProductInfoByCatId(id);
+            }
+            else
+            {
+                LoadCategoryInfoByDelFlag(0);
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            dgvProductInfo.AutoGenerateColumns = false;
+            dgvProductInfo.DataSource = proiBll.GetProductInforByNum(txtSearch.Text);
+            if (dgvProductInfo.SelectedRows.Count > 0)
+            {
+                dgvProductInfo.SelectedRows[0].Selected = false;
             }
         }
     }

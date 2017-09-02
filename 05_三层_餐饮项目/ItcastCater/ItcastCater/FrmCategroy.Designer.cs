@@ -145,6 +145,7 @@
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(121, 20);
             this.cmbCategory.TabIndex = 8;
+            this.cmbCategory.SelectedValueChanged += new System.EventHandler(this.cmbCategory_SelectedValueChanged);
             // 
             // txtSearch
             // 
@@ -152,6 +153,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(121, 21);
             this.txtSearch.TabIndex = 9;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dgvCategoryInfo
             // 
@@ -317,6 +319,7 @@
             this.Controls.Add(this.btnDeleteCategory);
             this.Controls.Add(this.btnUpdateCategory);
             this.Controls.Add(this.btnAddCategory);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmCategroy";
             this.Text = "商品类别和产品";
             this.Load += new System.EventHandler(this.FrmCategroy_Load);

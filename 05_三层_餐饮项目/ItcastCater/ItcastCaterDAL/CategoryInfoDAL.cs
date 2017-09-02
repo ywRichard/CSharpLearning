@@ -11,19 +11,6 @@ namespace ItcastCater.DAL
 {
     public class CategoryInfoDAL
     {
-        
-
-        /// <summary>
-        /// 根据Id删除产品信息
-        /// </summary>
-        /// <param name="proId"></param>
-        /// <returns></returns>
-        public int DeleteProductInfoById(int proId)
-        {
-            var sql = "update ProductInfo set DelFlag=1 where ProId=" + proId;
-            return SqliteHelper.ExecuteNonQuery(sql);
-        }
-
         /// <summary>
         /// 根据Id删除商品信息
         /// </summary>

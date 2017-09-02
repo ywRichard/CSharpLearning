@@ -13,16 +13,6 @@ namespace ItcastCater.BLL
         CategoryInfoDAL dal = new CategoryInfoDAL();
 
         /// <summary>
-        /// 根据Id删除产品信息
-        /// </summary>
-        /// <param name="proId"></param>
-        /// <returns></returns>
-        public bool DeleteProductInfoById(int proId)
-        {
-            return dal.DeleteProductInfoById(proId) > 0 ? true : false;
-        }
-
-        /// <summary>
         /// 根据Id删除商品信息
         /// </summary>
         /// <param name="categoryId"></param>

@@ -40,9 +40,9 @@ namespace ItcastCater.DAL
         /// </summary>
         public static object ExecuteScalar(string sql, params SQLiteCommand[] ps)
         {
-            using (SQLiteConnection con = new SQLiteConnection(sql))
+            using (SQLiteConnection con = new SQLiteConnection(str))
             {
-                using (SQLiteCommand cmd = new SQLiteCommand())
+                using (SQLiteCommand cmd = new SQLiteCommand(sql,con))
                 {
                     con.Open();
                     if (ps != null)
