@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBilling = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnMemberInfo = new System.Windows.Forms.Button();
@@ -66,9 +67,10 @@
             this.lblTablesType_TName = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabc = new System.Windows.Forms.TabControl();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button6 = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -93,15 +95,16 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // button1
+            // btnBilling
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(48, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 72);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBilling.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBilling.BackgroundImage")));
+            this.btnBilling.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBilling.Location = new System.Drawing.Point(48, 7);
+            this.btnBilling.Name = "btnBilling";
+            this.btnBilling.Size = new System.Drawing.Size(77, 72);
+            this.btnBilling.TabIndex = 1;
+            this.btnBilling.UseVisualStyleBackColor = true;
+            this.btnBilling.Click += new System.EventHandler(this.btnBilling_Click);
             // 
             // button2
             // 
@@ -474,7 +477,7 @@
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.tabControl1);
+            this.splitContainer2.Panel1.Controls.Add(this.tabc);
             // 
             // splitContainer2.Panel2
             // 
@@ -483,14 +486,15 @@
             this.splitContainer2.SplitterDistance = 363;
             this.splitContainer2.TabIndex = 0;
             // 
-            // tabControl1
+            // tabc
             // 
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(704, 363);
-            this.tabControl1.TabIndex = 0;
+            this.tabc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabc.Location = new System.Drawing.Point(0, 0);
+            this.tabc.Name = "tabc";
+            this.tabc.SelectedIndex = 0;
+            this.tabc.Size = new System.Drawing.Size(704, 363);
+            this.tabc.TabIndex = 0;
+            this.tabc.SelectedIndexChanged += new System.EventHandler(this.tabc_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
@@ -512,6 +516,13 @@
             this.button6.TabIndex = 1;
             this.button6.UseVisualStyleBackColor = true;
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "空闲.png");
+            this.imageList1.Images.SetKeyName(1, "就餐.png");
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -523,14 +534,16 @@
             this.Controls.Add(this.btnMemberInfo);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBilling);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMain";
             this.Text = "强大的餐饮管理系统";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -550,14 +563,14 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBilling;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnMemberInfo;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabc;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnYinCang;
@@ -589,5 +602,6 @@
         private System.Windows.Forms.Label lblCostMoney1;
         private System.Windows.Forms.Label lblCostTime1;
         private System.Windows.Forms.Label lblMealTime1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

@@ -46,10 +46,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryInfoDAL.cs" />
+    <Compile Include="DeskInfoDAL.cs" />
     <Compile Include="MemberInfoDAL.cs" />
     <Compile Include="MemberTypeDAL.cs" />
+    <Compile Include="OrderInfoDAL.cs" />
     <Compile Include="ProductInfoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoomInfoDAL.cs" />
+    <Compile Include="R_Order_DeskDAL.cs" />
     <Compile Include="SqliteHelper.cs" />
     <Compile Include="UserInfoDAL.cs" />
   </ItemGroup>

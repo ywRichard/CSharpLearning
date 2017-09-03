@@ -16,5 +16,12 @@ namespace ItcastCater
         /// 对象
         /// </summary>
         public object Obj { get; set; }
+
+        /// <summary>
+        /// 房间的类型
+        /// 房间的最低消费
+        /// </summary>
+        public string Name { get; set; }
+        public decimal Money { get; set; }
     }
 }

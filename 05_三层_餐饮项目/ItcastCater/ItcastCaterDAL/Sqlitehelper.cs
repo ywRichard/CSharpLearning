@@ -38,7 +38,7 @@ namespace ItcastCater.DAL
         /// <summary>
         /// 查询首行首列
         /// </summary>
-        public static object ExecuteScalar(string sql, params SQLiteCommand[] ps)
+        public static object ExecuteScalar(string sql, params SQLiteParameter[] ps)
         {
             using (SQLiteConnection con = new SQLiteConnection(str))
             {
