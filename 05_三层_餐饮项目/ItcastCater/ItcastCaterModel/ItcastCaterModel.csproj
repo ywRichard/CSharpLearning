@@ -48,6 +48,7 @@
     <Compile Include="ProductInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomInfo.cs" />
+    <Compile Include="R_OrderInfo_Product.cs" />
     <Compile Include="R_Order_Desk.cs" />
     <Compile Include="UserInfo.cs" />
   </ItemGroup>

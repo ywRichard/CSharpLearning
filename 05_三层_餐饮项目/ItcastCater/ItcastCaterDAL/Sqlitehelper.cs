@@ -59,7 +59,7 @@ namespace ItcastCater.DAL
         /// </summary>
         public static SQLiteDataReader ExecuteReader(string sql, params SQLiteParameter[] ps)
         {
-            var con = new SQLiteConnection(sql);
+            var con = new SQLiteConnection(str);
             using (SQLiteCommand cmd = new SQLiteCommand(sql, con))
             {
                 if (ps!=null)

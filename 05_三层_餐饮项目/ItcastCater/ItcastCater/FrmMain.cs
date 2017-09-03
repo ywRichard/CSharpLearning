@@ -105,7 +105,7 @@ namespace ItcastCater
 
             var fbi = new FrmBilling();
             this.evtFbi += new EventHandler(fbi.SetText);
-            if (this.evtFbi!=null)
+            if (this.evtFbi != null)
             {
                 this.evtFbi(this, mea);
                 fbi.FormClosed += new FormClosedEventHandler(fbi_FormClosed);
@@ -117,6 +117,42 @@ namespace ItcastCater
         private void fbi_FormClosed(object sender, FormClosedEventArgs e)
         {
             LoadDeskInfoBySelectedRoomId(tabc.SelectedTab);
+        }
+
+        public event EventHandler evtFrmMoney;
+        private void btnMoney_Click(object sender, EventArgs e)
+        {
+            var tp = tabc.SelectedTab;
+            var lv = tp.Controls[0] as ListView;
+
+            if (lv.SelectedItems.Count <= 0)
+            {
+                MessageBox.Show("请选中");
+                return;
+            }
+            //餐桌的状态
+            if ((lv.SelectedItems[0].Tag as DeskInfo).DeskState != 1)
+            {
+                MessageBox.Show("请选中已开单的餐桌");
+                return;
+            }
+            //注册事件
+            var fam = new FrmAddMoney();
+
+            evtFrmMoney += new EventHandler(fam.SetText);
+            var mea = new MyEventArgs();
+            var dk = lv.SelectedItems[0].Tag as DeskInfo;
+            mea.Name = dk.DeskName;//餐桌编号
+            var bll = new OrderInfoBLL();
+            //订单的id，选中的开单餐桌的当前订单
+            mea.Temp = bll.GetOrderIdByDeskId(dk.DeskId);
+            //窗体传值
+            if (this.evtFrmMoney != null)
+            {
+                this.evtFrmMoney(this, mea);
+                fam.FormClosed += new FormClosedEventHandler(fbi_FormClosed);
+                fam.ShowDialog();
+            }
         }
     }
 }

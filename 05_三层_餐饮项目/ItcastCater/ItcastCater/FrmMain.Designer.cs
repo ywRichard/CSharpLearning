@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnBilling = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnMoney = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnMemberInfo = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -71,6 +71,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button6 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -106,15 +107,16 @@
             this.btnBilling.UseVisualStyleBackColor = true;
             this.btnBilling.Click += new System.EventHandler(this.btnBilling_Click);
             // 
-            // button2
+            // btnMoney
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(173, 7);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 72);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnMoney.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMoney.BackgroundImage")));
+            this.btnMoney.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMoney.Location = new System.Drawing.Point(173, 7);
+            this.btnMoney.Name = "btnMoney";
+            this.btnMoney.Size = new System.Drawing.Size(77, 72);
+            this.btnMoney.TabIndex = 1;
+            this.btnMoney.UseVisualStyleBackColor = true;
+            this.btnMoney.Click += new System.EventHandler(this.btnMoney_Click);
             // 
             // button3
             // 
@@ -523,6 +525,17 @@
             this.imageList1.Images.SetKeyName(0, "空闲.png");
             this.imageList1.Images.SetKeyName(1, "就餐.png");
             // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(173, 7);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(77, 72);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnMoney_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -533,11 +546,10 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnMemberInfo);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnMoney);
             this.Controls.Add(this.btnBilling);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMain";
@@ -564,7 +576,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Button btnBilling;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnMoney;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnMemberInfo;
         private System.Windows.Forms.Button button5;
@@ -603,5 +615,6 @@
         private System.Windows.Forms.Label lblCostTime1;
         private System.Windows.Forms.Label lblMealTime1;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button button2;
     }
 }

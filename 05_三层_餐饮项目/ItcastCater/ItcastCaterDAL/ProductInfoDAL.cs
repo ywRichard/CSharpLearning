@@ -13,13 +13,43 @@ namespace ItcastCater.DAL
     public class ProductInfoDAL
     {
         /// <summary>
+        /// 通过产品数量或者拼音查询产品信息
+        /// </summary>
+        /// <param name="num">拼音或者数量</param>
+        /// <param name="flag">1->拼音; 2->数量</param>
+        /// <returns></returns>
+        public List<ProductInfo> GetProductInfoBySpellNum(string num, int flag)
+        {
+            var sql = "select * from ProductInfo where DelFlag=0";
+            if (flag == 1)//拼音
+            {
+                sql += " and ProSpell like @ProSpell";
+            }
+            else if (flag == 2)//v
+            {
+                sql += " and ProNum like @ProSpell";
+            }
+
+            var dt = SqliteHelper.ExecuteTable(sql, new SQLiteParameter("@ProSpell", "%" + num + "%"));
+            var list = new List<ProductInfo>();
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    list.Add(RowToProductInfo(dr));
+                }
+            }
+
+            return list;
+        }
+        /// <summary>
         /// 查询一个CatId下产品的数量
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         public object GetProductInfoCountByCatId(int id)
         {
-            var sql = "select count(*) from ProductInfo where DelFlag=0 and CatId="+id;
+            var sql = "select count(*) from ProductInfo where DelFlag=0 and CatId=" + id;
             return SqliteHelper.ExecuteScalar(sql);
         }
         /// <summary>

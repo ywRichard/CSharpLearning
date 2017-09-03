@@ -13,6 +13,16 @@ namespace ItcastCater.BLL
         ProductInfoDAL dal = new ProductInfoDAL();
 
         /// <summary>
+        /// 通过产品数量或者拼音查询产品信息
+        /// </summary>
+        /// <param name="num">拼音或者数量</param>
+        /// <param name="flag">1->拼音; 2->数量</param>
+        /// <returns></returns>
+        public List<ProductInfo> GetProductInfoBySpellNum(string num, int flag)
+        {
+            return dal.GetProductInfoBySpellNum(num, flag);
+        }
+        /// <summary>
         /// 查询一个CatId下产品的数量
         /// </summary>
         /// <param name="id"></param>
