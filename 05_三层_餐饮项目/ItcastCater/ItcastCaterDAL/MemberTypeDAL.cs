@@ -12,6 +12,17 @@ namespace ItcastCater.DAL
     public class MemberTypeDAL
     {
         /// <summary>
+        /// 通过会员级别查询级别名称
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public object GetMemberTypeByType(int type)
+        {
+            var sql = "select MemTpName from MemmberType where MemType=" + type;
+            
+            return SqliteHelper.ExecuteScalar(sql);
+        }
+        /// <summary>
         /// 查询所有的会员等级
         /// </summary>
         /// <param name="delFlag"></param>

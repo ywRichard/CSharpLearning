@@ -107,6 +107,7 @@
             this.cmbMemmber.Name = "cmbMemmber";
             this.cmbMemmber.Size = new System.Drawing.Size(121, 20);
             this.cmbMemmber.TabIndex = 24;
+            this.cmbMemmber.SelectedValueChanged += new System.EventHandler(this.cmbMemmber_SelectedValueChanged);
             // 
             // label10
             // 
@@ -230,6 +231,7 @@
             this.btnAccounts.TabIndex = 17;
             this.btnAccounts.Text = "结账";
             this.btnAccounts.UseVisualStyleBackColor = true;
+            this.btnAccounts.Click += new System.EventHandler(this.btnAccounts_Click);
             // 
             // lblSpareMoney
             // 
@@ -387,6 +389,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "FrmPayBill";
             this.Text = "FrmPayBill";
+            this.Load += new System.EventHandler(this.FrmPayBill_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllPro)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

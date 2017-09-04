@@ -15,7 +15,7 @@ namespace ItcastCater.BLL
         /// <summary>
         /// 通过deskId修改餐桌状态
         /// </summary>
-        /// <param name="state">1开单,2空闲</param>
+        /// <param name="state">1开单,0空闲</param>
         public bool UpdateDeskStateByDeskId(int deskId, int state)
         {
             return dal.UpdateDeskStateByDeskId(deskId, state)>0;

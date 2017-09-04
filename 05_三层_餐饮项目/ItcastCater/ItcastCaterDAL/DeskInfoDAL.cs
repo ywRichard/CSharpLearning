@@ -14,10 +14,11 @@ namespace ItcastCater.DAL
         /// <summary>
         /// 通过deskId修改餐桌状态
         /// </summary>
-        /// <param name="state">1开单,2空闲</param>
+        /// <param name="state">1开单,0空闲</param>
         public int UpdateDeskStateByDeskId(int deskId, int state)
         {
             var sql = "update DeskInfo set DeskState=@DeskState where DelFlag=0 and DeskId=@DeskId";
+
             return SqliteHelper.ExecuteNonQuery(sql, new SQLiteParameter("@DeskState", state), new SQLiteParameter("@DeskId", deskId));
         }
         /// <summary>

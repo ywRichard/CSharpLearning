@@ -20,7 +20,9 @@ namespace ItcastCater.BLL
         /// <returns></returns>
         public decimal GetMoneyByOrderId(int orderId)
         {
-            return dal.GetMoneyByOrderId(orderId) != null ? Convert.ToDecimal(dal.GetMoneyByOrderId(orderId)) : -1;
+            var result = dal.GetMoneyByOrderId(orderId);
+
+            return dal.GetMoneyByOrderId(orderId) != DBNull.Value ? Convert.ToDecimal(dal.GetMoneyByOrderId(orderId)) : -1;
         }
         /// <summary>
         /// 通过OrderId保存订单总消费

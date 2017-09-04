@@ -13,6 +13,13 @@ namespace ItcastCater.BLL
         MemberInfoDAL dal = new MemberInfoDAL();
 
         /// <summary>
+        /// 通过MemmberId修改会员余额
+        /// </summary>
+        public bool UpdateMemberMoneyById(int memId, decimal money)
+        {
+            return dal.UpdateMemberMoneyById(memId, money) > 0 ? true : false;
+        }
+        /// <summary>
         /// 保存新增或者修改会员的信息
         /// </summary>
         /// <param name="mem"></param>

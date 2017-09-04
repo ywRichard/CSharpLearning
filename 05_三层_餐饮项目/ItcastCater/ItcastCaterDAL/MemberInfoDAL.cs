@@ -11,7 +11,14 @@ namespace ItcastCater.DAL
 {
     public class MemberInfoDAL
     {
-
+        /// <summary>
+        /// 通过MemmberId修改会员余额
+        /// </summary>
+        public int UpdateMemberMoneyById(int memId, decimal money)
+        {
+            var sql = "update MemmberInfo set MemMoney=@MemMoney where DelFlag=0 and MemmberId=" + memId;
+            return SqliteHelper.ExecuteNonQuery(sql, new SQLiteParameter("@MemMoney", money));
+        }
         //新增
         public int AddMemberInfo(MemberInfo mem)
         {
