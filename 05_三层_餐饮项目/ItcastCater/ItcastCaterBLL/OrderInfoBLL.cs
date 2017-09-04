@@ -14,6 +14,22 @@ namespace ItcastCater.BLL
         OrderInfoDAL dal = new OrderInfoDAL();
 
         /// <summary>
+        /// 通过OrderId查询订单金额
+        /// </summary>
+        /// <param name="orderId"></param>
+        /// <returns></returns>
+        public decimal GetMoneyByOrderId(int orderId)
+        {
+            return dal.GetMoneyByOrderId(orderId) != null ? Convert.ToDecimal(dal.GetMoneyByOrderId(orderId)) : -1;
+        }
+        /// <summary>
+        /// 通过OrderId保存订单总消费
+        /// </summary>
+        public bool UpdateMoneyByOrderId(int orderId, int money)
+        {
+            return dal.UpdateMoneyByOrderId(orderId, money) > 0 ? true : false;
+        }
+        /// <summary>
         /// 通过餐桌id获得OrderInfo的id
         /// </summary>
         /// <param name="deskId"></param>

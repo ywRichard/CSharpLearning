@@ -478,6 +478,7 @@
             this.btnDeleteRorderPro.TabIndex = 0;
             this.btnDeleteRorderPro.Text = "退菜";
             this.btnDeleteRorderPro.UseVisualStyleBackColor = true;
+            this.btnDeleteRorderPro.Click += new System.EventHandler(this.btnDeleteRorderPro_Click);
             // 
             // groupBox7
             // 
@@ -574,6 +575,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "FrmAddMoney";
             this.Text = "FrmAddMoney";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAddMoney_FormClosing);
             this.Load += new System.EventHandler(this.FrmAddMoney_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);

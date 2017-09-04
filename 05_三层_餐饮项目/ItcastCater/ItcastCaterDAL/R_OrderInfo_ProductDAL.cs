@@ -13,6 +13,16 @@ namespace ItcastCater.DAL
     public class R_OrderInfo_ProductDAL
     {
         /// <summary>
+        /// 退菜
+        /// </summary>
+        /// <param name="rOrderId"></param>
+        /// <returns></returns>
+        public int DeleteROrderProductById(int rOrderId)
+        {
+            var sql = "update R_OrderInfo_Product set DelFlag=1 where ROrderProId=@ROrderProId";
+            return SqliteHelper.ExecuteNonQuery(sql, new SQLiteParameter("@ROrderProId", rOrderId));
+        }
+        /// <summary>
         /// 点菜，添加到订单表中
         /// </summary>
         /// <param name="rop"></param>

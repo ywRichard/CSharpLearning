@@ -42,6 +42,7 @@ namespace ItcastCater
             var odrBll = new OrderInfoBLL();
             var odr = new OrderInfo();
             odr.BeginTime = System.DateTime.Now;
+            odr.SubTime = System.DateTime.Now;
             odr.DelFlag = 0;
             odr.OrderMoney = 0;
             odr.OrderState = 1;

@@ -13,6 +13,15 @@ namespace ItcastCater.BLL
         R_OrderInfo_ProductDAL dal = new R_OrderInfo_ProductDAL();
 
         /// <summary>
+        /// 退菜
+        /// </summary>
+        /// <param name="rOrderId"></param>
+        /// <returns></returns>
+        public bool DeleteROrderProductById(int rOrderId)
+        {
+            return dal.DeleteROrderProductById(rOrderId) > 0 ? true : false;
+        }
+        /// <summary>
         /// 点菜，添加到订单表中
         /// </summary>
         /// <param name="rop"></param>

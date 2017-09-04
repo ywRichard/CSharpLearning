@@ -49,7 +49,6 @@ namespace ItcastCater
             var rop = bll.GetAllMoneyAndCount(id);
             labSumMoney.Text = rop.MONEY.ToString();
             labCount.Text = rop.CT.ToString();
-
         }
 
         //加载节点树
@@ -137,6 +136,37 @@ namespace ItcastCater
                 if (dgvProduct.SelectedRows.Count > 0)
                 {
                     dgvProduct.SelectedRows[0].Selected = false;
+                }
+            }
+        }
+
+        private void btnDeleteRorderPro_Click(object sender, EventArgs e)
+        {
+            if (dgvROrderProduct.SelectedRows.Count > 0)
+            {
+                var id = Convert.ToInt32(dgvROrderProduct.SelectedRows[0].Cells[0].Value);
+                var bll = new R_OrderInfo_ProductBLL();
+                var msg = bll.DeleteROrderProductById(id) ? "退菜成功" : "退菜失败";
+                MessageBox.Show(msg);
+                LoadROrderInfoProductByOrderId(Convert.ToInt32(labOrderId.Text));
+            }
+            else
+            {
+                MessageBox.Show("请选择要退的菜");
+            }
+        }
+
+        private void FrmAddMoney_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (labSumMoney.Text!="" && !string.IsNullOrEmpty(labSumMoney.Text))
+            {
+                var bll = new OrderInfoBLL();
+                var id = Convert.ToInt32(labOrderId.Text);
+                var money = Convert.ToInt32(labSumMoney.Text);
+
+                if (bll.UpdateMoneyByOrderId(id,money)==false)
+                {
+                    MessageBox.Show("保存订单总消费失败");
                 }
             }
         }

@@ -33,7 +33,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnBilling = new System.Windows.Forms.Button();
             this.btnMoney = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnCheckout = new System.Windows.Forms.Button();
             this.btnMemberInfo = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -118,15 +118,16 @@
             this.btnMoney.UseVisualStyleBackColor = true;
             this.btnMoney.Click += new System.EventHandler(this.btnMoney_Click);
             // 
-            // button3
+            // btnCheckout
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(298, 7);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(77, 72);
-            this.button3.TabIndex = 1;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCheckout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCheckout.BackgroundImage")));
+            this.btnCheckout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCheckout.Location = new System.Drawing.Point(298, 7);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(77, 72);
+            this.btnCheckout.TabIndex = 1;
+            this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
             // btnMemberInfo
             // 
@@ -545,7 +546,7 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnMemberInfo);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnCheckout);
             this.Controls.Add(this.btnMoney);
             this.Controls.Add(this.btnBilling);
             this.Controls.Add(this.splitContainer1);
@@ -554,7 +555,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMain";
             this.Text = "强大的餐饮管理系统";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -577,7 +577,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Button btnBilling;
         private System.Windows.Forms.Button btnMoney;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCheckout;
         private System.Windows.Forms.Button btnMemberInfo;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.SplitContainer splitContainer1;
