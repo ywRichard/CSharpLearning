@@ -74,6 +74,7 @@
             this.txtPwd.Location = new System.Drawing.Point(194, 110);
             this.txtPwd.Multiline = true;
             this.txtPwd.Name = "txtPwd";
+            this.txtPwd.PasswordChar = '*';
             this.txtPwd.Size = new System.Drawing.Size(171, 31);
             this.txtPwd.TabIndex = 1;
             this.txtPwd.Text = "admin";

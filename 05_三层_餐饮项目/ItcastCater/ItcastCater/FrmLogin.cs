@@ -29,7 +29,7 @@ namespace ItcastCater
             {
                 string msg = "";
                 var user = new UserInfoBLL();
-                if (user.IsLoginByName(txtName.Text, txtPwd.Text, out msg))
+                if (user.IsLoginByName(txtName.Text, Common.GetStringMD5(txtPwd.Text), out msg))
                 {
                     msgDiv1.MsgDivShow(msg, 1,Bind);
                 }
