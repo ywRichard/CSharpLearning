@@ -94,6 +94,7 @@ namespace ItcastCater
         private void btnAccounts_Click(object sender, EventArgs e)
         {
             decimal remainMoney = 0;
+            var orderInfo = new OrderInfo();
             if (cmbMemmber.SelectedIndex != 0)
             {
                 remainMoney = Convert.ToDecimal(labyeMoney.Text) - Convert.ToDecimal(lblMoney.Text);
@@ -109,13 +110,14 @@ namespace ItcastCater
                         MessageBox.Show("还是不够");
                         return;
                     }
+                    lblSpareMoney.Text = (Convert.ToDecimal(txtMoney.Text) + remainMoney).ToString();
+                    remainMoney = 0;
                 }
-                else
-                {
-                    //会员的余额
-                    var mem = cmbMemmber.SelectedItem as MemberInfo;
-                    (new MemberInfoBLL()).UpdateMemberMoneyById(mem.MemberId, remainMoney);
-                }
+                //会员的余额
+                var mem = cmbMemmber.SelectedItem as MemberInfo;
+                (new MemberInfoBLL()).UpdateMemberMoneyById(mem.MemberId, remainMoney);
+                orderInfo.OrderMemId = mem.MemberId;
+                orderInfo.DisCount = mem.MemDiscount;
             }
             else
             {
@@ -129,12 +131,27 @@ namespace ItcastCater
                     MessageBox.Show("钱不够");
                     return;
                 }
+
+                lblSpareMoney.Text = (Convert.ToDecimal(txtMoney.Text) - Convert.ToDecimal(lblMoney.Text)).ToString();
             }
 
             //餐桌的状态改变
-            (new DeskInfoBLL()).UpdateDeskStateByDeskId(_dkId, 0);
-            
+            var dkFlag = (new DeskInfoBLL()).UpdateDeskStateByDeskId(_dkId, 0);
+
+            orderInfo.OrderMoney = Convert.ToDecimal(lblMoney.Text);
+            orderInfo.EndTime = System.DateTime.Now;
+            orderInfo.OrderId = Convert.ToInt32(labOrderId.Text);
+
             //订单的状态改变，钱，会员的id，折扣
+            var orderFlag = (new OrderInfoBLL()).UpdateOrderInfoByOrderId(orderInfo);
+            if (dkFlag && orderFlag)
+            {
+                MessageBox.Show("结账成功");
+            }
+            else
+            {
+                MessageBox.Show("结账失败");
+            }
         }
     }
 }

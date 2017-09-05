@@ -14,6 +14,13 @@ namespace ItcastCater.BLL
         OrderInfoDAL dal = new OrderInfoDAL();
 
         /// <summary>
+        /// 结账更新订单状态
+        /// </summary>
+        public bool UpdateOrderInfoByOrderId(OrderInfo orderInfo)
+        {
+            return dal.UpdateOrderInfoByOrderId(orderInfo) > 0 ? true : false;
+        }
+        /// <summary>
         /// 通过OrderId查询订单金额
         /// </summary>
         /// <param name="orderId"></param>

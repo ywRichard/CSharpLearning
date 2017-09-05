@@ -179,8 +179,13 @@ namespace ItcastCater
                 var mea = new MyEventArgs();
                 mea.Obj = lv.SelectedItems[0].Tag as DeskInfo;
                 evt_FrmPayBil(this, mea);
+                fpb.FormClosed += new FormClosedEventHandler(fb_FormClosed);
                 fpb.ShowDialog();
             }
+        }
+
+        private void fb_FormClosed(object sender, FormClosedEventArgs e)
+        {
         }
     }
 }

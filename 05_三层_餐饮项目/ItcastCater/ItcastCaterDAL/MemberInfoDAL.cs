@@ -12,6 +12,35 @@ namespace ItcastCater.DAL
     public class MemberInfoDAL
     {
         /// <summary>
+        /// 通过会员名称和编号获取会员信息
+        /// </summary>
+        /// <param name="name">MemName or MemNum</param>
+        /// <param name="temp">1->会员名称; 2->会员编号</param>
+        /// <returns></returns>
+        public List<MemberInfo> GetMemberInfoBySerach(string name, int temp)
+        {
+            var sql = "select * from MemmberInfo where DelFlag=0 ";
+            if (temp == 1)
+            {
+                sql += "and MemName like @name";
+            }
+            else if (temp == 2)
+            {
+                sql += "and MemNum like @name";
+            }
+
+            var dt = SqliteHelper.ExecuteTable(sql, new SQLiteParameter("@name", "%" + name + "%"));
+            var list = new List<MemberInfo>();
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    list.Add(RowToMemberInfo(dr));
+                }
+            }
+            return list;
+        }
+        /// <summary>
         /// 通过MemmberId修改会员余额
         /// </summary>
         public int UpdateMemberMoneyById(int memId, decimal money)

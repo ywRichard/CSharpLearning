@@ -39,7 +39,7 @@ namespace ItcastCater
             if (dgvMemmber.SelectedRows.Count > 0)
             {
                 var id = Convert.ToInt32(dgvMemmber.SelectedRows[0].Cells[0].Value.ToString());
-                
+
                 var msg = bll.DeleteMemberInfoByMemberId(id) ? "删除成功" : "删除失败";
                 MessageBox.Show(msg);
                 LoadMemberInfoByDelFlag(0);
@@ -61,7 +61,7 @@ namespace ItcastCater
         //修改会员
         private void btnUpdateMember_Click(object sender, EventArgs e)
         {
-            if (dgvMemmber.SelectedRows.Count>0)//是否有选中的行
+            if (dgvMemmber.SelectedRows.Count > 0)//是否有选中的行
             {
                 //获取选中行的id，根据id去数据库查询
                 var id = Convert.ToInt32(dgvMemmber.SelectedRows[0].Cells[0].Value.ToString());
@@ -79,17 +79,17 @@ namespace ItcastCater
         private void ShowFrmChangeMember(int p)
         {
             var fcm = new FrmChangeMemberInfo();
-            if (p==1)
+            if (p == 1)
             {
                 fcm.Text = "新增会员";
             }
-            else if(p==2)
+            else if (p == 2)
             {
                 fcm.Text = "修改会员";
             }
             this.evtMember += new EventHandler(fcm.SetText);
             mea.Temp = p;
-            if (this.evtMember!=null)
+            if (this.evtMember != null)
             {
                 this.evtMember(this, mea);
                 fcm.FormClosed += new FormClosedEventHandler(fcm_FormClosed);
@@ -100,6 +100,30 @@ namespace ItcastCater
         private void fcm_FormClosed(object sender, FormClosedEventArgs e)
         {
             LoadMemberInfoByDelFlag(0);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtSearch.Text))
+            {
+                LoadMemberInfoByDelFlag(0);
+                return;
+            }
+
+            var temp = 0;
+            if (char.IsDigit(txtSearch.Text[0]))
+            {
+                temp = 2;
+            }
+            else
+            {
+                temp = 1;
+            }
+
+            var bll = new MemberInfoBLL();
+            dgvMemmber.AutoGenerateColumns = false;
+            dgvMemmber.DataSource = bll.GetMemberInfoBySerach(txtSearch.Text, temp);
+            dgvMemmber.SelectedRows[0].Selected = false;
         }
     }
 }

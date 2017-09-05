@@ -13,6 +13,16 @@ namespace ItcastCater.BLL
         MemberInfoDAL dal = new MemberInfoDAL();
 
         /// <summary>
+        /// 通过会员名称和编号获取会员信息
+        /// </summary>
+        /// <param name="name">MemName or MemNum</param>
+        /// <param name="temp">1->会员名称; 1->会员信息</param>
+        /// <returns></returns>
+        public List<MemberInfo> GetMemberInfoBySerach(string name, int temp)
+        {
+            return dal.GetMemberInfoBySerach(name, temp);
+        }
+        /// <summary>
         /// 通过MemmberId修改会员余额
         /// </summary>
         public bool UpdateMemberMoneyById(int memId, decimal money)

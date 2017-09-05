@@ -12,13 +12,30 @@ namespace ItcastCater.DAL
     public class OrderInfoDAL
     {
         /// <summary>
+        /// 结账更新订单状态
+        /// OrderState:1->未结账，2->已结账
+        /// </summary>
+        public int UpdateOrderInfoByOrderId(OrderInfo orderInfo)
+        {
+            var sql = "update OrderInfo set OrderState=2,EndTime=@EndTime,DisCount=@DisCount,OrderMemId=@OrderMemId,OrderMoney=@OrderMoney where OrderId=@OrderId";
+            var ps = new SQLiteParameter[]
+            {
+                new SQLiteParameter("@EndTime",orderInfo.EndTime),
+                new SQLiteParameter("@DisCount",orderInfo.DisCount),
+                new SQLiteParameter("@OrderMemId",orderInfo.OrderMemId),
+                new SQLiteParameter("@OrderMoney",orderInfo.OrderMoney),
+                new SQLiteParameter("@OrderId",orderInfo.OrderId)
+            };
+            return SqliteHelper.ExecuteNonQuery(sql, ps);
+        }
+        /// <summary>
         /// 通过OrderId查询订单金额
         /// </summary>
         /// <param name="orderId"></param>
         /// <returns></returns>
         public object GetMoneyByOrderId(int orderId)
         {
-            var sql = "select OrderMoney from OrderInfo where DelFlag=0 and OrderId="+orderId;
+            var sql = "select OrderMoney from OrderInfo where DelFlag=0 and OrderId=" + orderId;
             return SqliteHelper.ExecuteScalar(sql);
         }
         /// <summary>
