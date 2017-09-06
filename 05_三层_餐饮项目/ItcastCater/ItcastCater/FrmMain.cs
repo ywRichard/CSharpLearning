@@ -187,5 +187,12 @@ namespace ItcastCater
         private void fb_FormClosed(object sender, FormClosedEventArgs e)
         {
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var frm = FrmRoom.Instance;
+            frm.Show();
+
+        }
     }
 }
