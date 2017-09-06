@@ -26,5 +26,19 @@ namespace _单例模式
             }
             return FormSingle;
         }
+
+        private static Form2 _instance;
+
+        public static Form2 Instance
+        {
+            get
+            {
+                if (_instance==null||_instance.IsDisposed)
+                {
+                    _instance = new Form2();
+                }
+                return _instance;
+            }
+        }
     }
 }

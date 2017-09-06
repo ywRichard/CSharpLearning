@@ -19,8 +19,17 @@ namespace _单例模式
         private void button1_Click(object sender, EventArgs e)
         {
             //Form2 frm2 = new Form2();
-            Form2 frm2 = Form2.GetSingle();
+            //1、用方法实现单利模式
+            //Form2 frm2 = Form2.GetSingle();
+
+            //2、属性实现单例模式
+            var frm2 = Form2.Instance;
+
+            //3、非模态对话框
             frm2.Show();
+
+            //4、模态对话框
+            //frm2.ShowDialog();
         }
     }
 }

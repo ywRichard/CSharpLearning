@@ -18,3 +18,13 @@ C:\Users\yao\Desktop\VS Demo\Winform练习\_单例模式\obj\x86\Debug\GenerateR
 C:\Users\yao\Desktop\VS Demo\Winform练习\_单例模式\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\yao\Desktop\VS Demo\Winform练习\_单例模式\obj\x86\Debug\_单例模式.exe
 C:\Users\yao\Desktop\VS Demo\Winform练习\_单例模式\obj\x86\Debug\_单例模式.pdb
+C:\Users\Victor\Documents\GitHub\CSharpLearning\03_Winform练习\_单例模式\bin\Debug\_单例模式.exe
+C:\Users\Victor\Documents\GitHub\CSharpLearning\03_Winform练习\_单例模式\bin\Debug\_单例模式.pdb
+C:\Users\Victor\Documents\GitHub\CSharpLearning\03_Winform练习\_单例模式\obj\x86\Debug\_单例模式.csprojResolveAssemblyReference.cache
+C:\Users\Victor\Documents\GitHub\CSharpLearning\03_Winform练习\_单例模式\obj\x86\Debug\_单例模式.Form1.resources
+C:\Users\Victor\Documents\GitHub\CSharpLearning\03_Winform练习\_单例模式\obj\x86\Debug\_单例模式.Form2.resources
+C:\Users\Victor\Documents\GitHub\CSharpLearning\03_Winform练习\_单例模式\obj\x86\Debug\_单例模式.Properties.Resources.resources
+C:\Users\Victor\Documents\GitHub\CSharpLearning\03_Winform练习\_单例模式\obj\x86\Debug\_单例模式.csproj.GenerateResource.Cache
+C:\Users\Victor\Documents\GitHub\CSharpLearning\03_Winform练习\_单例模式\obj\x86\Debug\_单例模式.csproj.CoreCompileInputs.cache
+C:\Users\Victor\Documents\GitHub\CSharpLearning\03_Winform练习\_单例模式\obj\x86\Debug\_单例模式.exe
+C:\Users\Victor\Documents\GitHub\CSharpLearning\03_Winform练习\_单例模式\obj\x86\Debug\_单例模式.pdb
