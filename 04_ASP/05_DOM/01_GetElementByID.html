@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        //用这种---等到页面元素加载完成之后再执行。
+        window.onload = function () {
+            document.getElementById('txt1').value = '你好，世界！- 预加载';
+            document.getElementById('btn1').value = '世界的按钮 - 预加载';
+        };
+    </script>
+</head>
+<body>
+    <form action="/" method="get" id="form1">
+        <input type="text" name="name" value=" " id="txt1" />
+        <input type="button" name="name" value=" " id="btn1" />
+    </form>
+
+    <!-- 方法一, 通过元素路径调用； -->
+    <script>
+        //但是，元素路径变了（例如被其他标签包围）就会调用不到
+        //window.txt1.value = '我是文档，耶';
+        //window.btn1.value = '我是一个按钮';
+
+        //新路径
+        //window.form1.txt1.value = '我被包围了';
+        //window.form1.btn1.value = '新路径';
+
+        //方法二，用document.getElementById()来通过Id获取元素，不受元素路径的约束。不用调用之前，元素必须存在否则报错。
+        //document.getElementById('txt1').value = '你好，世界！';
+        //document.getElementById('btn1').value = '世界的按钮';
+    </script>
+</body>
+</html>

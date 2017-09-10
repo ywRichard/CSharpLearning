@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        #dv1{
+            background-color:blue;
+            width:100px;
+            height:100px;
+        }
+
+        #dv2{
+            background-color:green;
+            width:200px;
+            height:100px;
+            position:absolute;
+            left:200px;
+            top:200px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            document.getElementById('dv1').onclick = function (e) {
+                //通过event对象获取，当鼠标点击的时候是否按下了某个按键
+                /******************Firefox**********************/
+                //更为通用的方式，code在兼容浏览器方法，最好不要做浏览器判断，而是选择做“能力检测”。
+                //通过函数传参来获取事件对象，
+                var evt = window.event || e;//方法一：逻辑或去选择true的对象。
+                //var evt = e ? e : window.event;//方法二：三元运算符
+                
+                if (evt.ctrlKey) {
+                    alert('Ctrl键被按下' + evt.ctrlKey);
+                } else if (evt.altKey) {
+                    alert('Alt键被按下' + evt.altKey);
+                } else if (evt.shiftKey) {
+                    alert('Shift键被按下');
+                } else {
+                    alert('被普通的点了一下');
+                }
+                /*****************IE*********************/
+                //在IE8或者更早的IE浏览器中必须通过window.event方式来获取事件对象，IE9以后的兼容传参获取
+                //但是FireFox等标准的浏览器不兼容该方式
+                //var evt = window.event;//获取事件对象，火狐不兼容
+                //if (evt.ctrlKey) {
+                //    alert('Ctrl键被按下' + evt.ctrlKey);
+                //} else if (evt.altKey) {
+                //    alert('Alt键被按下' + evt.altKey);
+                //} else if (evt.shiftKey) {
+                //    alert('Shift键被按下');
+                //} else {
+                //    alert('被普通的点了一下');
+                //}
+
+                document.getElementById('dv2').onclick = function (e) {
+                    //能力检测；
+                    var evt = window.event || e;
+                    /*****************获取鼠标的位置*******************/
+                    var x, y;
+                    //页面坐标值
+                    //x = evt.clientX;
+                    //y = evt.clientY;
+                    //屏幕坐标值
+                    x = evt.screenX;
+                    y = evt.screenY;
+                    ////元素自己的偏移坐标
+                    //x = evt.offsetX;
+                    //y = evt.offsetY;
+                    alert('(' + x + ',' + y + ')');
+                }
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="dv1"></div>
+
+    <div id="dv2"></div>
+</body>
+</html>

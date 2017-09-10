@@ -1,5 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_18随机数的复习\bin\Debug\_18随机数的复习.exe
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_18随机数的复习\bin\Debug\_18随机数的复习.pdb
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_18随机数的复习\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_18随机数的复习\obj\x86\Debug\_18随机数的复习.exe
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_18随机数的复习\obj\x86\Debug\_18随机数的复习.pdb

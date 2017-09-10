@@ -1,5 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_5交换两个变量\bin\Debug\_5交换两个变量.exe
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_5交换两个变量\bin\Debug\_5交换两个变量.pdb
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_5交换两个变量\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_5交换两个变量\obj\x86\Debug\_5交换两个变量.exe
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_5交换两个变量\obj\x86\Debug\_5交换两个变量.pdb

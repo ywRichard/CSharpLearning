@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        /*
+            1、点击一个按钮，被点击的按钮显示“呜呜”，其他按钮显示“哈哈”。
+            2、十秒钟后协议文本框下的注册按钮才能点击，事件倒数。
+        */
+        /***********练习题一：点击一个按钮，被点击的按钮显示“呜呜”，其他按钮显示“哈哈”。***********/
+        //我写的代码，思路是用事件冒泡捕捉按钮点击事件，在通过遍历按钮判断是否被点击
+        //window.onload = function () {
+        //    document.getElementById('body1').onclick = function (e) {
+        //        alert('我被点击了');
+        //        var evt = window.event || e;
+        //        var trg = evt.srcElement || evt.target;
+        //        var pElements = document.getElementsByName('btnName');
+        //        for (var i = 0; i < pElements.length; i++) {
+        //            if (pElements[i]) {
+        //                pElements[i].value = '呜呜';
+        //            } else {
+        //                pElements[i].value = '哈哈';
+        //            }
+        //        }
+        //    }
+        //}
+             
+        //window.onload = function () {
+        //    var inputs = document.getElementsByTagName('input');//由于“闭包”，如果复用这个数组；该数组每次调用的资源都不会被释放。
+        //    for (var i = 0; i < inputs.length; i++) {
+        //        if (inputs[i].type == 'button') {
+        //            //1、动态注册事件
+        //            inputs[i].onclick = function () {
+        //                //var vlElements = document.getElementsByTagName('input');
+        //                //2、全部设置“哈哈”,点谁谁哭
+        //                var btnInputs = document.getElementsByTagName('input');
+        //                for (var j = 0; j < btnInputs.length; j++) {
+        //                    if (btnInputs[j].type=='button') {
+        //                        btnInputs[j].value = '哈哈';
+        //                    }
+        //                }
+        //                this.value = '呜呜';
+        //                //这么写是错误的，由于闭包，该语句只有在onclick触发时才执行，而此时onload函数早已经执行完，i=length+1;
+        //                btnInputs[i].value = '呜呜';
+        //            }
+        //        }
+        //    }
+        //}
+
+        /***********练习题二：十秒钟后协议文本框下的注册按钮才能点击，时钟倒数。***********/
+        //var setID;
+        //window.onload = function () {
+        //    var btnObj = document.getElementById('btn1');
+        //    btnObj.disabled = 'disabled';//true
+
+        //    var txtObj = document.getElementById('txt1');
+        //    txtObj.defaultValue = '5';
+        //    setID = setInterval(function () {
+        //        txtObj.value -= 1;
+        //        //方法一
+        //        if (txtObj.value == '0') {
+        //            btnObj.disabled = false;
+        //            clearInterval(setID);
+        //        }
+        //        //方法二：onchange事件
+        //        //txtObj.onchange();//调用自定义函数，而不是事件，onchange事件只有在用户输入之后才会触发；通过js代码改变text内容不会触发该事件。
+        //    }, 1000);
+
+        //    txtObj.onchange = function () {
+        //        if (txtObj.value == '0') {
+        //            btnObj.disabled = false;
+        //            clearInterval(setID);
+        //        }
+        //    }
+        //}
+
+            /***********练习题三：加法计算器。***********/
+        window.onload = function () {
+            document.getElementById('btnEqual').onclick = function () {
+                var x = parseInt(document.getElementById('txt1').value) + parseInt(document.getElementById('txt2').value);
+                document.getElementById('result').value = x;
+            }
+        }
+    </script>
+</head>
+<body id="body1">
+
+    <!--练习题一-->
+    <!--<input type="button" name="btnName" value="哈哈" id="btn1" />
+    <input type="button" name="btnName" value="哈哈" id="btn2" />
+    <input type="button" name="btnName" value="哈哈" id="btn3" />
+    <input type="button" name="btnName" value="哈哈" id="btn4" />
+    <input type="button" name="btnName" value="哈哈" id="btn5" />
+    <input type="button" name="btnName" value="哈哈" id="btn6" />
+    <input type="text" name="name" value=" " />
+    <input type="text" name="name" value=" " />
+    <input type="text" name="name" value=" " />
+    <input type="text" name="name" value=" " />-->
+
+    <!--练习题二-->
+    <!--<input type="text" name="name" value=" " id="txt1"/>
+    <input type="button" name="name" value="按钮" id="btn1"/>-->
+
+    <!--练习题三-->
+    <input type="text" name="name" value=" " id="txt1" />
+    +
+    <input type="text" name="name" value=" " id="txt2" />
+    <input type="button" name="name" value="=" id="btnEqual" />
+    <input type="text" name="name" value=" " id="result"/>
+</body>
+</html>

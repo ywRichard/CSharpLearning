@@ -1,5 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_2乘法表\bin\Debug\_2乘法表.exe
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_2乘法表\bin\Debug\_2乘法表.pdb
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_2乘法表\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_2乘法表\obj\x86\Debug\_2乘法表.exe
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_2乘法表\obj\x86\Debug\_2乘法表.pdb

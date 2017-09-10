@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        //练习一：三个文本框，光标离开文本框是有内容设置背景为红，没有内容设置背景为绿。
+        /*window.onload = function () {
+            var inputs = document.getElementsByTagName('input');
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].type == "text") {
+                    inputs[i].onblur = function () {
+                        if (this.value.length == 0) {//通过字符长度来判断
+                            this.style.backgroundColor = 'red';
+                        } else {
+                            this.style.backgroundColor='white';
+                        }
+                    }
+                }
+            }
+        };*/
+
+        //练习二：简易评分控件
+        window.onload = function () {
+            //1.获取tableID
+            var tds = document.getElementById('tbl').getElementsByTagName('td');
+            for (var i = 0; i < tds.length; i++) {
+                //2.为每个td注册一个onmouseover事件和onmouseout事件
+                tds[i].onmouseover = function () {
+                    for (var j = 0; j < tds.length; j++) {
+                        tds[j].innerText = '★';
+                        if (tds[j] == this) {
+                            break;
+                        }
+                    }
+                }
+                tds[i].onmouseout = function () {
+                    for (var k = 0; k < tds.length; k++) {
+                        tds[k].innerText = '☆';
+                        if (tds[k] == this) {
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /*练习二*/
+        td {
+            font-size:50px;
+            color:green;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <!--练习一-->
+    <!--<input type="text" name="name" value="" />
+    <br />
+    <input type="text" name="name" value="" />
+    <br />
+    <input type="text" name="name" value="" />
+    <input type="text" name="name" value="" />-->
+    <!--练习二-->
+    <table border="0" cellpadding="0" cellspacing="0" id="tbl">
+        <tr>
+            <td>☆</td>
+            <td>☆</td>
+            <td>☆</td>
+            <td>☆</td>
+            <td>☆</td>
+            <td>☆</td>
+        </tr>
+    </table>
+</body>
+</html>

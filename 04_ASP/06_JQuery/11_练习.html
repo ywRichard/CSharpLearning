@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#btn').click(function () {
+                $('#tb tr:first').css('fontSize', '30px');
+                $('#tb tr:last').css('color', 'red');
+                $('#tb tr:gt(0):lt(3)').css('fontSize', '28px');
+                $('#tb tr:odd').css('backgoundColor', 'red');
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" name="name" value="显示效果" id="btn"/>
+    <table border="1" cellpadding="1" id="tb">
+        <tr>
+            <td>姓名</td>
+            <td>成绩</td>
+        </tr>
+        <tr>
+            <td>Tom</td>
+            <td>98</td>
+        </tr>
+        <tr>
+            <td>Jim</td>
+            <td>97</td>
+        </tr>
+        <tr>
+            <td>老马</td>
+            <td>38</td>
+        </tr>
+        <tr>
+            <td>小赵</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>老杨</td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td>老猥琐</td>
+            <td>76</td>
+        </tr>
+    </table>
+</body>
+</html>

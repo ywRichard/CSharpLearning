@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        .cls {
+            width: 100px;
+            height: 50px;
+            background-color: orange;
+        }
+    </style>
+    <script src="Scripts/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#btn').click(function () {
+                //--------------------------------------------
+                //类选择器
+                $('.cls').css('backgroundColor', 'gray');//选择所有.cls类选择器的元素
+                //标签+类选择器；
+                //$('div.cls').css('backgroundColor', 'gray');//选择使用了.cls类选择器的‘div层’
+                //$('div .cls').css('backgroundColor', 'gray');//选择div层中使用了.cls类选择器的‘元素’
+            });
+
+            //-----------------多条件选择器----------------------
+            $('#btn1').click(function () {
+                $('p,strong,div.cls').css('backgroundColor', 'purple');
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" name="name" value="标签+类选择器" id="btn" />
+    <input type="button" name="name" value="多条件选择器" id="btn1" />
+    <div class="cls">
+
+    </div>
+    <div style="width:300px;height:200px;background-color:green;">
+        <p class="cls">层中加空格</p>
+    </div>
+
+    <p class="cls">为了测试'div.cls'</p>
+    <p>这是p标签</p>
+    <strong>这是strong标签</strong>
+
+</body>
+</html>

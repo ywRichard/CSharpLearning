@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        //闭包就是一个函数内部由又定义了一个函数，这个内部函数可以访问外部函数的值。这个内部函数就是闭包
+        //闭包由作用域链实现，
+
+        //function Person(name) {
+          //    this.user_name = name;
+
+        //    //通过这种方式可以模拟私有成员
+        //    var user_age = 18;//没有用this.，不能被外部访问；类似于私有成员
+
+        //    //类似‘类’中的共有属性，操作私有字段
+        //    this.setAge = function (age) {
+        //        user_age = age;
+        //    }
+        //    this.getAge = function () {
+        //        return user_age;
+        //    }
+        //}
+        
+        //var p1 = new Person('鸠摩智');
+        //alert(p1.user_name);
+        //alert(p1.user_age);//undefined-新建user_age未赋值；
+
+        //p1.setAge(100);
+        //alert(p1.getAge());
+
+        ///***************思考题一*******************/
+        ////调用fn()显示的x值为多少？
+        //function f1() {
+        //    var x = 100;
+        //    x++;
+
+        //    return function () {
+        //        alert(x);//匿名函数未定义x，系统指向外部函数作用域的x;
+        //    }
+        //}
+
+        //var fn = f1();
+        //fn();//x=101;
+
+        ///***************思考题二*******************/
+        //var x = 100;
+
+        //function f1() {
+        //    var y = 12;
+
+        //    alert(x);//x调用了外层作用域的x=100；
+        //    alert(y);//y=12
+        //    return function f2() {
+        //        var y = 22;
+        //        alert(x);//x=100
+        //        alert(y);//y=22
+        //    }
+        //}
+
+        //var fn = f1();
+        //fn();
+
+        /***************思考题三*******************/
+        function f1() {
+            var funs = new Array();
+
+            for (var i = 0; i < 5; i++) {
+                funs[i] = function () {
+                    alert(i);
+                }
+            }
+            return funs;
+        }
+
+        var myFuns = f1();
+
+        for (var n = 0; n < myFuns.length; n++) {
+            myFuns[n](n);
+        }
+
+    </script>
+</body>
+</html>

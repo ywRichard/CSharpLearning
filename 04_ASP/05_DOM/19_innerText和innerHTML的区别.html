@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        #dv1
+        {
+            width:300px;
+            height:300px;
+            border:1px solid blue;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            document.getElementById('btn1').onclick = function () {
+                //document.getElementById('dv1').innerText = '<a href="http://www.baidu.com">百度</a>';//显示赋值的字符串
+                document.getElementById('dv1').innerHTML = '<a href="http://www.baidu.com">百度</a>';//解析为a标签之后显示
+            };
+        };
+    </script>
+</head>
+<body>
+    <input type="button" name="name" value="button" id="btn1" />
+    <div id="dv1"></div>
+</body>
+</html>

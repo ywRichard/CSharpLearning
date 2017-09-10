@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        //既是函数，也是“函数对象“
+        //function Person() {
+        //}
+
+        //1、直接调用为普通函数
+        //Person();
+
+        //2、将函数当做‘类’，new一个Person对象，此时Person()为“构造函数”
+        /*定义函数时，关于函数名称，构造函数遵循Pascal，普通函数遵循Camel*/
+        //var p = new Person();
+        //p.user_name = 'zsf';
+        //p.user_age = 19;
+        //p.user_email = 'zsf@163.com';
+        //p.sayHi = function () {
+        //    alert('大家好，我叫：'+this.user_name+',今年'+this.user_age+'岁了');
+        //}
+        //p.sayHi();
+
+        /*************构造函数创建Person对象****************/
+        //function Person(name, age, email) {
+        //    this.user_name = name;
+        //    this.user_age = age;
+        //    this.user_email = email;
+
+        //    this.sayHi = function () {
+        //        alert(this.user_name + '  ' + this.user_age + '   ' + this.user_email);
+        //    }
+        //}
+
+        //var p1 = new Person('张翠山', 25, 'zcs@163.com');
+        ////p1.sayHi();
+        ////对象也可以看做是键值对集合，也可以遍历
+        //alert(p1.user_name);
+        //for (var key in p1) {
+        //    alert('Key:' + key + '  '+'Value:' + p1[key]);
+        //}
+
+        ////var p2 = new Person('殷素素', 23, 'yss@163.com');
+        ////p2.sayHi();
+
+        /*************对比两个类是否相同****************/
+        //function Person() {
+
+        //}
+        //var p = new Person();
+
+        //alert(p instanceof Person);//true
+        //alert(p instanceof Date);//false
+        //alert(p instanceof Object);//true
+
+        /*************创建对象的第二种方式****************/
+        //其实所有的对象就可以有Object()来创建；但是这样不利于区分不同的类，所以还是用自定的构造函数创建对象
+        //var o = new Object();
+        //o.user_name = "陈昆";
+        //o.sayHi = function () {
+        //    alert('你好，我是'+o.user_name+'，我由Object对象创建');
+        //}
+        //o.sayHi();
+
+        /*************通过对象字面量来直接创建对象***************/
+        var p1 = {
+            user_name: 'ydt',
+            user_age: 37,
+            user_email: 'ydt@163.com',
+            say_hi: function () {
+                alert("大家好"+this.user_name)
+            },
+            say_hello: function () {
+                alert("大家好，我今年" + this.user_age);
+            }
+        }
+
+        p1.say_hello();
+        p1.say_hi();
+    </script>
+</body>
+</html>

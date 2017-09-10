@@ -1,5 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_20-23练习\bin\Debug\_20-23练习.exe
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_20-23练习\bin\Debug\_20-23练习.pdb
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_20-23练习\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_20-23练习\obj\x86\Debug\_20-23练习.exe
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_20-23练习\obj\x86\Debug\_20-23练习.pdb

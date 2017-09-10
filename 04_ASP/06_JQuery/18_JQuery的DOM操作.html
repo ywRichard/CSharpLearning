@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#btn').click(function () {
+
+                //相当于DOM中的innerHTML
+                //$('div').html('<font color="red" face="宋体">哈哈，我又活了</font>');
+
+                //相当于DOM中的innerTexr
+                //$('div').text('<font color="red" face="宋体">哈哈，我又活了</font>');
+
+
+
+                //获取dom属性
+                //($('#ck')[0]).checked = true;//dom的方式
+
+                //JQuery -> attr('checked', true) 设置属性
+                //          attr('checked')获取属性的值
+                //$('div :checkbox').attr('checked', true);
+                $('div :checkbox').attr('checked', true);
+                $(':checkbox').attr('checked', true);
+                $('#ck').attr('checked', true);
+
+                //设置样式
+                $('div').attr('class', 'cls');
+
+                //移除该属性
+                $('div').removeAttr('border');
+            });
+        });
+    </script>
+    <style type="text/css">
+        .cls {
+            background-color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" name="name" value="设置" id="btn" />
+    <div style="width:300px; height:200px; border:1px solid red">
+        <input type="checkbox" name="name" value="1" id="ck" />扔标枪
+    </div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        //===================练习1====================
+        //window.onload = function () {
+        //    var checkBoxes = document.getElementById('ul1').getElementsByTagName('input');
+        //    document.getElementById('selectAll').onclick = function () {
+        //        for (var i = 0; i < checkBoxes.length; i++) {
+        //            checkBoxes[i].checked = true;
+        //        }
+        //    };
+
+        //    document.getElementById('selectNone').onclick = function () {
+        //        for (var i = 0; i < checkBoxes.length; i++) {
+        //            checkBoxes[i].checked = false;
+        //        }
+        //    }
+
+        //    document.getElementById('selectReverse').onclick = function () {
+        //        for (var i = 0; i < checkBoxes.length; i++) {
+        //            checkBoxes[i].checked = !(checkBoxes[i].checked);
+        //        }
+        //    }
+        //};
+
+        //===================练习2====================
+        var datas = {
+            "山东": ["济南", "青岛", "烟台"],
+            "山西": ["运城", "侯马", "太原"],
+            "广东": ["广州", "惠州", "东莞"],
+        };
+        
+        window.onload = function () {
+            var provinceList = document.getElementById('province');
+            var cityList = document.getElementById('city');
+
+            LoadProvince(provinceList);
+            //var index = provinceList.selectedIndex;
+            //LoadCity(provinceList.options[index].text, cityList);
+
+            provinceList.onchange = function () {
+                var index = provinceList.selectedIndex;
+                LoadCity(provinceList.options[index].text, cityList);
+            };
+
+            provinceList.onchange();//手动调用事件
+        }
+
+        function LoadProvince(selectElement) {
+            for (var key in datas) {
+                var opt = document.createElement('option');
+                opt.innerHTML = key;
+                opt.innerText = key;
+                selectElement.appendChild(opt);
+            }
+        };
+
+        function LoadCity(key, selectElement) {
+            //selectElement.length = 0;
+            while (selectElement.firstChild) {
+                selectElement.removeChild(selectElement.firstChild);
+            }
+            for (var i = 0; i < datas[key].length; i++) {
+                var opt = document.createElement('option');
+                opt.innerHTML = datas[key][i];
+                opt.innerText = datas[key][i];
+                selectElement.appendChild(opt);
+            }
+        };
+        //===================练习3====================
+        //window.onload = function () {
+        //    var obj1 = document.getElementById('select1');
+        //    var obj2 = document.getElementById('select2');
+
+        //    document.getElementById('btn1').onclick = function () {
+        //        TakeAll(obj1, obj2);
+        //    }
+
+        //    document.getElementById('btn4').onclick = function () {
+        //        TakeAll(obj2, obj1);
+        //    }
+
+        //    document.getElementById('btn2').onclick = function () {
+        //        TakeSingle(obj1, obj2);
+        //    }
+
+        //    document.getElementById('btn3').onclick = function () {
+        //        TakeSingle(obj2, obj1);
+        //    }
+        //}
+
+        ////take from para1 to para2
+        //function TakeAll(para1, para2) {
+        //    for (var i = 0; i < para1.length; i++) {
+        //        var opt = document.createElement('option');
+        //        opt.innerHTML = para1.options[i].text;
+        //        opt.value = para1.options[i].text;
+        //        para2.appendChild(opt);
+        //    }
+        //    para1.length = 0;
+        //}
+
+        //function TakeSingle(para1, para2) {
+        //    var index = para1.selectedIndex;
+        //    if (index != -1) {
+        //        var opt = document.createElement('option');
+        //        opt.innerHTML = para1.options[index].text;
+        //        opt.value = para1.options[index].text;
+        //        para1.options[index] = null;
+
+        //        para2.appendChild(opt);
+        //    }
+        //}
+    </script>
+</head>
+<body>
+    <p>
+        ====================练习1=======================
+    </p>
+    <ul id="ul1">
+        <li>
+            <input type="checkbox" name="name" id="id1" />
+            爱情买卖
+        </li>
+        <li>
+            <input type="checkbox" name="name" />
+            最炫民族风
+        </li>
+        <li>
+            <input type="checkbox" name="name" />
+            江南Style
+        </li>
+        <li>
+            <input type="checkbox" name="name" />
+            忐忑
+        </li>
+    </ul>
+    <input type="button" name="name" value="全选" id="selectAll" />
+    <input type="button" name="name" value="全不选" id="selectNone" />
+    <input type="button" name="name" value="反选" id="selectReverse" />
+    <input type="button" name="name" value="test" id="getResult" />
+
+    <p>
+        ====================练习2：城市选择=======================
+    </p>
+    省：
+    <select id="province"></select>
+    市:
+    <select id="city"></select>
+
+    <p>
+        ====================练习3：选项=======================
+    </p>
+    <select multiple="multiple" id="select1">
+        <option value="value">增加</option>
+        <option value="value">删除</option>
+        <option value="value">保存</option>
+        <option value="value">修改</option>
+        <option value="value">查询</option>
+    </select>
+    <input type="button" name="name" value=">>" id="btn1" />
+    <input type="button" name="name" value=">" id="btn2" />
+    <input type="button" name="name" value="<" id="btn3" />
+    <input type="button" name="name" value="<<" id="btn4" />
+    <select multiple="multiple" id="select2"></select>
+</body>
+</html>

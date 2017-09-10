@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+         //=========================练习2、隐藏二级列表+设置鼠标样式=======================
+        window.onload = function () {
+            document.getElementById('newsOut').onmouseover = function () {
+                this.style.cursor = 'pointer';
+            }
+
+            document.getElementById('newsIn').onmouseover = function () {
+                this.style.cursor = 'pointer';
+            }
+
+            document.getElementById('newsLocal').onmouseover = function () {
+                this.style.cursor = 'pointer';
+            }
+
+            document.getElementById('newsOut').onclick = function () {
+                HideLabel('ulOut')
+            };
+
+            document.getElementById('newsIn').onclick = function () {
+                HideLabel('ulIn')
+            };
+
+            document.getElementById('newsLocal').onclick = function () {
+                HideLabel('ulLocal')
+            };
+        }
+
+        function HideLabel(srcID) {
+            var styleDisplay = document.getElementById(srcID).style.display;
+            if (styleDisplay != 'none') {
+                document.getElementById(srcID).style.display = 'none';
+            }
+            else {
+                document.getElementById(srcID).style.display = 'block';
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>
+        =========================练习2、二级列表=======================
+    </p>
+    <ul>
+        <li>
+            <p id="newsOut">国际新闻</p>
+            <ul id="ulOut">
+                <li>叙利亚难民</li>
+                <li>也门危机</li>
+                <li>伊斯兰国</li>
+            </ul>
+        </li>
+        <li>
+            <p id="newsIn">国内新闻</p>
+            <ul id="ulIn">
+                <li>九载沟地震</li>
+                <li>南海主权</li>
+                <li>钓鱼岛事件</li>
+            </ul>
+        </li>
+        <li>
+            <p id="newsLocal">当地实况</p>
+            <ul id="ulLocal">
+                <li>高速路假日免费</li>
+                <li>陈奕迅演唱会</li>
+                <li>城管打人</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#ul1 li').mouseover(function () { $(this).css('backgroundColor', 'red'); })
+                .mouseout(function () { $(this).css('backgroundColor', ''); })
+                .click(function () {
+                    $(this).removeAttr('style').unbind().appendTo($('#ul2'));
+                });
+            //removeAttr('style')去除样式； unbind()去除事件
+        });
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+        <li>凯尔特人</li>
+        <li>湖人</li>
+        <li>灰熊</li>
+        <li>森林狼</li>
+        <li>山猫</li>
+        <li>骑士</li>
+        <li>热火</li>
+        <li>勇士</li>
+        <li>黄蜂</li>
+        <li>太阳</li>
+        <li>小牛</li>
+        <li>马刺</li>
+        <li>公牛</li>
+        <li>活塞</li>
+        <li>雷霆</li>
+    </ul>
+    <hr color="red" />
+    <ul id="ul2">
+    </ul>
+</body>
+</html>

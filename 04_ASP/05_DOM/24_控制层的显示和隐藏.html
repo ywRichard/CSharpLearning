@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        #pmsg {
+            border: 1px solid blue;
+            width: 500px;
+            height: 25px;
+        }
+    </style>
+    <script>
+        //为每个checkbox注册事件
+        window.onload = function () {
+            //获取所有的checkbox
+            var chks = document.getElementById('dv1').getElementsByTagName('input');
+
+            for (var i = 0; i < chks.length; i++) {
+                //为每个checkbox注册一个单击事件
+                chks[i].onclick = function () {
+                    var chkValue = [];//保存被选中项的值
+                    for (var j = 0; j < chks.length; j++) {
+                        if (chks[j].checked) {
+                            chkValue[chkValue.length] = chks[j].value;
+                        }
+                    }
+
+                    //获取个数，显示值
+                    document.getElementById('pmsg').innerHTML = '共选中了' + chkValue.length + '项，分别是：' + chkValue.toString();
+                };
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="dv1">
+        <input type="checkbox" name="name" value="tom" />tom
+        <input type="checkbox" name="name" value="jerry" />jerry
+        <input type="checkbox" name="name" value="lilei" /> lilei
+        <input type="checkbox" name="name" value="hanmeimei" />hanmeimei
+    </div>
+    <p id="pmsg">
+        共选中了0项,分别是：tom, lilei.
+    </p>
+</body>
+</html>

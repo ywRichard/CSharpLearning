@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        //直接在页面上定义的函数其实默认就是注册给了windows对象，所以f1()函数时windows对象的函数。f1()=windows.f1(),所以this表示windows对象。
+        //function f1() {
+        //    alert(this);
+        //}
+        //f1();//Object Windowkk
+
+        ///***************************************/
+        //function Person() {
+        //    this.toString = function () {
+        //        return 'Person类型';
+        //    }
+        //}
+
+        //var p1 = new Person();
+        //p1.toString();
+        //p1.fn = f1;
+        //p1.fn();
+
+        /***************************************/
+        var name = "window中的name变量";
+
+        //function Person() {
+        //    this.name = "Person中的属性";
+
+        //    this.getName = function () {
+        //        return function () { return this.name; }//显示“windows中的name变量”，由于返回的匿名函数并不是注册给Person的。如果函数没有注册给任何对象，就是注册给windows的
+        //    };
+        //}
+
+        function Person() {
+            this.name = "Person中的属性";
+            var that = this;
+            this.getName = function () {
+                return function () { return that.name; }//显示“Person中的属性”，将person的this通过变量传递给了匿名函数。
+            };
+        }
+
+        var p = new Person();
+
+        alert(p.getName()());
+
+
+
+    </script>
+</body>
+</html>

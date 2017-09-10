@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-1.8.3.intellisense.js"></script>
+    <script src="Scripts/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        //window.onload = function () {
+        //    alert('DOM加载完成')
+        //};
+
+        //==========JQuery加载方法===========
+        //jQuery(document).ready(function () {
+        //    alert("jQuery(document)的加载");
+        //});
+
+        //$(document).ready(function () {
+        //    alert("$(document)的加载");
+        //});
+
+        //jQuery(window).load(function () {
+        //    alert("jQuery(window)的加载");
+        //});
+
+        //$(window).load(function () {
+        //    alert("$(window)的加载");
+        //});
+
+        //推荐使用的方法
+        //$(function () {
+        //    alert("$的加载");
+        //})
+
+        //----------------遍历的函数 map---------------------
+        //var arrs = [1, 2, 4, 5, 6, 7];
+
+        //$.map(arrs, function () {
+        //    alert(arguments.length);
+        //    alert(arguments[0] + '-----' + arguments[1] + '-----' + arguments[2]);
+        //});
+
+        //map -> 遍历数组, ele元素，index索引
+        //var result = $.map(arrs, function (ele,index) {
+        //    return index > 3 ? ele * 2 : index;
+        //});
+
+        //alert(result);
+
+        //----------------遍历的函数 each---------------------
+        var arrs = [1, 2, 4, 5, 6, 7];
+        //$.each(arrs, function (k, v) {
+        //    //k---索引，index---值
+        //    alert(k + '===' + v);
+        //});
+
+        var dic = { 'yzk': '椰子壳', 'jk': '接口', 'ml': '玛丽' };
+        $.each(dic, function (k, v) {
+            //k---索引，index---值
+            alert(k + '===' + v);
+        });
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

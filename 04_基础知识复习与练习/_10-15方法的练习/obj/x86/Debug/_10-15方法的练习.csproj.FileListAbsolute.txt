@@ -1,7 +1,0 @@
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_10-15方法的练习\bin\Debug\_10-15方法的练习.exe
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_10-15方法的练习\bin\Debug\_10-15方法的练习.pdb
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_10-15方法的练习\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_10-15方法的练习\obj\x86\Debug\_10-15方法的练习.exe
-C:\Users\Richard\Documents\My Test Demo\基础知识复习与练习\_10-15方法的练习\obj\x86\Debug\_10-15方法的练习.pdb
-C:\Users\yao\Desktop\VS Demo\04_基础知识复习与练习\_10-15方法的练习\obj\x86\Debug\_10-15方法的练习.exe
-C:\Users\yao\Desktop\VS Demo\04_基础知识复习与练习\_10-15方法的练习\obj\x86\Debug\_10-15方法的练习.pdb

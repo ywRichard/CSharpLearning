@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        ////1、动态创建表格的另一种方法
+        //var dict = {
+        //    "百度": "http://www.baidu.com",
+        //    "谷歌": "http://www.google.com",
+        //    "网易": "http://www.163.com"
+        //};
+
+        //window.onload = function () {
+        //    document.getElementById('btn1').onclick = function () {
+        //        //动态创建表格
+        //        var tableWebList = document.createElement('table');
+        //        tableWebList.border = 1;
+
+        //        //为表格添加数据
+        //        for (var key in dict) {
+        //            var currentRow = tableWebList.insertRow(-1);//-1表示向表格最后追加一行。
+        //            //向行中插入td列
+        //            var td1 = currentRow.insertCell(-1);//-1向当前行中追加一行
+        //            td1.innerHTML = key;
+        //            currentRow.insertCell(-1).innerHTML = '<a href="' + dict[key] + '">' + key + '</a>';
+        //        };
+
+        //        //把表格加到body中
+        //        document.body.appendChild(tableWebList);
+        //    }
+        //};
+
+        /****************用新方法实现的无刷新评论******************/
+        window.onload = function () {
+            document.getElementById('btn2').onclick = function () {
+                var name = document.getElementById('txt1').value;
+                var content = document.getElementById('txt2').value;
+                if (name!='' && content!='') {
+                    //在表格中动态创建一行
+                    var currentRow = document.getElementById('tblComments').insertRow(-1);
+                    //动态插入列
+                    currentRow.insertCell(-1).innerHTML = name;
+                    currentRow.insertCell(-1).innerHTML = content;
+                }
+                
+            };
+        };
+    </script>
+</head>
+<body>
+    <input type="button" name="name" value="动态创建表格的另一种方法" id="btn1" />
+
+    <!-- 用新方法的无刷新评论 -->
+    <br />
+    <table id="tblComments" border="1">
+        <tr>
+            <td>猫猫：</td>
+            <td>沙发耶：</td>
+        </tr>
+    </table>
+    昵称：<input type="text" name="name" value=" " id="txt1" /><br />
+    <textarea id="txt2"></textarea><br />
+    <input type="button" name="name" value="评论" id="btn2" />
+</body>
+</html>
