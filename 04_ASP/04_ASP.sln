@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.10
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00_NewMVCProj", "00_NewMVCProj\00_NewMVCProj.csproj", "{4B486AF7-7D4F-4A0D-B22E-F9E5B5411B88}"
 EndProject
@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_EFCodeFirst_Annotation",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_EFModelFirst", "03_EFModelFirst\03_EFModelFirst.csproj", "{DE17B4BE-64F4-4D0F-B6B2-762031D135DE}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "04_Javascript", "http://localhost:49279", "{8CB90106-6DCA-4993-8B7C-45A5531E7F3C}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "04_Javascript(1)", "http://localhost:49279", "{8CB90106-6DCA-4993-8B7C-45A5531E7F3C}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
