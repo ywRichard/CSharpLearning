@@ -73,7 +73,8 @@ namespace _108_LINQ
                                         new Order { ID="Z", Amount=1100 }
                                     };
 
-            JoinSequences(customers, orders);
+            //JoinSequences(customers, orders);
+            DistinctByFiled(customers);
 
         }
 
@@ -145,6 +146,7 @@ namespace _108_LINQ
 
             }
         }
+
         public static void QueryOperation()
         {
             int[] numbers = { 0, 1, 2, 4, 6, 7 };
@@ -333,6 +335,14 @@ namespace _108_LINQ
             {
                 Console.WriteLine(c);
             }
+        }
+
+
+        public static void DistinctByFiled(List<Customer> customers)
+        {
+            customers.Distinct(new CustomerCountryComparer())
+                .ToList()
+                .ForEach(c => Console.WriteLine(c));
         }
 
         /// <summary>
@@ -527,5 +537,18 @@ namespace _108_LINQ
     {
         public string ID { get; set; }
         public decimal Amount { get; set; }
+    }
+
+    class CustomerCountryComparer : IEqualityComparer<Customer>
+    {
+        public bool Equals(Customer x, Customer y)
+        {
+            return x.Country == y.Country;
+        }
+
+        public int GetHashCode(Customer obj)
+        {
+            return obj.Country.GetHashCode();
+        }
     }
 }

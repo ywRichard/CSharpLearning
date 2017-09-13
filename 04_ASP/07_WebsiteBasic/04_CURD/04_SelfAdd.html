@@ -6,8 +6,9 @@
 </head>
 <body>
     <form action="04_SelfAdd.ashx" method="post">
-        <input type="hidden" name="isPostBack" value="111" />
+        <input type="hidden" name="isPostBack" value="$hidValue" />
         <input type="text" name="txtCount" value="$value" />
+        <div>$divValue</div>
         <input type="submit" value="自增" />
     </form>
 </body>

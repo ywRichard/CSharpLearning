@@ -13,6 +13,9 @@ public class _04_SelfAdd : IHttpHandler {
         var count = Convert.ToInt32(context.Request.Form["txtCount"]);
         count++;
         var strHtml = fileContent.Replace("$value",count.ToString());
+
+        strHtml = strHtml.Replace("$divValue", count.ToString());
+            strHtml = strHtml.Replace("$hidValue", count.ToString());
         context.Response.Write(strHtml);
     }
 

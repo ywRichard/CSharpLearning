@@ -31,7 +31,7 @@ public class _04_UserInfoList : IHttpHandler
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        sb.AppendFormat("<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td><td>{4}</td><td><a href='ShowDetail.ashx?id={5}'>详细</a></td></tr>", dr["ID"], dr["UserName"], dr["UserPass"], Convert.ToDateTime(dr["RegTime"]).ToShortDateString(),dr["Email"],dr["ID"]);
+                        sb.AppendFormat("<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td><td>{4}</td><td><a href='06_ShowDetail.ashx?id={5}'>详细</a><a href='07_DeleteDetail.ashx?id={5}'>详细</a></td></tr>", dr["ID"], dr["UserName"], dr["UserPass"], Convert.ToDateTime(dr["RegTime"]).ToShortDateString(),dr["Email"],dr["ID"]);
                     }
                 }
                 else
