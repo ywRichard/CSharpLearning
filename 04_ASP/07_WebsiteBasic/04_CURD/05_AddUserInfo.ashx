@@ -19,11 +19,11 @@ public class _05_AddUserInfo : IHttpHandler
             {
                 con.Open();
                 cmd.Connection = con;
-                cmd.CommandText = "insert UserInfo(UserName,UserPass,RegTime,Email) values(@UserName,@UserPass,@RegTime,@Email)";
-                cmd.Parameters.AddWithValue("@UserName",context.Request.Form["txtName"]);
-                cmd.Parameters.AddWithValue("@UserPass",context.Request.Form["txtPwd"]);
-                cmd.Parameters.AddWithValue("@RegTime",DateTime.Now);
-                cmd.Parameters.AddWithValue("@Email",context.Request.Form["txtEmail"]);
+                cmd.CommandText = "insert UserInfo(FirstName,PostalCode,HireDate,HomePhone) values(@FirstName,@PostalCode,@HireDate,@HomePhone)";
+                cmd.Parameters.AddWithValue("@FirstName",context.Request.Form["txtName"]);
+                cmd.Parameters.AddWithValue("@PostalCode",context.Request.Form["txtCode"]);
+                cmd.Parameters.AddWithValue("@HireDate",DateTime.Now);
+                cmd.Parameters.AddWithValue("@HomePhone",context.Request.Form["txtHomePhone"]);
 
                 if (cmd.ExecuteNonQuery()>0)
                 {

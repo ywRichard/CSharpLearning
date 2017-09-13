@@ -17,11 +17,11 @@ public class _04_UserInfoList : IHttpHandler
         context.Response.ContentType = "text/html";
 
         #region Implement retrive database by SqlServer
-        var conStr = System.Configuration.ConfigurationManager.ConnectionStrings["conStr"].ConnectionString;
+        var conStr = System.Configuration.ConfigurationManager.ConnectionStrings["connStr"].ConnectionString;
         using (var con = new SqlConnection(conStr))
         {
 
-            using (var sda = new SqlDataAdapter("select * from UserInfo", con))
+            using (var sda = new SqlDataAdapter("select EmployeeID,FirstName,PostalCode,HireDate,HomePhone from Employees", con))
             {
                 var dt = new DataTable();
                 sda.Fill(dt);
@@ -31,7 +31,7 @@ public class _04_UserInfoList : IHttpHandler
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        sb.AppendFormat("<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td><td>{4}</td><td><a href='06_ShowDetail.ashx?id={5}'>详细</a><a href='07_DeleteDetail.ashx?id={5}'>详细</a></td></tr>", dr["ID"], dr["UserName"], dr["UserPass"], Convert.ToDateTime(dr["RegTime"]).ToShortDateString(),dr["Email"],dr["ID"]);
+                        sb.AppendFormat("<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td><td>{4}</td><td><a href='06_ShowDetail.ashx?id={5}'>详细</a></td><td><a href='07_DeleteDetail.ashx?id={5}'>删除</a></td></tr>", dr["EmployeeID"], dr["FirstName"], dr["PostalCode"], Convert.ToDateTime(dr["HireDate"]).ToShortDateString(),dr["HomePhone"],dr["EmployeeID"]);
                     }
                 }
                 else
@@ -39,7 +39,7 @@ public class _04_UserInfoList : IHttpHandler
                     context.Response.Write("未查询到数据");
                 }
 
-                var filePath = context.Request.MapPath("UserInfoList.html");
+                var filePath = context.Request.MapPath("04_UserInfoList.html");
                 var fileContent = File.ReadAllText(filePath);
                 fileContent = fileContent.Replace("$tbody", sb.ToString());
                 context.Response.Write(fileContent);
