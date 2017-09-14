@@ -13,21 +13,21 @@ public class _05_AddUserInfo : IHttpHandler
         context.Response.ContentType = "text/html";
         var conStr = System.Configuration.ConfigurationManager.ConnectionStrings["connStr"].ConnectionString;
 
-        using (var con=new SqlConnection(conStr))
+        using (var con = new SqlConnection(conStr))
         {
-            using (var cmd=new SqlCommand())
+            using (var cmd = new SqlCommand())
             {
                 con.Open();
                 cmd.Connection = con;
-                cmd.CommandText = "insert UserInfo(FirstName,PostalCode,HireDate,HomePhone) values(@FirstName,@PostalCode,@HireDate,@HomePhone)";
-                cmd.Parameters.AddWithValue("@FirstName",context.Request.Form["txtName"]);
-                cmd.Parameters.AddWithValue("@PostalCode",context.Request.Form["txtCode"]);
-                cmd.Parameters.AddWithValue("@HireDate",DateTime.Now);
-                cmd.Parameters.AddWithValue("@HomePhone",context.Request.Form["txtHomePhone"]);
+                cmd.CommandText = "insert UserInfo(UserName,UserPass,RegTime,Email) values(@UserName,@UserPass,@RegTime,@Email)";
+                cmd.Parameters.AddWithValue("@UserName", context.Request.Form["txtName"]);
+                cmd.Parameters.AddWithValue("@UserPass", context.Request.Form["txtPwd"]);
+                cmd.Parameters.AddWithValue("@RegTime", DateTime.Now);
+                cmd.Parameters.AddWithValue("@Email", context.Request.Form["txtEmail"]);
 
-                if (cmd.ExecuteNonQuery()>0)
+                if (cmd.ExecuteNonQuery() > 0)
                 {
-                    context.Response.Redirect("UserInfoList.ashx");//重定向->重新跳转到
+                    context.Response.Redirect("04_UserInfoList.ashx");//重定向->重新跳转到
                 }
                 else
                 {

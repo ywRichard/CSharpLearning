@@ -3,8 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link href="tableStyle.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.8.3.intellisense.js"></script>
+    <script src="Scripts/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("a:contains('删除')").click(function () {
+                if (!confirm("确定要删除吗？")) {
+                    return false;
+                }
+            });
+        });
+    </script>
 </head>
-<link href="tableStyle.css" rel="stylesheet" />
 <body>
     <table>
         <tr>

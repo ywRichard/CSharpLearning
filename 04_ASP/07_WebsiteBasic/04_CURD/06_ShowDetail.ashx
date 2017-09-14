@@ -25,7 +25,7 @@ public class _06_ShowDetail : IHttpHandler
                     {
                         foreach (DataRow dr in dt.Rows)
                         {
-                            var filePath = context.Request.MapPath("ShowDetai.html");
+                            var filePath = context.Request.MapPath("06_ShowDetail.html");
                             var fileContent = System.IO.File.ReadAllText(filePath);
                             var str = fileContent.Replace("$name", dr["UserName"].ToString()).Replace("$pwd", dr["UserPass"].ToString());
                             context.Response.Write(str);
