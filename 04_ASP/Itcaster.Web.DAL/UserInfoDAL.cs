@@ -66,7 +66,7 @@ namespace Itcaster.Web.DAL
         /// <returns></returns>
         public int DeleteEntityModel(int id)
         {
-            var sql = "detele from UserInfo where ID=@ID";
+            var sql = "delete from UserInfo where ID=@ID";
             var ps = new SqlParameter("@ID", SqlDbType.Int);
             ps.Value = id;
 
@@ -104,7 +104,7 @@ namespace Itcaster.Web.DAL
 
             var dt = SqlHelper.GetTable(sql, CommandType.Text);
             var list = new List<UserInfo>();
-            if (dt.Rows.Count > 1)
+            if (dt.Rows.Count > 0)
             {
                 foreach (DataRow dr in dt.Rows)
                 {

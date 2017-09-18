@@ -12,8 +12,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Itcaster.Web.App</RootNamespace>
-    <AssemblyName>Itcaster.Web.App</AssemblyName>
+    <RootNamespace>Itcaster.Web</RootNamespace>
+    <AssemblyName>Itcaster.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -66,11 +66,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="2017_9_18\FileUpload.html" />
     <Content Include="css\tableStyle.css" />
+    <Content Include="Edit.html" />
     <Content Include="packages.config" />
     <Content Include="ShowDetails.html" />
     <Content Include="UserInfoList.ashx" />
     <Content Include="ShowDetails.ashx" />
+    <Content Include="Edit.ashx" />
+    <Content Include="ProcessEdit.ashx" />
+    <Content Include="Delete.ashx" />
+    <Content Include="2017_9_18\FileUpload.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -88,6 +94,18 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="2017_9_18\FileUpload.ashx.cs">
+      <DependentUpon>FileUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Delete.ashx.cs">
+      <DependentUpon>Delete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Edit.ashx.cs">
+      <DependentUpon>Edit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessEdit.ashx.cs">
+      <DependentUpon>ProcessEdit.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShowDetails.ashx.cs">
       <DependentUpon>ShowDetails.ashx</DependentUpon>
@@ -105,6 +123,9 @@
       <Project>{23c9c900-6437-4c85-a37e-93538c7bd3c9}</Project>
       <Name>Itcaster.Web.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ImagePath\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

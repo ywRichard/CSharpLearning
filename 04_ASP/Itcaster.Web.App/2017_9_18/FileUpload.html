@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--enctype="multipart/form-data":如果上传文件时，必须添加属性。将文件内容作为请求报文的一部分-->
+    <form action="FileUpload.ashx" method="post" enctype="multipart/form-data">
+        请选择上传的图片<input type="file" name="fileUp" />
+        <input type="text" name="txtTitle" />
+        <input type="submit" value="上传图片" />
+    </form>
+</body>
+</html>

@@ -7,7 +7,7 @@ using Itcaster.Web.BLL;
 using System.Text;
 using System.IO;
 
-namespace Itcaster.Web.App
+namespace Itcaster.Web
 {
     /// <summary>
     /// Summary description for UserInfoList
@@ -26,7 +26,7 @@ namespace Itcaster.Web.App
             {
                 foreach (UserInfo userInfo in list)
                 {
-                    sb.AppendFormat("<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td><td>{4}</td><td><a href='ShowDetails.ashx?id={0}'>详细</a></td></tr>", userInfo.ID,userInfo.UserName,userInfo.UserPass,userInfo.RegTime.ToShortDateString(),userInfo.Email);
+                    sb.AppendFormat("<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td><td>{4}</td><td><a href='ShowDetails.ashx?id={0}'>详细</a></td><td><a href='Delete.ashx?id={0}'>删除</a></td><td><a href='Edit.ashx?id={0}'>编辑</a></td></tr>", userInfo.ID,userInfo.UserName,userInfo.UserPass,userInfo.RegTime.ToShortDateString(),userInfo.Email);
                 }
             }
 
