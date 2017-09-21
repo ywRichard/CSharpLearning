@@ -26,8 +26,16 @@ namespace Itcaster.Web._2017_9_18
                 var fileExtension = Path.GetExtension(fileName);
                 if (fileExtension == ".jpg" || fileExtension == ".gif")
                 {
-                    file.SaveAs(context.Request.MapPath("../ImagePath/" + fileName));
-                    context.Response.Write("<html><head></head><body><img src='/ImagePath/" + fileName + "'/></body></html>");
+                    var dir = $"/ImagePath/{DateTime.Now.Year}/{DateTime.Now.Month}/{DateTime.Now.Day}/";
+                    //创建文件夹
+                    Directory.CreateDirectory(Path.GetDirectoryName(context.Request.MapPath(dir)));
+                    //对需要上传的文件进行重命名
+                    fileName = Guid.NewGuid().ToString();
+                    var fullDir = dir + fileName + fileExtension;
+                    file.SaveAs(context.Request.MapPath(fullDir));
+                    //file.SaveAs(context.Request.MapPath("../ImagePath/" + fileName));
+                    context.Response.Write("<html><head></head><body><img src='" + fullDir + "'/></body></html>");
+                    //context.Response.Write("<html><head></head><body><img src='/ImagePath/" + fileName + "'/></body></html>");
                 }
                 else
                 {

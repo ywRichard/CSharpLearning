@@ -23,6 +23,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -77,6 +78,7 @@
     <Content Include="ProcessEdit.ashx" />
     <Content Include="Delete.ashx" />
     <Content Include="2017_9_18\FileUpload.ashx" />
+    <Content Include="2017_9_18\ImageCreater.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -96,6 +98,9 @@
   <ItemGroup>
     <Compile Include="2017_9_18\FileUpload.ashx.cs">
       <DependentUpon>FileUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_18\ImageCreater.ashx.cs">
+      <DependentUpon>ImageCreater.ashx</DependentUpon>
     </Compile>
     <Compile Include="Delete.ashx.cs">
       <DependentUpon>Delete.ashx</DependentUpon>

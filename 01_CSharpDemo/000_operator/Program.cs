@@ -41,28 +41,46 @@ namespace _15运算符的学习
             #endregion
 
             #region operator overloading
-            AddClass1 ac1 = new AddClass1 { val = 2 };
-            AddClass1 ac2 = new AddClass1 { val = 3 };
-            AddClass1 ac3 = new AddClass1();
+            //AddClass1 ac1 = new AddClass1 { val = 2 };
+            //AddClass1 ac2 = new AddClass1 { val = 3 };
+            //AddClass1 ac3 = new AddClass1();
 
-            ac3 = ac1 + ac2;
-            Console.WriteLine(ac3.val);
+            //ac3 = ac1 + ac2;
+            //Console.WriteLine(ac3.val);
             #endregion
 
             #region overloading mixed type
-            AddClass1 para1 = new AddClass1 { val = 5 };
-            AddClass2 para2 = new AddClass2 { val = 8 };
-            AddClass3 result = para1 + para2;
+            //AddClass1 para1 = new AddClass1 { val = 5 };
+            //AddClass2 para2 = new AddClass2 { val = 8 };
+            //AddClass3 result = para1 + para2;
 
-            Console.WriteLine(result.val);
+            //Console.WriteLine(result.val);
             #endregion
 
             #region 加法变减法
-            AddClass1 para4 = new AddClass1 { val = 6 };
-            AddClass3 para5 = new AddClass3 { val = 2 };
+            //AddClass1 para4 = new AddClass1 { val = 6 };
+            //AddClass3 para5 = new AddClass3 { val = 2 };
 
-            AddClass2 result2 = para4 + para5;
-            Console.WriteLine(result2.val);
+            //AddClass2 result2 = para4 + para5;
+            //Console.WriteLine(result2.val);
+            #endregion
+
+            #region ?
+
+            var p = new Person();
+            if (p.Name == "name")
+            {
+                p = null;
+            }
+
+            string str = p?.Name;
+            if (str == "Name")
+            {
+                
+            }
+            Console.WriteLine(str);
+
+
             #endregion
 
         }
@@ -115,4 +133,14 @@ namespace _15运算符的学习
     }
     #endregion
 
+    public class Person
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+
+        public Person()
+        {
+            Name = "name";
+        }
+    }
 }
