@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var url = document.getElementById("url");
+            url.onclick = function () {
+                var src = document.getElementById("imgCode").src;
+                //document.getElementById("imgCode").src = src;
+                document.getElementById("imgCode").src = src + "?d=" + new Date().getMilliseconds();//防止src不变，浏览器缓存后不更新            };
+        };
+    </script>
+</head>
+<body>
+    <form action="Login.ashx" method="post">
+        用户名:<input type="text" name="txtName" /><br />
+        密码:<input type="password" name="txtPwd" /><br />
+        验证码:<input type="text" name="txtCode" /><a href="javascript:void(0)" id="url"><img src="ValidationCode.ashx" alt="Alternate Text" id="imgCode"/></a>
+    </form>
+</body>
+</html>

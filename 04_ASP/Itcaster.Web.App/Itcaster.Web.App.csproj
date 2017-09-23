@@ -67,7 +67,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="2017_9_18\Download.html" />
     <Content Include="2017_9_18\FileUpload.html" />
+    <Content Include="2017_9_18\Login.html" />
     <Content Include="css\tableStyle.css" />
     <Content Include="Edit.html" />
     <Content Include="packages.config" />
@@ -79,6 +81,9 @@
     <Content Include="Delete.ashx" />
     <Content Include="2017_9_18\FileUpload.ashx" />
     <Content Include="2017_9_18\ImageCreater.ashx" />
+    <Content Include="2017_9_18\ImageThumb.ashx" />
+    <Content Include="2017_9_18\ValidationCode.ashx" />
+    <Content Include="2017_9_18\Download.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -96,11 +101,20 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="2017_9_18\Download.ashx.cs">
+      <DependentUpon>Download.ashx</DependentUpon>
+    </Compile>
     <Compile Include="2017_9_18\FileUpload.ashx.cs">
       <DependentUpon>FileUpload.ashx</DependentUpon>
     </Compile>
     <Compile Include="2017_9_18\ImageCreater.ashx.cs">
       <DependentUpon>ImageCreater.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_18\ImageThumb.ashx.cs">
+      <DependentUpon>ImageThumb.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_18\ValidationCode.ashx.cs">
+      <DependentUpon>ValidationCode.ashx</DependentUpon>
     </Compile>
     <Compile Include="Delete.ashx.cs">
       <DependentUpon>Delete.ashx</DependentUpon>
@@ -123,6 +137,10 @@
     <ProjectReference Include="..\Itcaster.Web.BLL\Itcaster.Web.BLL.csproj">
       <Project>{68f55449-0815-486c-80b2-d44bde48ae34}</Project>
       <Name>Itcaster.Web.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itcaster.Web.Common\Itcaster.Web.Common.csproj">
+      <Project>{f8ec6c81-7157-4104-bcd3-d8035bd72a4e}</Project>
+      <Name>Itcaster.Web.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Itcaster.Web.Model\Itcaster.Web.Model.csproj">
       <Project>{23c9c900-6437-4c85-a37e-93538c7bd3c9}</Project>

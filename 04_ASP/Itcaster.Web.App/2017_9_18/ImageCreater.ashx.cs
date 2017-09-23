@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Web;
 
-namespace Itcaster.Web._2017_9_18
+namespace Itcaster.Web
 {
     /// <summary>
     /// Summary description for ImageCreater
