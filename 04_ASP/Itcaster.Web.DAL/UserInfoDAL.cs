@@ -13,6 +13,45 @@ namespace Itcaster.Web.DAL
     public class UserInfoDAL
     {
         /// <summary>
+        /// 获取所有数据的数目
+        /// </summary>
+        /// <returns></returns>
+        public int GetEntityCount()
+        {
+            var sql = "select count(*) from UserInfo";
+            return Convert.ToInt32(SqlHelper.ExecuteScalar(sql, CommandType.Text));
+        }
+
+        /// <summary>
+        /// 获取指定范围的数据
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
+        /// <returns></returns>
+        public List<UserInfo> GetPageEntityList(int start, int end)
+        {
+            //string sql = "select * from(select row_number() over(order  by id) as num,* from UserInfo) as t where t.num>=@start and t.num<=@end";
+            var sql = "select * from (select row_number() over(order by id) as num,* from UserInfo) as t where t.num>=@start and t.num<=@end";
+            var ps = new SqlParameter[] {
+                new SqlParameter("@start",SqlDbType.Int),
+                new SqlParameter("@end",SqlDbType.Int)
+            };
+            ps[0].Value = start;
+            ps[1].Value = end;
+
+            var dt = SqlHelper.GetTable(sql, CommandType.Text, ps);
+            var userList = new List<UserInfo>();
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    userList.Add(RowToUserInfo(dr));
+                }
+            }
+            return userList;
+        }
+
+        /// <summary>
         /// Insert a new UserInfo
         /// </summary>
         /// <param name="userInfo"></param>
