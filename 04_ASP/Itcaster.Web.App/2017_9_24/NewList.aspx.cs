@@ -14,9 +14,11 @@ namespace Itcaster.Web._2017_9_24
         private int _pageIndex;
         private int _pageCount;
         private int _pageSize;
+        private string _numericBar;
         public List<UserInfo> UserInfoList { get; set; }
         public int PageIndex { get => _pageIndex; set => _pageIndex = value; }
         public int PageCount { get => _pageCount; set => _pageCount = value; }
+        public string NumericBar { get => _numericBar; set => _numericBar = value; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -30,6 +32,8 @@ namespace Itcaster.Web._2017_9_24
             var bll = new BLL.UserInfoBLL();
             _pageCount = bll.GetPageCount(_pageSize);
             UserInfoList = new List<UserInfo>(bll.GetPageEntityList(index, _pageSize));
+
+            _numericBar = Common.PageNumericBar.GetNumericBar(_pageIndex, _pageCount);
         }
     }
 }

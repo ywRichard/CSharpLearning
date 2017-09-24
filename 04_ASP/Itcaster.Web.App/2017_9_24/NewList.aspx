@@ -6,6 +6,7 @@
 <head runat="server">
     <title></title>
     <link href="../css/tableStyle.css" rel="stylesheet" />
+    <link href="../css/pageBar.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -41,6 +42,9 @@
             <a href="NewList.aspx?pageIndex=<%=PageIndex<=1?1:PageIndex-1 %>">前页</a>
             <a href="NewList.aspx?pageIndex=<%=PageIndex<PageCount?PageIndex+1:PageCount %>">后页</a>
             <a href="NewList.aspx?pageIndex=<%=PageCount %>">末页</a>
+        </div>
+        <div>
+            <%=NumericBar %>
         </div>
     </form>
 </body>

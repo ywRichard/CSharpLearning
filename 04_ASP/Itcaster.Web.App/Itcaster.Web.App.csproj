@@ -75,6 +75,7 @@
     <Content Include="2017_9_18\FileUpload.html" />
     <Content Include="2017_9_18\Login.html" />
     <Content Include="2017_9_24\NewList.aspx" />
+    <Content Include="css\pageBar.css" />
     <Content Include="css\tableStyle.css" />
     <Content Include="Edit.html" />
     <Content Include="packages.config" />
