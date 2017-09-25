@@ -13,7 +13,7 @@ namespace Itcaster.Web._2017_9_24.ViewState
         {
             if (!IsPostBack)
             {
-                BLL.UserInfoService UserInfoService = new BLL.UserInfoService();
+                BLL.UserInfoBLL UserInfoService = new BLL.UserInfoBLL();
                 this.GridView1.DataSource = UserInfoService.GetEntityList();
                 this.GridView1.DataBind();
             }
