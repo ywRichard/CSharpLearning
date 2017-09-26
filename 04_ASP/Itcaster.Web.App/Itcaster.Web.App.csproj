@@ -74,6 +74,8 @@
     <Content Include="2017_9_18\Download.html" />
     <Content Include="2017_9_18\FileUpload.html" />
     <Content Include="2017_9_18\Login.html" />
+    <Content Include="2017_9_24\02_ReferrrerDemo.html" />
+    <Content Include="2017_9_24\02_UrlReferrer.aspx" />
     <Content Include="2017_9_24\NewList.aspx" />
     <Content Include="css\pageBar.css" />
     <Content Include="css\tableStyle.css" />
@@ -91,6 +93,8 @@
     <Content Include="2017_9_18\ValidationCode.ashx" />
     <Content Include="2017_9_18\Download.ashx" />
     <Content Include="2017_9_18\aspxCRUD\Delete.ashx" />
+    <Content Include="2017_9_24\02_UrlReferrer.ashx" />
+    <Content Include="2017_9_24\02_ShowImage.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -153,6 +157,19 @@
     </Compile>
     <Compile Include="2017_9_18\ValidationCode.ashx.cs">
       <DependentUpon>ValidationCode.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_24\02_ShowImage.ashx.cs">
+      <DependentUpon>02_ShowImage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_24\02_UrlReferrer.ashx.cs">
+      <DependentUpon>02_UrlReferrer.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_24\02_UrlReferrer.aspx.cs">
+      <DependentUpon>02_UrlReferrer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_24\02_UrlReferrer.aspx.designer.cs">
+      <DependentUpon>02_UrlReferrer.aspx</DependentUpon>
     </Compile>
     <Compile Include="2017_9_24\NewList.aspx.cs">
       <DependentUpon>NewList.aspx</DependentUpon>
