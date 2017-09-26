@@ -74,9 +74,14 @@
     <Content Include="2017_9_18\Download.html" />
     <Content Include="2017_9_18\FileUpload.html" />
     <Content Include="2017_9_18\Login.html" />
-    <Content Include="2017_9_24\02_ReferrrerDemo.html" />
-    <Content Include="2017_9_24\02_UrlReferrer.aspx" />
+    <Content Include="2017_9_24\Buffer_Demo.aspx" />
+    <Content Include="2017_9_24\UrlReferrer\Demo.html" />
+    <Content Include="2017_9_24\Server\HtmlEncode.aspx" />
     <Content Include="2017_9_24\NewList.aspx" />
+    <Content Include="2017_9_24\Server\Server_Demo.aspx" />
+    <Content Include="2017_9_24\Server\Server_Demo2.aspx" />
+    <Content Include="2017_9_24\ViewState\ViewState_Demo.aspx" />
+    <Content Include="2017_9_24\ViewState\WebForm1.aspx" />
     <Content Include="css\pageBar.css" />
     <Content Include="css\tableStyle.css" />
     <Content Include="Edit.html" />
@@ -93,8 +98,8 @@
     <Content Include="2017_9_18\ValidationCode.ashx" />
     <Content Include="2017_9_18\Download.ashx" />
     <Content Include="2017_9_18\aspxCRUD\Delete.ashx" />
-    <Content Include="2017_9_24\02_UrlReferrer.ashx" />
-    <Content Include="2017_9_24\02_ShowImage.ashx" />
+    <Content Include="2017_9_24\UrlReferrer\ShowImage.ashx" />
+    <Content Include="2017_9_24\UrlReferrer\UrlReferrerHanlder.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -158,18 +163,19 @@
     <Compile Include="2017_9_18\ValidationCode.ashx.cs">
       <DependentUpon>ValidationCode.ashx</DependentUpon>
     </Compile>
-    <Compile Include="2017_9_24\02_ShowImage.ashx.cs">
-      <DependentUpon>02_ShowImage.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="2017_9_24\02_UrlReferrer.ashx.cs">
-      <DependentUpon>02_UrlReferrer.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="2017_9_24\02_UrlReferrer.aspx.cs">
-      <DependentUpon>02_UrlReferrer.aspx</DependentUpon>
+    <Compile Include="2017_9_24\Buffer_Demo.aspx.cs">
+      <DependentUpon>Buffer_Demo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="2017_9_24\02_UrlReferrer.aspx.designer.cs">
-      <DependentUpon>02_UrlReferrer.aspx</DependentUpon>
+    <Compile Include="2017_9_24\Buffer_Demo.aspx.designer.cs">
+      <DependentUpon>Buffer_Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_24\Server\HtmlEncode.aspx.cs">
+      <DependentUpon>HtmlEncode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_24\Server\HtmlEncode.aspx.designer.cs">
+      <DependentUpon>HtmlEncode.aspx</DependentUpon>
     </Compile>
     <Compile Include="2017_9_24\NewList.aspx.cs">
       <DependentUpon>NewList.aspx</DependentUpon>
@@ -177,6 +183,40 @@
     </Compile>
     <Compile Include="2017_9_24\NewList.aspx.designer.cs">
       <DependentUpon>NewList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_24\Server\Server_Demo.aspx.cs">
+      <DependentUpon>Server_Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_24\Server\Server_Demo.aspx.designer.cs">
+      <DependentUpon>Server_Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_24\Server\Server_Demo2.aspx.cs">
+      <DependentUpon>Server_Demo2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_24\Server\Server_Demo2.aspx.designer.cs">
+      <DependentUpon>Server_Demo2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_24\UrlReferrer\ShowImage.ashx.cs">
+      <DependentUpon>ShowImage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_24\UrlReferrer\UrlReferrerHanlder.ashx.cs">
+      <DependentUpon>UrlReferrerHanlder.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_24\ViewState\ViewState_Demo.aspx.cs">
+      <DependentUpon>ViewState_Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_24\ViewState\ViewState_Demo.aspx.designer.cs">
+      <DependentUpon>ViewState_Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_24\ViewState\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_24\ViewState\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Delete.ashx.cs">
       <DependentUpon>Delete.ashx</DependentUpon>
