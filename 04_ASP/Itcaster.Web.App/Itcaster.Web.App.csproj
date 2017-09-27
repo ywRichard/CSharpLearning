@@ -74,14 +74,12 @@
     <Content Include="2017_9_18\Download.html" />
     <Content Include="2017_9_18\FileUpload.html" />
     <Content Include="2017_9_18\Login.html" />
-    <Content Include="2017_9_24\Buffer_Demo.aspx" />
-    <Content Include="2017_9_24\UrlReferrer\Demo.html" />
-    <Content Include="2017_9_24\Server\HtmlEncode.aspx" />
     <Content Include="2017_9_24\NewList.aspx" />
     <Content Include="2017_9_24\Server\Server_Demo.aspx" />
     <Content Include="2017_9_24\Server\Server_Demo2.aspx" />
     <Content Include="2017_9_24\ViewState\ViewState_Demo.aspx" />
     <Content Include="2017_9_24\ViewState\WebForm1.aspx" />
+    <Content Include="2017_9_26\CookieDemo_1.aspx" />
     <Content Include="css\pageBar.css" />
     <Content Include="css\tableStyle.css" />
     <Content Include="Edit.html" />
@@ -98,8 +96,6 @@
     <Content Include="2017_9_18\ValidationCode.ashx" />
     <Content Include="2017_9_18\Download.ashx" />
     <Content Include="2017_9_18\aspxCRUD\Delete.ashx" />
-    <Content Include="2017_9_24\UrlReferrer\ShowImage.ashx" />
-    <Content Include="2017_9_24\UrlReferrer\UrlReferrerHanlder.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -163,20 +159,6 @@
     <Compile Include="2017_9_18\ValidationCode.ashx.cs">
       <DependentUpon>ValidationCode.ashx</DependentUpon>
     </Compile>
-    <Compile Include="2017_9_24\Buffer_Demo.aspx.cs">
-      <DependentUpon>Buffer_Demo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="2017_9_24\Buffer_Demo.aspx.designer.cs">
-      <DependentUpon>Buffer_Demo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="2017_9_24\Server\HtmlEncode.aspx.cs">
-      <DependentUpon>HtmlEncode.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="2017_9_24\Server\HtmlEncode.aspx.designer.cs">
-      <DependentUpon>HtmlEncode.aspx</DependentUpon>
-    </Compile>
     <Compile Include="2017_9_24\NewList.aspx.cs">
       <DependentUpon>NewList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -217,6 +199,13 @@
     </Compile>
     <Compile Include="2017_9_24\ViewState\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_26\CookieDemo_1.aspx.cs">
+      <DependentUpon>CookieDemo_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_26\CookieDemo_1.aspx.designer.cs">
+      <DependentUpon>CookieDemo_1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Delete.ashx.cs">
       <DependentUpon>Delete.ashx</DependentUpon>
