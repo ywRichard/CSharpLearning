@@ -61,37 +61,66 @@ namespace _000_Array
             //Console.ReadKey();
             //average = nums.Average; 
             #endregion
-            int[] nums = {9,8,7,6,5,4,3,2,1,0 };
-            Array.Sort(nums);//升序的排列
-            Array.Reverse(nums);//元素倒序反转
 
-            //int temp = 0;
-            //int count = 0;
-            //for (int i = 0; i < nums.Length;  i++)
+            #region 升序降序排列
+            //int[] nums = { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
+            //Array.Sort(nums);//升序的排列
+            //Array.Reverse(nums);//元素倒序反转
+
+            ////int temp = 0;
+            ////int count = 0;
+            ////for (int i = 0; i < nums.Length;  i++)
+            ////{
+            ////    Console.Write(nums[i] + "\t");
+            ////}
+            ////Console.WriteLine();
+
+            ////for (int i = 0; i < nums.Length - 1; i++)
+            ////{
+            ////    for (int j = 0;  j < nums.Length - 1;  j++)
+            ////    {
+            ////        if (nums[j] > nums[j+1])
+            ////        {
+            ////            temp = nums[j];
+            ////            nums[j] = nums[j+1];
+            ////            nums[j+1] = temp;
+            ////            count++;
+            ////        }
+            ////    }           
+            ////}
+            //for (int i = 0; i < nums.Length; i++)
             //{
             //    Console.Write(nums[i] + "\t");
             //}
-            //Console.WriteLine();
+            #endregion
 
-            //for (int i = 0; i < nums.Length - 1; i++)
-            //{
-            //    for (int j = 0;  j < nums.Length - 1;  j++)
-            //    {
-            //        if (nums[j] > nums[j+1])
-            //        {
-            //            temp = nums[j];
-            //            nums[j] = nums[j+1];
-            //            nums[j+1] = temp;
-            //            count++;
-            //        }
-            //    }           
-            //}
-            for (int i = 0; i < nums.Length; i++)
+            #region 引用类型数组的初始化和实例化
+            //方法一
+            var ps = new Person[3];//声明
+            for (int i = 0; i < ps.Length; i++)
             {
-                Console.Write(nums[i] + "\t");
+                ps[i] = new Person();//实例化
             }
+
+            //方法二
+            var ps2 = new Person[]//声明的同时，实例化
+            {
+                new Person(),
+                new Person(),
+            };
+            ps.ToList().ForEach(p => Console.WriteLine(p.Name));
+            #endregion
             Console.WriteLine();
             Console.ReadKey();
+        }
+
+        public class Person
+        {
+            private int _age;
+            private string _name;
+
+            public int Age { get => _age; set => _age = value; }
+            public string Name { get => _name; set => _name = value; }
         }
     }
 }
