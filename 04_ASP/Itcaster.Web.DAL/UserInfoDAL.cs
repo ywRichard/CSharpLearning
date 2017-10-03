@@ -167,5 +167,21 @@ namespace Itcaster.Web.DAL
 
             return userInfo;
         }
+
+        public UserInfo GetUserInfoModel(string userName)
+        {
+            string sql = "select * from UserInfo where UserName=@UserName";
+            SqlParameter[] pars = {
+                                  new SqlParameter("@UserName",userName)
+
+                                  };
+            DataTable dt = SqlHelper.GetTable(sql, CommandType.Text, pars);
+            UserInfo userInfo = null;
+            if (dt.Rows.Count > 0)
+            {
+                userInfo = RowToUserInfo(dt.Rows[0]);
+            }
+            return userInfo;
+        }
     }
 }

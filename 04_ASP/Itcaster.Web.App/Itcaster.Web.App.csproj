@@ -67,6 +67,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="2017_10_01\03_AdminIndex.aspx" />
+    <Content Include="2017_10_01\05_Ajax_Demo.aspx" />
+    <Content Include="2017_10_01\Ajax_Demo.aspx" />
+    <Content Include="2017_10_01\Image\login_bg.jpg" />
+    <Content Include="2017_10_01\Image\login_img.jpg" />
+    <Content Include="2017_10_01\Image\login_leftbg.jpg" />
+    <Content Include="2017_10_01\Image\login_line.jpg" />
+    <Content Include="2017_10_01\Image\login_menu2.jpg" />
+    <Content Include="2017_10_01\Image\login_rigbg.jpg" />
+    <Content Include="2017_10_01\Image\login_tit.jpg" />
+    <Content Include="2017_10_01\Image\style.css" />
+    <Content Include="2017_10_01\01_Login.aspx" />
     <Content Include="2017_9_18\aspxCRUD\Add.aspx" />
     <Content Include="2017_9_18\aspxCRUD\Details.aspx" />
     <Content Include="2017_9_18\aspxCRUD\Edit.aspx" />
@@ -79,7 +91,12 @@
     <Content Include="2017_9_24\Server\Server_Demo2.aspx" />
     <Content Include="2017_9_24\ViewState\ViewState_Demo.aspx" />
     <Content Include="2017_9_24\ViewState\WebForm1.aspx" />
-    <Content Include="2017_9_26\CookieDemo_1.aspx" />
+    <Content Include="2017_9_26\01_CookieDemo_1.aspx" />
+    <Content Include="2017_9_26\01_CookieDemo_2.aspx" />
+    <Content Include="2017_9_26\03_CookieLogin.aspx" />
+    <Content Include="2017_9_26\02_Login.aspx" />
+    <Content Include="2017_9_26\04_Test.aspx" />
+    <Content Include="2017_9_26\Session_Demo.aspx" />
     <Content Include="css\pageBar.css" />
     <Content Include="css\tableStyle.css" />
     <Content Include="Edit.html" />
@@ -96,6 +113,8 @@
     <Content Include="2017_9_18\ValidationCode.ashx" />
     <Content Include="2017_9_18\Download.ashx" />
     <Content Include="2017_9_18\aspxCRUD\Delete.ashx" />
+    <Content Include="2017_10_01\02_Validation.ashx" />
+    <Content Include="2017_10_01\04_Logout.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -113,6 +132,40 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="2017_10_01\01_Login.aspx.cs">
+      <DependentUpon>01_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_01\01_Login.aspx.designer.cs">
+      <DependentUpon>01_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_01\02_Validation.ashx.cs">
+      <DependentUpon>02_Validation.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_01\03_AdminIndex.aspx.cs">
+      <DependentUpon>03_AdminIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_01\03_AdminIndex.aspx.designer.cs">
+      <DependentUpon>03_AdminIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_01\04_Logout.ashx.cs">
+      <DependentUpon>04_Logout.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_01\05_Ajax_Demo.aspx.cs">
+      <DependentUpon>05_Ajax_Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_01\05_Ajax_Demo.aspx.designer.cs">
+      <DependentUpon>05_Ajax_Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_01\Ajax_Demo.aspx.cs">
+      <DependentUpon>Ajax_Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_01\Ajax_Demo.aspx.designer.cs">
+      <DependentUpon>Ajax_Demo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="2017_9_18\aspxCRUD\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -200,12 +253,47 @@
     <Compile Include="2017_9_24\ViewState\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="2017_9_26\CookieDemo_1.aspx.cs">
-      <DependentUpon>CookieDemo_1.aspx</DependentUpon>
+    <Compile Include="2017_9_26\01_CookieDemo_1.aspx.cs">
+      <DependentUpon>01_CookieDemo_1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="2017_9_26\CookieDemo_1.aspx.designer.cs">
-      <DependentUpon>CookieDemo_1.aspx</DependentUpon>
+    <Compile Include="2017_9_26\01_CookieDemo_1.aspx.designer.cs">
+      <DependentUpon>01_CookieDemo_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_26\01_CookieDemo_2.aspx.cs">
+      <DependentUpon>01_CookieDemo_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_26\01_CookieDemo_2.aspx.designer.cs">
+      <DependentUpon>01_CookieDemo_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_26\03_CookieLogin.aspx.cs">
+      <DependentUpon>03_CookieLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_26\03_CookieLogin.aspx.designer.cs">
+      <DependentUpon>03_CookieLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_26\02_Login.aspx.cs">
+      <DependentUpon>02_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_26\02_Login.aspx.designer.cs">
+      <DependentUpon>02_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_26\04_Test.aspx.cs">
+      <DependentUpon>04_Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_26\04_Test.aspx.designer.cs">
+      <DependentUpon>04_Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_26\Session_Demo.aspx.cs">
+      <DependentUpon>Session_Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_26\Session_Demo.aspx.designer.cs">
+      <DependentUpon>Session_Demo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Delete.ashx.cs">
       <DependentUpon>Delete.ashx</DependentUpon>

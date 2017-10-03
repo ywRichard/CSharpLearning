@@ -47,6 +47,11 @@ namespace Itcaster.Web.BLL
             return dal.GetEntityModel(id);
         }
 
+        public UserInfo GetEntityModel(string userName)
+        {
+            return dal.GetUserInfoModel(userName);
+        }
+
         /// <summary>
         /// detele an UserInfo
         /// </summary>
@@ -84,6 +89,34 @@ namespace Itcaster.Web.BLL
         public List<UserInfo> GetEntityList()
         {
             return dal.GetEntityList();
+        }
+
+        /// <summary>
+        /// 校验用户信息
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="userPwd"></param>
+        /// <returns></returns>
+        public bool CheckUserInfo(string userName, string userPwd, out string msg, out UserInfo userInfo)
+        {
+            bool isSuccess = false;
+            userInfo = dal.GetUserInfoModel(userName);
+            if (userInfo != null)
+            {
+                if (userInfo.UserPass == userPwd)
+                {
+                    isSuccess = true;
+                }
+            }
+            if (isSuccess)
+            {
+                msg = "登录成功!!";
+            }
+            else
+            {
+                msg = "用户名密码错误!!";
+            }
+            return isSuccess;
         }
     }
 }

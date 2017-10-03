@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CookieDemo_1.aspx.cs" Inherits="Itcaster.Web._2017_9_26.CookieDemo_1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="05_Ajax_Demo.aspx.cs" Inherits="Itcaster.Web._2017_10_01._05_Ajax_Demo" %>
 
 <!DOCTYPE html>
 
