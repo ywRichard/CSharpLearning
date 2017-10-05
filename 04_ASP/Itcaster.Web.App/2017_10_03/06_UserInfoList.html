@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="../css/tableStyle.css" rel="stylesheet" />
+    <link href="../css/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../css/themes/icon.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-1.7.1.js"></script>
+    <script src="../Scripts/jquery.easyui.min.js"></script>
+    <script src="../Scripts/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#detailDiv").css("display", "none");
+            $("#addDiv").css("display", "none");
+            $("#editDiv").css("display", "none");
+            loadUserInfo();
+            $("#addUserInfo").click(function () {
+                addUserDialog();
+            });
+        });
+
+        function loadUserInfo(pageIndex) {
+            $.post("06_List.ashx", { "pageIndex": pageIndex }, function (data) {
+                var serverData = $.parseJSON(data);
+                $(".tabTr:gt(0)").remove();
+                for (var i = 0; i < serverData.UserList.length; i++) {
+                    $("<tr class='tabTr'><td>" + serverData.UserList[i].ID + "</td><td>" + serverData.UserList[i].UserName + "</td><td>" + serverData.UserList[i].UserPass + "</td><td>" + serverData.UserList[i].Email + "</td><td>" + ChangeDateFormat(serverData.UserList[i].RegTime) + "</td><td><a href='javascript:void(0)' class='detail' nId=" + serverData.UserList[i].ID + ">详细</a></td><td><a href='javascript:void(0)' class='delete' nId=" + serverData.UserList[i].ID + ">删除</a></td><td><a href='javascript:void(0)' class='edit' nId=" + serverData.UserList[i].ID + ">编辑</a></td></tr>").appendTo("#tabList");
+                }
+                //注意：一定要等到数据全部绑定到表格上以后再加相应事件
+                $('#divPageBar').html(serverData.PageBar);
+                bindPageBarEvent();
+                bindDetailEvent();
+                bindDeleteEvent();//删除事件
+                bindEditEvent();
+            });
+        }
+        //绑定页码事件
+        function bindPageBarEvent() {
+            $(".myPageBar").click(function () {
+                var pageIndexData = $(this).attr('href').split('=');
+                loadUserInfo(pageIndexData[1]);
+                return false;//终止超链接跳转事件
+            });
+        }
+        //编辑用户信息窗口
+        function bindEditEvent() {
+            $('.edit').click(function () {
+                var id = $(this).attr('nId');
+                $.post("06_Detail.ashx", { "id": id }, function (data) {
+                    var serverData = $.parseJSON(data);
+                    $('#txtEditName').val(serverData.UserName);
+                    $('#txtEditPwd').val(serverData.UserPass);
+                    $('#txtEditEmail').val(serverData.Email);
+                    $('#txtEditRegTime').val(ChangeDateFormat(serverData.RegTime));
+                    $('#txtEditId').val(serverData.ID);
+                })//post
+                $("#editDiv").css("display", "block");
+                $('#editDiv').dialog({
+                    title: '编辑用户信息',
+                    width: 300,
+                    height: 400,
+                    modal: true,
+                    collapsible: true,
+                    resizable: true,
+                    minimizable: true,
+                    maximizable: true,
+                    buttons: [{
+                        text: '修改',
+                        iconCls: 'icon-ok',
+                        handler: function () {
+                            //修改
+                            editUserEvent();
+                        }
+                    }, {
+                        text: 'Cancel',
+                        handler: function () {
+                            $('#editDiv').dialog('close');
+                        }
+                    }]
+                });
+
+            });
+        }
+        //编辑用户信息
+        function editUserEvent() {
+            var serverData = $("#editForm").serializeArray();//必须加name属性的值
+            $.post("06_EditUserInfo.ashx", serverData, function (data) {
+                if (data == "yes") {
+                    $("#editForm input").val("");
+                    $('#editDiv').dialog('close');
+                    loadUserInfo();
+                }
+                else {
+                    alert("修改失败!!");
+                }
+            });
+        }
+        //弹出添加用户窗口
+        function addUserDialog() {
+            $("#addDiv").css("display", "block");
+            $('#addDiv').dialog({
+                title: '添加用户信息',
+                width: 300,
+                height: 400,
+                modal: true,
+                collapsible: true,
+                resizable: true,
+                minimizable: true,
+                maximizable: true,
+                buttons: [{
+                    text: '添加',
+                    iconCls: 'icon-ok',
+                    handler: function () {
+                        addUserEvent();//添加数据
+                    }
+                }, {
+                    text: 'Cancel',
+                    handler: function () {
+                        $('#addDiv').dialog('close');
+                    }
+                }]
+            });
+        }
+        //添加用户信息
+        function addUserEvent() {
+            var serverData = $("#addForm").serializeArray();//必须加name属性的值
+            $.post("06_AddUserInfo.ashx", serverData, function (data) {
+                if (data == "ok") {
+                    $("#addForm input").val("");
+                    $('#addDiv').dialog('close');
+                    loadUserInfo();
+                }
+                else {
+                    alert("添加失败!!");
+                }
+            });
+        }
+
+        function bindDetailEvent() {
+            $(".detail").click(function () {
+                var id = $(this).attr("nId");
+                $.post("06_Detail.ashx", { "id": id }, function (data) {
+                    var serverData = $.parseJSON(data);
+                    $("#name").text(serverData.UserName);
+                    $("#pwd").text(serverData.UserPass);
+                    $("#mail").text(serverData.Email);
+                    $("#regTime").text(ChangeDateFormat(serverData.RegTime));
+                });
+                $("#detailDiv").css("display", "block");
+                $('#detailDiv').dialog({
+                    title: '用户详细信息',
+                    width: 300,
+                    height: 400,
+                    modal: true,
+                    collapsible: true,
+                    resizable: true,
+                    minimizable: true,
+                    maximizable: true,
+                    buttons: [{
+                        text: 'Ok',
+                        iconCls: 'icon-ok',
+                        handler: function () {
+                            alert('ok');
+                        }
+                    }, {
+                        text: 'Cancel',
+                        handler: function () {
+                            $('#detailDiv').dialog('close');
+                        }
+                    }]
+                });
+            });
+        }
+        //删除用户信息
+        function bindDeleteEvent() {
+            $('.delete').click(function () {
+                var id = $(this).attr("nId");
+                $.messager.confirm("删除", "确定要删除该记录吗？", function (r) {
+                    if (r) {
+                        $.post("06_DeleteUserInfo.ashx", { "id": id }, function (data) {
+                            if (data == "yes") {
+                                $.messager.show({
+                                    title: '删除成功',
+                                    msg: '恭喜删除成功了',
+                                    showType: 'show'
+                                });
+                                loadUserInfo();
+                            } else {
+                                $.messager.alert("提示", "删除失败");
+                            }
+
+                        });//post
+                    }//if
+                })//messaeger
+            });//click
+        }
+
+        //将序列化的json格式后日期（毫秒数）转成日期格式
+        function ChangeDateFormat(cellval) {
+            var date = new Date(parseInt(cellval.replace("/Date(", "").replace(")", ""), 10));
+            var month = date.getMonth + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
+            var currentDate = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+            return date.getFullYear() + "-" + month + "-" + currentDate;
+        }
+    </script>
+</head>
+<body>
+    <a href="javascript:void(0)" id="addUserInfo">添加</a>
+    <table id="tabList">
+        <tr class="tabTr">
+            <th>编号</th>
+            <th>用户名</th>
+            <th>密码</th>
+            <th>邮箱</th>
+            <th>时间</th>
+            <th>详细</th>
+            <th>删除</th>
+            <th>编辑</th>
+        </tr>
+    </table>
+    <div id="divPageBar" class="page_nav"></div>
+    <!--#############################详细信息##################################-->
+    <div id="detailDiv">
+        <table>
+            <tr><td>用户名</td><td><span id="name"></span></td></tr>
+            <tr><td>密码</td><td><span id="pwd"></span></td></tr>
+            <tr><td>邮箱</td><td><span id="mail"></span></td></tr>
+            <tr><td>时间</td><td><span id="regTime"></span></td></tr>
+        </table>
+    </div>
+    <!--#############################添加用户信息##################################-->
+    <div id="addDiv">
+        <form id="addForm">
+            <table>
+                <tr><td>用户名</td><td><input type="text" name="txtName" /></td></tr>
+                <tr><td>密码</td><td><input type="text" name="txtPwd" /></td></tr>
+                <tr><td>邮箱</td><td><input type="text" name="txtEmail" /></td></tr>
+            </table>
+        </form>
+    </div>
+    <!--#############################编辑用户信息##################################-->
+    <div id="editDiv">
+        <form id="editForm">
+            <input type="hidden" name="txtEditId" id="txtEditId" />
+            <table>
+                <tr><td>用户名</td><td><input type="text" name="txtEditName" id="txtEditName" /></td></tr>
+                <tr><td>密码</td><td><input type="text" name="txtEditPwd" id="txtEditPwd" /></td></tr>
+                <tr><td>邮箱</td><td><input type="text" name="txtEditEmail" id="txtEditEmail" /></td></tr>
+                <tr><td>时间</td><td><input type="text" name="txtEditRegTime" id="txtEditRegTime" /></td></tr>
+            </table>
+        </form>
+    </div>
+
+</body>
+</html>

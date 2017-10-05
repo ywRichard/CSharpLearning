@@ -38,7 +38,7 @@ namespace Itcaster.Web.Common
                 }
                 else
                 {
-                    sb.Append(string.Format("<a href='?pageIndex={0}'>{0}</a>", i));
+                    sb.Append(string.Format("<a href='?pageIndex={0}' class='myPageBar'>{0}</a>", i));
                 }
             }
 
