@@ -88,6 +88,15 @@
     <Content Include="2017_10_03\06_UserInfoList.html" />
     <Content Include="2017_10_05\01_Demo.aspx" />
     <Content Include="2017_10_05\01_Repeater.aspx" />
+    <Content Include="2017_10_05\02_ListView.aspx" />
+    <Content Include="2017_10_06\01_Index.aspx" />
+    <Content Include="2017_10_06\01_MasterIndex.aspx" />
+    <Content Include="2017_10_06\02_CustomCacheDemo.aspx" />
+    <Content Include="2017_10_06\02_DataSrcCache.aspx" />
+    <Content Include="2017_10_06\02_PageCacheDemo.aspx" />
+    <Content Include="2017_10_06\03_FileContent.txt" />
+    <Content Include="2017_10_06\03_FileSystemDependency.aspx" />
+    <Content Include="2017_10_06\04_Error.aspx" />
     <Content Include="2017_9_18\aspxCRUD\Add.aspx" />
     <Content Include="2017_9_18\aspxCRUD\Details.aspx" />
     <Content Include="2017_9_18\aspxCRUD\Edit.aspx" />
@@ -375,6 +384,9 @@
     <Content Include="css\themes\metro\validatebox.css" />
     <Content Include="css\themes\metro\window.css" />
     <Content Include="Edit.html" />
+    <Content Include="FileNotFound.html" />
+    <Content Include="ImagePath\yw404.jpg" />
+    <Content Include="MyErrorPage.html" />
     <Content Include="packages.config" />
     <Content Include="Scripts\easyui-lang-zh_CN.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
@@ -404,6 +416,9 @@
     <Content Include="2017_10_03\06_AddUserInfo.ashx" />
     <Content Include="2017_10_03\06_DeleteUserInfo.ashx" />
     <Content Include="2017_10_03\06_EditUserInfo.ashx" />
+    <Content Include="2017_10_06\01_Master.Master" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -540,6 +555,69 @@
     </Compile>
     <Compile Include="2017_10_05\01_Repeater.aspx.designer.cs">
       <DependentUpon>01_Repeater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_05\02_ListView.aspx.cs">
+      <DependentUpon>02_ListView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_05\02_ListView.aspx.designer.cs">
+      <DependentUpon>02_ListView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\01_Index.aspx.cs">
+      <DependentUpon>01_Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\01_Index.aspx.designer.cs">
+      <DependentUpon>01_Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\01_Master.Master.cs">
+      <DependentUpon>01_Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\01_Master.Master.designer.cs">
+      <DependentUpon>01_Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\01_MasterIndex.aspx.cs">
+      <DependentUpon>01_MasterIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\01_MasterIndex.aspx.designer.cs">
+      <DependentUpon>01_MasterIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\02_CustomCacheDemo.aspx.cs">
+      <DependentUpon>02_CustomCacheDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\02_CustomCacheDemo.aspx.designer.cs">
+      <DependentUpon>02_CustomCacheDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\02_DataSrcCache.aspx.cs">
+      <DependentUpon>02_DataSrcCache.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\02_DataSrcCache.aspx.designer.cs">
+      <DependentUpon>02_DataSrcCache.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\02_PageCacheDemo.aspx.cs">
+      <DependentUpon>02_PageCacheDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\02_PageCacheDemo.aspx.designer.cs">
+      <DependentUpon>02_PageCacheDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\03_FileSystemDependency.aspx.cs">
+      <DependentUpon>03_FileSystemDependency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\03_FileSystemDependency.aspx.designer.cs">
+      <DependentUpon>03_FileSystemDependency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\04_Error.aspx.cs">
+      <DependentUpon>04_Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\04_Error.aspx.designer.cs">
+      <DependentUpon>04_Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="2017_9_18\aspxCRUD\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
@@ -701,9 +779,7 @@
       <Name>Itcaster.Web.Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ImagePath\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -62,6 +62,11 @@ namespace Itcaster.Web.BLL
             return dal.DeleteEntityModel(id) > 0;
         }
 
+        public bool DeleteEntityModel(UserInfo userInfo)
+        {
+            return DeleteEntityModel(userInfo.ID);
+        }
+
         /// <summary>
         /// Edit an UserInfo
         /// </summary>

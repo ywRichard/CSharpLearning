@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="01_Master.master.cs" Inherits="Itcaster.Web._2017_10_06._01_Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        function ShowResult() {
+            'showResult'
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table><tr><td>顶部布局Logo图片</td></tr></table>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <table><tr><td>低部布局版权</td></tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentBottomHoder" runat="server"></asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
