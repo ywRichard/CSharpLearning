@@ -97,6 +97,8 @@
     <Content Include="2017_10_06\03_FileContent.txt" />
     <Content Include="2017_10_06\03_FileSystemDependency.aspx" />
     <Content Include="2017_10_06\04_Error.aspx" />
+    <Content Include="2017_10_06\05_Login.aspx" />
+    <Content Include="2017_10_06\Admin\Index.aspx" />
     <Content Include="2017_9_18\aspxCRUD\Add.aspx" />
     <Content Include="2017_9_18\aspxCRUD\Details.aspx" />
     <Content Include="2017_9_18\aspxCRUD\Edit.aspx" />
@@ -385,6 +387,7 @@
     <Content Include="css\themes\metro\window.css" />
     <Content Include="Edit.html" />
     <Content Include="FileNotFound.html" />
+    <Content Include="Global.asax" />
     <Content Include="ImagePath\yw404.jpg" />
     <Content Include="MyErrorPage.html" />
     <Content Include="packages.config" />
@@ -619,6 +622,20 @@
     <Compile Include="2017_10_06\04_Error.aspx.designer.cs">
       <DependentUpon>04_Error.aspx</DependentUpon>
     </Compile>
+    <Compile Include="2017_10_06\05_Login.aspx.cs">
+      <DependentUpon>05_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\05_Login.aspx.designer.cs">
+      <DependentUpon>05_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\Admin\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\Admin\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="2017_9_18\aspxCRUD\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -753,6 +770,9 @@
     </Compile>
     <Compile Include="Edit.ashx.cs">
       <DependentUpon>Edit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="ProcessEdit.ashx.cs">
       <DependentUpon>ProcessEdit.ashx</DependentUpon>
