@@ -17,5 +17,10 @@ namespace _01_MVCBasic.Controllers
             //还可以指定自定义显示页面
             return View("Show");
         }
+
+        public ActionResult HtmlTest()
+        {
+            return View();
+        }
     }
 }

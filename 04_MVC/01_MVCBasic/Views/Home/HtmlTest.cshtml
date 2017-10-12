@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HtmlTest</title>
+</head>
+<body>
+    <div>
+        <!--硬件编码，路由规则改变后链接地址将失效-->
+        <a href="/home/index">超链接1</a>
+        <br />
+        <!--根据路由规则生成链接地址-->
+        <a href="@Url.Action("HtmlTest", "Home")">超链接2</a>
+        <!--HtmlHelper,快速搭建View-->
+        @Html.ActionLink("超链接","HtmlTest","Home1");
+        @Html.Raw("Raw");<!--在特定位置输出一个常量-->
+        <hr/>
+        @{ 
+            var temp1 = "<b>123</b>";
+        }
+        @Html.Encode(temp1);<!--对html标签进行编码再输出到页面-->
+        <!--搭建表单,根据路由方式生成地址-->
+        @using (Html.BeginForm("Show", "Home", FormMethod.Post))
+        {
+            @Html.TextBox("uName");
+            <input type="button" name="name" value="" /><!--Html中没有封装的这么写-->
+            <input type="submit" name="name" value="" />
+        }
+    </div>
+</body>
+</html>
