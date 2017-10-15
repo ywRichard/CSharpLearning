@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace _01_MVCBasic
+namespace _00_HomeworkDemo
 {
     public class MvcApplication : System.Web.HttpApplication
     {
@@ -13,8 +13,6 @@ namespace _01_MVCBasic
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            //路由规则的调试，添加
-            //RouteDebug.RouteDebugger.RewriteRoutesForTesting(RouteTable.Routes);
         }
     }
 }

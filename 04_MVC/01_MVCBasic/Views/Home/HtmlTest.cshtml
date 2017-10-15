@@ -1,4 +1,5 @@
-﻿
+﻿<!--如果有多个model只能识别最后一个-->
+@model _01_MVCBasic.Models.Person
 @{
     Layout = null;
 }
@@ -18,10 +19,10 @@
         <!--根据路由规则生成链接地址-->
         <a href="@Url.Action("HtmlTest", "Home")">超链接2</a>
         <!--HtmlHelper,快速搭建View-->
-        @Html.ActionLink("超链接","HtmlTest","Home1");
+        @Html.ActionLink("超链接", "HtmlTest", "Home1");
         @Html.Raw("Raw");<!--在特定位置输出一个常量-->
-        <hr/>
-        @{ 
+        <hr />
+        @{
             var temp1 = "<b>123</b>";
         }
         @Html.Encode(temp1);<!--对html标签进行编码再输出到页面-->
@@ -32,6 +33,18 @@
             <input type="button" name="name" value="" /><!--Html中没有封装的这么写-->
             <input type="submit" name="name" value="" />
         }
+        @ViewBag.QQ
+        @ViewData["QQ"]
+        @ViewBag.Tencent
+        @ViewData["Tencent"]
+        <br /><hr />
+        生成下拉列表
+        @Html.DropDownList("ddlList")<!--生成下拉列表-->
+
+        <br /><hr />
+        页面强类型
+        @Html.TextBoxFor(c => c.Name)<!--通过model指定类型，在编辑阶段就检查创建的Html元素; 在Runtime再检查出的错误，成本太高-->
+        @ViewData.Model<!--通过页面绑定model传递对象-->
     </div>
 </body>
 </html>

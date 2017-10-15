@@ -8,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DEF7731A-DBEC-4E3C-AE9A-24AE2CE0EEAB}</ProjectGuid>
+    <ProjectGuid>{61407BA2-CB98-4109-A5BF-82FA4061B687}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_01_MVCBasic</RootNamespace>
-    <AssemblyName>01_MVCBasic</AssemblyName>
+    <RootNamespace>_00_HomeworkDemo</RootNamespace>
+    <AssemblyName>00_HomeworkDemo</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -47,9 +47,6 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="RouteDebug">
-      <HintPath>Lib\RouteDebug.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -59,7 +56,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -93,51 +89,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Areas\NewsInfo\Views\web.config" />
     <None Include="Scripts\jquery-1.8.0.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.0.js" />
     <Content Include="Scripts\jquery-1.8.0.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.bootstrap.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.bootstrap.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\NewsInfo\NewsInfoAreaRegistration.cs" />
-    <Compile Include="Controllers\HelloController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\NewController.cs" />
-    <Compile Include="Controllers\_04AjaxController.cs" />
-    <Compile Include="Controllers\_05ValidateController.cs" />
+    <Compile Include="Areas\_01AJAX\Controllers\AjaxController.cs" />
+    <Compile Include="Areas\_01AJAX\_01AJAXAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Animal.cs" />
-    <Compile Include="Models\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Show.cshtml" />
-    <Content Include="Views\Home\HtmlTest.cshtml" />
-    <Content Include="Views\Hello\Add.cshtml" />
-    <Content Include="Views\Hello\Index.cshtml" />
-    <Content Include="Views\Hello\AddPerson.cshtml" />
-    <Content Include="Views\Hello\AddPerson1.cshtml" />
-    <Content Include="Views\Hello\Edit.cshtml" />
-    <Content Include="Views\New\Show.cshtml" />
-    <Content Include="Views\_04Ajax\Index.cshtml" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.bootstrap.min.js.map" />
-    <Content Include="Views\_05Validate\Add.cshtml" />
+    <Content Include="Areas\_01AJAX\Views\web.config" />
+    <Content Include="Areas\_01AJAX\Views\Ajax\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -147,9 +119,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\NewsInfo\Controllers\" />
-    <Folder Include="Areas\NewsInfo\Models\" />
-    <Folder Include="Areas\NewsInfo\Views\Shared\" />
+    <Folder Include="Areas\_01AJAX\Models\" />
+    <Folder Include="Areas\_01AJAX\Views\Shared\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -164,9 +137,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49515</DevelopmentServerPort>
+          <DevelopmentServerPort>52020</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49446/</IISUrl>
+          <IISUrl>http://localhost:52002/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>Hello</h1>
+        <a href="@Url.Action("Add","Hello")?Id=1">添加1</a>
+        <hr />
+        <br />
+        @using (Html.BeginForm("Add", "Hello"))
+        {
+            @Html.TextBox("Id");
+            <input type="submit" name="name" value="" />
+        }
+    </div>
+</body>
+</html>

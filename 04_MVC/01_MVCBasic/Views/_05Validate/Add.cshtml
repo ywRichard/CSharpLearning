@@ -1,0 +1,30 @@
+﻿@model _01_MVCBasic.Models.Person
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+    <script src="~/Scripts/jquery-1.8.0.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Add", "_05Validate", FormMethod.Post))
+        {
+            @Html.TextBoxFor(p => p.Name);
+            @Html.ValidationMessageFor(p => p.Name)
+            <br />
+            @Html.TextBoxFor(p => p.Age);
+            @Html.ValidationMessageFor(p => p.Age)
+            <br />
+            <input type="submit" value="添加" />
+        }
+    </div>
+</body>
+</html>

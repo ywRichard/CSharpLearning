@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-1.8.0.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script>
+        $(function () {
+            $('#btnAdd').click(function () {
+                $.post(
+                    '@Url.Action("Add", "Ajax")',
+                    $('#form1').serialize(),
+                    function (data) {
+                        $('#sum').val(data);
+                    }
+                );
+            });//click
+        });//onload
+
+        function Success(obj) {
+            $('#result').val(obj.Sum);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <!--JQuery-->
+        <form id="form1">
+            <input type="text" name="a1" value="" />+
+            <input type="text" name="a2" value="" />
+            <input type="button" id="btnAdd" value="JQuery=" />
+            <input type="text" id="sum" value="" />
+        </form>
+        <!--AJAX Helper-->
+        <hr />
+        @using (Ajax.BeginForm("AddObj", "Ajax", new AjaxOptions()
+        {
+            OnSuccess = "Success"
+        }))
+        {
+            <input type="text" name="a1" value="" />
+            <span>+</span>
+            <input type="text" name="a2" value="" />
+            <input type="submit" value="=" />
+            <input type="text" id="result" />
+        }
+    </div>
+</body>
+</html>

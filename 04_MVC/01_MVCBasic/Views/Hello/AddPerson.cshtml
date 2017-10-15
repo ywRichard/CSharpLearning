@@ -1,0 +1,27 @@
+﻿@model _01_MVCBasic.Models.Person
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddPerson</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("AddPerson", "Hello"))
+        {
+            <span>Name:</span>
+            @Html.TextBox("Name");
+            <br />
+            <span>Age:</span>
+            @Html.TextBox("Age");
+            <br />
+            <input type="submit" name="name" value="Submit" />
+        }
+    </div>
+</body>
+</html>

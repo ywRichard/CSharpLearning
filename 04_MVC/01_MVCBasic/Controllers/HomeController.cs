@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using _01_MVCBasic.Models;
 
 namespace _01_MVCBasic.Controllers
 {
@@ -20,6 +21,19 @@ namespace _01_MVCBasic.Controllers
 
         public ActionResult HtmlTest()
         {
+            //页面传值的两种形式，实现相同
+            ViewBag.QQ = 345;
+            ViewData["Tencent"] = "Tencent";
+
+            //创建一个下拉列表项
+            var list = new List<SelectListItem>();//SelectListItem -> HtmlHelper选定，不能更改。
+            list.Add(new SelectListItem() { Selected = false, Text = "item1", Value = "123" });
+            list.Add(new SelectListItem() { Selected = true, Text = "item2", Value = "456" });
+            list.Add(new SelectListItem() { Selected = false, Text = "item3", Value = "789" });
+            list.Add(new SelectListItem() { Selected = false, Text = "item4", Value = "QWE" });
+            ViewBag.ddlList = list;
+
+            ViewData.Model = new Person("model", 101);
             return View();
         }
     }

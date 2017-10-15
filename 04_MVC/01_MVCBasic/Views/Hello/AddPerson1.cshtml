@@ -1,0 +1,22 @@
+﻿@model _01_MVCBasic.Models.Person
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddPerson1</title>
+</head>
+<body>
+    <div>
+        <span>Name:</span>
+        @Html.TextBoxFor(p => p.Name)
+        <br />
+        <span>Age:</span>
+        @Html.TextBoxFor(p => p.Age)
+    </div>
+</body>
+</html>
