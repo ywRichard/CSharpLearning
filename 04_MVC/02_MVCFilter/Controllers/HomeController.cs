@@ -15,7 +15,7 @@ namespace _02_MVCFilter.Controllers
         //[MyAuthorization]//当前行为在执行前，会执行身份验证过滤器
         public ActionResult Index()
         {
-            throw new Exception("抛个异常");
+            //throw new Exception("抛个异常");
             return View();
         }
 
