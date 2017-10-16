@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @RenderSection("top1")
+</head>
+<body>
+    <div>
+        top
+        <hr />
+        @RenderBody()
+        <hr />
+        @RenderSection("bottom1")
+        <hr />
+        bottom
+    </div>
+</body>
+</html>
