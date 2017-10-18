@@ -1,4 +1,5 @@
-﻿
+﻿@using _05_EFBasic
+@model IQueryable<_05_EFBasic.UserInfo>
 @{
     Layout = null;
 }
@@ -12,7 +13,20 @@
 </head>
 <body>
     <div> 
-        <a href="@Url.Action("Insert", "CURD")">Add</a>
+        <!--<a href="@Url.Action("Insert", "CURD")">Add</a>-->
+        <table border="1">
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+            </tr>
+            @foreach (var userInfo in Model)
+            {
+                <tr>
+                    <td>@userInfo.ID</td>
+                    <td>@userInfo.UserName</td>
+                </tr>
+            }
+        </table>
     </div>
 </body>
 </html>
