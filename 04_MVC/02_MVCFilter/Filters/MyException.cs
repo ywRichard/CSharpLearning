@@ -10,8 +10,9 @@ namespace _02_MVCFilter.Filters
     {
         public override void OnException(ExceptionContext filterContext)
         {
-            //父类实现不能删除，否则捕获不到异常
-            base.OnException(filterContext);
+           //Web.Config中添加 < customErrors mode = "On" ></ customErrors >< !--开启自定义异常捕获-- >
+             //父类实现不能删除，否则捕获不到异常
+             base.OnException(filterContext);
 
             //记录日志
 
