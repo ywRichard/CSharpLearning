@@ -7,17 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _05_EFBasic
+namespace _05_EFBasic.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class UserInfo
+    public partial class NewsType
     {
-        public int ID { get; set; }
-        public string UserName { get; set; }
-        public string UserPass { get; set; }
-        public Nullable<System.DateTime> RegTime { get; set; }
-        public string Email { get; set; }
+        public int tid { get; set; }
+        public string tTitle { get; set; }
+    
+        public virtual NewsInfo NewsInfo { get; set; }
     }
 }

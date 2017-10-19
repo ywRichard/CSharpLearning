@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _05_EFBasic
+namespace _05_EFBasic.Models
 {
     using System;
     using System.Data.Entity;

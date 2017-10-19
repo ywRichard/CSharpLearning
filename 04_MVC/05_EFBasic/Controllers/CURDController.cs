@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using _05_EFBasic.Models;
 
 namespace _05_EFBasic.Controllers
 {
@@ -31,16 +32,26 @@ namespace _05_EFBasic.Controllers
             //基本查询
             //IQueryable<UserInfo> list = from userInfo in context.Set<UserInfo>()
             //select userInfo;
+
             //单条件查询
             //var list = from userInfo in context.Set<UserInfo>()
             //           where userInfo.ID > 10
             //           select userInfo;
-            //多条件查询
-            var list = from userInfo in context.Set<UserInfo>()
-                       where userInfo.ID > 10 && userInfo.UserName.Length > 5
-                       select userInfo;
 
-            return View(list);
+            //多条件查询
+            //var list = from userInfo in context.Set<UserInfo>()
+            //           where userInfo.ID > 10 && userInfo.UserName.Length > 5
+            //           select userInfo;
+
+            //查询多列
+            var list1 = from userInfo in context.Set<UserInfo>()
+                        select new UserInfoViewModel
+                        {
+                            ID = userInfo.ID,
+                            Name = userInfo.UserName
+                        };
+
+            return View(list1);
         }
 
         public ActionResult Insert()

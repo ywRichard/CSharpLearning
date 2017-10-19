@@ -1,5 +1,7 @@
-﻿@using _05_EFBasic
-@model IQueryable<_05_EFBasic.UserInfo>
+﻿@using _05_EFBasic.Models
+<!--IQueryable<_05_EFBasic.Models.UserInfo>-->
+@model IQueryable<_05_EFBasic.Models.UserInfoViewModel>
+    
 @{
     Layout = null;
 }
@@ -23,7 +25,7 @@
             {
                 <tr>
                     <td>@userInfo.ID</td>
-                    <td>@userInfo.UserName</td>
+                    <td>@userInfo.Name</td>
                 </tr>
             }
         </table>

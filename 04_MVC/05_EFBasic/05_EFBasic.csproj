@@ -98,22 +98,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="MyContext.Context.tt">
+    <Content Include="Models\MyContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MyContext.edmx</DependentUpon>
       <LastGenOutput>MyContext.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="MyContext.tt">
+    <Content Include="Models\MyContext.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MyContext.edmx</DependentUpon>
       <LastGenOutput>MyContext.cs</LastGenOutput>
     </Content>
-    <Content Include="T1.Context.tt">
+    <Content Include="Models\T1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>T1.edmx</DependentUpon>
       <LastGenOutput>T1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="T1.tt">
+    <Content Include="Models\T1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>T1.edmx</DependentUpon>
       <LastGenOutput>T1.cs</LastGenOutput>
@@ -126,56 +126,63 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="MyContext.Context.cs">
+    <Compile Include="Models\MyContext.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MyContext.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="MyContext.cs">
+    <Compile Include="Models\MyContext.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MyContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="MyContext.Designer.cs">
+    <Compile Include="Models\MyContext.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MyContext.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\NewsInfo.cs">
+      <DependentUpon>MyContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewsType.cs">
+      <DependentUpon>MyContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserInfo.cs">
+      <DependentUpon>MyContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserInfoViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="T1.Context.cs">
+    <Compile Include="Models\T1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>T1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="T1.cs">
+    <Compile Include="Models\T1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>T1.tt</DependentUpon>
     </Compile>
-    <Compile Include="T1.Designer.cs">
+    <Compile Include="Models\T1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>T1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="UserInfo.cs">
-      <DependentUpon>MyContext.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <EntityDeploy Include="MyContext.edmx">
+    <EntityDeploy Include="Models\MyContext.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>MyContext.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="MyContext.edmx.diagram">
+    <Content Include="Models\MyContext.edmx.diagram">
       <DependentUpon>MyContext.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
-    <EntityDeploy Include="T1.edmx">
+    <EntityDeploy Include="Models\T1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>T1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="T1.edmx.diagram">
+    <Content Include="Models\T1.edmx.diagram">
       <DependentUpon>T1.edmx</DependentUpon>
     </Content>
     <Content Include="Views\CURD\Index.cshtml" />
@@ -188,7 +195,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

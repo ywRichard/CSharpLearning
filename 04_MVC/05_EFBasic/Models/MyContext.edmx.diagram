@@ -6,6 +6,9 @@
     <edmx:Diagrams>
       <Diagram DiagramId="991ab3ed31e34b53a1e37bc3c776d131" Name="Diagram1">
         <EntityTypeShape EntityType="TestDemoModel1.UserInfo" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDemoModel1.NewsInfo" Width="1.5" PointX="5.625" PointY="0.875" />
+        <EntityTypeShape EntityType="TestDemoModel1.NewsType" Width="1.5" PointX="3.375" PointY="1" />
+        <AssociationConnector Association="TestDemoModel1.FK_NewsInfo_NewsType" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

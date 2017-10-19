@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _05_EFBasic
+namespace _05_EFBasic.Models
 {
     using System;
     using System.Data.Entity;
@@ -26,5 +26,7 @@ namespace _05_EFBasic
         }
     
         public virtual DbSet<UserInfo> UserInfo { get; set; }
+        public virtual DbSet<NewsInfo> NewsInfo { get; set; }
+        public virtual DbSet<NewsType> NewsType { get; set; }
     }
 }
