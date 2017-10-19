@@ -13,7 +13,6 @@ namespace _05_EFBasic.Controllers
         // GET: CURD
         public ActionResult Index()
         {
-
             //var myContext = new MyContext();
             //var userInfo = myContext.UserInfo;//获得DbSet<UserInfo>
 

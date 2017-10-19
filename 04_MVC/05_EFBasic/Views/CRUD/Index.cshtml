@@ -1,7 +1,4 @@
-﻿@using _05_EFBasic.Models
-<!--IQueryable<_05_EFBasic.Models.UserInfoViewModel>-->
-@model IQueryable<_05_EFBasic.Models.UserInfo>
-
+﻿@model IQueryable<_05_EFBasic.Models.UserInfo>
 @{
     Layout = null;
 }
@@ -15,17 +12,22 @@
 </head>
 <body>
     <div>
-        <a href="@Url.Action("Insert", "CURD")">Add</a>
+        <a href="@Url.Action("Insert","CRUD")">添加</a>
+        <hr />
         <table border="1">
             <tr>
                 <th>编号</th>
                 <th>姓名</th>
+                <th>修改</th>
+                <th>删除</th>
             </tr>
             @foreach (var userInfo in Model)
             {
                 <tr>
                     <td>@userInfo.ID</td>
                     <td>@userInfo.UserName</td>
+                    <td>@Html.ActionLink("修改", "Edit", "CRUD", new { id = userInfo.ID }, null)</td>
+                    <td>@Html.ActionLink("删除", "Delete", "CRUD", new { id = userInfo.ID }, null)</td>
                 </tr>
             }
         </table>

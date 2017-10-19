@@ -1,0 +1,28 @@
+﻿@model _05_EFBasic.Models.UserInfo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Edit", "CRUD", FormMethod.Post))
+        {
+            <span>ID:</span>
+            @Model.ID
+            @Html.HiddenFor(u => u.ID)
+            <br />
+            <span>姓名:</span>
+            @Html.TextBoxFor(u => u.UserName)
+            <br />
+            <input type="submit" name="name" value="修改" />
+        }
+    </div>
+</body>
+</html>

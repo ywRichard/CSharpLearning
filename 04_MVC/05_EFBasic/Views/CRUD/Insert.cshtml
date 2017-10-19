@@ -1,0 +1,23 @@
+﻿@model _05_EFBasic.Models.UserInfo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Insert</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Insert", "CRUD", FormMethod.Post))
+        {
+            <span>姓名：</span>
+            @Html.TextBoxFor(u => u.UserName);
+            <input type="submit" name="name" value="添加" />
+        }
+    </div>
+</body>
+</html>

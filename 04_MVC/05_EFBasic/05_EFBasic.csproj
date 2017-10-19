@@ -122,6 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CRUDController.cs" />
     <Compile Include="Controllers\CURDController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -186,6 +187,9 @@
       <DependentUpon>T1.edmx</DependentUpon>
     </Content>
     <Content Include="Views\CURD\Index.cshtml" />
+    <Content Include="Views\CRUD\Index.cshtml" />
+    <Content Include="Views\CRUD\Insert.cshtml" />
+    <Content Include="Views\CRUD\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
