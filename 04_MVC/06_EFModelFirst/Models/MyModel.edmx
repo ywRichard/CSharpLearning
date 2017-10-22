@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MyModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MyModelStoreContainer">
+    <EntitySet Name="BookType" EntityType="MyModel.Store.BookType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BookInfo" EntityType="MyModel.Store.BookInfo" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="BookTypeBookInfo" Association="MyModel.Store.BookTypeBookInfo">
+      <End Role="BookType" EntitySet="BookType" />
+      <End Role="BookInfo" EntitySet="BookInfo" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BookType">
+    <Key>
+      <PropertyRef Name="TypeId" />
+    </Key>
+    <Property Name="TypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeTitle" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BookInfo">
+    <Key>
+      <PropertyRef Name="BookId" />
+    </Key>
+    <Property Name="BookId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookTitle" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="BookTid" Type="int" Nullable="false" />
+    <Property Name="BookContent" Type="nvarchar" Nullable="false" MaxLength="400" />
+  </EntityType>
+  <Association Name="BookTypeBookInfo">
+    <End Role="BookType" Type="MyModel.Store.BookType" Multiplicity="1" />
+    <End Role="BookInfo" Type="MyModel.Store.BookInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BookType">
+        <PropertyRef Name="TypeId" />
+      </Principal>
+      <Dependent Role="BookInfo">
+        <PropertyRef Name="BookTid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="MyModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="MyModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BookType" EntityType="MyModel.BookType" />
+          <EntitySet Name="BookInfo" EntityType="MyModel.BookInfo" />
+          <AssociationSet Name="BookTypeBookInfo" Association="MyModel.BookTypeBookInfo">
+            <End Role="BookType" EntitySet="BookType" />
+            <End Role="BookInfo" EntitySet="BookInfo" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="BookType">
+          <Key>
+            <PropertyRef Name="TypeId" />
+          </Key>
+          <Property Name="TypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeTitle" Type="String" Nullable="false" FixedLength="false" Unicode="true" MaxLength="50" />
+          <NavigationProperty Name="BookInfo" Relationship="MyModel.BookTypeBookInfo" FromRole="BookType" ToRole="BookInfo" />
+        </EntityType>
+        <EntityType Name="BookInfo">
+          <Key>
+            <PropertyRef Name="BookId" />
+          </Key>
+          <Property Name="BookId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BookTitle" Type="String" Nullable="false" FixedLength="false" MaxLength="100" Unicode="true" />
+          <Property Name="BookTid" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BookType" Relationship="MyModel.BookTypeBookInfo" FromRole="BookInfo" ToRole="BookType" />
+          <Property Name="BookContent" Type="String" Nullable="false" Unicode="true" MaxLength="400" />
+        </EntityType>
+        <Association Name="BookTypeBookInfo">
+          <End Type="MyModel.BookType" Role="BookType" Multiplicity="1" />
+          <End Type="MyModel.BookInfo" Role="BookInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BookType">
+              <PropertyRef Name="TypeId" />
+            </Principal>
+            <Dependent Role="BookInfo">
+              <PropertyRef Name="BookTid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyModelStoreContainer" CdmEntityContainer="MyModelContainer">
+    <EntitySetMapping Name="BookType">
+      <EntityTypeMapping TypeName="IsTypeOf(MyModel.BookType)">
+        <MappingFragment StoreEntitySet="BookType">
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="TypeTitle" ColumnName="TypeTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookInfo">
+      <EntityTypeMapping TypeName="IsTypeOf(MyModel.BookInfo)">
+        <MappingFragment StoreEntitySet="BookInfo">
+          <ScalarProperty Name="BookId" ColumnName="BookId" />
+          <ScalarProperty Name="BookTitle" ColumnName="BookTitle" />
+          <ScalarProperty Name="BookTid" ColumnName="BookTid" />
+          <ScalarProperty Name="BookContent" ColumnName="BookContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

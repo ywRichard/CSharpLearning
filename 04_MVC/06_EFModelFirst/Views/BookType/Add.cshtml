@@ -1,0 +1,22 @@
+﻿@model _06_EFModelFirst.Models.BookType
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Add", "BookType", FormMethod.Post))
+        {
+            @Html.TextBoxFor(u => u.TypeTitle)
+            <input type="submit" value="添加" />
+        }
+    </div>
+</body>
+</html>

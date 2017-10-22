@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _05_EFBasic.Models
+namespace _06_EFModelFirst.Models
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class T1Content : DbContext
+    public partial class MyModelContainer : DbContext
     {
-        public T1Content()
-            : base("name=T1Content")
+        public MyModelContainer()
+            : base("name=MyModelContainer")
         {
         }
     
@@ -25,6 +25,7 @@ namespace _05_EFBasic.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<UserInfo> UserInfoes { get; set; }
+        public virtual DbSet<BookType> BookType { get; set; }
+        public virtual DbSet<BookInfo> BookInfo { get; set; }
     }
 }

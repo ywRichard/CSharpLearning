@@ -1,0 +1,31 @@
+﻿@model IQueryable< _06_EFModelFirst.Models.BookType>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @Html.ActionLink("添加","Add","BookType")
+        <table border="1">
+            <tr>
+                <th>编号</th>
+                <th>标题</th>
+            </tr>
+            @foreach (var bookType in Model)
+            {
+                <tr>
+                    <td>@bookType.TypeId</td>
+                    <td>@bookType.TypeTitle</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

@@ -13,10 +13,10 @@ namespace _05_EFBasic.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class T1Content : DbContext
+    public partial class MyContext : DbContext
     {
-        public T1Content()
-            : base("name=T1Content")
+        public MyContext()
+            : base("name=MyContext")
         {
         }
     
@@ -25,6 +25,8 @@ namespace _05_EFBasic.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<UserInfo> UserInfoes { get; set; }
+        public virtual DbSet<UserInfo> UserInfo { get; set; }
+        public virtual DbSet<NewsInfo> NewsInfo { get; set; }
+        public virtual DbSet<NewsType> NewsType { get; set; }
     }
 }
