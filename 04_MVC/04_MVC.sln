@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_HttpClient", "04_MVCClie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_EFModelFirst", "06_EFModelFirst\06_EFModelFirst.csproj", "{12BDE4D5-60EC-4353-992B-83ACDE1E4677}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_EFCodeFirst", "07_EFCodeFirst\07_EFCodeFirst.csproj", "{2346F27F-60EE-4DAB-99CD-D7D71B57DE81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_CodeFirst", "07_CodeFirst\07_CodeFirst.csproj", "{10D67470-C26F-4810-ACB2-32D5FC2FA721}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{12BDE4D5-60EC-4353-992B-83ACDE1E4677}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12BDE4D5-60EC-4353-992B-83ACDE1E4677}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12BDE4D5-60EC-4353-992B-83ACDE1E4677}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2346F27F-60EE-4DAB-99CD-D7D71B57DE81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2346F27F-60EE-4DAB-99CD-D7D71B57DE81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2346F27F-60EE-4DAB-99CD-D7D71B57DE81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2346F27F-60EE-4DAB-99CD-D7D71B57DE81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10D67470-C26F-4810-ACB2-32D5FC2FA721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10D67470-C26F-4810-ACB2-32D5FC2FA721}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10D67470-C26F-4810-ACB2-32D5FC2FA721}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10D67470-C26F-4810-ACB2-32D5FC2FA721}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
