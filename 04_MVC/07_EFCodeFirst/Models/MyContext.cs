@@ -15,7 +15,7 @@ namespace _07_EFCodeFirst.Models
 
         }
 
-        public DbSet<ArticleInfo> ArticleInfo { get; set; }
-        public DbSet<ArticleType> ArticleType { get; set; }
+        public DbSet<BookInfo1> BookInfo1 { get; set; }
+        public DbSet<BookType1> BookType1 { get; set; }
     }
 }

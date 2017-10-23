@@ -6,17 +6,17 @@ using System.Web;
 
 namespace _07_EFCodeFirst.Models
 {
-    public class ArticleType
+    public class BookType1
     {
-        public ArticleType()
+        public BookType1()
         {
-            ArticleInfo = new HashSet<ArticleInfo>();
+            BookInfo1 = new HashSet<BookInfo1>();
         }
 
         [Key]
-        public int TypeId { get; set; }
+        public int TId { get; set; }
         public string TypeTitle { get; set; }
 
-        public virtual ICollection<ArticleInfo> ArticleInfo { get; set; }
+        public ICollection<BookInfo1> BookInfo1 { get; set; }
     }
 }

@@ -55,7 +55,7 @@ namespace _05_EFBasic.Controllers
 
         public ActionResult Insert()
         {
-            var context = new T1Context();
+            var context = new T1Content();
             context.UserInfoes.Add(new UserInfo
             {
                 UserName = "ef",

@@ -16,7 +16,7 @@ namespace _07_EFCodeFirst
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "ArticleType", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "BookType", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
