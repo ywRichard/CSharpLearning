@@ -1,0 +1,72 @@
+﻿@model IQueryable<Model.BookInfo>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-1.8.0.min.js"></script>
+
+    <script>
+        $(function () {
+            LoadList(1);
+        });
+
+        function GoPage(pageIndex) {
+            LoadList(pageIndex);
+        }
+
+        function LoadList(pageIndex) {
+            $.getJSON(
+                '@Url.Action("LoadList","BookInfo")',
+                {
+                    pageSize: 5,
+                    pageIndex: pageIndex
+                },
+                function (buffer) {
+                    var list = $('#list');
+                    list.empty();
+                    $.each(buffer.List, function (index, item) {
+                        list.append('<tr><td>' + item.ID + '</td>' +
+                            '<td>' + item.Title + '</td>' +
+                            '<td>' + item.TypeTitle + '</td>' +
+                            '<td><a href="@Url.Action("Edit","BookInfo")?id=' + item.ID + '">修改</a></td>' +
+                            '<td><a href="@Url.Action("Remove","BookInfo")?id=' + item.ID + '">删除</a></td>' +
+                            '</tr>');
+                    });//each
+
+                    list.append('<tr><td colspan=5>'+buffer.Pager+'</td></tr>');
+                }//list1
+            );//getJson
+        }
+    </script>
+</head>
+<body>
+    <div>
+        @Html.ActionLink("添加", "Add", "BookInfo")
+        <hr />
+        <table border="1">
+            <tr>
+                <th width="100">编号</th>
+                <th width="100">标题</th>
+                <th width="100">分类</th>
+                <th width="100">修改</th>
+                <th width="100">删除</th>
+            </tr>
+            <tbody id="list"></tbody>
+            @*@foreach (var bookInfo in Model)
+                {
+                    <tr>
+                        <td>@bookInfo.BookId</td>
+                        <td>@bookInfo.BookTitle</td>
+                        <td>@bookInfo.BookType.TypeTitle</td>
+                    </tr>
+                }*@
+        </table>
+    </div>
+</body>
+</html>

@@ -52,6 +52,11 @@ namespace DAL
             return context.SaveChanges();
         }
 
+        public int GetCount()
+        {
+            return context.Set<BookInfo>().Count();
+        }
+
         public abstract Expression<Func<T, bool>> GetKeyById(int id);
         public abstract Expression<Func<T, int>> GetKey();
     }

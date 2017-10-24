@@ -10,9 +10,9 @@
             <PropertyRef Name="BookId" />
           </Key>
           <Property Name="BookId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="BookTitle" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="BookTid" Type="int" Nullable="false" />
-          <Property Name="BookContent" Type="nvarchar" MaxLength="400" />
+          <Property Name="BookTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BookContent" Type="nvarchar" MaxLength="400" Nullable="false" />
+          <Property Name="Tid" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="BookType">
           <Key>
@@ -21,7 +21,7 @@
           <Property Name="TypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TypeTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <Association Name="FK_BookTypeBookInfo">
+        <Association Name="FK_BookInfo_BookType">
           <End Role="BookType" Type="Self.BookType" Multiplicity="1" />
           <End Role="BookInfo" Type="Self.BookInfo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -29,14 +29,14 @@
               <PropertyRef Name="TypeId" />
             </Principal>
             <Dependent Role="BookInfo">
-              <PropertyRef Name="BookTid" />
+              <PropertyRef Name="Tid" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="TestDemoModelStoreContainer">
           <EntitySet Name="BookInfo" EntityType="Self.BookInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BookType" EntityType="Self.BookType" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_BookTypeBookInfo" Association="Self.FK_BookTypeBookInfo">
+          <AssociationSet Name="FK_BookInfo_BookType" Association="Self.FK_BookInfo_BookType">
             <End Role="BookType" EntitySet="BookType" />
             <End Role="BookInfo" EntitySet="BookInfo" />
           </AssociationSet>
@@ -51,10 +51,10 @@
             <PropertyRef Name="BookId" />
           </Key>
           <Property Name="BookId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="BookTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="BookTid" Type="Int32" Nullable="false" />
-          <Property Name="BookContent" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="BookType" Relationship="Self.FK_BookTypeBookInfo" FromRole="BookInfo" ToRole="BookType" />
+          <Property Name="BookTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BookContent" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tid" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BookType" Relationship="Self.FK_BookInfo_BookType" FromRole="BookInfo" ToRole="BookType" />
         </EntityType>
         <EntityType Name="BookType">
           <Key>
@@ -62,9 +62,9 @@
           </Key>
           <Property Name="TypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TypeTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="BookInfo" Relationship="Self.FK_BookTypeBookInfo" FromRole="BookType" ToRole="BookInfo" />
+          <NavigationProperty Name="BookInfoes" Relationship="Self.FK_BookInfo_BookType" FromRole="BookType" ToRole="BookInfo" />
         </EntityType>
-        <Association Name="FK_BookTypeBookInfo">
+        <Association Name="FK_BookInfo_BookType">
           <End Role="BookType" Type="Self.BookType" Multiplicity="1" />
           <End Role="BookInfo" Type="Self.BookInfo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -72,16 +72,16 @@
               <PropertyRef Name="TypeId" />
             </Principal>
             <Dependent Role="BookInfo">
-              <PropertyRef Name="BookTid" />
+              <PropertyRef Name="Tid" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="MyContext" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="BookInfo" EntityType="Self.BookInfo" />
-          <EntitySet Name="BookType" EntityType="Self.BookType" />
-          <AssociationSet Name="FK_BookTypeBookInfo" Association="Self.FK_BookTypeBookInfo">
-            <End Role="BookType" EntitySet="BookType" />
-            <End Role="BookInfo" EntitySet="BookInfo" />
+          <EntitySet Name="BookInfoes" EntityType="Self.BookInfo" />
+          <EntitySet Name="BookTypes" EntityType="Self.BookType" />
+          <AssociationSet Name="FK_BookInfo_BookType" Association="Self.FK_BookInfo_BookType">
+            <End Role="BookType" EntitySet="BookTypes" />
+            <End Role="BookInfo" EntitySet="BookInfoes" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -90,17 +90,17 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="TestDemoModelStoreContainer" CdmEntityContainer="MyContext">
-          <EntitySetMapping Name="BookInfo">
+          <EntitySetMapping Name="BookInfoes">
             <EntityTypeMapping TypeName="TestDemoModel.BookInfo">
               <MappingFragment StoreEntitySet="BookInfo">
                 <ScalarProperty Name="BookId" ColumnName="BookId" />
                 <ScalarProperty Name="BookTitle" ColumnName="BookTitle" />
-                <ScalarProperty Name="BookTid" ColumnName="BookTid" />
                 <ScalarProperty Name="BookContent" ColumnName="BookContent" />
+                <ScalarProperty Name="Tid" ColumnName="Tid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="BookType">
+          <EntitySetMapping Name="BookTypes">
             <EntityTypeMapping TypeName="TestDemoModel.BookType">
               <MappingFragment StoreEntitySet="BookType">
                 <ScalarProperty Name="TypeId" ColumnName="TypeId" />
@@ -122,7 +122,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

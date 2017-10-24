@@ -25,7 +25,7 @@ namespace Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<BookInfo> BookInfo { get; set; }
-        public virtual DbSet<BookType> BookType { get; set; }
+        public virtual DbSet<BookInfo> BookInfoes { get; set; }
+        public virtual DbSet<BookType> BookTypes { get; set; }
     }
 }

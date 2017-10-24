@@ -42,5 +42,10 @@ namespace BLL
         {
             return dal.Remove(id) > 0;
         }
+
+        public int GetCount()
+        {
+            return dal.GetCount();
+        }
     }
 }

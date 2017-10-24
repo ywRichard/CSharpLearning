@@ -16,8 +16,8 @@ namespace Model
     {
         public int BookId { get; set; }
         public string BookTitle { get; set; }
-        public int BookTid { get; set; }
         public string BookContent { get; set; }
+        public int Tid { get; set; }
     
         public virtual BookType BookType { get; set; }
     }

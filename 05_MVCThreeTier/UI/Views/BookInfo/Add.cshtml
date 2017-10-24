@@ -1,0 +1,26 @@
+﻿@model Model.BookInfo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Add", "BookInfo", FormMethod.Post))
+        {
+            @Html.TextBoxFor(u => u.BookTitle)
+            <br /><br />
+            @Html.TextBoxFor(u => u.BookContent)
+            <br /><br />
+            @Html.DropDownListFor(u => u.Tid, (IEnumerable<SelectListItem>)ViewBag.TypeList)
+            <input type="submit" value="添加" />
+        }
+    </div>
+</body>
+</html>

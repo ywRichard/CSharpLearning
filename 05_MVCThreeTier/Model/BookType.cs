@@ -17,13 +17,13 @@ namespace Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public BookType()
         {
-            this.BookInfo = new HashSet<BookInfo>();
+            this.BookInfoes = new HashSet<BookInfo>();
         }
     
         public int TypeId { get; set; }
         public string TypeTitle { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BookInfo> BookInfo { get; set; }
+        public virtual ICollection<BookInfo> BookInfoes { get; set; }
     }
 }
