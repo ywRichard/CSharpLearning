@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_简介", "_简介\_简介.csproj", "{B32E1E0A-0DD0-4AAD-97FE-F0824E444B66}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_练习", "_练习\_练习.csproj", "{F6295520-84A3-4A5C-BC8E-4E3EBF8F49B9}"
@@ -48,14 +50,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_进程练习", "_进程练习\_进程练习.csproj", "{EF81880F-5833-4D9B-9CEB-82859A352CB5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_摇奖机", "_摇奖机\_摇奖机.csproj", "{1BB8F507-E5A1-4643-A070-EF1566C15987}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_Socket_Server", "_Socket_Server\_Socket_Server.csproj", "{6EC97F50-599B-4BCF-973C-43BB86694C4A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_Socket_Client", "_Socket_Client\_Socket_Client.csproj", "{59E11E3C-5D71-4746-97C2-E534402A3677}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_Socket_Client1", "_Socket_Client1\_Socket_Client1.csproj", "{D4BA40B4-D2EB-433B-B77B-F3AB103CB54B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_Socket_Server1", "_Socket_Server1\_Socket_Server1.csproj", "{04CC13F4-69EE-4339-A2DE-A31BF7368EC2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_GDI_Line", "_GDI_Line\_GDI_Line.csproj", "{6BA0A406-78D2-442B-951E-9AF922381218}"
 EndProject
@@ -179,22 +173,6 @@ Global
 		{1BB8F507-E5A1-4643-A070-EF1566C15987}.Debug|x86.Build.0 = Debug|x86
 		{1BB8F507-E5A1-4643-A070-EF1566C15987}.Release|x86.ActiveCfg = Release|x86
 		{1BB8F507-E5A1-4643-A070-EF1566C15987}.Release|x86.Build.0 = Release|x86
-		{6EC97F50-599B-4BCF-973C-43BB86694C4A}.Debug|x86.ActiveCfg = Debug|x86
-		{6EC97F50-599B-4BCF-973C-43BB86694C4A}.Debug|x86.Build.0 = Debug|x86
-		{6EC97F50-599B-4BCF-973C-43BB86694C4A}.Release|x86.ActiveCfg = Release|x86
-		{6EC97F50-599B-4BCF-973C-43BB86694C4A}.Release|x86.Build.0 = Release|x86
-		{59E11E3C-5D71-4746-97C2-E534402A3677}.Debug|x86.ActiveCfg = Debug|x86
-		{59E11E3C-5D71-4746-97C2-E534402A3677}.Debug|x86.Build.0 = Debug|x86
-		{59E11E3C-5D71-4746-97C2-E534402A3677}.Release|x86.ActiveCfg = Release|x86
-		{59E11E3C-5D71-4746-97C2-E534402A3677}.Release|x86.Build.0 = Release|x86
-		{D4BA40B4-D2EB-433B-B77B-F3AB103CB54B}.Debug|x86.ActiveCfg = Debug|x86
-		{D4BA40B4-D2EB-433B-B77B-F3AB103CB54B}.Debug|x86.Build.0 = Debug|x86
-		{D4BA40B4-D2EB-433B-B77B-F3AB103CB54B}.Release|x86.ActiveCfg = Release|x86
-		{D4BA40B4-D2EB-433B-B77B-F3AB103CB54B}.Release|x86.Build.0 = Release|x86
-		{04CC13F4-69EE-4339-A2DE-A31BF7368EC2}.Debug|x86.ActiveCfg = Debug|x86
-		{04CC13F4-69EE-4339-A2DE-A31BF7368EC2}.Debug|x86.Build.0 = Debug|x86
-		{04CC13F4-69EE-4339-A2DE-A31BF7368EC2}.Release|x86.ActiveCfg = Release|x86
-		{04CC13F4-69EE-4339-A2DE-A31BF7368EC2}.Release|x86.Build.0 = Release|x86
 		{6BA0A406-78D2-442B-951E-9AF922381218}.Debug|x86.ActiveCfg = Debug|x86
 		{6BA0A406-78D2-442B-951E-9AF922381218}.Debug|x86.Build.0 = Debug|x86
 		{6BA0A406-78D2-442B-951E-9AF922381218}.Release|x86.ActiveCfg = Release|x86
