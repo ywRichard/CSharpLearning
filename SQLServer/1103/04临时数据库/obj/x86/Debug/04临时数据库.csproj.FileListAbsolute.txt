@@ -1,5 +1,0 @@
-C:\Users\yao\Desktop\SqlDemo\1103\04临时数据库\bin\Debug\04临时数据库.exe
-C:\Users\yao\Desktop\SqlDemo\1103\04临时数据库\bin\Debug\04临时数据库.pdb
-C:\Users\yao\Desktop\SqlDemo\1103\04临时数据库\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\yao\Desktop\SqlDemo\1103\04临时数据库\obj\x86\Debug\04临时数据库.exe
-C:\Users\yao\Desktop\SqlDemo\1103\04临时数据库\obj\x86\Debug\04临时数据库.pdb

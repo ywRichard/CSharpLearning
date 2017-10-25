@@ -1,5 +1,0 @@
-C:\Users\yao\Desktop\SqlDemo\1011解决方案\06序列化\bin\Debug\06序列化.exe
-C:\Users\yao\Desktop\SqlDemo\1011解决方案\06序列化\bin\Debug\06序列化.pdb
-C:\Users\yao\Desktop\SqlDemo\1011解决方案\06序列化\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\yao\Desktop\SqlDemo\1011解决方案\06序列化\obj\x86\Debug\06序列化.exe
-C:\Users\yao\Desktop\SqlDemo\1011解决方案\06序列化\obj\x86\Debug\06序列化.pdb

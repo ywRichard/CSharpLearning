@@ -1,7 +1,0 @@
-\\mac\home\documents\visual studio 2010\Projects\ConnectDB\连接字符串2\bin\Debug\连接字符串2.exe
-\\mac\home\documents\visual studio 2010\Projects\ConnectDB\连接字符串2\bin\Debug\连接字符串2.pdb
-\\mac\home\documents\visual studio 2010\Projects\ConnectDB\连接字符串2\obj\x86\Debug\ResolveAssemblyReference.cache
-\\mac\home\documents\visual studio 2010\Projects\ConnectDB\连接字符串2\obj\x86\Debug\连接字符串2.exe
-\\mac\home\documents\visual studio 2010\Projects\ConnectDB\连接字符串2\obj\x86\Debug\连接字符串2.pdb
-C:\Users\yao\Desktop\SqlDemo\ConnectDB\连接字符串2\obj\x86\Debug\连接字符串2.exe
-C:\Users\yao\Desktop\SqlDemo\ConnectDB\连接字符串2\obj\x86\Debug\连接字符串2.pdb

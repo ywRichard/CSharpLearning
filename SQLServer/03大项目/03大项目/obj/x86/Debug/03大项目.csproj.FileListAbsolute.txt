@@ -1,9 +1,0 @@
-\\mac\home\documents\visual studio 2010\Projects\03大项目\03大项目\obj\x86\Debug\ResolveAssemblyReference.cache
-\\mac\home\documents\visual studio 2010\Projects\03大项目\03大项目\obj\x86\Debug\_03大项目.Form1.resources
-\\mac\home\documents\visual studio 2010\Projects\03大项目\03大项目\obj\x86\Debug\_03大项目.Properties.Resources.resources
-\\mac\home\documents\visual studio 2010\Projects\03大项目\03大项目\obj\x86\Debug\GenerateResource.read.1.tlog
-\\mac\home\documents\visual studio 2010\Projects\03大项目\03大项目\obj\x86\Debug\GenerateResource.write.1.tlog
-\\mac\home\documents\visual studio 2010\Projects\03大项目\03大项目\bin\Debug\03大项目.exe
-\\mac\home\documents\visual studio 2010\Projects\03大项目\03大项目\bin\Debug\03大项目.pdb
-\\mac\home\documents\visual studio 2010\Projects\03大项目\03大项目\obj\x86\Debug\03大项目.exe
-\\mac\home\documents\visual studio 2010\Projects\03大项目\03大项目\obj\x86\Debug\03大项目.pdb
