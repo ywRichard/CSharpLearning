@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Books>
-  <Book>
-    <Name>C#开发大全</Name>
-    <Price>120</Price>
-    <Des>天书</Des>
-  </Book>
-</Books>
