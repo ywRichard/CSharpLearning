@@ -7,7 +7,7 @@
     <ProjectGuid>{2A20EC58-C58E-4E8B-8995-3E2F85D5644F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_01_BubbleOrder</RootNamespace>
-    <AssemblyName>_01_BubbleOrder</AssemblyName>
+    <AssemblyName>01_BubbleOrder</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

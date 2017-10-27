@@ -7,7 +7,7 @@
     <ProjectGuid>{E224C216-8699-47EC-B7EE-CD7FA12C7A3F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_00_SwitchValue</RootNamespace>
-    <AssemblyName>_00_SwitchValue</AssemblyName>
+    <AssemblyName>00_SwitchValue</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

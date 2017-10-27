@@ -7,7 +7,7 @@
     <ProjectGuid>{D8085DF7-5DF2-4F70-B619-BAB9B87223C3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_011_GenericDelegate</RootNamespace>
-    <AssemblyName>_011_GenericDelegate</AssemblyName>
+    <AssemblyName>011_GenericDelegate</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
