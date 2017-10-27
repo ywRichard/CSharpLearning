@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_DatabaseFirst", "01_EFBasicConsole\01_DatabaseFirst.csproj", "{21FEEF4F-7E71-4398-9597-D4F51B4FD632}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_CodeFirst", "02_CodeFirst\02_CodeFirst.csproj", "{10D67470-C26F-4810-ACB2-32D5FC2FA721}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_CodeFirst1", "02_CodeFirst1\02_CodeFirst1.csproj", "{421623D6-EA03-4B05-A0B5-2D157D8221D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_DbTableRelation", "03_DbTableRelation\03_DbTableRelation.csproj", "{CD09E900-EFDD-49B9-9D31-58F9E44FC056}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,8 +29,15 @@ Global
 		{421623D6-EA03-4B05-A0B5-2D157D8221D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{421623D6-EA03-4B05-A0B5-2D157D8221D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{421623D6-EA03-4B05-A0B5-2D157D8221D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD09E900-EFDD-49B9-9D31-58F9E44FC056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD09E900-EFDD-49B9-9D31-58F9E44FC056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD09E900-EFDD-49B9-9D31-58F9E44FC056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD09E900-EFDD-49B9-9D31-58F9E44FC056}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7462A771-501D-44B7-8E1D-3FCB57B9B4FD}
 	EndGlobalSection
 EndGlobal
