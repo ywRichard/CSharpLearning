@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_CodeFirst1", "02_CodeFir
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_DbTableRelation", "03_DbTableRelation\03_DbTableRelation.csproj", "{CD09E900-EFDD-49B9-9D31-58F9E44FC056}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_EFConcurrency", "04_EFConcurrency\04_EFConcurrency.csproj", "{8E3E5AC8-D553-496B-8214-D012E680ACD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{CD09E900-EFDD-49B9-9D31-58F9E44FC056}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD09E900-EFDD-49B9-9D31-58F9E44FC056}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD09E900-EFDD-49B9-9D31-58F9E44FC056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E3E5AC8-D553-496B-8214-D012E680ACD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E3E5AC8-D553-496B-8214-D012E680ACD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E3E5AC8-D553-496B-8214-D012E680ACD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E3E5AC8-D553-496B-8214-D012E680ACD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
