@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_DbTableRelation", "03_Db
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_EFConcurrency", "04_EFConcurrency\04_EFConcurrency.csproj", "{8E3E5AC8-D553-496B-8214-D012E680ACD3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_EFTransaction", "05_EFTransaction\05_EFTransaction.csproj", "{4087C6D9-AF95-420A-839D-455F393E19A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{8E3E5AC8-D553-496B-8214-D012E680ACD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E3E5AC8-D553-496B-8214-D012E680ACD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E3E5AC8-D553-496B-8214-D012E680ACD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4087C6D9-AF95-420A-839D-455F393E19A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4087C6D9-AF95-420A-839D-455F393E19A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4087C6D9-AF95-420A-839D-455F393E19A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4087C6D9-AF95-420A-839D-455F393E19A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
