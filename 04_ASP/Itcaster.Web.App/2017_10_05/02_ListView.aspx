@@ -10,6 +10,7 @@
     <form id="form1" runat="server">
         <div>
         </div>
+        <!--适用于CRUD-->
         <asp:ListView ID="ListView1" runat="server" DataSourceID="ObjectDataSource1" DataKeyNames="ID">
             <AlternatingItemTemplate>
                 <tr style="">
@@ -37,6 +38,7 @@
                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
                     </td>
                     <td>
+                        <!--Eval(),单向绑定即只绑定输出；Bing(),双向绑定不但可以输出数据源，在更新用户的输入到数据源-->
                         <asp:TextBox ID="IDTextBox" runat="server" Text='<%# Bind("ID") %>' />
                     </td>
                     <td>
@@ -53,7 +55,7 @@
                     </td>
                 </tr>
             </EditItemTemplate>
-            <EmptyDataTemplate>
+            <EmptyDataTemplate><!--当数据源没有数据时显示-->
                 <table runat="server" style="">
                     <tr>
                         <td>No data was returned.</td>
@@ -83,7 +85,7 @@
                     </td>
                 </tr>
             </InsertItemTemplate>
-            <ItemTemplate>
+            <ItemTemplate><!--每一项的模板-->
                 <tr style="">
                     <td>
                         <asp:Label ID="IDLabel" runat="server" Text='<%# Eval("ID") %>' />
@@ -114,6 +116,7 @@
                                     <th runat="server">RegTime</th>
                                     <th runat="server">Email</th>
                                 </tr>
+                                <!--项占位符-->
                                 <tr id="itemPlaceholder" runat="server">
                                 </tr>
                             </table>

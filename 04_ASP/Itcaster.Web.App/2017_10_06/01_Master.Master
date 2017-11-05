@@ -9,7 +9,7 @@
     </asp:ContentPlaceHolder>
     <script type="text/javascript">
         function ShowResult() {
-            'showResult'
+            'showResult';
         }
     </script>
 </head>

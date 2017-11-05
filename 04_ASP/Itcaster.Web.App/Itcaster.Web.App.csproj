@@ -86,7 +86,7 @@
     <Content Include="2017_10_03\04_Login.aspx" />
     <Content Include="2017_10_03\05_JsonDemo.aspx" />
     <Content Include="2017_10_03\06_UserInfoList.html" />
-    <Content Include="2017_10_05\01_Demo.aspx" />
+    <Content Include="2017_10_05\00_ServerControlDemo.aspx" />
     <Content Include="2017_10_05\01_Repeater.aspx" />
     <Content Include="2017_10_05\02_ListView.aspx" />
     <Content Include="2017_10_06\01_Index.aspx" />
@@ -545,12 +545,12 @@
     <Compile Include="2017_10_03\06_List.ashx.cs">
       <DependentUpon>06_List.ashx</DependentUpon>
     </Compile>
-    <Compile Include="2017_10_05\01_Demo.aspx.cs">
-      <DependentUpon>01_Demo.aspx</DependentUpon>
+    <Compile Include="2017_10_05\00_ServerControlDemo.aspx.cs">
+      <DependentUpon>00_ServerControlDemo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="2017_10_05\01_Demo.aspx.designer.cs">
-      <DependentUpon>01_Demo.aspx</DependentUpon>
+    <Compile Include="2017_10_05\00_ServerControlDemo.aspx.designer.cs">
+      <DependentUpon>00_ServerControlDemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="2017_10_05\01_Repeater.aspx.cs">
       <DependentUpon>01_Repeater.aspx</DependentUpon>

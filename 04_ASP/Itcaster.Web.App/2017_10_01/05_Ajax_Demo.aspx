@@ -19,7 +19,9 @@
                 xhr.open("get", "08_AjaxDemo_Get.aspx?name=aaa&pwd=123", true);
                 xhr.send();//开始发送
                 xhr.onreadystatechange = function () {//回调函数
-                    if (xhr.readyState == 4) {//表示处理结果从服务器返回过来
+                    //readyState属性反应了XMLHttpRequest对象在发送/接收数据过程中所处的状态。
+                    //返回状态码：0 - 未初始化；1 - 打开；2 - 发送；3 - 正在接收；4 - 已加载
+                    if (xhr.readyState == 4) {//检查处理结果是否从服务器返回过来
                         if (xhr.status == 200) {//表示服务端处理没有问题
                             //打印从服务端返回的数据
                             alert(xhr.responseText);

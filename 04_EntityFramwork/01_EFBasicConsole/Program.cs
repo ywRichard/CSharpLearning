@@ -28,7 +28,7 @@ namespace _01_DatabaseFirst
 
             //Read
             //var userInfo = context.Set<UserInfo>().Find(22);//查找主键
-            //var userName = context.Set<UserInfo>().Take(50).Include("UserName");//预先装载userName，Include()会让EF通知DB将"...表中的..."发送给我。
+            var userName = context.Set<UserInfo>().Take(50).Include("UserName");//预先装载userName，Include()会让EF通知DB将"...表中的..."发送给我。
             context.Set<UserInfo>().Take(50).Include("UserName").Load();//显示装入，Load()让EF将数据载入到context中？
             //if (userInfo != null)
             //{
