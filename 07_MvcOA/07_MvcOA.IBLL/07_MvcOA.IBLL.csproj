@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_07_MvcOA.IBLL</RootNamespace>
     <AssemblyName>07_MvcOA.IBLL</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,7 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBaseBLL.cs" />
+    <Compile Include="IUserInfoBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\07_MvcOA.DALFactory\07_MvcOA.DALFactory.csproj">
+      <Project>{c5b0bc39-4524-458b-b453-56cde8d19dd5}</Project>
+      <Name>07_MvcOA.DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\07_MvcOA.IDAL\07_MvcOA.IDAL.csproj">
+      <Project>{0c9d3f7e-e88d-45c4-9095-9be388722af7}</Project>
+      <Name>07_MvcOA.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\07_MvcOA.Model\07_MvcOA.Model.csproj">
+      <Project>{4f71837c-a4e0-4cb7-9a3d-c43836b8181d}</Project>
+      <Name>07_MvcOA.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

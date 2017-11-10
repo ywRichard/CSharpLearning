@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _07_MvcOA.IDAL
 {
-    public interface IBaseDAL<T> where T : class, new()
+    public interface IBaseDal<T> where T : class, new()
     {
         IQueryable<T> LoadEntities(System.Linq.Expressions.Expression<Func<T, bool>> whereLambda);
 

@@ -7,7 +7,7 @@ using _07_MvcOA.Model;
 
 namespace _07_MvcOA.IDAL
 {
-    public interface IUserInfoDAL : IBaseDAL<UserInfo>
+    public interface IUserInfoDal : IBaseDal<UserInfo>
     {
 
     }
