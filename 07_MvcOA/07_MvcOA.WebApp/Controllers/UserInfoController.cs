@@ -14,7 +14,6 @@ namespace _07_MvcOA.WebApp.Controllers
         IUserInfoBLL userInfoBll=new UserInfoBLL();
         public ActionResult Index()
         {
-            ViewData.Model = userInfoBll.LoadEntities(u => true);
             return View();
         }
     }
