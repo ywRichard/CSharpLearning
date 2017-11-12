@@ -10,6 +10,6 @@ namespace _07_MvcOA.IBLL
 {
     public interface IUserInfoBLL : IBaseBLL<UserInfo>
     {
-
+        bool DeleteEntities(List<int> list);
     }
 }

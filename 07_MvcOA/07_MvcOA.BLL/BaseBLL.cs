@@ -50,6 +50,7 @@ namespace _07_MvcOA.BLL
         public T AddEntity(T entity)
         {
             CurrentDal.AddEntity(entity);
+            GetCurrentSession.SaveChanges();
             return entity;
         }
     }

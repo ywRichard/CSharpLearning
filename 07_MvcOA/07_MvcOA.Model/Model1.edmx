@@ -13,7 +13,7 @@
           <Property Name="UserName" Type="nvarchar(max)" Nullable="false" />
           <Property Name="UserPwd" Type="nvarchar(max)" Nullable="false" />
           <Property Name="SubTime" Type="datetime" Nullable="false" />
-          <Property Name="DelFlag" Type="bit" Nullable="false" />
+          <Property Name="DelFlag" Type="smallint" Nullable="false" />
           <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
           <Property Name="Remark" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Sort" Type="int" Nullable="false" />
@@ -33,7 +33,7 @@
           <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="UserPwd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="SubTime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+          <Property Name="DelFlag" Type="Int16" Nullable="false" />
           <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Sort" Type="Int32" Nullable="false" />

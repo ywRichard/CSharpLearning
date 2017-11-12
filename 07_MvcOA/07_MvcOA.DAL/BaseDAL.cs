@@ -59,7 +59,8 @@ namespace _07_MvcOA.DAL
         /// </summary>
         public T AddEntity(T entity)
         {
-            context.Set<T>().Add(entity);
+            //context.Set<T>().Add(entity);
+            context.Entry(entity).State = EntityState.Added;
             //context.SaveChanges();
             return entity;
         }

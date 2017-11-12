@@ -18,7 +18,7 @@ namespace _07_MvcOA.Model
         public string UserName { get; set; }
         public string UserPwd { get; set; }
         public System.DateTime SubTime { get; set; }
-        public bool DelFlag { get; set; }
+        public short DelFlag { get; set; }
         public System.DateTime ModifiedOn { get; set; }
         public string Remark { get; set; }
         public int Sort { get; set; }
