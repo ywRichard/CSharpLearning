@@ -15,15 +15,24 @@
     <script src="~/Scripts/jquery.easyui.min.js"></script>
     <script src="~/Scripts/easyui-lang-zh_CN.js"></script>
     <script src="~/Scripts/datapattern.js"></script>
+    <!--要使用AjaxHelper必须添加这个文件-->
     <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
     <script type="text/javascript">
         $(function () {
             loadData();
             $("#addDiv").css("display", "none");
             $("#editDiv").css("display", "none");
+            $('#btnSearch').click(function () {
+                var pars = {
+                    name: $("#txtUserName").val(),
+                    remark: $("txtRemark").val()
+                };
+
+                loadData(pars);
+            });
         });
 
-        function loadData() {
+        function loadData(pars) {
             $('#tt').datagrid({
                 url: '/UserInfo/GetUserInfo',
                 title: '用户数据表格',
@@ -38,7 +47,7 @@
                 pageSize: 5,//页大小，一页多少条数据
                 pageNumber: 1,//当前页，默认的
                 pageList: [5, 10, 15],
-                queryParams: {},//往后台传递参数
+                queryParams: pars,//往后台传递参数
                 columns: [[//c.UserName, c.UserPass, c.Email, c.RegTime
                     { field: 'ck', checkbox: true, align: 'left', width: 50 },
                     { field: 'ID', title: '编号', width: 80 },
@@ -195,6 +204,7 @@
 </head>
 <body>
     <div>
+        用户名:<input type="text" id="txtUserName" value="" />&nbsp;&nbsp;备注<input type="text" name="txtRemark" value="" /><input type="button" id="btnSearch" value="搜索" />
         <table id="tt" style="width: 700px;" title="标题，可以使用代码进行初始化，也可以使用这种属性的方式" iconcls="icon-edit"></table>
     </div>
     <!---------------添加用户信息--------------------->
