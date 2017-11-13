@@ -177,8 +177,8 @@
             });
         }
         function afterEdit(data) {
-            if (data = "ok") {
-                $('#tt').datagrid('clearSelections');//清除已删除的选项记录
+            if (data == "ok") {
+                $('#editDiv').dialog('close');//清除已删除的选项记录
                 $('#tt').datagrid('reload');
             } else {
                 $.messager.alert('提醒', '编辑数据失败', 'erroe');
@@ -215,7 +215,7 @@
         {
             <input type="hidden" name="SubTime" id="txtSubTime" />
             <input type="hidden" name="DelFlag" id="txtDelFlag" />
-            <input type="hidden" name="ID" id="txtId" />
+            <input type="hidden" name="UserID" id="txtId" />
             <table>
                     <tr><td>用户名</td><td><input type="text" name="UserName" id="txtUserName" /></td></tr>
                     <tr><td>密码</td><td><input type="text" name="UserPwd" id="txtUserPwd" /></td></tr>

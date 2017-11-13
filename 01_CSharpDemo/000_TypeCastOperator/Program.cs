@@ -65,6 +65,11 @@ namespace _000_TypeCastOperator
             string str = "aaa";
             double result;
             Console.WriteLine($"Result:{double.TryParse(str, out result)},Value:{result}");
+
+            string str1 = "NaN";
+            double result1;
+            Console.WriteLine($"Result:{double.TryParse(str1, out result1)},Value:{result1}");
+            Console.WriteLine($"Result:{double.Parse(str1)},Value:{double.Parse(str1)}");
             #endregion
 
             Console.ReadKey();
