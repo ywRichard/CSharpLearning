@@ -26,6 +26,26 @@ namespace _07_MvcOA.BLL
             return GetCurrentSession.SaveChanges();
         }
 
+        public IQueryable<UserInfo> LoadSearchEntities(UserInfoParam userInfoParam)
+        {
+            var delFlag = (short)DelFlagEnum.Normal;
+            var skipCount = (userInfoParam.PageIndex - 1) * userInfoParam.PageSize;
+            var temp = GetCurrentSession.UserInfoDal.LoadEntities(u => u.DelFlag == delFlag);
+            if (!string.IsNullOrEmpty(userInfoParam.UserName))
+            {
+                temp = temp.Where(u => u.UserName.Contains(userInfoParam.UserName));
+            }
+            if (!string.IsNullOrEmpty(userInfoParam.Remark))
+            {
+                temp = temp.Where(u => u.Remark.Contains(userInfoParam.Remark));
+            }
+            userInfoParam.TotalCount = temp.Count();
+
+            return temp.OrderBy(u => u.UserID)
+                       .Skip(skipCount)
+                       .Take(userInfoParam.PageSize);
+        }
+
         public override void SetCurrentDal()
         {
             CurrentDal = GetCurrentSession.UserInfoDal;

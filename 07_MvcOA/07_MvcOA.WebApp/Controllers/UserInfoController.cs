@@ -38,26 +38,26 @@ namespace _07_MvcOA.WebApp.Controllers
                 TotalCount = totalCount
             };
 
-            short delFlag = (short)DelFlagEnum.Normal;
-            var userInfoList = userInfoBll.LoadPageEntities(pageIndex, pageSize, out totalCount,
-                c => c.DelFlag == delFlag,
-                c => c.UserID, true);
-            var temp = userInfoList.Select(u => new
-            {
-                ID = u.UserID,
-                UserName = u.UserName,
-                UserPass = u.UserPwd,
-                Remark = u.Remark,
-                RegTime = u.SubTime,
-            });
+            //short delFlag = (short)DelFlagEnum.Normal;
+            //var userInfoList = userInfoBll.LoadPageEntities(pageIndex, pageSize, out totalCount,
+            //    c => c.DelFlag == delFlag,
+            //    c => c.UserID, true);
+
+            var temp = userInfoBll.LoadSearchEntities(userInfoParam)
+                .Select(u => new
+                {
+                    ID = u.UserID,
+                    UserName = u.UserName,
+                    UserPass = u.UserPwd,
+                    Remark = u.Remark,
+                    RegTime = u.SubTime,
+                });
 
             return Json(new
             {
                 rows = temp,
-                total = totalCount
-            },
-                JsonRequestBehavior.AllowGet
-                );
+                total = userInfoParam.TotalCount
+            }, JsonRequestBehavior.AllowGet);
         }
         /// <summary>
         /// 删除用户信息

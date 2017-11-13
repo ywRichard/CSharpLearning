@@ -24,8 +24,8 @@
             $("#editDiv").css("display", "none");
             $('#btnSearch').click(function () {
                 var pars = {
-                    name: $("#txtUserName").val(),
-                    remark: $("txtRemark").val()
+                    name: $("#txtUName").val(),
+                    remark: $("#txtRemark").val()
                 };
 
                 loadData(pars);
@@ -204,7 +204,7 @@
 </head>
 <body>
     <div>
-        用户名:<input type="text" id="txtUserName" value="" />&nbsp;&nbsp;备注<input type="text" name="txtRemark" value="" /><input type="button" id="btnSearch" value="搜索" />
+        用户名:<input type="text" id="txtUName" value="" />&nbsp;&nbsp;备注<input type="text" name="txtRemark" value="" /><input type="button" id="btnSearch" value="搜索" />
         <table id="tt" style="width: 700px;" title="标题，可以使用代码进行初始化，也可以使用这种属性的方式" iconcls="icon-edit"></table>
     </div>
     <!---------------添加用户信息--------------------->
@@ -212,10 +212,10 @@
         @using (Ajax.BeginForm("AddUserInfo", "UserInfo", new { }, new AjaxOptions() { HttpMethod = "Post", OnSuccess = "afterAdd" }, new { id = "addForm" }))
         {
             <table>
-                    <tr><td>用户名</td><td><input type="text" name="UserName" /></td></tr>
-                    <tr><td>密码</td><td><input type="text" name="UserPwd" /></td></tr>
-                    <tr><td>备注</td><td><input type="text" name="Remark" /></td></tr>
-                    <tr><td>排序</td><td><input type="text" name="Sort" /></td></tr>
+                <tr><td>用户名</td><td><input type="text" name="UserName" /></td></tr>
+                <tr><td>密码</td><td><input type="text" name="UserPwd" /></td></tr>
+                <tr><td>备注</td><td><input type="text" name="Remark" /></td></tr>
+                <tr><td>排序</td><td><input type="text" name="Sort" /></td></tr>
             </table>
         }
     </div>
@@ -227,10 +227,10 @@
             <input type="hidden" name="DelFlag" id="txtDelFlag" />
             <input type="hidden" name="UserID" id="txtId" />
             <table>
-                    <tr><td>用户名</td><td><input type="text" name="UserName" id="txtUserName" /></td></tr>
-                    <tr><td>密码</td><td><input type="text" name="UserPwd" id="txtUserPwd" /></td></tr>
-                    <tr><td>备注</td><td><input type="text" name="Remark" id="txtRemark" /></td></tr>
-                    <tr><td>排序</td><td><input type="text" name="Sort" id="txtSort" /></td></tr>
+                <tr><td>用户名</td><td><input type="text" name="UserName" id="txtUserName" /></td></tr>
+                <tr><td>密码</td><td><input type="text" name="UserPwd" id="txtUserPwd" /></td></tr>
+                <tr><td>备注</td><td><input type="text" name="Remark" id="txtRemark" /></td></tr>
+                <tr><td>排序</td><td><input type="text" name="Sort" id="txtSort" /></td></tr>
             </table>
         }
     </div>
