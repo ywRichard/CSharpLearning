@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <!--添加类，name->"可随意"; type="类全名"+"程序集名称"-->
+  <object name="UserInfoBLL"
+          type="_07_MvcOA.SpringNet.UserInfoBLL, 07_MvcOA.SpringNet">
+    <!--添加属性，name->必须是属性名; value->基本类型(int,string,bool)赋值-->
+    <property name="UserName" value="张三"/>
+    <!--添加引用类型的属性，如类。ref->指定应用对象-->
+    <property name="Person" ref="Person1"/>
+  </object>
+  <!--为Person属性创建的类型-->
+  <object name="Person1"
+          type="_07_MvcOA.SpringNet.Person, 07_MvcOA.SpringNet">
+    <property name="Age" value="19"/>
+  </object>
+</objects>

@@ -12,7 +12,7 @@ namespace _07_MvcOA.WebApp.Controllers
     public class UserInfoController : Controller
     {
         // GET: UserInfo
-        IUserInfoBLL userInfoBll = new UserInfoBLL();
+        IUserInfoBLL userInfoBll { get; set; }
         public ActionResult Index()
         {
             return View();

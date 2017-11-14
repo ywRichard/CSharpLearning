@@ -5,10 +5,11 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Spring.Web.Mvc;
 
 namespace _07_MvcOA.WebApp
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : SpringMvcApplication//System.Web.HttpApplication
     {
         protected void Application_Start()
         {
