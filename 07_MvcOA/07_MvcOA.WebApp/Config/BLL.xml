@@ -4,8 +4,6 @@
   <!-- this obj is defined as a singleton and given an initial value for Count of 0
          so it can be easily verified as being instantiated only once by the ApplicationContext
          no matter how many child contexts are instatiated as part of WebAPI calls -->
-  <object type="_07_MvcOA.WebApp.Controllers.Counter, 07_MvcOA.WebApp.Controllers.">
-    <property name="Count" value="0" />
-  </object>
+  <object name="UserInfoBLL1" type="_07_MvcOA.BLL.UserInfoBLL, 07_MvcOA.BLL" singleton="false" />
 
 </objects>
