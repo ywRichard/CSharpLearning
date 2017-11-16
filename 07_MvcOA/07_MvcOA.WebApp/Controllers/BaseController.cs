@@ -11,7 +11,7 @@ namespace _07_MvcOA.WebApp.Controllers
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             base.OnActionExecuting(filterContext);
-            if (Session["UserInfo"]==null)
+            if (Session["UserInfo"] == null)
             {
                 filterContext.HttpContext.Response.Redirect("/Login/Index");
             }
