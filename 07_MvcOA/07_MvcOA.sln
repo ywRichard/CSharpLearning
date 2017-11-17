@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_MvcOA.WebApp", "07_MvcOA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_MvcOA.SpringNet", "07_MvcOA.SpringNet\07_MvcOA.SpringNet.csproj", "{9A861CCA-3F52-4F9A-AA22-68FF039195E6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{84C51642-1986-4721-9257-3CB19E2F6AC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_MvcOA.Memcached", "07_MvcOA.Memcached\07_MvcOA.Memcached.csproj", "{FE31442A-6133-4BD9-A825-BBFD2C3E1BAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,9 +67,17 @@ Global
 		{9A861CCA-3F52-4F9A-AA22-68FF039195E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A861CCA-3F52-4F9A-AA22-68FF039195E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A861CCA-3F52-4F9A-AA22-68FF039195E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE31442A-6133-4BD9-A825-BBFD2C3E1BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE31442A-6133-4BD9-A825-BBFD2C3E1BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE31442A-6133-4BD9-A825-BBFD2C3E1BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE31442A-6133-4BD9-A825-BBFD2C3E1BAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9A861CCA-3F52-4F9A-AA22-68FF039195E6} = {84C51642-1986-4721-9257-3CB19E2F6AC0}
+		{FE31442A-6133-4BD9-A825-BBFD2C3E1BAD} = {84C51642-1986-4721-9257-3CB19E2F6AC0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3C891CF3-E37E-4872-B96E-10F4D3514D62}
