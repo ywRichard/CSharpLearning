@@ -10,20 +10,19 @@ namespace _07_MvcOA.WebApp.Controllers
     {
         public ActionResult Index()
         {
+            if (LoginUser!=null)
+            {
+                ViewData["UserName"] = LoginUser.UserName;
+            }
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult HomePage()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
+            if (LoginUser != null)
+            {
+                ViewData["UserName"] = LoginUser.UserName;
+            }
             return View();
         }
     }

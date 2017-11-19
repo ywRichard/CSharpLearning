@@ -8,9 +8,10 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>_07_MvcOA.Memcached</RootNamespace>
     <AssemblyName>07_MvcOA.Memcached</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -38,9 +39,6 @@
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\Lib\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="Memcached.ClientLibrary">
       <HintPath>..\Lib\Memcached.ClientLibrary.dll</HintPath>
     </Reference>
@@ -59,7 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\07_MvcOA.Common\07_MvcOA.Common.csproj">
+      <Project>{b93afef0-c8b1-42b8-b397-e0235f197c97}</Project>
+      <Name>07_MvcOA.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
