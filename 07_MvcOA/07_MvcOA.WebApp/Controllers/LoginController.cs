@@ -119,5 +119,19 @@ namespace _07_MvcOA.WebApp.Controllers
             Response.Cookies["cp1"].Expires = DateTime.Now.AddDays(-1);
             Response.Cookies["cp2"].Expires = DateTime.Now.AddDays(-1);
         }
+
+        public ActionResult Logout()
+        {
+            if (Request.Cookies["sessionId"] != null)
+            {
+                var key = Request.Cookies["sessionId"].Value;
+                MemcachedHelper.Delete(key);
+                Response.Cookies["cp1"].Expires = DateTime.Now.AddDays(-1);
+                Response.Cookies["cp2"].Expires = DateTime.Now.AddDays(-1);
+            }
+
+            //return RedirectToAction("Index");
+            return Redirect("/Login/Index");
+        }
     }
 }

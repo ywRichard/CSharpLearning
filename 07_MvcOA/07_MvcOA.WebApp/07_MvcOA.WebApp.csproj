@@ -198,10 +198,10 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\3DSMAX.png" />
+    <Content Include="Content\lib\images\3DSMAX.png" />
     <Content Include="Content\Images\7_7.jpg" />
     <Content Include="Content\Images\Alien Folder.png" />
-    <Content Include="Content\Images\applebg.jpg" />
+    <Content Include="Content\lib\images\applebg.jpg" />
     <Content Include="Content\Images\bg.png" />
     <Content Include="Content\Images\bg3.png" />
     <Content Include="Content\Images\big.png" />
@@ -965,8 +965,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\UserInfo\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
