@@ -16,17 +16,17 @@ namespace _07_MvcOA.DALFactory
     /// 工厂-> 直接new一个对象。
     /// 抽象工厂-> 通过反射的方式创建实例
     /// </summary>
-    public class AbstractFactory
+    public partial class AbstractFactory
     {
         private static readonly string DalAssemblyPath = ConfigurationManager.AppSettings["DalAssemblyPath"];
         private static readonly string NameSpace = ConfigurationManager.AppSettings["NameSpace"];
 
-        public static IUserInfoDal CreateUserInfoDal()
-        {
-            //反射创建类实例，需要用类的全名：命名空间+类名
-            var fullClassName = NameSpace + ".UserInfoDal";//构建类的全名称
-            return CreateInstance(fullClassName) as IUserInfoDal;
-        }
+        //public static IUserInfoDal CreateUserInfoDal()
+        //{
+        //    //反射创建类实例，需要用类的全名：命名空间+类名
+        //    var fullClassName = NameSpace + ".UserInfoDal";//构建类的全名称
+        //    return CreateInstance(fullClassName) as IUserInfoDal;
+        //}
 
         public static object CreateInstance(string fullClassName)
         {
