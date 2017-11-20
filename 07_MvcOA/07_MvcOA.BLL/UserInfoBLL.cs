@@ -8,7 +8,7 @@ using _07_MvcOA.IBLL;
 
 namespace _07_MvcOA.BLL
 {
-    public class UserInfoBLL : BaseBLL<UserInfo>, IUserInfoBLL
+    public partial class UserInfoBLL
     {
         /// <summary>
         /// 批量删除
@@ -44,11 +44,6 @@ namespace _07_MvcOA.BLL
             return temp.OrderBy(u => u.UserID)
                        .Skip(skipCount)
                        .Take(userInfoParam.PageSize);
-        }
-
-        public override void SetCurrentDal()
-        {
-            CurrentDal = GetCurrentSession.UserInfoDal;
         }
     }
 }

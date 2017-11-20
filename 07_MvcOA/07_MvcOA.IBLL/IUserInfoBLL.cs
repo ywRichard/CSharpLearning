@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace _07_MvcOA.IBLL
 {
-    public interface IUserInfoBLL : IBaseBLL<UserInfo>
+    public partial interface IUserInfoBLL
     {
         bool DeleteEntities(List<int> list);
         IQueryable<UserInfo> LoadSearchEntities(UserInfoParam userInfoParam);

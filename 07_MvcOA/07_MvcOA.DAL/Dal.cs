@@ -1,4 +1,6 @@
-﻿using System;
+﻿ 
+
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -10,8 +12,10 @@ using _07_MvcOA.Model;
 
 namespace _07_MvcOA.DAL
 {
-    public partial class UserInfoDal
+		
+	public partial class UserInfoDal :BaseDal<UserInfo>,IUserInfoDal
     {
 
     }
+	
 }

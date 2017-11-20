@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace _07_MvcOA.IDAL
 {
-    public interface IDBSession
+    public partial interface IDBSession
     {
-        IUserInfoDal UserInfoDal { get; set; }
         bool SaveChanges();
     }
 }
