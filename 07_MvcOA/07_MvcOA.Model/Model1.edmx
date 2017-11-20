@@ -40,7 +40,63 @@
         </EntityType>
         <EntityContainer Name="OAEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="UserInfo" EntityType="Self.UserInfo" />
+          <EntitySet Name="ActionInfo" EntityType="OAEntitiesModel.ActionInfo" />
+          <EntitySet Name="RoleInfo" EntityType="OAEntitiesModel.RoleInfo" />
+          <EntitySet Name="Department" EntityType="OAEntitiesModel.Department" />
+          <EntitySet Name="R_UserInfo_ActionInfo" EntityType="OAEntitiesModel.R_UserInfo_ActionInfo" />
         </EntityContainer>
+        <EntityType Name="ActionInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubTime" Type="DateTime" Nullable="false" />
+          <Property Name="DelFlag" Type="Int16" Nullable="false" />
+          <Property Name="ModifiedOn" Type="String" MaxLength="Max" Nullable="false" Unicode="true" />
+          <Property Name="Remark" Type="String" MaxLength="256" Unicode="true" />
+          <Property Name="Url" Type="String" Nullable="false" MaxLength="512" Unicode="true" />
+          <Property Name="HttpMethod" Type="String" MaxLength="32" Nullable="false" Unicode="true" />
+          <Property Name="ActionMethodName" Type="String" MaxLength="32" Unicode="true" />
+          <Property Name="ControllerName" Type="String" MaxLength="128" Unicode="true" />
+          <Property Name="ActionInfoName" Type="String" Nullable="false" MaxLength="32" Unicode="true" />
+          <Property Name="Sort" Type="String" MaxLength="Max" Unicode="true" />
+          <Property Name="ActionTypeEnum" Type="Int16" Nullable="false" />
+          <Property Name="MenuIcon" Type="String" MaxLength="512" Unicode="false" />
+          <Property Name="IconWidth" Type="Int32" Nullable="false" />
+          <Property Name="IconHeight" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RoleInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="32" Unicode="true" />
+          <Property Name="DelFlag" Type="Int16" Nullable="false" />
+          <Property Name="SubTime" Type="DateTime" Nullable="false" />
+          <Property Name="Remark" Type="String" Unicode="true" MaxLength="256" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+          <Property Name="Sort" Type="String" Unicode="true" MaxLength="Max" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepName" Type="String" Nullable="false" Unicode="true" MaxLength="32" />
+          <Property Name="ParentId" Type="Int32" Nullable="false" />
+          <Property Name="TreePath" Type="String" Nullable="false" Unicode="true" MaxLength="128" />
+          <Property Name="Level" Type="Int32" Nullable="false" />
+          <Property Name="IsLeaf" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="R_UserInfo_ActionInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserInfoID" Type="Int32" Nullable="false" />
+          <Property Name="ActionInfoID" Type="Int32" Nullable="false" />
+          <Property Name="IsPass" Type="Boolean" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->

@@ -42,10 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IBaseBLL.cs" />
-    <Compile Include="IManager.cs">
+    <Compile Include="IBLL.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>IManager.tt</DependentUpon>
+      <DependentUpon>IBLL.tt</DependentUpon>
     </Compile>
     <Compile Include="IUserInfoBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,9 +65,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="IManager.tt">
+    <Content Include="IBLL.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>IManager.cs</LastGenOutput>
+      <LastGenOutput>IBLL.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
