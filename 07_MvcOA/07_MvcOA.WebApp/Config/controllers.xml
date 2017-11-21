@@ -2,10 +2,14 @@
 <objects xmlns="http://www.springframework.net" default-autowire="constructor">
 
   <object type="_07_MvcOA.WebApp.Controllers.UserInfoController, 07_MvcOA.WebApp" singleton="false" >
-    <property name="userInfoBll" ref="UserInfoBLL1" />
+    <property name="UserInfoBll" ref="UserInfoBLL1" />
   </object>
   
   <object type="_07_MvcOA.WebApp.Controllers.LoginController, 07_MvcOA.WebApp" singleton="false" >
-    <property name="userInfoBll" ref="UserInfoBLL1" />
+    <property name="UserInfoBll" ref="UserInfoBLL1" />
+  </object>
+
+  <object type="_07_MvcOA.WebApp.Controllers.RoleInfoController, 07_MvcOA.WebApp" singleton="false" >
+    <property name="RoleInfoBll" ref="RoleInfoBll1" />
   </object>
 </objects>

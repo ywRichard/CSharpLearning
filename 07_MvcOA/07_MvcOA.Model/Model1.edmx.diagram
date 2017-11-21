@@ -5,11 +5,17 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="2fe11cd0ffc04d47a18e1d11a88c6756" Name="Diagram1">
-        <EntityTypeShape EntityType="OAEntitiesModel.UserInfo" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="OAEntitiesModel.ActionInfo" Width="1.875" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="OAEntitiesModel.RoleInfo" Width="1.5" PointX="5" PointY="0.75" />
-        <EntityTypeShape EntityType="OAEntitiesModel.Department" Width="1.5" PointX="5" PointY="3.5" />
-        <EntityTypeShape EntityType="OAEntitiesModel.R_UserInfo_ActionInfo" Width="1.5" PointX="8.5" PointY="0.875" />
+        <EntityTypeShape EntityType="OAEntitiesModel.UserInfo" Width="2" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAEntitiesModel.ActionInfo" Width="1.875" PointX="6.125" PointY="0.75" />
+        <EntityTypeShape EntityType="OAEntitiesModel.RoleInfo" Width="1.5" PointX="8.875" PointY="0.75" />
+        <EntityTypeShape EntityType="OAEntitiesModel.Department" Width="1.5" PointX="1.25" PointY="4.5" />
+        <EntityTypeShape EntityType="OAEntitiesModel.R_UserInfo_ActionInfo" Width="1.875" PointX="3.5" PointY="0.75" />
+        <AssociationConnector Association="OAEntitiesModel.UserInfoR_UserInfo_ActionInfo" />
+        <AssociationConnector Association="OAEntitiesModel.UserInfoRoleInfo" />
+        <AssociationConnector Association="OAEntitiesModel.R_UserInfo_ActionInfoActionInfo" />
+        <AssociationConnector Association="OAEntitiesModel.ActionInfoRoleInfo" />
+        <AssociationConnector Association="OAEntitiesModel.ActionInfoDepartment" />
+        <AssociationConnector Association="OAEntitiesModel.UserInfoDepartment" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

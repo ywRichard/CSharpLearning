@@ -14,6 +14,14 @@ namespace _07_MvcOA.Model
     
     public partial class ActionInfo
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ActionInfo()
+        {
+            this.R_UserInfo_ActionInfo = new HashSet<R_UserInfo_ActionInfo>();
+            this.RoleInfo = new HashSet<RoleInfo>();
+            this.Department = new HashSet<Department>();
+        }
+    
         public int ID { get; set; }
         public System.DateTime SubTime { get; set; }
         public short DelFlag { get; set; }
@@ -29,5 +37,12 @@ namespace _07_MvcOA.Model
         public string MenuIcon { get; set; }
         public int IconWidth { get; set; }
         public int IconHeight { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<R_UserInfo_ActionInfo> R_UserInfo_ActionInfo { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RoleInfo> RoleInfo { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Department> Department { get; set; }
     }
 }

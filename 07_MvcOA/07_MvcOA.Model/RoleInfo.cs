@@ -14,6 +14,13 @@ namespace _07_MvcOA.Model
     
     public partial class RoleInfo
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public RoleInfo()
+        {
+            this.UserInfo = new HashSet<UserInfo>();
+            this.ActionInfo = new HashSet<ActionInfo>();
+        }
+    
         public int ID { get; set; }
         public string RoleName { get; set; }
         public short DelFlag { get; set; }
@@ -21,5 +28,10 @@ namespace _07_MvcOA.Model
         public string Remark { get; set; }
         public System.DateTime ModifiedOn { get; set; }
         public string Sort { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserInfo> UserInfo { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ActionInfo> ActionInfo { get; set; }
     }
 }

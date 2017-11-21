@@ -13,6 +13,26 @@ using _07_MvcOA.Model;
 namespace _07_MvcOA.DAL
 {
 		
+	public partial class ActionInfoDal :BaseDal<ActionInfo>,IActionInfoDal
+    {
+
+    }
+		
+	public partial class DepartmentDal :BaseDal<Department>,IDepartmentDal
+    {
+
+    }
+		
+	public partial class R_UserInfo_ActionInfoDal :BaseDal<R_UserInfo_ActionInfo>,IR_UserInfo_ActionInfoDal
+    {
+
+    }
+		
+	public partial class RoleInfoDal :BaseDal<RoleInfo>,IRoleInfoDal
+    {
+
+    }
+		
 	public partial class UserInfoDal :BaseDal<UserInfo>,IUserInfoDal
     {
 

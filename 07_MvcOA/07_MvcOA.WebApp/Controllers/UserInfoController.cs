@@ -12,7 +12,7 @@ namespace _07_MvcOA.WebApp.Controllers
     public class UserInfoController : Controller
     {
         // GET: UserInfo
-        IUserInfoBLL userInfoBll { get; set; }
+        IUserInfoBLL UserInfoBll { get; set; }
         public ActionResult Index()
         {
             return View();
@@ -39,11 +39,11 @@ namespace _07_MvcOA.WebApp.Controllers
             };
 
             //short delFlag = (short)DelFlagEnum.Normal;
-            //var userInfoList = userInfoBll.LoadPageEntities(pageIndex, pageSize, out totalCount,
+            //var userInfoList = UserInfoBll.LoadPageEntities(pageIndex, pageSize, out totalCount,
             //    c => c.DelFlag == delFlag,
             //    c => c.UserID, true);
 
-            var temp = userInfoBll.LoadSearchEntities(userInfoParam)
+            var temp = UserInfoBll.LoadSearchEntities(userInfoParam)
                 .Select(u => new
                 {
                     ID = u.UserID,
@@ -73,7 +73,7 @@ namespace _07_MvcOA.WebApp.Controllers
                 list.Add(int.Parse(id));
             }
 
-            if (userInfoBll.DeleteEntities(list))
+            if (UserInfoBll.DeleteEntities(list))
             {
                 return Content("ok");
             }
@@ -92,7 +92,7 @@ namespace _07_MvcOA.WebApp.Controllers
             userInfo.DelFlag = 0;
             userInfo.SubTime = DateTime.Now;
             userInfo.ModifiedOn = DateTime.Now;
-            userInfoBll.AddEntity(userInfo);
+            UserInfoBll.AddEntity(userInfo);
 
             return Json("ok");
         }
@@ -103,7 +103,7 @@ namespace _07_MvcOA.WebApp.Controllers
         public ActionResult GetUserInfoModel()
         {
             int id = int.Parse(Request["id"]);
-            var userInfo = userInfoBll.LoadEntities(c => c.UserID == id).FirstOrDefault();
+            var userInfo = UserInfoBll.LoadEntities(c => c.UserID == id).FirstOrDefault();
 
             if (userInfo != null)
                 return Json(new { serverData = userInfo, msg = "ok" }, JsonRequestBehavior.AllowGet);
@@ -118,7 +118,7 @@ namespace _07_MvcOA.WebApp.Controllers
         public ActionResult EditUserInfo(UserInfo userInfo)
         {
             userInfo.ModifiedOn = DateTime.Now;
-            if (userInfoBll.EditEntity(userInfo))
+            if (UserInfoBll.EditEntity(userInfo))
             {
                 return Content("ok");
             }

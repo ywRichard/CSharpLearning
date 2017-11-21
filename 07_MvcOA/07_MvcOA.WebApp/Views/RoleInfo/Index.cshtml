@@ -24,7 +24,7 @@
             $("#editDiv").css("display", "none");
             $('#btnSearch').click(function () {
                 var pars = {
-                    name: $("#txtUName").val(),
+                    name: $("#txtRName").val(),
                     remark: $("#txtRemark").val()
                 };
 
@@ -34,7 +34,7 @@
 
         function loadData(pars) {
             $('#tt').datagrid({
-                url: '/UserInfo/GetUserInfo',
+                url: '/RoleInfo/GetRoleInfo',
                 title: '用户数据表格',
                 width: 700,
                 height: 400,
@@ -51,11 +51,11 @@
                 columns: [[//c.UserName, c.UserPass, c.Email, c.RegTime
                     { field: 'ck', checkbox: true, align: 'left', width: 50 },
                     { field: 'ID', title: '编号', width: 80 },
-                    { field: 'UserName', title: '姓名', width: 120 },
-                    { field: 'UserPass', title: '密码', width: 120 },
+                    { field: 'RoleName', title: '角色名', width: 120 },
+                    { field: 'Sort', title: '排序', width: 120 },
                     { field: 'Remark', title: '备注', width: 120 },
                     {
-                        field: 'RegTime', title: '时间', width: 80, align: 'right',
+                        field: 'SubTime', title: '时间', width: 80, align: 'right',
                         formatter: function (value, row, index) {
                             return (eval(value.replace(/\/Date\((\d+)\)\//gi, "new Date($1)"))).pattern("yyyy-M-d");
                         }
@@ -66,27 +66,27 @@
                     text: '删除',
                     iconCls: 'icon-remove',
                     handler: function () {
-                        deleteUserInfo();
+                        deleteRoleInfo();
                     }
                 }, {
                     id: 'btnAdd',
                     text: '添加',
                     iconCls: 'icon-add',
                     handler: function () {
-                        addUserInfo();
+                        addRoleInfo();
                     }
                 }, {
                     id: 'btnEdit',
                     text: '修改',
                     iconCls: 'icon-edit',
                     handler: function () {
-                        editUserInfo();
+                        editRoleInfo();
                     }
                 }]
             }); //datagrid
         }//loadData
 
-        function deleteUserInfo() {
+        function deleteRoleInfo() {
             var rows = $('#tt').datagrid('getSelections');
             if (!rows || rows.length == 0) {
                 $.messager.alert("提醒", "请选择要删除的记录！", "error");
@@ -99,7 +99,7 @@
                         strId = strId + rows[i].ID + ",";
                     }
                     strId = strId.substr(0, strId.length - 1);
-                    $.post("/UserInfo/DeleteUserInfo", { "strId": strId }, function (data) {
+                    $.post("/RoleInfo/DeleteRoleInfo", { "strId": strId }, function (data) {
                         if (data == "ok") {
                             $('#tt').datagrid('clearSelections');//清除已删除的选项的记录
                             $('#tt').datagrid('reload');//重新加载页面，回到原分页目录
@@ -111,7 +111,7 @@
             });//message.confirm
         }
 
-        function addUserInfo() {
+        function addRoleInfo() {
             $("#addDiv").css("display", "block");
             $('#addDiv').dialog({
                 title: "添加用户信息",
@@ -144,21 +144,20 @@
             }
         }
 
-        function editUserInfo() {
+        function editRoleInfo() {
             var rows = $('#tt').datagrid('getSelections');
             if (rows.length != 1) {
                 $.messager.alert("提醒", "请选择要编辑的一条记录！", "error");
                 return;
             }
-            $.post("/userInfo/GetUserInfoModel", { "id": rows[0].ID }, function (data) {
+            $.post("/RoleInfo/GetRoleInfoModel", { "id": rows[0].ID }, function (data) {
                 if (data.msg == "ok") {
-                    $("#txtUserName").val(data.serverData.UserName);
-                    $("#txtUserPwd").val(data.serverData.UserPwd);
+                    $("#txtUserName").val(data.serverData.RoleName);
                     $("#txtRemark").val(data.serverData.Remark);
                     $("#txtSort").val(data.serverData.Sort);
                     $("#txtSubTime").val(ChangeDateFormat(data.serverData.SubTime));
                     $("#txtDelFlag").val(data.serverData.DelFlag);
-                    $("#txtId").val(data.serverData.UserID);
+                    $("#txtId").val(data.serverData.ID);
                     $('#editDiv').css("display", "block");
                     $('#editDiv').dialog({
                         title: "编辑用户信息",
@@ -204,16 +203,15 @@
 </head>
 <body>
     <div>
-        用户名:<input type="text" id="txtUName" value="" />&nbsp;&nbsp;备注<input type="text" name="txtRemark" value="" /><input type="button" id="btnSearch" value="搜索" />
+        角色名:<input type="text" id="txtRName" value="" />&nbsp;&nbsp;备注<input type="text" name="txtRemark" value="" /><input type="button" id="btnSearch" value="搜索" />
         <table id="tt" style="width: 700px;" title="标题，可以使用代码进行初始化，也可以使用这种属性的方式" iconcls="icon-edit"></table>
     </div>
     <!---------------添加用户信息--------------------->
     <div id="addDiv">
-        @using (Ajax.BeginForm("AddUserInfo", "UserInfo", new { }, new AjaxOptions() { HttpMethod = "Post", OnSuccess = "afterAdd" }, new { id = "addForm" }))
+        @using (Ajax.BeginForm("AddRoleInfo", "RoleInfo", new { }, new AjaxOptions() { HttpMethod = "Post", OnSuccess = "afterAdd" }, new { id = "addForm" }))
         {
             <table>
-                <tr><td>用户名</td><td><input type="text" name="UserName" /></td></tr>
-                <tr><td>密码</td><td><input type="text" name="UserPwd" /></td></tr>
+                <tr><td>角色名</td><td><input type="text" name="RoleName" /></td></tr>
                 <tr><td>备注</td><td><input type="text" name="Remark" /></td></tr>
                 <tr><td>排序</td><td><input type="text" name="Sort" /></td></tr>
             </table>
@@ -221,14 +219,13 @@
     </div>
     <!---------------修改用户信息--------------------->
     <div id="editDiv">
-        @using (Ajax.BeginForm("EditUserInfo", "UserInfo", new { }, new AjaxOptions() { HttpMethod = "Post", OnSuccess = "afterEdit" }, new { id = "editForm" }))
+        @using (Ajax.BeginForm("EditRoleInfo", "RoleInfo", new { }, new AjaxOptions() { HttpMethod = "Post", OnSuccess = "afterEdit" }, new { id = "editForm" }))
         {
             <input type="hidden" name="SubTime" id="txtSubTime" />
             <input type="hidden" name="DelFlag" id="txtDelFlag" />
             <input type="hidden" name="UserID" id="txtId" />
             <table>
-                <tr><td>用户名</td><td><input type="text" name="UserName" id="txtUserName" /></td></tr>
-                <tr><td>密码</td><td><input type="text" name="UserPwd" id="txtUserPwd" /></td></tr>
+                <tr><td>角色名</td><td><input type="text" name="RoleName" id="txtRoleName" /></td></tr>
                 <tr><td>备注</td><td><input type="text" name="Remark" id="txtRemark" /></td></tr>
                 <tr><td>排序</td><td><input type="text" name="Sort" id="txtSort" /></td></tr>
             </table>

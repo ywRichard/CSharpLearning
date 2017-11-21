@@ -15,6 +15,30 @@ namespace _07_MvcOA.DALFactory
     public partial class AbstractFactory
     {
 		
+	    public static IActionInfoDal CreateActionInfoDal()
+        {
+            string classFulleName = NameSpace+ ".ActionInfoDAL";
+            return CreateInstance(classFulleName) as IActionInfoDal;
+        }
+		
+	    public static IDepartmentDal CreateDepartmentDal()
+        {
+            string classFulleName = NameSpace+ ".DepartmentDAL";
+            return CreateInstance(classFulleName) as IDepartmentDal;
+        }
+		
+	    public static IR_UserInfo_ActionInfoDal CreateR_UserInfo_ActionInfoDal()
+        {
+            string classFulleName = NameSpace+ ".R_UserInfo_ActionInfoDAL";
+            return CreateInstance(classFulleName) as IR_UserInfo_ActionInfoDal;
+        }
+		
+	    public static IRoleInfoDal CreateRoleInfoDal()
+        {
+            string classFulleName = NameSpace+ ".RoleInfoDAL";
+            return CreateInstance(classFulleName) as IRoleInfoDal;
+        }
+		
 	    public static IUserInfoDal CreateUserInfoDal()
         {
             string classFulleName = NameSpace+ ".UserInfoDAL";

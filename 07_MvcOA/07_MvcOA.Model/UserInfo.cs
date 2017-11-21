@@ -14,6 +14,14 @@ namespace _07_MvcOA.Model
     
     public partial class UserInfo
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public UserInfo()
+        {
+            this.R_UserInfo_ActionInfo = new HashSet<R_UserInfo_ActionInfo>();
+            this.RoleInfo = new HashSet<RoleInfo>();
+            this.Department = new HashSet<Department>();
+        }
+    
         public int UserID { get; set; }
         public string UserName { get; set; }
         public string UserPwd { get; set; }
@@ -22,5 +30,12 @@ namespace _07_MvcOA.Model
         public System.DateTime ModifiedOn { get; set; }
         public string Remark { get; set; }
         public int Sort { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<R_UserInfo_ActionInfo> R_UserInfo_ActionInfo { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RoleInfo> RoleInfo { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Department> Department { get; set; }
     }
 }

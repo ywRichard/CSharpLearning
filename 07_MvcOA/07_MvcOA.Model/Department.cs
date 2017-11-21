@@ -14,11 +14,23 @@ namespace _07_MvcOA.Model
     
     public partial class Department
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Department()
+        {
+            this.ActionInfo = new HashSet<ActionInfo>();
+            this.UserInfo = new HashSet<UserInfo>();
+        }
+    
         public int ID { get; set; }
         public string DepName { get; set; }
         public int ParentId { get; set; }
         public string TreePath { get; set; }
         public int Level { get; set; }
         public bool IsLeaf { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ActionInfo> ActionInfo { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserInfo> UserInfo { get; set; }
     }
 }

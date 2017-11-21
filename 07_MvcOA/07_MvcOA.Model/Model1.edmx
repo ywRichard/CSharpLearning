@@ -37,6 +37,9 @@
           <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Sort" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="R_UserInfo_ActionInfo" Relationship="OAEntitiesModel.UserInfoR_UserInfo_ActionInfo" FromRole="UserInfo" ToRole="R_UserInfo_ActionInfo" />
+          <NavigationProperty Name="RoleInfo" Relationship="OAEntitiesModel.UserInfoRoleInfo" FromRole="UserInfo" ToRole="RoleInfo" />
+          <NavigationProperty Name="Department" Relationship="OAEntitiesModel.UserInfoDepartment" FromRole="UserInfo" ToRole="Department" />
         </EntityType>
         <EntityContainer Name="OAEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="UserInfo" EntityType="Self.UserInfo" />
@@ -44,6 +47,30 @@
           <EntitySet Name="RoleInfo" EntityType="OAEntitiesModel.RoleInfo" />
           <EntitySet Name="Department" EntityType="OAEntitiesModel.Department" />
           <EntitySet Name="R_UserInfo_ActionInfo" EntityType="OAEntitiesModel.R_UserInfo_ActionInfo" />
+          <AssociationSet Name="UserInfoR_UserInfo_ActionInfo" Association="OAEntitiesModel.UserInfoR_UserInfo_ActionInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="R_UserInfo_ActionInfo" EntitySet="R_UserInfo_ActionInfo" />
+          </AssociationSet>
+          <AssociationSet Name="UserInfoRoleInfo" Association="OAEntitiesModel.UserInfoRoleInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="RoleInfo" EntitySet="RoleInfo" />
+          </AssociationSet>
+          <AssociationSet Name="R_UserInfo_ActionInfoActionInfo" Association="OAEntitiesModel.R_UserInfo_ActionInfoActionInfo">
+            <End Role="R_UserInfo_ActionInfo" EntitySet="R_UserInfo_ActionInfo" />
+            <End Role="ActionInfo" EntitySet="ActionInfo" />
+          </AssociationSet>
+          <AssociationSet Name="ActionInfoRoleInfo" Association="OAEntitiesModel.ActionInfoRoleInfo">
+            <End Role="ActionInfo" EntitySet="ActionInfo" />
+            <End Role="RoleInfo" EntitySet="RoleInfo" />
+          </AssociationSet>
+          <AssociationSet Name="ActionInfoDepartment" Association="OAEntitiesModel.ActionInfoDepartment">
+            <End Role="ActionInfo" EntitySet="ActionInfo" />
+            <End Role="Department" EntitySet="Department" />
+          </AssociationSet>
+          <AssociationSet Name="UserInfoDepartment" Association="OAEntitiesModel.UserInfoDepartment">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="Department" EntitySet="Department" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="ActionInfo">
           <Key>
@@ -64,6 +91,9 @@
           <Property Name="MenuIcon" Type="String" MaxLength="512" Unicode="false" />
           <Property Name="IconWidth" Type="Int32" Nullable="false" />
           <Property Name="IconHeight" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="R_UserInfo_ActionInfo" Relationship="OAEntitiesModel.R_UserInfo_ActionInfoActionInfo" FromRole="ActionInfo" ToRole="R_UserInfo_ActionInfo" />
+          <NavigationProperty Name="RoleInfo" Relationship="OAEntitiesModel.ActionInfoRoleInfo" FromRole="ActionInfo" ToRole="RoleInfo" />
+          <NavigationProperty Name="Department" Relationship="OAEntitiesModel.ActionInfoDepartment" FromRole="ActionInfo" ToRole="Department" />
         </EntityType>
         <EntityType Name="RoleInfo">
           <Key>
@@ -76,6 +106,8 @@
           <Property Name="Remark" Type="String" Unicode="true" MaxLength="256" />
           <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
           <Property Name="Sort" Type="String" Unicode="true" MaxLength="Max" />
+          <NavigationProperty Name="UserInfo" Relationship="OAEntitiesModel.UserInfoRoleInfo" FromRole="RoleInfo" ToRole="UserInfo" />
+          <NavigationProperty Name="ActionInfo" Relationship="OAEntitiesModel.ActionInfoRoleInfo" FromRole="RoleInfo" ToRole="ActionInfo" />
         </EntityType>
         <EntityType Name="Department">
           <Key>
@@ -87,6 +119,8 @@
           <Property Name="TreePath" Type="String" Nullable="false" Unicode="true" MaxLength="128" />
           <Property Name="Level" Type="Int32" Nullable="false" />
           <Property Name="IsLeaf" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ActionInfo" Relationship="OAEntitiesModel.ActionInfoDepartment" FromRole="Department" ToRole="ActionInfo" />
+          <NavigationProperty Name="UserInfo" Relationship="OAEntitiesModel.UserInfoDepartment" FromRole="Department" ToRole="UserInfo" />
         </EntityType>
         <EntityType Name="R_UserInfo_ActionInfo">
           <Key>
@@ -96,7 +130,49 @@
           <Property Name="UserInfoID" Type="Int32" Nullable="false" />
           <Property Name="ActionInfoID" Type="Int32" Nullable="false" />
           <Property Name="IsPass" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="UserInfo" Relationship="OAEntitiesModel.UserInfoR_UserInfo_ActionInfo" FromRole="R_UserInfo_ActionInfo" ToRole="UserInfo" />
+          <NavigationProperty Name="ActionInfo" Relationship="OAEntitiesModel.R_UserInfo_ActionInfoActionInfo" FromRole="R_UserInfo_ActionInfo" ToRole="ActionInfo" />
         </EntityType>
+        <Association Name="UserInfoR_UserInfo_ActionInfo">
+          <End Type="OAEntitiesModel.UserInfo" Role="UserInfo" Multiplicity="1" />
+          <End Type="OAEntitiesModel.R_UserInfo_ActionInfo" Role="R_UserInfo_ActionInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInfo">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="R_UserInfo_ActionInfo">
+              <PropertyRef Name="UserInfoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserInfoRoleInfo">
+          <End Type="OAEntitiesModel.UserInfo" Role="UserInfo" Multiplicity="*" />
+          <End Type="OAEntitiesModel.RoleInfo" Role="RoleInfo" Multiplicity="*" />
+        </Association>
+        <Association Name="R_UserInfo_ActionInfoActionInfo">
+          <End Type="OAEntitiesModel.R_UserInfo_ActionInfo" Role="R_UserInfo_ActionInfo" Multiplicity="*" />
+          <End Type="OAEntitiesModel.ActionInfo" Role="ActionInfo" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="ActionInfo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="R_UserInfo_ActionInfo">
+              <PropertyRef Name="ActionInfoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ActionInfoRoleInfo">
+          <End Type="OAEntitiesModel.ActionInfo" Role="ActionInfo" Multiplicity="*" />
+          <End Type="OAEntitiesModel.RoleInfo" Role="RoleInfo" Multiplicity="*" />
+        </Association>
+        <Association Name="ActionInfoDepartment">
+          <End Type="OAEntitiesModel.ActionInfo" Role="ActionInfo" Multiplicity="*" />
+          <End Type="OAEntitiesModel.Department" Role="Department" Multiplicity="*" />
+        </Association>
+        <Association Name="UserInfoDepartment">
+          <End Type="OAEntitiesModel.UserInfo" Role="UserInfo" Multiplicity="*" />
+          <End Type="OAEntitiesModel.Department" Role="Department" Multiplicity="*" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
