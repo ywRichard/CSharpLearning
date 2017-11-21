@@ -81,6 +81,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="SearchPattern\BaseParam.cs" />
+    <Compile Include="SearchPattern\RoleInfoParam.cs" />
     <Compile Include="SearchPattern\UserInfoParam.cs" />
     <Compile Include="UserInfo.cs">
       <DependentUpon>Model1.tt</DependentUpon>
