@@ -150,6 +150,7 @@
                 $.messager.alert("提醒", "请选择要编辑的一条记录！", "error");
                 return;
             }
+            //由iframe标签替代
             $.post("/userInfo/GetUserInfoModel", { "id": rows[0].ID }, function (data) {
                 if (data.msg == "ok") {
                     $("#txtUserName").val(data.serverData.UserName);
@@ -185,6 +186,7 @@
                 }
             });
         }
+
         function afterEdit(data) {
             if (data == "ok") {
                 $('#editDiv').dialog('close');//清除已删除的选项记录

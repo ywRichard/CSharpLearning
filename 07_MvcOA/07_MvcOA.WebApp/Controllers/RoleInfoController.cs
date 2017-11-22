@@ -83,5 +83,14 @@ namespace _07_MvcOA.WebApp.Controllers
                 return Json(new { msg = "no" }, JsonRequestBehavior.AllowGet);
             }
         }
+
+        public ActionResult ShowEditInfo()
+        {
+            var id = int.Parse(Request["id"]);
+            var roleInfo = RoleInfoBll.LoadEntities(r => r.ID == id).FirstOrDefault();
+            ViewData.Model=roleInfo;
+
+            return View();
+        }
     }
 }

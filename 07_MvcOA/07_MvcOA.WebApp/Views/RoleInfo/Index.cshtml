@@ -150,41 +150,46 @@
                 $.messager.alert("提醒", "请选择要编辑的一条记录！", "error");
                 return;
             }
-            $.post("/RoleInfo/GetRoleInfoModel", { "id": rows[0].ID }, function (data) {
-                if (data.msg == "ok") {
-                    $("#txtRoleName").val(data.serverData.RoleName);
-                    $("#txtRemark").val(data.serverData.Remark);
-                    $("#txtSort").val(data.serverData.Sort);
-                    $("#txtSubTime").val(ChangeDateFormat(data.serverData.SubTime));
-                    $("#txtDelFlag").val(data.serverData.DelFlag);
-                    $("#txtId").val(data.serverData.ID);
-                    $('#editDiv').css("display", "block");
-                    $('#editDiv').dialog({
-                        title: "编辑角色信息",
-                        width: 300,
-                        height: 300,
-                        collapsible: true,
-                        resizable: true,
-                        modal: true,
-                        buttons: [{
-                            text: '确定',
-                            iconCls: 'icon-ok',
-                            handler: function () {
-                                $('#editForm').submit();
-                            }
-                        }, {
-                            text: '取消',
-                            handler: function () {
-                                $('#editDiv').dialog('close');
-                            }
-                        }]
-                    });
-                } else {
-                    $.messager.alert("提醒", "展示数据错误！", "error");
-                }
+            //由iframe标签替代
+            //$.post("/RoleInfo/GetRoleInfoModel", { "id": rows[0].ID }, function (data) {
+            //    if (data.msg == "ok") {
+            //        $("#txtRoleName").val(data.serverData.RoleName);
+            //        $("#txtRemark").val(data.serverData.Remark);
+            //        $("#txtSort").val(data.serverData.Sort);
+            //        $("#txtSubTime").val(ChangeDateFormat(data.serverData.SubTime));
+            //        $("#txtDelFlag").val(data.serverData.DelFlag);
+            //        $("#txtId").val(data.serverData.ID);
+            $("#editFrame").attr("src", "/RoleInfo/ShowEditInfo/?id=" + rows[0].ID);
+
+            $('#editDiv').css("display", "block");
+            $('#editDiv').dialog({
+                title: "编辑角色信息",
+                width: 300,
+                height: 300,
+                collapsible: true,
+                resizable: true,
+                modal: true,
+                buttons: [{
+                    text: '确定',
+                    iconCls: 'icon-ok',
+                    handler: function () {
+                        //$('#editForm').submit();
+                        var childWindow = $("#editFrame")[0].contentWindow;
+                        childWindow.subForm();
+                    }
+                }, {
+                    text: '取消',
+                    handler: function () {
+                        $('#editDiv').dialog('close');
+                    }
+                }]
             });
+        //} else {
+        //    $.messager.alert("提醒", "展示数据错误！", "error");
+        //}
         }
         function afterEdit(data) {
+            alert("parent edit")
             if (data == "ok") {
                 $('#editDiv').dialog('close');//清除已删除的选项记录
                 $('#tt').datagrid('reload');
@@ -206,7 +211,7 @@
         角色名:<input type="text" id="txtRName" value="" />&nbsp;&nbsp;备注<input type="text" name="txtRemark" value="" /><input type="button" id="btnSearch" value="搜索" />
         <table id="tt" style="width: 700px;" title="标题，可以使用代码进行初始化，也可以使用这种属性的方式" iconcls="icon-edit"></table>
     </div>
-    <!---------------添加用户信息--------------------->
+    <!---------------添加角色信息--------------------->
     <div id="addDiv">
         @using (Ajax.BeginForm("AddRoleInfo", "RoleInfo", new { }, new AjaxOptions() { HttpMethod = "Post", OnSuccess = "afterAdd" }, new { id = "addForm" }))
         {
@@ -217,9 +222,10 @@
             </table>
         }
     </div>
-    <!---------------修改用户信息--------------------->
-    <div id="editDiv">
-        @using (Ajax.BeginForm("EditRoleInfo", "RoleInfo", new { }, new AjaxOptions() { HttpMethod = "Post", OnSuccess = "afterEdit" }, new { id = "editForm" }))
+    <!---------------修改角色信息--------------------->
+<div id="editDiv">
+    <iframe id="editFrame" scrolling="no" width="100%" height="100%" frameborder="0"></iframe>
+    @*@using (Ajax.BeginForm("EditRoleInfo", "RoleInfo", new { }, new AjaxOptions() { HttpMethod = "Post", OnSuccess = "afterEdit" }, new { id = "editForm" }))
         {
             <input type="hidden" name="SubTime" id="txtSubTime" />
             <input type="hidden" name="DelFlag" id="txtDelFlag" />
@@ -229,7 +235,7 @@
                 <tr><td>备注</td><td><input type="text" name="Remark" id="txtRemark" /></td></tr>
                 <tr><td>排序</td><td><input type="text" name="Sort" id="txtSort" /></td></tr>
             </table>
-        }
-    </div>
+        }*@
+</div>
 </body>
 </html>
