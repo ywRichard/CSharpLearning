@@ -40,19 +40,48 @@ namespace _07_MvcOA.WebApp.Controllers
             return Json(new { rows = temp, total = totalCount }, JsonRequestBehavior.AllowGet);
         }
 
-        //public ActionResult DeleteRoleInfo()
-        //{
-        //    return Content();
-        //}
+        public ActionResult DeleteRoleInfo()
+        {
+            var strId = Request["strId"];
+            var strIds = strId.Split(',');
+            var list = new List<int>();
+            foreach (var id in strIds)
+            {
+                list.Add(int.Parse(id));
+            }
+            var result = RoleInfoBll.DeleteEntities(list) ? "ok" : "no";
 
-        //public ActionResult AddRoleInfo()
-        //{
-        //    return Json();
-        //}
+            return Content(result);
+        }
 
-        //public ActionResult EditRoleInfo()
-        //{
-        //    return Content();
-        //}
+        public ActionResult AddRoleInfo(RoleInfo roleInfo)
+        {
+            roleInfo.SubTime = DateTime.Now;
+            roleInfo.ModifiedOn = DateTime.Now;
+            roleInfo.DelFlag = 0;
+            RoleInfoBll.AddEntity(roleInfo);
+            return Content("ok");
+        }
+
+        public ActionResult EditRoleInfo(RoleInfo roleInfo)
+        {
+            roleInfo.ModifiedOn = DateTime.Now;
+            var result = RoleInfoBll.EditEntity(roleInfo) ? "ok" : "no";
+            return Content(result);
+        }
+
+        public ActionResult GetRoleInfoModel()
+        {
+            var id = int.Parse(Request["id"]);
+            var roleInfo = RoleInfoBll.LoadEntities(r => r.ID == id).FirstOrDefault();
+            if (roleInfo != null)
+            {
+                return Json(new { serverData = roleInfo, msg = "ok" }, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json(new { msg = "no" }, JsonRequestBehavior.AllowGet);
+            }
+        }
     }
 }

@@ -20,7 +20,6 @@ namespace _07_MvcOA.DALFactory
         {
             get { return DbContextFactory.CreateDbContext(); }
         }
-        private IUserInfoDal _userInfoDal;
 
         /// <summary>
         /// 一个业务中有可能涉及到对多张表的操作，那么可以将操作的数据传递到数据层中相应的方法，打上相应的标记，最后调用该方法。

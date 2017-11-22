@@ -38,7 +38,7 @@ foreach (EntityType entity in ItemCollection.GetItems<EntityType>().OrderBy(e =>
 #>		
 	    public static I<#=entity.Name#>Dal Create<#=entity.Name#>Dal()
         {
-            string classFulleName = NameSpace+ ".<#=entity.Name#>DAL";
+            string classFulleName = NameSpace+ ".<#=entity.Name#>Dal";
             return CreateInstance(classFulleName) as I<#=entity.Name#>Dal;
         }
 <#}#>

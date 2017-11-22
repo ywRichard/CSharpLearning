@@ -17,31 +17,31 @@ namespace _07_MvcOA.DALFactory
 		
 	    public static IActionInfoDal CreateActionInfoDal()
         {
-            string classFulleName = NameSpace+ ".ActionInfoDAL";
+            string classFulleName = NameSpace+ ".ActionInfoDal";
             return CreateInstance(classFulleName) as IActionInfoDal;
         }
 		
 	    public static IDepartmentDal CreateDepartmentDal()
         {
-            string classFulleName = NameSpace+ ".DepartmentDAL";
+            string classFulleName = NameSpace+ ".DepartmentDal";
             return CreateInstance(classFulleName) as IDepartmentDal;
         }
 		
 	    public static IR_UserInfo_ActionInfoDal CreateR_UserInfo_ActionInfoDal()
         {
-            string classFulleName = NameSpace+ ".R_UserInfo_ActionInfoDAL";
+            string classFulleName = NameSpace+ ".R_UserInfo_ActionInfoDal";
             return CreateInstance(classFulleName) as IR_UserInfo_ActionInfoDal;
         }
 		
 	    public static IRoleInfoDal CreateRoleInfoDal()
         {
-            string classFulleName = NameSpace+ ".RoleInfoDAL";
+            string classFulleName = NameSpace+ ".RoleInfoDal";
             return CreateInstance(classFulleName) as IRoleInfoDal;
         }
 		
 	    public static IUserInfoDal CreateUserInfoDal()
         {
-            string classFulleName = NameSpace+ ".UserInfoDAL";
+            string classFulleName = NameSpace+ ".UserInfoDal";
             return CreateInstance(classFulleName) as IUserInfoDal;
         }
 	}

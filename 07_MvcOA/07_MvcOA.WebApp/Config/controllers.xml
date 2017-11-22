@@ -10,6 +10,6 @@
   </object>
 
   <object type="_07_MvcOA.WebApp.Controllers.RoleInfoController, 07_MvcOA.WebApp" singleton="false" >
-    <property name="RoleInfoBll" ref="RoleInfoBll1" />
+    <property name="RoleInfoBll" ref="RoleInfoBLL1" />
   </object>
 </objects>

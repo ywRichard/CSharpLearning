@@ -8,7 +8,7 @@ using _07_MvcOA.IBLL;
 
 namespace _07_MvcOA.BLL
 {
-    public partial class UserInfoBLL
+    public partial class UserInfoBLL : BaseBLL<UserInfo>, IUserInfoBLL
     {
         /// <summary>
         /// 批量删除

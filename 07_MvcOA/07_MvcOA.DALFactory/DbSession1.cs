@@ -12,7 +12,7 @@ using System.Data.Entity;
 
 namespace _07_MvcOA.DALFactory
 {
-	public partial class DBSession : IDBSession
+	public partial class DBSession
     {
 	
 		private IActionInfoDal _ActionInfoDal;

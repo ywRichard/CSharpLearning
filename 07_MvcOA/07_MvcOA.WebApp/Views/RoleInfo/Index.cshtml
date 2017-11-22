@@ -35,13 +35,13 @@
         function loadData(pars) {
             $('#tt').datagrid({
                 url: '/RoleInfo/GetRoleInfo',
-                title: '用户数据表格',
+                title: '角色数据表格',
                 width: 700,
                 height: 400,
                 fitColumns: true, //列自适应
                 nowrap: false,
                 idField: 'ID',//主键列的列明
-                loadMsg: '正在加载用户的信息...',
+                loadMsg: '正在加载角色信息...',
                 pagination: true,//是否有分页
                 singleSelect: false,//是否单行选择
                 pageSize: 5,//页大小，一页多少条数据
@@ -114,7 +114,7 @@
         function addRoleInfo() {
             $("#addDiv").css("display", "block");
             $('#addDiv').dialog({
-                title: "添加用户信息",
+                title: "添加角色信息",
                 width: 300,
                 height: 300,
                 collapsible: true,
@@ -152,7 +152,7 @@
             }
             $.post("/RoleInfo/GetRoleInfoModel", { "id": rows[0].ID }, function (data) {
                 if (data.msg == "ok") {
-                    $("#txtUserName").val(data.serverData.RoleName);
+                    $("#txtRoleName").val(data.serverData.RoleName);
                     $("#txtRemark").val(data.serverData.Remark);
                     $("#txtSort").val(data.serverData.Sort);
                     $("#txtSubTime").val(ChangeDateFormat(data.serverData.SubTime));
@@ -160,7 +160,7 @@
                     $("#txtId").val(data.serverData.ID);
                     $('#editDiv').css("display", "block");
                     $('#editDiv').dialog({
-                        title: "编辑用户信息",
+                        title: "编辑角色信息",
                         width: 300,
                         height: 300,
                         collapsible: true,
@@ -223,7 +223,7 @@
         {
             <input type="hidden" name="SubTime" id="txtSubTime" />
             <input type="hidden" name="DelFlag" id="txtDelFlag" />
-            <input type="hidden" name="UserID" id="txtId" />
+            <input type="hidden" name="ID" id="txtId" />
             <table>
                 <tr><td>角色名</td><td><input type="text" name="RoleName" id="txtRoleName" /></td></tr>
                 <tr><td>备注</td><td><input type="text" name="Remark" id="txtRemark" /></td></tr>
