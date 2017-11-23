@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using _07_MvcOA.BLL;
 using _07_MvcOA.IBLL;
 using _07_MvcOA.Model;
+using _07_MvcOA.Common;
 
 namespace _07_MvcOA.WebApp.Controllers
 {
@@ -106,9 +107,17 @@ namespace _07_MvcOA.WebApp.Controllers
             var userInfo = UserInfoBll.LoadEntities(c => c.UserID == id).FirstOrDefault();
 
             if (userInfo != null)
-                return Json(new { serverData = userInfo, msg = "ok" }, JsonRequestBehavior.AllowGet);
+            {
+                //存在Json序列化时，循环引用的问题。
+                //return Json(new { serverData = userInfo, msg = "ok" }, JsonRequestBehavior.AllowGet);
+                //Newtonsoft.Json，先序列化成字符串，在返回该字符串。
+                return Content(SerializerHelper.SerializerToString(new { serverData = userInfo, msg = "ok" }));
+            }
             else
-                return Json(new { msg = "no" }, JsonRequestBehavior.AllowGet);
+            {
+                //return Json(new { msg = "no" }, JsonRequestBehavior.AllowGet);
+                return Content(SerializerHelper.SerializerToString(new { msg = "no" }));
+            }
         }
         /// <summary>
         /// 编辑用户信息

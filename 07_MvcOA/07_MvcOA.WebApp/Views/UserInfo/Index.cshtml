@@ -150,8 +150,11 @@
                 $.messager.alert("提醒", "请选择要编辑的一条记录！", "error");
                 return;
             }
-            //由iframe标签替代
-            $.post("/userInfo/GetUserInfoModel", { "id": rows[0].ID }, function (data) {
+            //可由iframe标签替代
+            $.post("/userInfo/GetUserInfoModel", { "id": rows[0].ID }, function (serverData) {
+                alert(serverData);
+                //循环引用问题 -> 反序列化json字符串
+                var data = $.parseJSON(serverData);
                 if (data.msg == "ok") {
                     $("#txtUserName").val(data.serverData.UserName);
                     $("#txtUserPwd").val(data.serverData.UserPwd);
