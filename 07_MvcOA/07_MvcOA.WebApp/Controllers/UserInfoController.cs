@@ -14,6 +14,7 @@ namespace _07_MvcOA.WebApp.Controllers
     {
         // GET: UserInfo
         IUserInfoBLL UserInfoBll { get; set; }
+        IRoleInfoBLL RoleInfoBll { get; set; }
         public ActionResult Index()
         {
             return View();
@@ -135,6 +136,52 @@ namespace _07_MvcOA.WebApp.Controllers
             {
                 return Content("no");
             }
+        }
+        /// <summary>
+        /// 为用户分配角色
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult SetUserRoleInfo()
+        {
+            var id = int.Parse(Request["userId"]);
+            var userInfo = UserInfoBll.LoadEntities(u => u.UserID == id).FirstOrDefault();
+            ViewBag.userInfo = userInfo;
+            //查询所有的角色信息
+            var delFlag = (short)DelFlagEnum.Normal;
+            var roleInfoList = RoleInfoBll.LoadEntities(r => r.DelFlag == delFlag).ToList();
+            //找出用户已经有的角色编号
+            var userRoleIdList = userInfo.RoleInfo.Select(u => u.ID).ToList();
+
+            ViewBag.AllRoleInfo = roleInfoList;
+            ViewBag.AllExtRoleId = userRoleIdList;
+
+            return View();
+        }
+        //完成对用户角色的分配
+        public ActionResult SetUserRole()
+        {
+            var userId = int.Parse(Request["userId"]);
+
+            //Post请求中的表单元素以键值对表示
+            //[name,value]，key是name;所以要递交的表单元素必须要有name.
+            var allKeys = Request.Form.AllKeys;//获取Post请求中Form表单元素所有的键(name)
+            var idList = new List<int>();
+            foreach (string key in allKeys)
+            {
+                if (key.StartsWith("cba_"))
+                {
+                    var id = int.Parse(key.Replace("cba_", ""));
+                    idList.Add(id);
+                }
+            }
+
+            var result = "";
+            if (UserInfoBll.SetUserOrderInfo(userId, idList))
+                result = "ok";
+            else
+                result = "no";
+
+            return Content(result);
         }
     }
 }

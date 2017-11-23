@@ -1,0 +1,51 @@
+﻿
+@{
+    Layout = null;
+}
+@using _07_MvcOA.Model
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SetUserRoleInfo</title>
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script type="text/javascript">
+        function subForm() {
+            $("#form1").submit();
+        }
+        function afterSet(data) {
+            window.parent.afterSetUserRoleInfo(data);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        为用户 @{
+            UserInfo userInfo = ViewBag.userInfo;
+            @userInfo.UserName;
+        } 分配角色
+        @using (Ajax.BeginForm("SetUserRole", "UserInfo", new { }, new AjaxOptions() { HttpMethod = "post", OnSuccess = "afterSet" }, new { id = "form1" }))
+        {
+            <input type="hidden" name="userId" value="@userInfo.UserID" />
+            List<RoleInfo> roleInfoList = ViewBag.AllRoleInfo;
+            List<int> roleInfoIdList = ViewBag.AllExtRoleId;
+            foreach (RoleInfo roleInfo in roleInfoList)
+            {
+                var checkName = "cba_" + roleInfo.ID;
+                if (roleInfoIdList.Contains(roleInfo.ID))
+                {
+                    <input type="checkbox" name="@checkName" value="@roleInfo.ID" checked="checked" />@roleInfo.RoleName
+                }
+                else
+                {
+                    <input type="checkbox" name="@checkName" value="@roleInfo.ID" />@roleInfo.RoleName
+                }
+                <br />
+            }
+        }
+    </div>
+</body>
+</html>

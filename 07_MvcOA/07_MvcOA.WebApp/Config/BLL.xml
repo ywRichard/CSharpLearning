@@ -8,4 +8,5 @@
   
   <object name="RoleInfoBLL1" type="_07_MvcOA.BLL.RoleInfoBLL, 07_MvcOA.BLL" singleton="false" />
 
+  <object name="ActionInfoBLL1" type="_07_MvcOA.BLL.ActionInfoBLL, 07_MvcOA.BLL" singleton="false" />
 </objects>

@@ -22,6 +22,7 @@
             loadData();
             $("#addDiv").css("display", "none");
             $("#editDiv").css("display", "none");
+            $("#setRoleDiv").css("display", "none");
             $('#btnSearch').click(function () {
                 var pars = {
                     name: $("#txtUName").val(),
@@ -82,10 +83,57 @@
                     handler: function () {
                         editUserInfo();
                     }
+                }, {
+                    id: 'btnUserRole',
+                    text: '为用户分配角色',
+                    iconCls: 'icon-edit',
+                    handler: function () {
+                        setUserRoleInfo();
+                    }
                 }]
             }); //datagrid
         }//loadData
+        //为用户分配角色
+        function setUserRoleInfo() {
+            var rows = $('#tt').datagrid('getSelections');
+            if (rows.length != 1) {
+                $.messager.alert("提醒", "请选择要编辑的一条记录！", "error");
+                return;
+            }
+            $("#setRoleFrame").attr("src","/UserInfo/SetUserRoleInfo/?userId=" + rows[0].ID);
+            $("#setRoleDiv").css("display", "block");
+            $("#setRoleDiv").dialog({
+                title: "分配用户角色信息",
+                width: 300,
+                height: 300,
+                collapsible: true,
+                resizable: true,
+                modal: true,
+                buttons: [{
+                    text: '确定',
+                    iconCls: 'icon-ok',
+                    handler: function () {
+                        //$('#editForm').submit();
+                        var childWindow = $("#setRoleFrame")[0].contentWindow;
+                        childWindow.subForm();
+                    }
+                }, {
+                    text: '取消',
+                    handler: function () {
+                        $('#setRoleDiv').dialog('close');
+                    }
+                }]
+            });
+        }
+        function afterSetUserRoleInfo(data) {
+            if (data=="ok") {
+                $('#setRoleDiv').dialog('close');
+            } else {
+                
+            }
+        }
 
+        
         function deleteUserInfo() {
             var rows = $('#tt').datagrid('getSelections');
             if (!rows || rows.length == 0) {
@@ -151,7 +199,7 @@
                 return;
             }
             //可由iframe标签替代
-            $.post("/userInfo/GetUserInfoModel", { "id": rows[0].ID }, function (serverData) {
+            $.post("/UserInfo/GetUserInfoModel", { "id": rows[0].ID }, function (serverData) {
                 alert(serverData);
                 //循环引用问题 -> 反序列化json字符串
                 var data = $.parseJSON(serverData);
@@ -189,7 +237,6 @@
                 }
             });
         }
-
         function afterEdit(data) {
             if (data == "ok") {
                 $('#editDiv').dialog('close');//清除已删除的选项记录
@@ -198,6 +245,7 @@
                 $.messager.alert('提醒', '编辑数据失败', 'erroe');
             }
         }
+
         //将序列化成json格式后日期(毫秒数)转成日期格式
         function ChangeDateFormat(cellval) {
             var date = new Date(parseInt(cellval.replace("/Date(", "").replace(")/", ""), 10));
@@ -238,6 +286,10 @@
                 <tr><td>排序</td><td><input type="text" name="Sort" id="txtSort" /></td></tr>
             </table>
         }
+    </div>
+    <!---------------为用户配置角色信息--------------------->
+    <div id="setRoleDiv">
+        <iframe id="setRoleFrame" scrolling="no" width="100%" height="100%" frameborder="0"></iframe>
     </div>
 </body>
 </html>

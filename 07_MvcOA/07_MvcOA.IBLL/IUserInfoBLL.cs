@@ -12,5 +12,6 @@ namespace _07_MvcOA.IBLL
     {
         bool DeleteEntities(List<int> list);
         IQueryable<UserInfo> LoadSearchEntities(UserInfoParam userInfoParam);
+        bool SetUserOrderInfo(int userId, List<int> roleIdList);
     }
 }
