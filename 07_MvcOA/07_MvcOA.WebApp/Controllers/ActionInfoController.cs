@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace _07_MvcOA.WebApp.Controllers
 {
-    public class ActionInfoController : Controller
+    public class ActionInfoController : BaseController
     {
         IBLL.IActionInfoBLL ActionInfoBll { get; set; }
         // GET: ActionInfo
@@ -39,6 +39,36 @@ namespace _07_MvcOA.WebApp.Controllers
             });
 
             return Json(new { rows = temp, total = totalCount }, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult DeleteActionInfo()
+        {
+            var actionId = int.Parse(Request["actionId"]);
+
+            var actionInfo = ActionInfoBll.LoadEntities(a => a.ID == actionId).FirstOrDefault();
+            if (ActionInfoBll.DeleteEntity(actionInfo))
+            {
+                return Content("ok");
+            }
+            else
+            {
+                return Content("no");
+            }
+        }
+
+        public ActionResult DeleteActionInfoList()
+        {
+            var strId = Request["strId"];
+            var strIds = strId.Split(',');
+            var listId = new List<int>();
+            foreach (var id in strIds)
+            {
+                listId.Add(int.Parse(id));
+            }
+            if (ActionInfoBll.DeleteEntities(listId))
+                return Content("ok");
+            else
+                return Content("no");
         }
     }
 }

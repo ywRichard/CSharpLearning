@@ -54,13 +54,28 @@
                     { field: 'ActionInfoName', title: '权限名称', width: 120 },
                     { field: 'Url', title: '请求地址', width: 120 },
                     { field: 'HttpMethod', title: '请求方式', width: 120 },
-                    { field: 'ActionTypeEnum', title: '权限类型', width: 120 },
+                    {
+                        field: 'ActionTypeEnum', title: '权限类型', width: 120,
+                        //格式化列
+                        formatter: function (value, row, index) {
+                            var type = value == 1 ? "菜单权限" : "普通权限";
+                            return type;
+                        }
+                    },
                     { field: 'Sort', title: '排序', width: 120 },
                     { field: 'Remark', title: '备注', width: 120 },
                     {
                         field: 'SubTime', title: '时间', width: 80, align: 'right',
                         formatter: function (value, row, index) {
                             return (eval(value.replace(/\/Date\((\d+)\)\//gi, "new Date($1)"))).pattern("yyyy-M-d");
+                        }
+                    },
+                    {
+                        field: 'Operator', title: '操作', width: 120, align: 'right',
+                        formatter: function (value, row, index) {
+                            var str = "<a href='javascript:void(0)' ids='" + row.ID + "' class='deletes'>删除</a>";
+                            str += "&nbsp;&nbsp;<a href='javascript:void(0)' ids='" + row.ID + "' class='edits'>编辑</a>";
+                            return str;
                         }
                     }
                 ]],
@@ -69,27 +84,37 @@
                     text: '删除',
                     iconCls: 'icon-remove',
                     handler: function () {
-                        deleteRoleInfo();
+                        deleteActionInfoList();
                     }
                 }, {
                     id: 'btnAdd',
                     text: '添加',
                     iconCls: 'icon-add',
                     handler: function () {
-                        addRoleInfo();
+                        addActionInfo();
                     }
                 }, {
                     id: 'btnEdit',
                     text: '修改',
                     iconCls: 'icon-edit',
                     handler: function () {
-                        editRoleInfo();
+                        editActionInfo();
                     }
-                }]
+                }],
+                onLoadSuccess:function() {
+                    $(".deletes").click(function() {
+                        alert($(this).attr("ids"));
+                        deleteRoleInfo($(this).attr("ids"));
+                    });
+
+                    $(".edits").click(function() {
+                        alert($(this).attr("ids"));
+                    });
+                }
             }); //datagrid
         }//loadData
 
-        function deleteRoleInfo() {
+        function deleteRoleInfoList() {
             var rows = $('#tt').datagrid('getSelections');
             if (!rows || rows.length == 0) {
                 $.messager.alert("提醒", "请选择要删除的记录！", "error");
@@ -102,7 +127,7 @@
                         strId = strId + rows[i].ID + ",";
                     }
                     strId = strId.substr(0, strId.length - 1);
-                    $.post("/RoleInfo/DeleteRoleInfo", { "strId": strId }, function (data) {
+                    $.post("/ActionInfo/DeleteActionInfoList", { "strId": strId }, function (data) {
                         if (data == "ok") {
                             $('#tt').datagrid('clearSelections');//清除已删除的选项的记录
                             $('#tt').datagrid('reload');//重新加载页面，回到原分页目录
@@ -112,6 +137,15 @@
                     });//post
                 }
             });//message.confirm
+        }
+        function deleteRoleInfo(actionId) {
+            $.post("/ActionInfo/DeleteActionInfo", { "actionId": actionId }, function(data) {
+                if (data=="ok") {
+                    $('#tt').datagrid('reload');
+                } else {
+                    $.messager.alert("提醒", "删除记录失败", "error");
+                }
+            });
         }
 
         function addRoleInfo() {

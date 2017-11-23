@@ -8,7 +8,7 @@ using _07_MvcOA.Model;
 
 namespace _07_MvcOA.WebApp.Controllers
 {
-    public class RoleInfoController : Controller
+    public class RoleInfoController : BaseController
     {
         // GET: RoleInfo
         IRoleInfoBLL RoleInfoBll { get; set; }

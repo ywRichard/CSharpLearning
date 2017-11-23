@@ -10,7 +10,7 @@ using _07_MvcOA.Common;
 
 namespace _07_MvcOA.WebApp.Controllers
 {
-    public class UserInfoController : Controller
+    public class UserInfoController : BaseController
     {
         // GET: UserInfo
         IUserInfoBLL UserInfoBll { get; set; }
