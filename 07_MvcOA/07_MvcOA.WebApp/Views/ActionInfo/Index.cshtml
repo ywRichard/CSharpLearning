@@ -98,17 +98,16 @@
                     text: '修改',
                     iconCls: 'icon-edit',
                     handler: function () {
-                        editActionInfo();
+                        editSelectActionInfo();
                     }
                 }],
                 onLoadSuccess:function() {
                     $(".deletes").click(function() {
-                        alert($(this).attr("ids"));
                         deleteRoleInfo($(this).attr("ids"));
                     });
 
                     $(".edits").click(function() {
-                        alert($(this).attr("ids"));
+                        editActionInfo($(this).attr("ids"))
                     });
                 }
             }); //datagrid
@@ -181,26 +180,20 @@
             }
         }
 
-        function editRoleInfo() {
+        function editSelectActionInfo() {
             var rows = $('#tt').datagrid('getSelections');
             if (rows.length != 1) {
                 $.messager.alert("提醒", "请选择要编辑的一条记录！", "error");
                 return;
             }
-            //由iframe标签替代
-            //$.post("/RoleInfo/GetRoleInfoModel", { "id": rows[0].ID }, function (data) {
-            //    if (data.msg == "ok") {
-            //        $("#txtRoleName").val(data.serverData.RoleName);
-            //        $("#txtRemark").val(data.serverData.Remark);
-            //        $("#txtSort").val(data.serverData.Sort);
-            //        $("#txtSubTime").val(ChangeDateFormat(data.serverData.SubTime));
-            //        $("#txtDelFlag").val(data.serverData.DelFlag);
-            //        $("#txtId").val(data.serverData.ID);
-            $("#editFrame").attr("src", "/RoleInfo/ShowEditInfo/?id=" + rows[0].ID);
+            editActionInfo(rows[0].ID)
+        }
+        function editActionInfo(actionId) {
+            $("#editFrame").attr("src", "/ActionInfo/ShowEditInfo/?id=" + actionId);
 
             $('#editDiv').css("display", "block");
             $('#editDiv').dialog({
-                title: "编辑角色信息",
+                title: "编辑权限信息",
                 width: 300,
                 height: 300,
                 collapsible: true,
@@ -221,16 +214,13 @@
                     }
                 }]
             });
-        //} else {
-        //    $.messager.alert("提醒", "展示数据错误！", "error");
-        //}
         }
         function afterEdit(data) {
             if (data == "ok") {
                 $('#editDiv').dialog('close');//清除已删除的选项记录
                 $('#tt').datagrid('reload');
             } else {
-                $.messager.alert('提醒', '编辑数据失败', 'erroe');
+                $.messager.alert('提醒', '编辑权限信息失败', 'erroe');
             }
         }
         //将序列化成json格式后日期(毫秒数)转成日期格式

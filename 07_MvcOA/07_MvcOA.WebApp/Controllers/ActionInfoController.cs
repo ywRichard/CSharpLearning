@@ -70,5 +70,21 @@ namespace _07_MvcOA.WebApp.Controllers
             else
                 return Content("no");
         }
+
+        public ActionResult EditInfo(ActionInfo actionInfo)
+        {
+            actionInfo.ModifiedOn = DateTime.Now;
+            var result = ActionInfoBll.EditEntity(actionInfo) ? "ok" : "no";
+            return Content(result);
+        }
+
+        public ActionResult ShowEditInfo()
+        {
+            var id = int.Parse(Request["id"]);
+            var actionInfo = ActionInfoBll.LoadEntities(a => a.ID == id).FirstOrDefault();
+            ViewData.Model = actionInfo;
+
+            return View();
+        }
     }
 }

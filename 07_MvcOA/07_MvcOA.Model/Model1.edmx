@@ -76,7 +76,7 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="SubTime" Type="datetime" Nullable="false" />
     <Property Name="DelFlag" Type="smallint" Nullable="false" />
-    <Property Name="ModifiedOn" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
     <Property Name="Remark" Type="nvarchar" Nullable="true" MaxLength="256" />
     <Property Name="Url" Type="nvarchar" Nullable="false" MaxLength="512" />
     <Property Name="HttpMethod" Type="nvarchar" Nullable="false" MaxLength="32" />
@@ -331,7 +331,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="SubTime" Type="DateTime" Nullable="false" />
           <Property Name="DelFlag" Type="Int16" Nullable="false" />
-          <Property Name="ModifiedOn" Type="String" MaxLength="Max" Nullable="false" Unicode="true" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
           <Property Name="Remark" Type="String" MaxLength="256" Unicode="true" />
           <Property Name="Url" Type="String" Nullable="false" MaxLength="512" Unicode="true" />
           <Property Name="HttpMethod" Type="String" MaxLength="32" Nullable="false" Unicode="true" />
