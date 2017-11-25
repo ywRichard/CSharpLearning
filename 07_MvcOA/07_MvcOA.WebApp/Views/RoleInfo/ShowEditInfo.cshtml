@@ -18,7 +18,7 @@
         }
 
         function afterEdit(data) {
-            if (data=="ok") {
+            if (data == "ok") {
                 window.parent.afterEdit(data);
             }
         }
@@ -26,58 +26,37 @@
     </script>
 </head>
 <body>
-    @using (Ajax.BeginForm("EditRoleInfo", "RoleInfo", new { }, new AjaxOptions { HttpMethod = "Post", OnSuccess = "afterEdit" }, new{id= "editForm" }))
+    @using (Ajax.BeginForm("EditRoleInfo", "RoleInfo", new { }, new AjaxOptions { HttpMethod = "Post", OnSuccess = "afterEdit" }, new { id = "editForm" }))
     {
         @Html.AntiForgeryToken()
-        
+
         <div class="form-horizontal">
-            <h4>RoleInfo</h4>
+            <h4>角色信息管理</h4>
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             @Html.HiddenFor(model => model.ID)
-    
+            @Html.HiddenFor(model => model.DelFlag)
+            @Html.HiddenFor(model => model.SubTime)
+            @Html.HiddenFor(model => model.ModifiedOn)
+
             <div class="form-group">
-                @Html.LabelFor(model => model.RoleName, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.RoleName, htmlAttributes: new { @class = "control-label col-md-2" }, labelText: "角色名称")
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.RoleName, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.RoleName, "", new { @class = "text-danger" })
                 </div>
             </div>
-    
+
             <div class="form-group">
-                @Html.LabelFor(model => model.DelFlag, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.DelFlag, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.DelFlag, "", new { @class = "text-danger" })
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.SubTime, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.SubTime, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.SubTime, "", new { @class = "text-danger" })
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.Remark, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.Remark, htmlAttributes: new { @class = "control-label col-md-2" }, labelText: "备注")
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.Remark, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Remark, "", new { @class = "text-danger" })
                 </div>
             </div>
-    
+
             <div class="form-group">
-                @Html.LabelFor(model => model.ModifiedOn, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.ModifiedOn, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.ModifiedOn, "", new { @class = "text-danger" })
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.Sort, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.Sort, htmlAttributes: new { @class = "control-label col-md-2" }, labelText: "排序")
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.Sort, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Sort, "", new { @class = "text-danger" })
@@ -85,9 +64,5 @@
             </div>
         </div>
     }
-    
-    <div>
-        @Html.ActionLink("Back to List", "Index")
-    </div>
 </body>
 </html>
