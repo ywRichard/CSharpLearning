@@ -10,5 +10,6 @@ namespace _07_MvcOA.IBLL
     public partial interface IActionInfoBLL : IBaseBLL<ActionInfo>
     {
         bool DeleteEntities(List<int> list);
+        bool SetActionRoleInfo(int actionId, List<int> roleIdList);
     }
 }

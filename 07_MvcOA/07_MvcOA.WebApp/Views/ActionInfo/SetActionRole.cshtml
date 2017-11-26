@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = null;
+}
+@using _07_MvcOA.Model
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>为权限分配角色</title>
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script type="text/javascript">
+        function subForm() {
+            $("#form1").submit();
+        }
+
+        function afterSetRole(data) {
+            window.parent.setActionRoleAfter(data);
+        }
+    </script>
+</head>
+<body>
+<div>
+    为权限
+    @{
+        ActionInfo actionInfo = ViewBag.ActionInfo;
+        @actionInfo.ActionInfoName
+    }分配角色
+    @using (Ajax.BeginForm("SetActionRoleInfo", "ActionInfo", new { }, new AjaxOptions() { HttpMethod = "post", OnSuccess = "afterSetRole" }, new { id = "form1" }))
+    {
+        <input type="hidden" name="actionId" value="@actionInfo.ID" />
+        List<RoleInfo> allRoleList = ViewBag.RoleList;
+        List<int> roleIdList = ViewBag.RoleIdList;
+        foreach (RoleInfo roleInfo in allRoleList)
+        {
+            var checkName = "cba_" + roleInfo.ID;
+            if (roleIdList.Contains(roleInfo.ID))
+            {
+                <input type="checkbox" name="@checkName" checked="checked" value="@roleInfo.ID"/>@roleInfo.RoleName
+            }
+            else
+            {
+                <input type="checkbox" name="@checkName" value="@roleInfo.ID" />@roleInfo.RoleName
+            }
+            <br/>
+        }
+    }
+</div>
+</body>
+</html>

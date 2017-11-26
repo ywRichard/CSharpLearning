@@ -16,5 +16,6 @@
   
   <object type="_07_MvcOA.WebApp.Controllers.ActionInfoController, 07_MvcOA.WebApp" singleton="false" >
     <property name="ActionInfoBll" ref="ActionInfoBLL1" />
+    <property name="RoleInfoBll" ref="RoleInfoBLL1" />
   </object>
 </objects>

@@ -17,11 +17,14 @@
     <script src="~/Scripts/datapattern.js"></script>
     <!--要使用AjaxHelper必须添加这个文件-->
     <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/MyAjaxForm.js"></script>
+
     <script type="text/javascript">
         $(function () {
             loadData();
             $("#addDiv").css("display", "none");
             $("#editDiv").css("display", "none");
+            $("#setActionRoleDiv").css("display", "none");
             $('#btnSearch').click(function () {
                 var pars = {
                     name: $("#txtRName").val(),
@@ -30,8 +33,47 @@
 
                 loadData(pars);
             });
+            bindActionTypeEnumChange();
+            bindFileupClick();
         });
 
+        //给权限绑定change事件
+        function bindActionTypeEnumChange() {
+            $("#ActionTypeEnumChange").change(function () {
+                if ($(this).val() == "1") {
+                    $("#actionIconTr").fadeIn("show");
+                } else {
+                    $("#actionIconTr").fadeOut("show");
+                }
+            });
+        }
+        //文件上传
+        function bindFileupClick() {
+            $("#btnFileUp").click(function () {
+                if ($("#fileUp").val() == "") {
+                    $.messager.alert("提示", "请选择上传的文件", "error");
+                    return;
+                }
+                //开始进行异步上传图片
+                $("#addForm").ajaxSubmit({
+                    success: function (data) {
+                        var serverData = data.split(':');
+                        if (serverData[0] == "ok") {
+                            //显示上传成功的图片，应该用缩略图
+                            $("#showImage").append("<img src=" + serverData[1] + " width='40px' height='40px'/>");
+                            //将上传成功的图片地址保到存隐藏域中，单击提交表单按钮，完成提交。
+                            $("#hiddenMenuIcon").val(serverData[1]);
+                        } else {
+                            $.messager.alert("提示", serverData[1], "error");
+                        }
+                    },
+                    url: "/ActionInfo/FileUpload",
+                    type: "post"
+                });
+            });
+        }
+
+        //加载界面
         function loadData(pars) {
             $('#tt').datagrid({
                 url: '/ActionInfo/GetActionInfo',
@@ -100,20 +142,79 @@
                     handler: function () {
                         editSelectActionInfo();
                     }
+                }, {
+                    id: 'btnSetActionRole',
+                    text: '为权限分配角色',
+                    iconCls: 'icon-edit',
+                    handler: function () {
+                        setActionRoleInfo();
+                    }
+                }, {
+                    id: 'btnSetUserAction',
+                    text: '为特殊用户分配角色',
+                    iconCls: 'icon-edit',
+                    handler: function () {
+                        setUserActionInfo();
+                    }
                 }],
-                onLoadSuccess:function() {
-                    $(".deletes").click(function() {
-                        deleteRoleInfo($(this).attr("ids"));
+                onLoadSuccess: function () {
+                    $(".deletes").click(function () {
+                        deleteActionInfo($(this).attr("ids"));
                     });
 
-                    $(".edits").click(function() {
+                    $(".edits").click(function () {
                         editActionInfo($(this).attr("ids"))
                     });
                 }
             }); //datagrid
         }//loadData
 
-        function deleteRoleInfoList() {
+        //为特殊用户分配权限
+        function serUserActionInfo() {
+
+        }
+        //为权限分配角色
+        function setActionRoleInfo() {
+            var rows = $('#tt').datagrid('getSelections');
+            if (rows.length != 1) {
+                $.messager.alert("提醒", "请选择一条要分配角色信息的权限", "error");
+                return;
+            }
+            $("#setActionRoleFrame").attr("src", "/ActionInfo/SetActionRole/?actionId=" + rows[0].ID);
+            $("#setActionRoleDiv").css("display", "block");
+            $('#setActionRoleDiv').dialog({
+                title: "为权限分角色信息",
+                width: 300,
+                height: 300,
+                collapsible: true,
+                resizable: true,
+                modal: true,
+                buttons: [{
+                    text: '确定',
+                    iconCls: 'icon-ok',
+                    handler: function () {
+                        //$('#editForm').submit();
+                        var childWindow = $("#setActionRoleFrame")[0].contentWindow;
+                        childWindow.subForm();
+                    }
+                }, {
+                    text: '取消',
+                    handler: function () {
+                        $('#setActionRoleDiv').dialog('close');
+                    }
+                }]
+            });
+        }
+        function setActionRoleAfter(data) {
+            if (data == "ok") {
+                $("#setActionRoleDiv").dialog('close');
+            } else {
+                $.messager.alert("提示", "分配异常!!", "error");
+            }
+        }
+
+        //删除权限
+        function deleteActionInfoList() {
             var rows = $('#tt').datagrid('getSelections');
             if (!rows || rows.length == 0) {
                 $.messager.alert("提醒", "请选择要删除的记录！", "error");
@@ -137,9 +238,9 @@
                 }
             });//message.confirm
         }
-        function deleteRoleInfo(actionId) {
-            $.post("/ActionInfo/DeleteActionInfo", { "actionId": actionId }, function(data) {
-                if (data=="ok") {
+        function deleteActionInfo(actionId) {
+            $.post("/ActionInfo/DeleteActionInfo", { "actionId": actionId }, function (data) {
+                if (data == "ok") {
                     $('#tt').datagrid('reload');
                 } else {
                     $.messager.alert("提醒", "删除记录失败", "error");
@@ -147,11 +248,12 @@
             });
         }
 
-        function addRoleInfo() {
+        //添加权限
+        function addActionInfo() {
             $("#addDiv").css("display", "block");
             $('#addDiv').dialog({
-                title: "添加角色信息",
-                width: 300,
+                title: "添加权限信息",
+                width: 350,
                 height: 300,
                 collapsible: true,
                 resizable: true,
@@ -180,6 +282,7 @@
             }
         }
 
+        //修改权限
         function editSelectActionInfo() {
             var rows = $('#tt').datagrid('getSelections');
             if (rows.length != 1) {
@@ -237,17 +340,49 @@
         角色名:<input type="text" id="txtRName" value="" />&nbsp;&nbsp;备注<input type="text" name="txtRemark" value="" /><input type="button" id="btnSearch" value="搜索" />
         <table id="tt" style="width: 700px;" title="标题，可以使用代码进行初始化，也可以使用这种属性的方式" iconcls="icon-edit"></table>
     </div>
-    <!---------------添加角色信息--------------------->
+    <!---------------添加权限信息--------------------->
     <div id="addDiv">
-        @using (Ajax.BeginForm("AddRoleInfo", "RoleInfo", new { }, new AjaxOptions() { HttpMethod = "Post", OnSuccess = "afterAdd" }, new { id = "addForm" }))
-        {
-            <table>
-                <tr><td>角色名</td><td><input type="text" name="RoleName" /></td></tr>
-                <tr><td>备注</td><td><input type="text" name="Remark" /></td></tr>
-                <tr><td>排序</td><td><input type="text" name="Sort" /></td></tr>
-            </table>
-        }
+        <!--enctype="multipart/form-data":如果上传文件时，必须添加属性。将文件内容作为请求报文的一部分-->
+        @using (Ajax.BeginForm("AddActionInfo", "ActionInfo", new {}, new AjaxOptions() {HttpMethod = "Post", OnSuccess = "afterAdd"}, new {id = "addForm", enctype = "multipart/form-data"}))
+    {
+        <table>
+            <tr><td>权限名称</td><td><input type="text" name="ActionInfoName" /></td></tr>
+            <tr><td>Url</td><td><input type="text" name="Url" /></td></tr>
+            <tr>
+                <td>HttpMethod</td>
+                <td>
+                    <select name="HttpMethod">
+                        <option value="GET">GET</option>
+                        <option value="POST">POST</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>权限类型</td>
+                <td>
+                    <select name="ActionTypeEnum" id="ActionTypeEnumChange">
+                        <option value="0">普通权限</option>
+                        <option value="1">菜单权限</option>
+                    </select>
+                </td>
+            </tr>
+            <tr style="display: none" id="actionIconTr">
+                <td>菜单图标</td>
+                <td>
+                    <!--文件上传域-->
+                    <input type="file" name="fileIconUp" id="fileUp" /><br />
+                    <!--如果type为submit，那么会把整个表单都会提交；为button，则由ajax Form只提交图片-->
+                    <input type="button" value="上传图片" id="btnFileUp" />
+                    <input type="hidden" name="MenuIcon" id="hiddenMenuIcon" />
+                    <div id="showImage"></div>
+                </td>
+            </tr>
+            <tr><td>备注</td><td><input type="text" name="Remark" /></td></tr>
+            <tr><td>排序</td><td><input type="text" name="Sort" /></td></tr>
+        </table>
+    }
     </div>
+
     <!---------------修改角色信息--------------------->
     <div id="editDiv">
         <iframe id="editFrame" scrolling="no" width="100%" height="100%" frameborder="0"></iframe>
@@ -262,6 +397,11 @@
                     <tr><td>排序</td><td><input type="text" name="Sort" id="txtSort" /></td></tr>
                 </table>
             }*@
+    </div>
+
+    <!---------------为权限分配角色信息--------------------->
+    <div id="setActionRoleDiv">
+        <iframe id="setActionRoleFrame" scrolling="no" frameborder="0" width="100%" height="100%"></iframe>
     </div>
 </body>
 </html>

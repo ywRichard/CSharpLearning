@@ -23,6 +23,7 @@
             $("#addDiv").css("display", "none");
             $("#editDiv").css("display", "none");
             $("#setRoleDiv").css("display", "none");
+            $('#setActionDiv').css("display", "none");
             $('#btnSearch').click(function () {
                 var pars = {
                     name: $("#txtUName").val(),
@@ -100,7 +101,7 @@
                 $.messager.alert("提醒", "请选择要编辑的一条记录！", "error");
                 return;
             }
-            $("#setRoleFrame").attr("src","/UserInfo/SetUserRoleInfo/?userId=" + rows[0].ID);
+            $("#setRoleFrame").attr("src", "/UserInfo/SetUserRoleInfo/?userId=" + rows[0].ID);
             $("#setRoleDiv").css("display", "block");
             $("#setRoleDiv").dialog({
                 title: "分配用户角色信息",
@@ -126,14 +127,14 @@
             });
         }
         function afterSetUserRoleInfo(data) {
-            if (data=="ok") {
+            if (data == "ok") {
                 $('#setRoleDiv').dialog('close');
             } else {
-                
+
             }
         }
 
-        
+
         function deleteUserInfo() {
             var rows = $('#tt').datagrid('getSelections');
             if (!rows || rows.length == 0) {
@@ -290,6 +291,12 @@
     <!---------------为用户配置角色信息--------------------->
     <div id="setRoleDiv">
         <iframe id="setRoleFrame" scrolling="no" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+
+    <!---------------为特殊用户分配权限信息--------------------->
+    <div id="setActionInfo">
+        <iframe id="setActionFrame" scrolling="no" width="100%" height="100%"></iframe>
+
     </div>
 </body>
 </html>
