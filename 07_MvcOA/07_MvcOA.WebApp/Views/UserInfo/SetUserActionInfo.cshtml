@@ -1,0 +1,72 @@
+﻿
+@{
+    Layout = null;
+}
+@using _07_MvcOA.Model
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SetUserActionInfo</title>
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+</head>
+<body>
+    <div>
+        为用户@{
+            UserInfo userInfo = ViewBag.UserInfo;
+            @userInfo.UserName;
+        }分配权限
+        <table>
+            <tr><th>权限编号</th><th>权限名称</th><th>地址</th><th>请求方式</th><th>操作</th></tr>
+            @{
+                List<ActionInfo> actionInfoList = ViewBag.ActionInfoList;
+                List<R_UserInfo_ActionInfo> actionIdList = ViewBag.ActionIdList;
+                foreach (ActionInfo actionInfo in actionInfoList)
+                {
+                    var rb_name = "cba_" + actionInfo.ID;
+                    var norb_name = "rocba_" + actionInfo.ID;
+                    <tr>
+                        <td>@actionInfo.ID</td>
+                        <td>@actionInfo.ActionInfoName</td>
+                        <td>@actionInfo.Url</td>
+                        <td>@actionInfo.HttpMethod</td>
+                        <td>
+                            @{
+                                var isExt = (from a in actionIdList
+                                             where a.ID == actionInfo.ID
+                                             select a).FirstOrDefault();
+                                if (isExt != null)
+                                {
+                                    if (isExt.IsPass == true)
+                                    {
+                                        <label for="@rb_name">允许</label>
+                                        <input type="radio" value="true" name="@rb_name" class="selectActions" checked="checked" ids="@actionInfo.ID" id="@rb_name"/>
+                                        <label for="@norb_name">禁止</label>
+                                        <input type="radio" value="false" name="@rb_name" class="selectActions" ids="@actionInfo.ID" id="@rb_name" />
+                                    }
+                                    else
+                                    {
+                                        <label for="@rb_name">允许</label>
+                                        <input type="radio" value="true" name="@rb_name" class="selectActions" ids="@actionInfo.ID" id="@rb_name"/>
+                                        <label for="@norb_name">禁止</label>
+                                        <input type="radio" value="false" name="@rb_name" class="selectActions" checked="checked" ids="@actionInfo.ID" id="@rb_name" />
+                                    }
+                                }
+                                else
+                                {
+                                    <label for="@rb_name">允许</label>
+                                    <input type="radio" value="true" name="@rb_name" class="selectActions" ids="@actionInfo.ID" id="@rb_name"/>
+                                    <label for="@norb_name">禁止</label>
+                                    <input type="radio" value="false" name="@rb_name" class="selectActions" ids="@actionInfo.ID" id="@rb_name" />
+                                }
+                            }
+                        </td>
+                    </tr>
+                  }
+            }
+        </table>
+    </div>
+</body>
+</html>

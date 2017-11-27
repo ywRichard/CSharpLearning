@@ -149,13 +149,6 @@
                     handler: function () {
                         setActionRoleInfo();
                     }
-                }, {
-                    id: 'btnSetUserAction',
-                    text: '为特殊用户分配角色',
-                    iconCls: 'icon-edit',
-                    handler: function () {
-                        setUserActionInfo();
-                    }
                 }],
                 onLoadSuccess: function () {
                     $(".deletes").click(function () {
@@ -169,10 +162,6 @@
             }); //datagrid
         }//loadData
 
-        //为特殊用户分配权限
-        function serUserActionInfo() {
-
-        }
         //为权限分配角色
         function setActionRoleInfo() {
             var rows = $('#tt').datagrid('getSelections');

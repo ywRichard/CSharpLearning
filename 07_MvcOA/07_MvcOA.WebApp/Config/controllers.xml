@@ -4,6 +4,7 @@
   <object type="_07_MvcOA.WebApp.Controllers.UserInfoController, 07_MvcOA.WebApp" singleton="false" >
     <property name="UserInfoBll" ref="UserInfoBLL1" />
     <property name="RoleInfoBll" ref="RoleInfoBLL1" />
+    <property name="ActionInfoBll" ref="ActionInfoBLL1" />
   </object>
   
   <object type="_07_MvcOA.WebApp.Controllers.LoginController, 07_MvcOA.WebApp" singleton="false" >

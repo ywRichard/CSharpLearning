@@ -15,6 +15,7 @@ namespace _07_MvcOA.WebApp.Controllers
         // GET: UserInfo
         IUserInfoBLL UserInfoBll { get; set; }
         IRoleInfoBLL RoleInfoBll { get; set; }
+        private IActionInfoBLL ActionInfoBll { get; set; }
         public ActionResult Index()
         {
             return View();
@@ -182,6 +183,26 @@ namespace _07_MvcOA.WebApp.Controllers
                 result = "no";
 
             return Content(result);
+        }
+        /// <summary>
+        /// 为用户分配权限
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult SetUserActionInfo()
+        {
+            var userId = int.Parse(Request["userId"]);
+            //查询要分配权限的用户信息
+            var userInfo = UserInfoBll.LoadEntities(u => u.UserID == userId).FirstOrDefault();
+            ViewBag.UserInfo = userInfo;
+            //获取所有的权限信息
+            var delFlag = (short)DelFlagEnum.Normal;
+            var allActionList = ActionInfoBll.LoadEntities(a => a.DelFlag == delFlag).FirstOrDefault();
+            ViewBag.ActionList = allActionList;
+            //获取所有用户已经有的权限
+            var allActionIdList = userInfo.R_UserInfo_ActionInfo.ToList();
+            ViewBag.ActionIdList = allActionIdList;
+
+            return View();
         }
     }
 }

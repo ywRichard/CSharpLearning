@@ -91,9 +91,50 @@
                     handler: function () {
                         setUserRoleInfo();
                     }
+                }, {
+                    id: 'btnSetUserAction',
+                    text: '为特殊用户分配角色',
+                    iconCls: 'icon-edit',
+                    handler: function () {
+                        setUserActionInfo();
+                    }
                 }]
             }); //datagrid
         }//loadData
+        //为特殊用户分配权限
+        function setUserActionInfo() {
+            var rows = $('#tt').datagrid('getSelections');
+            if (rows.length != 1) {
+                $.messager.alert("提醒", "请选择要分配的一条权限！", "error");
+                return;
+            }
+
+            $("#setActionFrame").attr("src", "/UserInfo/SetUserActionInfo/?userId=" + rows[0].ID);
+            $("#setActionDiv").css("display", "block");
+            $("#setActionDiv").dialog({
+                title: "为特殊用户设置权限信息",
+                width: 300,
+                height: 300,
+                collapsible: true,
+                resizable: true,
+                modal: true,
+                buttons: [{
+                    text: '确定',
+                    iconCls: 'icon-ok',
+                    handler: function () {
+                        //$('#editForm').submit();
+                        //var childWindow = $("#setRoleFrame")[0].contentWindow;
+                        //childWindow.subForm();
+                    }
+                }, {
+                    text: '取消',
+                    handler: function () {
+                        $('#setRoleDiv').dialog('close');
+                    }
+                }]
+            });
+        }
+
         //为用户分配角色
         function setUserRoleInfo() {
             var rows = $('#tt').datagrid('getSelections');
