@@ -196,7 +196,7 @@ namespace _07_MvcOA.WebApp.Controllers
             ViewBag.UserInfo = userInfo;
             //获取所有的权限信息
             var delFlag = (short)DelFlagEnum.Normal;
-            var allActionList = ActionInfoBll.LoadEntities(a => a.DelFlag == delFlag).FirstOrDefault();
+            var allActionList = ActionInfoBll.LoadEntities(a => a.DelFlag == delFlag).ToList();
             ViewBag.ActionList = allActionList;
             //获取所有用户已经有的权限
             var allActionIdList = userInfo.R_UserInfo_ActionInfo.ToList();

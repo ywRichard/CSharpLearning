@@ -113,8 +113,8 @@
             $("#setActionDiv").css("display", "block");
             $("#setActionDiv").dialog({
                 title: "为特殊用户设置权限信息",
-                width: 300,
-                height: 300,
+                width: 600,
+                height: 500,
                 collapsible: true,
                 resizable: true,
                 modal: true,
@@ -335,7 +335,8 @@
     </div>
 
     <!---------------为特殊用户分配权限信息--------------------->
-    <div id="setActionInfo">
+    <div id="setActionDiv">
+        <!--scrolling="no": 禁用iframe内的滚动条-->
         <iframe id="setActionFrame" scrolling="no" width="100%" height="100%"></iframe>
 
     </div>
