@@ -9,66 +9,108 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>SetUserActionInfo</title>
+    <link href="~/Content/themes/icon.css" rel="stylesheet" />
+    <link href="~/Content/themes/default/easyui.css" rel="stylesheet" />
     <script src="~/Scripts/jquery-3.2.1.min.js"></script>
     <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
     <link href="~/Content/tableStyle.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.easyui.min.js"></script>
+    <script src="~/Scripts/easyui-lang-zh_CN.js"></script>
 </head>
 <body>
-    <div>
-        为用户@{
-            UserInfo userInfo = ViewBag.UserInfo;
-            <span style="font-size:20px;color:red">@userInfo.UserName</span>
-        }分配权限
-        <table>
-            <tr><th>权限编号</th><th>权限名称</th><th>地址</th><th>请求方式</th><th>操作</th></tr>
-            @{
-                List<ActionInfo> actionList = ViewBag.ActionList;
-                List<R_UserInfo_ActionInfo> actionIdList = ViewBag.ActionIdList;
-                foreach (ActionInfo actionInfo in actionList)
-                {
-                    var rb_name = "cba_" + actionInfo.ID;
-                    var norb_name = "rocba_" + actionInfo.ID;
-                    <tr>
-                        <td>@actionInfo.ID</td>
-                        <td>@actionInfo.ActionInfoName</td>
-                        <td>@actionInfo.Url</td>
-                        <td>@actionInfo.HttpMethod</td>
-                        <td>
-                            @{
-                                var isExt = (from a in actionIdList
-                                             where a.ID == actionInfo.ID
-                                             select a).FirstOrDefault();
-                                if (isExt != null)
+<div>
+    为用户@{
+           UserInfo userInfo = ViewBag.UserInfo;
+           <span style="font-size:20px;color:red">@userInfo.UserName</span>
+       }分配权限
+    <table>
+        <tr><th>权限编号</th><th>权限名称</th><th>地址</th><th>请求方式</th><th>操作</th></tr>
+        @{
+            List<ActionInfo> actionList = ViewBag.ActionList;
+            List<R_UserInfo_ActionInfo> actionIdList = ViewBag.ActionIdList;
+            foreach (ActionInfo actionInfo in actionList)
+            {
+                var rb_name = "cba_" + actionInfo.ID;
+                var norb_name = "rocba_" + actionInfo.ID;
+                <tr>
+                    <td>@actionInfo.ID</td>
+                    <td>@actionInfo.ActionInfoName</td>
+                    <td>@actionInfo.Url</td>
+                    <td>@actionInfo.HttpMethod</td>
+                    <td>
+                        @{
+                            var isExt = (from a in actionIdList
+                                where a.ActionInfoID == actionInfo.ID
+                                select a).FirstOrDefault();
+                            if (isExt != null)
+                            {
+                                if (isExt.IsPass == true)
                                 {
-                                    if (isExt.IsPass == true)
-                                    {
-                                        <label for="@rb_name">允许</label>
-                                        <input type="radio" value="true" name="@rb_name" class="selectActions" checked="checked" ids="@actionInfo.ID" id="@rb_name"/>
-                                        <label for="@norb_name">禁止</label>
-                                        <input type="radio" value="false" name="@rb_name" class="selectActions" ids="@actionInfo.ID" id="@norb_name" />
-                                    }
-                                    else
-                                    {
-                                        <label for="@rb_name">允许</label>
-                                        <input type="radio" value="true" name="@rb_name" class="selectActions" ids="@actionInfo.ID" id="@rb_name"/>
-                                        <label for="@norb_name">禁止</label>
-                                        <input type="radio" value="false" name="@rb_name" class="selectActions" checked="checked" ids="@actionInfo.ID" id="@norb_name" />
-                                    }
+                                    <label for="@rb_name">允许</label>
+                                    <input type="radio" value="true" name="@rb_name" class="selectActions" checked="checked" ids="@actionInfo.ID" id="@rb_name"/>
+                                    <label for="@norb_name">禁止</label>
+                                    <input type="radio" value="false" name="@rb_name" class="selectActions" ids="@actionInfo.ID" id="@norb_name" />
                                 }
                                 else
                                 {
                                     <label for="@rb_name">允许</label>
                                     <input type="radio" value="true" name="@rb_name" class="selectActions" ids="@actionInfo.ID" id="@rb_name"/>
                                     <label for="@norb_name">禁止</label>
-                                    <input type="radio" value="false" name="@rb_name" class="selectActions" ids="@actionInfo.ID" id="@norb_name" />
+                                    <input type="radio" value="false" name="@rb_name" class="selectActions" checked="checked" ids="@actionInfo.ID" id="@norb_name" />
                                 }
-                                <input type="button" name="name" value="清除" class="btnClear" ids="@actionInfo.ID"/>
                             }
-                        </td>
-                    </tr>
-                  }
+                            else
+                            {
+                                <label for="@rb_name">允许</label>
+                                <input type="radio" value="true" name="@rb_name" class="selectActions" ids="@actionInfo.ID" id="@rb_name"/>
+                                <label for="@norb_name">禁止</label>
+                                <input type="radio" value="false" name="@rb_name" class="selectActions" ids="@actionInfo.ID" id="@norb_name" />
+                            }
+                            <input type="button" name="name" value="清除" class="btnClear" ids="@actionInfo.ID"/>
+                        }
+                    </td>
+                </tr>
             }
-        </table>
-    </div>
+        }
+    </table>
+</div>
 </body>
 </html>
+<script type="text/javascript">
+    $(function() {
+        $(".selectActions").click(function() {
+            var $control = $(this);
+            $.post("/UserInfo/SetActionUser",
+            //参数的(key,value)，只能是string类型的。是int或基本类型，需要''括起来；如果是类或其他引用类型，需要序列化。
+                { "userId": '@userInfo.UserID', "actionId": $control.attr("ids"), "value": $control.val() },
+                function(data) {
+                    if (data=="ok") {
+                        $.messager.show({
+                            title:'提示',
+                            msg:'权限分配成功',
+                            showType:'show'
+                        })
+                    } else {
+                        $.messager.show({
+                            title: '提示',
+                            msg: '权限分配失败',
+                            showType: 'show'
+                        })
+                    }
+                });
+        });//selectActions click
+
+        $(".btnClear").click(function() {
+            var $control = $(this);
+            $.post("/UserInfo/ClearUserAction",
+                { "userId": @userInfo.UserID, "actionId": $control.attr("ids") },
+                function(data) {
+                    if (data=="ok") {
+                        
+                    } else {
+                        
+                    }
+                });
+        });//btnClear click
+    });
+</script>

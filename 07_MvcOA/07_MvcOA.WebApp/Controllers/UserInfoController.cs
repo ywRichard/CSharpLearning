@@ -204,5 +204,40 @@ namespace _07_MvcOA.WebApp.Controllers
 
             return View();
         }
+        /// <summary>
+        /// 设置用户权限的值
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult SetActionUser()
+        {
+            var userId = int.Parse(Request["userId"]);
+            var actionId = int.Parse(Request["actionId"]);
+            var isPass = Request["value"] == "true" ? true : false;
+            if (UserInfoBll.SetUserActionInfo(userId, actionId, isPass))
+            {
+                return Content("ok");
+            }
+            else
+            {
+                return Content("no");
+            }
+        }
+        /// <summary>
+        /// 删除特殊用户的权限
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult ClearUserAction()
+        {
+            var userId = int.Parse(Request["userId"]);
+            var actionId = int.Parse(Request["actionId"]);
+            if (UserInfoBll.DeleteUserActionInfo(userId, actionId))
+            {
+                return Content("ok");
+            }
+            else
+            {
+                return Content("no");
+            }
+        }
     }
 }

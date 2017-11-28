@@ -60,7 +60,7 @@ namespace _07_MvcOA.BLL
             var result = false;
             //获取要分配的用户信息
             var userInfo = GetCurrentSession.UserInfoDal.LoadEntities(u => u.UserID == userId).FirstOrDefault();
-            if (userInfo!=null)
+            if (userInfo != null)
             {
                 //我的实现:
                 //直接向中间表插入userid和roleIdList，完成角色的分配。但是这样就是直接操作数据库，和EF还有导航属性无关。
@@ -78,6 +78,48 @@ namespace _07_MvcOA.BLL
                 result = GetCurrentSession.SaveChanges();
             }
             return result;
+        }
+        /// <summary>
+        /// 为特殊用户分配权限
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="actionId"></param>
+        /// <param name="isPass"></param>
+        /// <returns></returns>
+        public bool SetUserActionInfo(int userId, int actionId, bool isPass)
+        {
+            var r_UserInfo_ActionInfo = GetCurrentSession.R_UserInfo_ActionInfoDal
+                .LoadEntities(r => r.UserInfoID == userId && r.ActionInfoID == actionId)
+                .FirstOrDefault();
+
+            if (r_UserInfo_ActionInfo == null)//当前用户没有添加这个权限
+            {
+                var r_userInfo_actionInfo = new R_UserInfo_ActionInfo
+                {
+                    ActionInfoID = actionId,
+                    UserInfoID = userId,
+                    IsPass = isPass
+                };
+                GetCurrentSession.R_UserInfo_ActionInfoDal.AddEntity(r_userInfo_actionInfo);
+            }
+            else
+            {
+                r_UserInfo_ActionInfo.IsPass = isPass;
+            }
+            return GetCurrentSession.SaveChanges();
+        }
+
+        public bool DeleteUserActionInfo(int userId, int actionId)
+        {
+            var r_UserInfo_ActionInfo = GetCurrentSession.R_UserInfo_ActionInfoDal
+                .LoadEntities(r => r.UserInfoID == userId && r.ActionInfoID == actionId)
+                .FirstOrDefault();
+            if (r_UserInfo_ActionInfo != null)
+            {
+                GetCurrentSession.R_UserInfo_ActionInfoDal.DeleteEntity(r_UserInfo_ActionInfo);
+            }
+
+            return GetCurrentSession.SaveChanges();
         }
     }
 }
