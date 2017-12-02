@@ -1,7 +1,19 @@
 
-------------------header-------------------2017-11-21 10:59:53,864 [11] ERROR errorMsg [(null)] - System.NullReferenceException: Object reference not set to an instance of an object.
-   at _07_MvcOA.BLL.UserInfoBLL.LoadSearchEntities(UserInfoParam userInfoParam) in C:\Users\Victor\Documents\GitHub\CSharpLearning\07_MvcOA\07_MvcOA.BLL\UserInfoBLL.cs:line 33
-   at _07_MvcOA.WebApp.Controllers.UserInfoController.GetUserInfo() in C:\Users\Victor\Documents\GitHub\CSharpLearning\07_MvcOA\07_MvcOA.WebApp\Controllers\UserInfoController.cs:line 46
+------------------header-------------------2017-12-02 14:50:29,832 [11] ERROR errorMsg [(null)] - Newtonsoft.Json.JsonSerializationException: Self referencing loop detected for property 'UserInfo' with type 'System.Data.Entity.DynamicProxies.UserInfo_2EAD4342D15B2567531929878248ED080290F2BF9CC5784EEDB5CC1F52611CEF'. Path 'R_UserInfo_ActionInfo[0]'.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.CheckForCircularReference(JsonWriter writer, Object value, JsonProperty property, JsonContract contract, JsonContainerContract containerContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.CalculatePropertyValues(JsonWriter writer, Object value, JsonContainerContract contract, JsonProperty member, JsonProperty property, JsonContract& memberContract, Object& memberValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeValue(JsonWriter writer, Object value, JsonContract valueContract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeList(JsonWriter writer, IEnumerable values, JsonArrayContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeValue(JsonWriter writer, Object value, JsonContract valueContract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeValue(JsonWriter writer, Object value, JsonContract valueContract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.Serialize(JsonWriter jsonWriter, Object value, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.SerializeInternal(JsonWriter jsonWriter, Object value, Type objectType)
+   at Newtonsoft.Json.JsonConvert.SerializeObjectInternal(Object value, Type type, JsonSerializer jsonSerializer)
+   at Newtonsoft.Json.JsonConvert.SerializeObject(Object value)
+   at _07_MvcOA.Common.SerializerHelper.SerializerToString(Object obj) in C:\Users\Admin\Desktop\GitHub\07_MvcOA\07_MvcOA.Common\SerializerHelper.cs:line 14
+   at _07_MvcOA.WebApp.Controllers.LoginController.CheckLogin() in C:\Users\Admin\Desktop\GitHub\07_MvcOA\07_MvcOA.WebApp\Controllers\LoginController.cs:line 63
    at lambda_method(Closure , ControllerBase , Object[] )
    at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
    at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
@@ -38,9 +50,21 @@
    at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
    at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
 
-------------------header-------------------2017-11-21 21:56:13,942 [11] ERROR errorMsg [(null)] - System.NullReferenceException: Object reference not set to an instance of an object.
-   at _07_MvcOA.BLL.BaseBLL`1.LoadPageEntities[s](Int32 pageIndex, Int32 pageSize, Int32& totalCount, Expression`1 whereLambda, Expression`1 orderbyLambda, Boolean isAsc) in C:\Users\Admin\Desktop\GitHub\07_MvcOA\07_MvcOA.BLL\BaseBLL.cs:line 37
-   at _07_MvcOA.WebApp.Controllers.RoleInfoController.GetRoleInfo() in C:\Users\Admin\Desktop\GitHub\07_MvcOA\07_MvcOA.WebApp\Controllers\RoleInfoController.cs:line 29
+------------------header-------------------2017-12-02 15:12:08,956 [11] ERROR errorMsg [(null)] - Newtonsoft.Json.JsonSerializationException: Self referencing loop detected for property 'UserInfo' with type 'System.Data.Entity.DynamicProxies.UserInfo_2EAD4342D15B2567531929878248ED080290F2BF9CC5784EEDB5CC1F52611CEF'. Path 'R_UserInfo_ActionInfo[0]'.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.CheckForCircularReference(JsonWriter writer, Object value, JsonProperty property, JsonContract contract, JsonContainerContract containerContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.CalculatePropertyValues(JsonWriter writer, Object value, JsonContainerContract contract, JsonProperty member, JsonProperty property, JsonContract& memberContract, Object& memberValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeValue(JsonWriter writer, Object value, JsonContract valueContract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeList(JsonWriter writer, IEnumerable values, JsonArrayContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeValue(JsonWriter writer, Object value, JsonContract valueContract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeValue(JsonWriter writer, Object value, JsonContract valueContract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.Serialize(JsonWriter jsonWriter, Object value, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.SerializeInternal(JsonWriter jsonWriter, Object value, Type objectType)
+   at Newtonsoft.Json.JsonConvert.SerializeObjectInternal(Object value, Type type, JsonSerializer jsonSerializer)
+   at Newtonsoft.Json.JsonConvert.SerializeObject(Object value)
+   at _07_MvcOA.Common.SerializerHelper.SerializerToString(Object obj) in C:\Users\Admin\Desktop\GitHub\07_MvcOA\07_MvcOA.Common\SerializerHelper.cs:line 14
+   at _07_MvcOA.WebApp.Controllers.LoginController.CheckLogin() in C:\Users\Admin\Desktop\GitHub\07_MvcOA\07_MvcOA.WebApp\Controllers\LoginController.cs:line 63
    at lambda_method(Closure , ControllerBase , Object[] )
    at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
    at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)

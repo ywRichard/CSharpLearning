@@ -108,7 +108,12 @@ namespace _07_MvcOA.BLL
             }
             return GetCurrentSession.SaveChanges();
         }
-
+        /// <summary>
+        /// 删除特殊用户权限，方法一
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="actionId"></param>
+        /// <returns></returns>
         public bool DeleteUserActionInfo(int userId, int actionId)
         {
             var r_UserInfo_ActionInfo = GetCurrentSession.R_UserInfo_ActionInfoDal

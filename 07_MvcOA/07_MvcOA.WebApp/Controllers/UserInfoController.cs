@@ -13,9 +13,10 @@ namespace _07_MvcOA.WebApp.Controllers
     public class UserInfoController : BaseController
     {
         // GET: UserInfo
-        IUserInfoBLL UserInfoBll { get; set; }
-        IRoleInfoBLL RoleInfoBll { get; set; }
+        private IUserInfoBLL UserInfoBll { get; set; }
+        private IRoleInfoBLL RoleInfoBll { get; set; }
         private IActionInfoBLL ActionInfoBll { get; set; }
+        private IR_UserInfo_ActionInfoBLL R_UserInfo_ActionInfoBll { get; set; }
         public ActionResult Index()
         {
             return View();
@@ -228,16 +229,37 @@ namespace _07_MvcOA.WebApp.Controllers
         /// <returns></returns>
         public ActionResult ClearUserAction()
         {
+            var result = "";
+
+            #region 方法一
+            //var userId = int.Parse(Request["userId"]);
+            //var actionId = int.Parse(Request["actionId"]);
+            //if (UserInfoBll.DeleteUserActionInfo(userId, actionId))
+            //{
+            //    return Content("ok");
+            //}
+            //else
+            //{
+            //    return Content("no");
+            //}
+            #endregion
+
+            #region 教程的方法
             var userId = int.Parse(Request["userId"]);
             var actionId = int.Parse(Request["actionId"]);
-            if (UserInfoBll.DeleteUserActionInfo(userId, actionId))
+            var r_userInfo_actionInfo = R_UserInfo_ActionInfoBll.LoadEntities(r => r.UserInfoID == userId && r.ActionInfoID == actionId).FirstOrDefault();
+            
+            if (r_userInfo_actionInfo!=null)
             {
-                return Content("ok");
+                result = R_UserInfo_ActionInfoBll.DeleteEntity(r_userInfo_actionInfo) ? "ok" : "no";
             }
             else
             {
-                return Content("no");
+                result = "no";
             }
+            #endregion
+
+            return Content(result);
         }
     }
 }
