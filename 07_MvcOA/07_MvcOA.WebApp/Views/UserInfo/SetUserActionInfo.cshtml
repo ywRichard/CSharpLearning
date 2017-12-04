@@ -9,9 +9,13 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>SetUserActionInfo</title>
+    <link href="~/Content/themes/icon.css" rel="stylesheet" />
+    <link href="~/Content/themes/default/easyui.css" rel="stylesheet" />
     <script src="~/Scripts/jquery-3.2.1.min.js"></script>
     <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
     <link href="~/Content/tableStyle.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.easyui.min.js"></script>
+    <script src="~/Scripts/easyui-lang-zh_CN.js"></script>
 </head>
 <body>
     <div>
@@ -36,21 +40,21 @@
                         <td>
                             @{
                                 var isExt = (from a in actionIdList
-                                             where a.ID == actionInfo.ID
+                                             where a.ActionInfoID == actionInfo.ID
                                              select a).FirstOrDefault();
                                 if (isExt != null)
                                 {
                                     if (isExt.IsPass == true)
                                     {
                                         <label for="@rb_name">允许</label>
-                                        <input type="radio" value="true" name="@rb_name" class="selectActions" checked="checked" ids="@actionInfo.ID" id="@rb_name"/>
+                                        <input type="radio" value="true" name="@rb_name" class="selectActions" checked="checked" ids="@actionInfo.ID" id="@rb_name" />
                                         <label for="@norb_name">禁止</label>
                                         <input type="radio" value="false" name="@rb_name" class="selectActions" ids="@actionInfo.ID" id="@norb_name" />
                                     }
                                     else
                                     {
                                         <label for="@rb_name">允许</label>
-                                        <input type="radio" value="true" name="@rb_name" class="selectActions" ids="@actionInfo.ID" id="@rb_name"/>
+                                        <input type="radio" value="true" name="@rb_name" class="selectActions" ids="@actionInfo.ID" id="@rb_name" />
                                         <label for="@norb_name">禁止</label>
                                         <input type="radio" value="false" name="@rb_name" class="selectActions" checked="checked" ids="@actionInfo.ID" id="@norb_name" />
                                     }
@@ -58,17 +62,72 @@
                                 else
                                 {
                                     <label for="@rb_name">允许</label>
-                                    <input type="radio" value="true" name="@rb_name" class="selectActions" ids="@actionInfo.ID" id="@rb_name"/>
+                                    <input type="radio" value="true" name="@rb_name" class="selectActions" ids="@actionInfo.ID" id="@rb_name" />
                                     <label for="@norb_name">禁止</label>
                                     <input type="radio" value="false" name="@rb_name" class="selectActions" ids="@actionInfo.ID" id="@norb_name" />
                                 }
-                                <input type="button" name="name" value="清除" class="btnClear" ids="@actionInfo.ID"/>
+                                <input type="button" name="name" value="清除" class="btnClear" ids="@actionInfo.ID" />
                             }
                         </td>
                     </tr>
-                  }
+                                }
             }
         </table>
     </div>
 </body>
 </html>
+<script type="text/javascript">
+    $(function () {
+        $(".selectActions").click(
+            selectUserAction
+        );
+
+        $(".btnClear").click(
+            clearUserAction
+        );
+    });
+
+    function selectUserAction() {
+        var $control = $(this);
+            $.post("/UserInfo/SetActionUser",
+                //参数的(key,value)，只能是string类型的。是int或基本类型，需要''括起来；如果是类或其他引用类型，需要序列化。
+                { "userId": '@userInfo.UserID', "actionId": $control.attr("ids"), "value": $control.val() },
+                function(data) {
+                    if (data=="ok") {
+                        $.messager.show({
+                            title:'提示',
+                            msg:'权限分配成功',
+                            showType:'show'
+                        })
+                    } else {
+                        $.messager.show({
+                            title: '提示',
+                            msg: '权限分配失败',
+                            showType: 'show'
+                        })
+                    }
+                });
+    }
+
+    function clearUserAction() {
+        var $control = $(this);
+        $.post("/UserInfo/ClearUserAction",
+            { "userId": @userInfo.UserID, "actionId": $control.attr("ids") },
+            function (data) {
+                if (data == "ok") {
+                    $control.parent().find(".selectActions").removeAttr("checked");
+                    $.messager.show({
+                        title: '提示',
+                        msg: '清除权限成功',
+                        showType: 'show'
+                    })
+                } else {
+                    $.messager.show({
+                        title: '提示',
+                        msg: '清除权限失败',
+                        showType: 'show'
+                    })
+                }
+            });
+    }
+</script>
