@@ -68,7 +68,7 @@ namespace _07_MvcOA.LuceneNet
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var indexPath = "";//注意和磁盘上文件夹的大小写一致，否则会出现报错，将创建的分词内容放在该目录下。
+            var indexPath = @"C:\Users\Victor\Desktop\LuceneNetDir";//注意和磁盘上文件夹的大小写一致，否则会出现报错，将创建的分词内容放在该目录下。
             FSDirectory directory = FSDirectory.Open(new DirectoryInfo(indexPath), new NativeFSLockFactory());//指定索引文件（打开索引目录） FS指的就是FileSystem
             var isUpdate = IndexReader.IndexExists(directory);//IndexReader：对索引进行读取的类。该语句的作用：判断索引库文件夹是否存在以及索引特征文件是否存在。
             if (isUpdate)
@@ -81,41 +81,42 @@ namespace _07_MvcOA.LuceneNet
                 }
             }
             IndexWriter writer = new IndexWriter(directory, new PanGuAnalyzer(), !isUpdate, Lucene.Net.Index.IndexWriter.MaxFieldLength.UNLIMITED);//向索引库中写索引，这时在这里加锁。
-            for (int i = 0; i < 10; i++)
+            for (int i = 1; i < 10; i++)
             {
-                var txt = File.ReadAllText(@"D:\abc\aa\测试文件\" + i + ".txt", System.Text.Encoding.Default);//注意这个地方的编码
+                var txt = File.ReadAllText(@"C:\Users\Victor\Desktop\LuceneNetDir\测试文件\" + i + ".txt", System.Text.Encoding.Default);//注意这个地方的编码
                 Document document = new Document();//表示一篇文档
                 //Field.Store.Yes:表示是否储存原值。只有当Field.Store.YES在后面才能用doc.Get("number")取出值来。Field.Index. Not_ANALYZED:不进行分词保存。
-                document.Add(new Field("number",i.ToString(),Field.Store.YES,Field.Index.NOT_ANALYZED));//字段名"number"可更改
+                document.Add(new Field("number", i.ToString(), Field.Store.YES, Field.Index.NOT_ANALYZED));//字段名"number"可更改
 
-                //Field.Index.ANALYZED:进行分词保存，也就是要进行全文的字段要设置分词保存（因为要进行模糊查询）
-                //Lucene.Net.Documents.Field.TermVector.WITH_POSITION_OFFSETS:不仅保存分词还保存分词的距离
-                document.Add(new Field("body",txt,Field.Store.YES,Field.Index.ANALYZED,Lucene.Net.Documents.Field.TermVector.WITH_POSITIONS_OFFSETS));
+                //Field.Index.ANALYZED:进行分词保存，也就是将要进行全文搜索的字段设置分词保存（因为要进行模糊查询）
+                //Lucene.Net.Documents.Field.TermVector.WITH_POSITION_OFFSETS:不仅保存分词还保存分词的距离，干扰词的数量
+                document.Add(new Field("body", txt, Field.Store.YES, Field.Index.ANALYZED, Lucene.Net.Documents.Field.TermVector.WITH_POSITIONS_OFFSETS));
+                writer.AddDocument(document);
             }
-
             writer.Dispose();//会自动解锁
             directory.Dispose();//不要忘了close，否则索引结果搜不到
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            var indexPath = @"c:\lucenedir";
-            var kw = "面向对象";
-            FSDirectory directory = FSDirectory.Open(new DirectoryInfo(indexPath),new NoLockFactory());
-            IndexReader reader=IndexReader.Open(directory,true);
-            IndexSearcher searcher=new IndexSearcher(reader);
+            var indexPath = @"C:\Users\Victor\Desktop\LuceneNetDir";
+            var kw = "有凤来仪";
+            FSDirectory directory = FSDirectory.Open(new DirectoryInfo(indexPath), new NoLockFactory());
+            IndexReader reader = IndexReader.Open(directory, true);
+            IndexSearcher searcher = new IndexSearcher(reader);
             //搜索条件
-            PhraseQuery query=new PhraseQuery();
+            PhraseQuery query = new PhraseQuery();
             //foreach (var word in kw.Split('.'))//先用空格，让用户去分词，空格分隔的就是词"计算机   专业"
             //{
             //    query.Add(new Term("body",word));
             //}
             //query.Add(new Term("body", "语言"));//可以添加查询条件，两者是add关系。顺序没有关系
-            query.Add(new Term("body", "大学生"));
+            //query.Add(new Term("body", "大学生"));
             query.Add(new Term("body", kw));//body中含有kw的文章
+            //WITH_POSITIONS_OFFSETS -> 盘古分词在建立索引的时候已经将干扰词间距记录，lucene.net只要匹配就可以了
             query.Slop = 100;//多个查询条件词之间的最大距离，在文章中相隔太远也就无意义（例如 “大学生”这个查询条件和“简历”这个查询条件之间如果间隔的词太多也就没有意义了。）
             //TopScoreDocCollector是盛放查询结果的容器
-            TopScoreDocCollector collector=TopScoreDocCollector.Create(1000,true);
+            TopScoreDocCollector collector = TopScoreDocCollector.Create(1000, true);
             searcher.Search(query, null, collector);//根据query查询条件进行查询，查询结果放入cllector容器
             ScoreDoc[] docs = collector.TopDocs(0, collector.TotalHits).ScoreDocs;//得到所有查询结果中的文档，collector.TotalHits:表示总条数；TopDocs(300,20):表示得到300(从300开始)，到320(结束）的文档内容
             //可以用来实现分页内容
