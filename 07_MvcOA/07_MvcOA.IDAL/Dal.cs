@@ -14,6 +14,11 @@ namespace _07_MvcOA.IDAL
       
     }
 	
+	public partial interface IBookDal :IBaseDal<Book>
+    {
+      
+    }
+	
 	public partial interface IDepartmentDal :IBaseDal<Department>
     {
       

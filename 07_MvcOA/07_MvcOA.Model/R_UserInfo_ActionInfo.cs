@@ -11,7 +11,7 @@ namespace _07_MvcOA.Model
 {
     using System;
     using System.Collections.Generic;
-    
+    using Newtonsoft.Json;
     public partial class R_UserInfo_ActionInfo
     {
         public int ID { get; set; }

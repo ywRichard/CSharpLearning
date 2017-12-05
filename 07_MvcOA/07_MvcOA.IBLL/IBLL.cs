@@ -16,6 +16,11 @@ namespace _07_MvcOA.IBLL
        
     }   
 	
+	public partial interface IBookBLL : IBaseBLL<Book>
+    {
+       
+    }   
+	
 	public partial interface IDepartmentBLL : IBaseBLL<Department>
     {
        

@@ -18,6 +18,11 @@ namespace _07_MvcOA.DAL
 
     }
 		
+	public partial class BookDal :BaseDal<Book>,IBookDal
+    {
+
+    }
+		
 	public partial class DepartmentDal :BaseDal<Department>,IDepartmentDal
     {
 

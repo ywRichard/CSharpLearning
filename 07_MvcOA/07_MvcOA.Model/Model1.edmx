@@ -11,6 +11,7 @@
     <EntitySet Name="RoleInfo" EntityType="OAEntitiesModel.Store.RoleInfo" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Department" EntityType="OAEntitiesModel.Store.Department" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="R_UserInfo_ActionInfo" EntityType="OAEntitiesModel.Store.R_UserInfo_ActionInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Books" EntityType="OAEntitiesModel.Store.Books" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="UserInfoRoleInfo" EntityType="OAEntitiesModel.Store.UserInfoRoleInfo" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ActionInfoRoleInfo" EntityType="OAEntitiesModel.Store.ActionInfoRoleInfo" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ActionInfoDepartment" EntityType="OAEntitiesModel.Store.ActionInfoDepartment" store:Type="Tables" Schema="dbo" />
@@ -61,8 +62,8 @@
       <PropertyRef Name="UserID" />
     </Key>
     <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="UserName" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="UserPwd" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="32" />
+    <Property Name="UserPwd" Type="nvarchar" Nullable="false" MaxLength="32" />
     <Property Name="SubTime" Type="datetime" Nullable="false" />
     <Property Name="DelFlag" Type="smallint" Nullable="false" />
     <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
@@ -120,6 +121,24 @@
     <Property Name="UserInfoID" Type="int" Nullable="false" />
     <Property Name="ActionInfoID" Type="int" Nullable="false" />
     <Property Name="IsPass" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Books">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="32" />
+    <Property Name="Author" Type="nvarchar" Nullable="false" MaxLength="32" />
+    <Property Name="PublisherId" Type="int" Nullable="false" />
+    <Property Name="PublishDate" Type="datetime" Nullable="false" />
+    <Property Name="ISBN" Type="nvarchar" Nullable="false" MaxLength="32" />
+    <Property Name="WordsCount" Type="int" Nullable="false" />
+    <Property Name="UnitPrice" Type="decimal" Nullable="false" />
+    <Property Name="ContentDescription" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AuthorDescription" Type="nvarchar" Nullable="true" MaxLength="500" />
+    <Property Name="EditorComment" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="TOC" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="Category" Type="smallint" Nullable="false" />
   </EntityType>
   <EntityType Name="UserInfoRoleInfo">
     <Key>
@@ -282,8 +301,8 @@
             <PropertyRef Name="UserID" />
           </Key>
           <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="UserPwd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserPwd" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="SubTime" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="DelFlag" Type="Int16" Nullable="false" />
           <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
@@ -323,6 +342,7 @@
             <End Role="UserInfo" EntitySet="UserInfo" />
             <End Role="Department" EntitySet="Department" />
           </AssociationSet>
+          <EntitySet Name="Book" EntityType="OAEntitiesModel.Book" />
         </EntityContainer>
         <EntityType Name="ActionInfo">
           <Key>
@@ -425,6 +445,24 @@
           <End Type="OAEntitiesModel.UserInfo" Role="UserInfo" Multiplicity="*" />
           <End Type="OAEntitiesModel.Department" Role="Department" Multiplicity="*" />
         </Association>
+        <EntityType Name="Book">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="32" Unicode="true" />
+          <Property Name="Author" Type="String" Nullable="false" MaxLength="32" Unicode="true" />
+          <Property Name="PublisherId" Type="Int32" Nullable="false" />
+          <Property Name="PublishDate" Type="DateTime" Nullable="false" />
+          <Property Name="ISBN" Type="String" Nullable="false" MaxLength="32" />
+          <Property Name="WordsCount" Type="Int32" Nullable="false" />
+          <Property Name="UnitPrice" Type="Decimal" Nullable="false" />
+          <Property Name="ContentDescription" Type="String" Nullable="false" MaxLength="Max" Unicode="true" />
+          <Property Name="AuthorDescription" Type="String" MaxLength="500" Unicode="true" Nullable="true" />
+          <Property Name="EditorComment" Type="String" Nullable="true" Unicode="true" MaxLength="200" />
+          <Property Name="TOC" Type="String" Nullable="true" Unicode="true" MaxLength="200" />
+          <Property Name="Category" Type="Int16" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -498,6 +536,25 @@
           <ScalarProperty Name="UserInfoID" ColumnName="UserInfoID" />
           <ScalarProperty Name="ActionInfoID" ColumnName="ActionInfoID" />
           <ScalarProperty Name="IsPass" ColumnName="IsPass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Book">
+      <EntityTypeMapping TypeName="IsTypeOf(OAEntitiesModel.Book)">
+        <MappingFragment StoreEntitySet="Books">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="PublisherId" ColumnName="PublisherId" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="WordsCount" ColumnName="WordsCount" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="ContentDescription" ColumnName="ContentDescription" />
+          <ScalarProperty Name="AuthorDescription" ColumnName="AuthorDescription" />
+          <ScalarProperty Name="EditorComment" ColumnName="EditorComment" />
+          <ScalarProperty Name="TOC" ColumnName="TOC" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

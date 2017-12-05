@@ -29,6 +29,20 @@ namespace _07_MvcOA.DALFactory
             set { _ActionInfoDal = value; }
         }
 	
+		private IBookDal _BookDal;
+        public IBookDal BookDal
+        {
+            get
+            {
+                if(_BookDal == null)
+                {
+                    _BookDal = AbstractFactory.CreateBookDal();
+                }
+                return _BookDal;
+            }
+            set { _BookDal = value; }
+        }
+	
 		private IDepartmentDal _DepartmentDal;
         public IDepartmentDal DepartmentDal
         {

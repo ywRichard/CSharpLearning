@@ -11,4 +11,6 @@
   <object name="ActionInfoBLL" type="_07_MvcOA.BLL.ActionInfoBLL, 07_MvcOA.BLL" singleton="false" />
   
   <object name="R_UserInfo_ActionInfoBLL" type="_07_MvcOA.BLL.R_UserInfo_ActionInfoBLL, 07_MvcOA.BLL" singleton="false" />
+
+  <object name="BookBLL" type="_07_MvcOA.BLL.BookBLL, 07_MvcOA.BLL" singleton="false" />
 </objects>

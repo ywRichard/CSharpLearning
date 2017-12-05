@@ -24,4 +24,8 @@
   <object type="_07_MvcOA.WebApp.Controllers.HomeController, 07_MvcOA.WebApp" singleton="false" >
     <property name="UserInfoBll" ref="UserInfoBLL" />
   </object>
+
+  <object type="_07_MvcOA.WebApp.Controllers.SearchController, 07_MvcOA.WebApp" singleton="false" >
+    <property name="BookBll" ref="BookBLL" />
+  </object>
 </objects>

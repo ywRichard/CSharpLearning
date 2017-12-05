@@ -19,6 +19,14 @@ namespace _07_MvcOA.BLL
         }
     }   
 	
+	public partial class BookBLL :BaseBLL<Book>,IBookBLL
+    {
+        public override void SetCurrentDal()
+        {
+            CurrentDal = GetCurrentSession.BookDal;
+        }
+    }   
+	
 	public partial class DepartmentBLL :BaseBLL<Department>,IDepartmentBLL
     {
         public override void SetCurrentDal()

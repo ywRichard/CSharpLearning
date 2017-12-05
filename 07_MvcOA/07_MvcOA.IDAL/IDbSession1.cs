@@ -13,6 +13,8 @@ namespace _07_MvcOA.IDAL
 	
 		IActionInfoDal ActionInfoDal{get;set;}
 	
+		IBookDal BookDal{get;set;}
+	
 		IDepartmentDal DepartmentDal{get;set;}
 	
 		IR_UserInfo_ActionInfoDal R_UserInfo_ActionInfoDal{get;set;}

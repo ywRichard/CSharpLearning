@@ -30,5 +30,6 @@ namespace _07_MvcOA.Model
         public virtual DbSet<RoleInfo> RoleInfo { get; set; }
         public virtual DbSet<Department> Department { get; set; }
         public virtual DbSet<R_UserInfo_ActionInfo> R_UserInfo_ActionInfo { get; set; }
+        public virtual DbSet<Book> Book { get; set; }
     }
 }

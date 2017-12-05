@@ -21,6 +21,12 @@ namespace _07_MvcOA.DALFactory
             return CreateInstance(classFulleName) as IActionInfoDal;
         }
 		
+	    public static IBookDal CreateBookDal()
+        {
+            string classFulleName = NameSpace+ ".BookDal";
+            return CreateInstance(classFulleName) as IBookDal;
+        }
+		
 	    public static IDepartmentDal CreateDepartmentDal()
         {
             string classFulleName = NameSpace+ ".DepartmentDal";
