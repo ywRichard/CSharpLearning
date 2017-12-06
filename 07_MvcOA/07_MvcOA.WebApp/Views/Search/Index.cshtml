@@ -2,21 +2,85 @@
 @{
     Layout = null;
 }
-
+@using _07_MvcOA.WebApp.Models
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>文档搜索</title>
+    <style type="text/css">
+        .search-text2 {
+            display: block;
+            width: 708px;
+            height: 26px;
+            line-height: 26px;
+            float: left;
+            margin: 3px 5px;
+            border: 0px;
+            outline: none;
+            font-family: 'Microsoft Yahei';
+            font-size: 14px;
+        }
+
+        .search-btn2 {
+            width: 102px;
+            height: 32px;
+            line-height: 32px;
+            cursor: pointer;
+            border: 0px;
+            background-color: #d6000f;
+            font-family: 'Microsoft Yahei';
+            font-size: 16px;
+            color: #f3f3f3;
+        }
+
+        .search-list {
+            width: 780px;
+            overflow: hidden;
+            margin: 30px 20px 10px 20px;
+        }
+
+            .search-list dt {
+                font-family: 'Microsoft Yahei';
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 7px;
+                font-weight: normal;
+            }
+
+            .search-list .search-detail {
+                font-size: 14px;
+                color: #666666;
+                margin-bottom: 5px;
+                font-family: microsoft yahei;
+                line-height: 22px;
+                overflow: hidden;
+            }
+
+            .search-list dt a {
+                color: #2981a9;
+            }
+    </style>
 </head>
 <body>
-    <div> 
-        <form action="/Search/SearchContent" method="post">
-            请输入搜索条件:<input type="text" name="txtContent">
-            <input type="submit" name="btnSearch" value="搜索" />
+    <div>
+        <form action="/Search/SearchContent" method="get"><!--将参数通过url传递，有利于搜索结果的传递，可以直接将搜索得到的url复制给其他人-->
+            请输入搜索条件:<input type="text" name="txtContent" autocomplete="off" class="search-text2" value="@ViewData["searchWhere"]">
+            <input type="submit" name="btnSearch" value="搜索" class="search-btn2" />
             <input type="submit" name="btnCreate" value="创建索引库" />
         </form>
+
+        <dl class="search-list">
+            @if (ViewData["searchList"] != null)
+            {
+                foreach (var viewModel in (List<ViewSearchContentModel>)ViewData["searchList"])
+                {
+                    <dt><a href="/Book/ShowDetail/?Id=@viewModel.Id">@viewModel.Title</a></dt>
+                    <dd class="search-detail">@MvcHtmlString.Create(viewModel.Content)</dd>//直接输出content中的html字符，不进行二次html编码
+                }
+            }
+        </dl>
     </div>
 </body>
 </html>

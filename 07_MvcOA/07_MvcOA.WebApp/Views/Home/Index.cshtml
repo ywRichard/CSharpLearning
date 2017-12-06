@@ -119,6 +119,10 @@
             margin-top: 15px;
             margin-left: 30px;
         }
+
+        .l-dialog-content {
+            overflow-y: hidden
+        }
     </style>
 </head>
 <body style="overflow: hidden; background: url(/Content/lib/images/applebg.jpg) no-repeat  center center;">
@@ -174,7 +178,7 @@
     ];
 
     function onResize() {
-        var linksHeight = $(window).height() - TASKBARHEIGHT-70;
+        var linksHeight = $(window).height() - TASKBARHEIGHT - 70;
         var winlinks = $("#winlinks");
         winlinks.height(linksHeight);
         var colMaxNumber = parseInt(linksHeight / LINKHEIGHT);//一列最多显示几个快捷方式
