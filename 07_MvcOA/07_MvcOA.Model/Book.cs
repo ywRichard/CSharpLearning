@@ -27,5 +27,7 @@ namespace _07_MvcOA.Model
         public string EditorComment { get; set; }
         public string TOC { get; set; }
         public short Category { get; set; }
+        public int CategoryId { get; set; }
+        public int Clicks { get; set; }
     }
 }

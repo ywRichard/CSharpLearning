@@ -11,7 +11,7 @@
     <EntitySet Name="RoleInfo" EntityType="OAEntitiesModel.Store.RoleInfo" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Department" EntityType="OAEntitiesModel.Store.Department" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="R_UserInfo_ActionInfo" EntityType="OAEntitiesModel.Store.R_UserInfo_ActionInfo" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Books" EntityType="OAEntitiesModel.Store.Books" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Book" EntityType="OAEntitiesModel.Store.Book" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="UserInfoRoleInfo" EntityType="OAEntitiesModel.Store.UserInfoRoleInfo" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ActionInfoRoleInfo" EntityType="OAEntitiesModel.Store.ActionInfoRoleInfo" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ActionInfoDepartment" EntityType="OAEntitiesModel.Store.ActionInfoDepartment" store:Type="Tables" Schema="dbo" />
@@ -122,7 +122,7 @@
     <Property Name="ActionInfoID" Type="int" Nullable="false" />
     <Property Name="IsPass" Type="bit" Nullable="false" />
   </EntityType>
-  <EntityType Name="Books">
+  <EntityType Name="Book">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -139,6 +139,8 @@
     <Property Name="EditorComment" Type="nvarchar" Nullable="true" MaxLength="200" />
     <Property Name="TOC" Type="nvarchar" Nullable="true" MaxLength="200" />
     <Property Name="Category" Type="smallint" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="Clicks" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="UserInfoRoleInfo">
     <Key>
@@ -462,6 +464,8 @@
           <Property Name="EditorComment" Type="String" Nullable="true" Unicode="true" MaxLength="200" />
           <Property Name="TOC" Type="String" Nullable="true" Unicode="true" MaxLength="200" />
           <Property Name="Category" Type="Int16" Nullable="false" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Clicks" Type="Int32" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -541,7 +545,7 @@
     </EntitySetMapping>
     <EntitySetMapping Name="Book">
       <EntityTypeMapping TypeName="IsTypeOf(OAEntitiesModel.Book)">
-        <MappingFragment StoreEntitySet="Books">
+        <MappingFragment StoreEntitySet="Book">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Author" ColumnName="Author" />
@@ -555,6 +559,8 @@
           <ScalarProperty Name="EditorComment" ColumnName="EditorComment" />
           <ScalarProperty Name="TOC" ColumnName="TOC" />
           <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Clicks" ColumnName="Clicks" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

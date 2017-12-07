@@ -8,6 +8,9 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.8.20.min.js"></script>
+    <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" />
     <title>文档搜索</title>
     <style type="text/css">
         .search-text2 {
@@ -62,11 +65,22 @@
                 color: #2981a9;
             }
     </style>
+    <script type="text/javascript">
+        $(function () {
+            $("#searchTxtContent").autocomplete({
+                source: "/Search/AutoComplete"
+                //minLength: 2,//输入两个字符发请求
+                //select: function (event, ui) { //选择触发事件
+                //    log("Selected: " + ui.item.value + " aka " + ui.item.id);
+                //}
+            });
+        });
+    </script>
 </head>
 <body>
     <div>
         <form action="/Search/SearchContent" method="get"><!--将参数通过url传递，有利于搜索结果的传递，可以直接将搜索得到的url复制给其他人-->
-            请输入搜索条件:<input type="text" name="txtContent" autocomplete="off" class="search-text2" value="@ViewData["searchWhere"]">
+            请输入搜索条件:<input type="text" name="txtContent" autocomplete="off" class="search-text2" value="@ViewData["searchWhere"]" id="searchTxtContent">
             <input type="submit" name="btnSearch" value="搜索" class="search-btn2" />
             <input type="submit" name="btnCreate" value="创建索引库" />
         </form>

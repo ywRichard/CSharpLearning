@@ -23,7 +23,10 @@ namespace _07_MvcOA.WebApp
         /// </summary>
         protected void Application_Start()
         {
-            //，读取log4Net的配置信息
+            //程序一运行，就开启线程扫描队列将数据取出来写到Lucene.Net中
+            SearchIndexManager.GetInstance().StartThread();
+
+            //读取log4Net的配置信息
             log4net.Config.XmlConfigurator.Configure();
 
             AreaRegistration.RegisterAllAreas();
