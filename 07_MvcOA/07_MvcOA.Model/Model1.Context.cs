@@ -31,5 +31,7 @@ namespace _07_MvcOA.Model
         public virtual DbSet<Department> Department { get; set; }
         public virtual DbSet<R_UserInfo_ActionInfo> R_UserInfo_ActionInfo { get; set; }
         public virtual DbSet<Book> Book { get; set; }
+        public virtual DbSet<KeywordsRank> KeywordsRank { get; set; }
+        public virtual DbSet<SearchDetails> SearchDetails { get; set; }
     }
 }

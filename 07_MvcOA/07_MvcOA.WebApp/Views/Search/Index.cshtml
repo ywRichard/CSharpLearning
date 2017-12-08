@@ -67,6 +67,7 @@
     </style>
     <script type="text/javascript">
         $(function () {
+            //搜索热词
             $("#searchTxtContent").autocomplete({
                 source: "/Search/AutoComplete"
                 //minLength: 2,//输入两个字符发请求
@@ -82,7 +83,7 @@
         <form action="/Search/SearchContent" method="get"><!--将参数通过url传递，有利于搜索结果的传递，可以直接将搜索得到的url复制给其他人-->
             请输入搜索条件:<input type="text" name="txtContent" autocomplete="off" class="search-text2" value="@ViewData["searchWhere"]" id="searchTxtContent">
             <input type="submit" name="btnSearch" value="搜索" class="search-btn2" />
-            <input type="submit" name="btnCreate" value="创建索引库" />
+            @*<input type="submit" name="btnCreate" value="创建索引库" />*@
         </form>
 
         <dl class="search-list">

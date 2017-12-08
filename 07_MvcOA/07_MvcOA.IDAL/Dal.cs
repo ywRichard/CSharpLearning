@@ -24,12 +24,22 @@ namespace _07_MvcOA.IDAL
       
     }
 	
+	public partial interface IKeywordsRankDal :IBaseDal<KeywordsRank>
+    {
+      
+    }
+	
 	public partial interface IR_UserInfo_ActionInfoDal :IBaseDal<R_UserInfo_ActionInfo>
     {
       
     }
 	
 	public partial interface IRoleInfoDal :IBaseDal<RoleInfo>
+    {
+      
+    }
+	
+	public partial interface ISearchDetailsDal :IBaseDal<SearchDetails>
     {
       
     }

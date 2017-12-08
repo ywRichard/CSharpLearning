@@ -33,6 +33,12 @@ namespace _07_MvcOA.DALFactory
             return CreateInstance(classFulleName) as IDepartmentDal;
         }
 		
+	    public static IKeywordsRankDal CreateKeywordsRankDal()
+        {
+            string classFulleName = NameSpace+ ".KeywordsRankDal";
+            return CreateInstance(classFulleName) as IKeywordsRankDal;
+        }
+		
 	    public static IR_UserInfo_ActionInfoDal CreateR_UserInfo_ActionInfoDal()
         {
             string classFulleName = NameSpace+ ".R_UserInfo_ActionInfoDal";
@@ -43,6 +49,12 @@ namespace _07_MvcOA.DALFactory
         {
             string classFulleName = NameSpace+ ".RoleInfoDal";
             return CreateInstance(classFulleName) as IRoleInfoDal;
+        }
+		
+	    public static ISearchDetailsDal CreateSearchDetailsDal()
+        {
+            string classFulleName = NameSpace+ ".SearchDetailsDal";
+            return CreateInstance(classFulleName) as ISearchDetailsDal;
         }
 		
 	    public static IUserInfoDal CreateUserInfoDal()

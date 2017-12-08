@@ -57,6 +57,20 @@ namespace _07_MvcOA.DALFactory
             set { _DepartmentDal = value; }
         }
 	
+		private IKeywordsRankDal _KeywordsRankDal;
+        public IKeywordsRankDal KeywordsRankDal
+        {
+            get
+            {
+                if(_KeywordsRankDal == null)
+                {
+                    _KeywordsRankDal = AbstractFactory.CreateKeywordsRankDal();
+                }
+                return _KeywordsRankDal;
+            }
+            set { _KeywordsRankDal = value; }
+        }
+	
 		private IR_UserInfo_ActionInfoDal _R_UserInfo_ActionInfoDal;
         public IR_UserInfo_ActionInfoDal R_UserInfo_ActionInfoDal
         {
@@ -83,6 +97,20 @@ namespace _07_MvcOA.DALFactory
                 return _RoleInfoDal;
             }
             set { _RoleInfoDal = value; }
+        }
+	
+		private ISearchDetailsDal _SearchDetailsDal;
+        public ISearchDetailsDal SearchDetailsDal
+        {
+            get
+            {
+                if(_SearchDetailsDal == null)
+                {
+                    _SearchDetailsDal = AbstractFactory.CreateSearchDetailsDal();
+                }
+                return _SearchDetailsDal;
+            }
+            set { _SearchDetailsDal = value; }
         }
 	
 		private IUserInfoDal _UserInfoDal;

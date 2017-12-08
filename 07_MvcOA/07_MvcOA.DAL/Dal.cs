@@ -28,12 +28,22 @@ namespace _07_MvcOA.DAL
 
     }
 		
+	public partial class KeywordsRankDal :BaseDal<KeywordsRank>,IKeywordsRankDal
+    {
+
+    }
+		
 	public partial class R_UserInfo_ActionInfoDal :BaseDal<R_UserInfo_ActionInfo>,IR_UserInfo_ActionInfoDal
     {
 
     }
 		
 	public partial class RoleInfoDal :BaseDal<RoleInfo>,IRoleInfoDal
+    {
+
+    }
+		
+	public partial class SearchDetailsDal :BaseDal<SearchDetails>,ISearchDetailsDal
     {
 
     }

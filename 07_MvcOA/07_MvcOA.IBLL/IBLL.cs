@@ -26,12 +26,22 @@ namespace _07_MvcOA.IBLL
        
     }   
 	
+	public partial interface IKeywordsRankBLL : IBaseBLL<KeywordsRank>
+    {
+       
+    }   
+	
 	public partial interface IR_UserInfo_ActionInfoBLL : IBaseBLL<R_UserInfo_ActionInfo>
     {
        
     }   
 	
 	public partial interface IRoleInfoBLL : IBaseBLL<RoleInfo>
+    {
+       
+    }   
+	
+	public partial interface ISearchDetailsBLL : IBaseBLL<SearchDetails>
     {
        
     }   

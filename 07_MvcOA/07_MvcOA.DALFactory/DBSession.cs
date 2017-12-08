@@ -7,6 +7,7 @@ using _07_MvcOA.DAL;
 using _07_MvcOA.IDAL;
 using _07_MvcOA.Model;
 using System.Data.Entity;
+using System.Data.SqlClient;
 
 namespace _07_MvcOA.DALFactory
 {
@@ -20,7 +21,6 @@ namespace _07_MvcOA.DALFactory
         {
             get { return DbContextFactory.CreateDbContext(); }
         }
-
         /// <summary>
         /// 一个业务中有可能涉及到对多张表的操作，那么可以将操作的数据传递到数据层中相应的方法，打上相应的标记，最后调用该方法。
         /// 将数据一次性递交到数据库中，避免多次链接数据库
@@ -29,6 +29,14 @@ namespace _07_MvcOA.DALFactory
         public bool SaveChanges()
         {
             return Context.SaveChanges() > 0;
+        }
+        public int ExecuteSql(string sql, params SqlParameter[] pars)
+        {
+            return Context.Database.ExecuteSqlCommand(sql, pars);
+        }
+        public List<T> ExecuteSelectQuery<T>(string sql, params SqlParameter[] pars)
+        {
+            return Context.Database.SqlQuery<T>(sql, pars).ToList();
         }
     }
 }

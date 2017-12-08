@@ -16,6 +16,8 @@ namespace _07_MvcOA.WebApp.Controllers
     public class SearchController : Controller
     {
         IBLL.IBookBLL BookBll { get; set; }
+        IBLL.ISearchDetailsBLL SearchDetailsBll { get; set; }
+        IBLL.IKeywordsRankBLL KeywordsRankBll { get; set; }
         // GET: Search
         public ActionResult Index()
         {
@@ -44,7 +46,7 @@ namespace _07_MvcOA.WebApp.Controllers
         /// <returns></returns>
         private void CreateSearchIndex()
         {
-            
+
         }
 
         private List<Models.ViewSearchContentModel> SearchBookContent()
@@ -77,9 +79,16 @@ namespace _07_MvcOA.WebApp.Controllers
                 {
                     Id = doc.Get("Id"),
                     Title = doc.Get("Title"),
-                    Content = Common.WebCommon.CreateHighLight(Request["txtContent"], doc.Get("Content"))
+                    Content = Common.WebCommon.CreateHighLight(Request["txtContent"], doc.Get("Content"))//搜索内容关键字高亮显示
                 });
             }
+
+            SearchDetailsBll.AddEntity(new SearchDetails
+            {
+                Id = Guid.NewGuid(),
+                KeyWords = Request["txtContent"],
+                SearchDateTime = DateTime.Now,
+            });
 
             return list;
         }
@@ -87,7 +96,9 @@ namespace _07_MvcOA.WebApp.Controllers
         #region 搜索热词
         public ActionResult AutoComplete()
         {
-            return Content("");
+            var term = Request["term"];
+            List<string> list = KeywordsRankBll.GetSearchWord(term);
+            return Json(list.ToArray(), JsonRequestBehavior.AllowGet);
         }
         #endregion
     }

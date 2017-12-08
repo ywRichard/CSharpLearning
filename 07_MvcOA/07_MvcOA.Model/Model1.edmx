@@ -12,6 +12,8 @@
     <EntitySet Name="Department" EntityType="OAEntitiesModel.Store.Department" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="R_UserInfo_ActionInfo" EntityType="OAEntitiesModel.Store.R_UserInfo_ActionInfo" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Book" EntityType="OAEntitiesModel.Store.Book" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KeywordsRank" EntityType="OAEntitiesModel.Store.KeywordsRank" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SearchDetails" EntityType="OAEntitiesModel.Store.SearchDetails" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="UserInfoRoleInfo" EntityType="OAEntitiesModel.Store.UserInfoRoleInfo" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ActionInfoRoleInfo" EntityType="OAEntitiesModel.Store.ActionInfoRoleInfo" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ActionInfoDepartment" EntityType="OAEntitiesModel.Store.ActionInfoDepartment" store:Type="Tables" Schema="dbo" />
@@ -141,6 +143,22 @@
     <Property Name="Category" Type="smallint" Nullable="false" />
     <Property Name="CategoryId" Type="int" Nullable="false" />
     <Property Name="Clicks" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KeywordsRank">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KeyWords" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="SearchCount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SearchDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KeyWords" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="SearchDateTime" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="UserInfoRoleInfo">
     <Key>
@@ -345,6 +363,8 @@
             <End Role="Department" EntitySet="Department" />
           </AssociationSet>
           <EntitySet Name="Book" EntityType="OAEntitiesModel.Book" />
+          <EntitySet Name="KeywordsRank" EntityType="OAEntitiesModel.KeywordsRank" />
+          <EntitySet Name="SearchDetails" EntityType="OAEntitiesModel.SearchDetails" />
         </EntityContainer>
         <EntityType Name="ActionInfo">
           <Key>
@@ -467,6 +487,22 @@
           <Property Name="CategoryId" Type="Int32" Nullable="false" />
           <Property Name="Clicks" Type="Int32" Nullable="false" />
         </EntityType>
+        <EntityType Name="KeywordsRank">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KeyWords" Type="String" Nullable="false" Unicode="true" MaxLength="255" />
+          <Property Name="SearchCount" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SearchDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KeyWords" Type="String" Nullable="false" MaxLength="255" Unicode="true" />
+          <Property Name="SearchDateTime" Type="DateTime" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -561,6 +597,24 @@
           <ScalarProperty Name="Category" ColumnName="Category" />
           <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
           <ScalarProperty Name="Clicks" ColumnName="Clicks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KeywordsRank">
+      <EntityTypeMapping TypeName="IsTypeOf(OAEntitiesModel.KeywordsRank)">
+        <MappingFragment StoreEntitySet="KeywordsRank">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KeyWords" ColumnName="KeyWords" />
+          <ScalarProperty Name="SearchCount" ColumnName="SearchCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SearchDetails">
+      <EntityTypeMapping TypeName="IsTypeOf(OAEntitiesModel.SearchDetails)">
+        <MappingFragment StoreEntitySet="SearchDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KeyWords" ColumnName="KeyWords" />
+          <ScalarProperty Name="SearchDateTime" ColumnName="SearchDateTime" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

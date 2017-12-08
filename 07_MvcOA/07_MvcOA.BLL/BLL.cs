@@ -35,6 +35,14 @@ namespace _07_MvcOA.BLL
         }
     }   
 	
+	public partial class KeywordsRankBLL :BaseBLL<KeywordsRank>,IKeywordsRankBLL
+    {
+        public override void SetCurrentDal()
+        {
+            CurrentDal = GetCurrentSession.KeywordsRankDal;
+        }
+    }   
+	
 	public partial class R_UserInfo_ActionInfoBLL :BaseBLL<R_UserInfo_ActionInfo>,IR_UserInfo_ActionInfoBLL
     {
         public override void SetCurrentDal()
@@ -48,6 +56,14 @@ namespace _07_MvcOA.BLL
         public override void SetCurrentDal()
         {
             CurrentDal = GetCurrentSession.RoleInfoDal;
+        }
+    }   
+	
+	public partial class SearchDetailsBLL :BaseBLL<SearchDetails>,ISearchDetailsBLL
+    {
+        public override void SetCurrentDal()
+        {
+            CurrentDal = GetCurrentSession.SearchDetailsDal;
         }
     }   
 	

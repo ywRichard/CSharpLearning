@@ -27,5 +27,7 @@
 
   <object type="_07_MvcOA.WebApp.Controllers.SearchController, 07_MvcOA.WebApp" singleton="false" >
     <property name="BookBll" ref="BookBLL" />
+    <property name="SearchDetailsBll" ref="SearchDetailsBLL" />
+    <property name="KeywordsRankBll" ref="KeywordsRankBLL" />
   </object>
 </objects>
