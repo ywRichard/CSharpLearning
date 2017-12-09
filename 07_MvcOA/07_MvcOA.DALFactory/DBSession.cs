@@ -30,10 +30,19 @@ namespace _07_MvcOA.DALFactory
         {
             return Context.SaveChanges() > 0;
         }
+        /// <summary>
+        /// 执行delete, insert, update
+        /// </summary>
+        /// <param name="pars"></param>
+        /// <returns></returns>
         public int ExecuteSql(string sql, params SqlParameter[] pars)
         {
             return Context.Database.ExecuteSqlCommand(sql, pars);
         }
+        /// <summary>
+        /// 执行select
+        /// </summary>
+        /// <returns></returns>
         public List<T> ExecuteSelectQuery<T>(string sql, params SqlParameter[] pars)
         {
             return Context.Database.SqlQuery<T>(sql, pars).ToList();

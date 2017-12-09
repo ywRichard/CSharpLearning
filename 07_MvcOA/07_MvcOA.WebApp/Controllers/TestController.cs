@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ServiceStack.Redis;
 
 namespace _07_MvcOA.WebApp.Controllers
 {
@@ -36,6 +37,29 @@ namespace _07_MvcOA.WebApp.Controllers
             SearchIndexManager.GetInstance().AddQueue("2323", model.Title, model.ContentDescription);
 
             return Content("ok");
+        }
+
+        public ActionResult Test()
+        {
+            var num1 = 1;
+            var num2 = 0;
+            var result = num1 / num2;
+            return Content(result.ToString());
+        }
+
+        public ActionResult TestRedis()
+        {
+            var client = new RedisClient("127.0.0.1", 6379);
+            client.Set<int>("Pwd8800", 1111);
+            //var pwd = client.Get<int>("Pwd8800");
+            return Content("ok");
+        }
+
+        public ActionResult GetRedis()
+        {
+            var client = new RedisClient("127.0.0.1", 6381);
+            var pwd = client.Get<int>("Pwd8800");
+            return Content(pwd.ToString());
         }
     }
 }

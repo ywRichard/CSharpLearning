@@ -35,7 +35,7 @@ namespace _07_MvcOA.BLL
         /// <returns></returns>
         public List<string> GetSearchWord(string str)
         {
-            var sql = "select keywords from keywordsRank where Keywords like @msg";
+            var sql = "select top 10 keywords from keywordsRank where Keywords like @msg orderby";
             return this.GetCurrentSession.ExecuteSelectQuery<string>(sql, new System.Data.SqlClient.SqlParameter("@msg", str + "%"));
         }
     }
