@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 12/08/2017 09:36:07
--- Generated from EDMX file: C:\Users\Victor\Documents\GitHub\CSharpLearning\07_MvcOA\07_MvcOA.Model\Model1.edmx
+-- Date Created: 12/09/2017 17:25:16
+-- Generated from EDMX file: C:\Users\Admin\Desktop\GitHub\07_MvcOA\07_MvcOA.Model\Model1.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -70,8 +70,8 @@ GO
 IF OBJECT_ID(N'[dbo].[Book]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Book];
 GO
-IF OBJECT_ID(N'[dbo].[KeyWordsRank]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[KeyWordsRank];
+IF OBJECT_ID(N'[dbo].[KeywordsRank]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[KeywordsRank];
 GO
 IF OBJECT_ID(N'[dbo].[SearchDetails]', 'U') IS NOT NULL
     DROP TABLE [dbo].[SearchDetails];
