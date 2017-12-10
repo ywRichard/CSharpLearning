@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net" default-autowire="constructor">
+
+  <object type="_07_MvcOA.WebApp.Controllers.UserInfoController, 07_MvcOA.WebApp" singleton="false" >
+    <property name="UserInfoBll" ref="UserInfoBLL" />
+    <property name="RoleInfoBll" ref="RoleInfoBLL" />
+    <property name="ActionInfoBll" ref="ActionInfoBLL" />
+    <property name="R_UserInfo_ActionInfoBll" ref="R_UserInfo_ActionInfoBLL" />
+  </object>
+  
+  <object type="_07_MvcOA.WebApp.Controllers.LoginController, 07_MvcOA.WebApp" singleton="false" >
+    <property name="UserInfoBll" ref="UserInfoBLL" />
+  </object>
+
+  <object type="_07_MvcOA.WebApp.Controllers.RoleInfoController, 07_MvcOA.WebApp" singleton="false" >
+    <property name="RoleInfoBll" ref="RoleInfoBLL" />
+  </object>
+  
+  <object type="_07_MvcOA.WebApp.Controllers.ActionInfoController, 07_MvcOA.WebApp" singleton="false" >
+    <property name="ActionInfoBll" ref="ActionInfoBLL" />
+    <property name="RoleInfoBll" ref="RoleInfoBLL" />
+  </object>
+
+  <object type="_07_MvcOA.WebApp.Controllers.HomeController, 07_MvcOA.WebApp" singleton="false" >
+    <property name="UserInfoBll" ref="UserInfoBLL" />
+  </object>
+
+  <object type="_07_MvcOA.WebApp.Controllers.SearchController, 07_MvcOA.WebApp" singleton="false" >
+    <property name="BookBll" ref="BookBLL" />
+    <property name="SearchDetailsBll" ref="SearchDetailsBLL" />
+    <property name="KeywordsRankBll" ref="KeywordsRankBLL" />
+  </object>
+</objects>

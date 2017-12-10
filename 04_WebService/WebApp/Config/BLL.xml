@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net" default-autowire="constructor">
+
+  <!-- this obj is defined as a singleton and given an initial value for Count of 0
+         so it can be easily verified as being instantiated only once by the ApplicationContext
+         no matter how many child contexts are instatiated as part of WebAPI calls -->
+  <object name="UserInfoBLL" type="_07_MvcOA.BLL.UserInfoBLL, 07_MvcOA.BLL" singleton="false" />
+  
+  <object name="RoleInfoBLL" type="_07_MvcOA.BLL.RoleInfoBLL, 07_MvcOA.BLL" singleton="false" />
+
+  <object name="ActionInfoBLL" type="_07_MvcOA.BLL.ActionInfoBLL, 07_MvcOA.BLL" singleton="false" />
+  
+  <object name="R_UserInfo_ActionInfoBLL" type="_07_MvcOA.BLL.R_UserInfo_ActionInfoBLL, 07_MvcOA.BLL" singleton="false" />
+
+  <object name="BookBLL" type="_07_MvcOA.BLL.BookBLL, 07_MvcOA.BLL" singleton="false" />
+
+  <object name="SearchDetailsBLL" type="_07_MvcOA.BLL.SearchDetailsBLL, 07_MvcOA.BLL" singleton="false" />
+
+  <object name="KeywordsRankBLL" type="_07_MvcOA.BLL.KeywordsRankBLL, 07_MvcOA.BLL" singleton="false" />
+</objects>
