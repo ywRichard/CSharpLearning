@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ImageServer.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ImageServerStoreContainer">
+    <EntitySet Name="ImageInfo" EntityType="ImageServer.Store.ImageInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ImageServerInfo" EntityType="ImageServer.Store.ImageServerInfo" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ImageInfo_ImageServerInfo" Association="ImageServer.Store.FK_ImageInfo_ImageServerInfo">
+      <End Role="ImageServerInfo" EntitySet="ImageServerInfo" />
+      <End Role="ImageInfo" EntitySet="ImageInfo" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ImageInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ImageName" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="ImageServerId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ImageServerInfo">
+    <Key>
+      <PropertyRef Name="ServerId" />
+    </Key>
+    <Property Name="ServerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServerName" Type="nvarchar" Nullable="false" MaxLength="32" />
+    <Property Name="ServerUrl" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="PicRootPath" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="MaxPicCount" Type="int" Nullable="false" />
+    <Property Name="CurPicAmount" Type="int" Nullable="false" />
+    <Property Name="FlgUsable" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ImageInfo_ImageServerInfo">
+    <End Role="ImageServerInfo" Type="ImageServer.Store.ImageServerInfo" Multiplicity="1" />
+    <End Role="ImageInfo" Type="ImageServer.Store.ImageInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ImageServerInfo">
+        <PropertyRef Name="ServerId" />
+      </Principal>
+      <Dependent Role="ImageInfo">
+        <PropertyRef Name="ImageServerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ImageServer" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ImageInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ImageName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ImageServerId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ImageServerInfo" Relationship="ImageServer.FK_ImageInfo_ImageServerInfo" FromRole="ImageInfo" ToRole="ImageServerInfo" />
+        </EntityType>
+        <EntityType Name="ImageServerInfo">
+          <Key>
+            <PropertyRef Name="ServerId" />
+          </Key>
+          <Property Name="ServerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServerName" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ServerUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PicRootPath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MaxPicCount" Type="Int32" Nullable="false" />
+          <Property Name="CurPicAmount" Type="Int32" Nullable="false" />
+          <Property Name="FlgUsable" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ImageInfo" Relationship="ImageServer.FK_ImageInfo_ImageServerInfo" FromRole="ImageServerInfo" ToRole="ImageInfo" />
+        </EntityType>
+        <Association Name="FK_ImageInfo_ImageServerInfo">
+          <End Role="ImageServerInfo" Type="Self.ImageServerInfo" Multiplicity="1" />
+          <End Role="ImageInfo" Type="Self.ImageInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ImageServerInfo">
+              <PropertyRef Name="ServerId" />
+            </Principal>
+            <Dependent Role="ImageInfo">
+              <PropertyRef Name="ImageServerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MyImageServerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ImageInfo" EntityType="Self.ImageInfo" />
+          <EntitySet Name="ImageServerInfo" EntityType="Self.ImageServerInfo" />
+          <AssociationSet Name="FK_ImageInfo_ImageServerInfo" Association="Self.FK_ImageInfo_ImageServerInfo">
+            <End Role="ImageServerInfo" EntitySet="ImageServerInfo" />
+            <End Role="ImageInfo" EntitySet="ImageInfo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ImageServerStoreContainer" CdmEntityContainer="MyImageServerEntities">
+    <EntitySetMapping Name="ImageInfo">
+      <EntityTypeMapping TypeName="IsTypeOf(ImageServer.ImageInfo)">
+        <MappingFragment StoreEntitySet="ImageInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImageServerId" ColumnName="ImageServerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImageServerInfo">
+      <EntityTypeMapping TypeName="IsTypeOf(ImageServer.ImageServerInfo)">
+        <MappingFragment StoreEntitySet="ImageServerInfo">
+          <ScalarProperty Name="ServerId" ColumnName="ServerId" />
+          <ScalarProperty Name="ServerName" ColumnName="ServerName" />
+          <ScalarProperty Name="ServerUrl" ColumnName="ServerUrl" />
+          <ScalarProperty Name="PicRootPath" ColumnName="PicRootPath" />
+          <ScalarProperty Name="MaxPicCount" ColumnName="MaxPicCount" />
+          <ScalarProperty Name="CurPicAmount" ColumnName="CurPicAmount" />
+          <ScalarProperty Name="FlgUsable" ColumnName="FlgUsable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

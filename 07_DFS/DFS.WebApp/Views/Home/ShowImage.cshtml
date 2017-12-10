@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+@using DFS.Model;
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowImage</title>
+</head>
+<body>
+    <div>
+        @if (ViewData["list"] != null)
+        {
+            foreach (var imageServerInfo in (List<ImageServerInfo>)ViewData["list"])
+            {
+                foreach (var imageInfo in imageServerInfo.ImageInfo)
+                {
+                    <img src="@String.Format($"http://{imageServerInfo.ServerUrl}{imageInfo.ImageName}")" alt="Alternate Text" />
+                }
+            }
+        }
+    </div>
+</body>
+</html>
