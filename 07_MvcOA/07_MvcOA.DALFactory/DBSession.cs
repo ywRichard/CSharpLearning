@@ -24,6 +24,7 @@ namespace _07_MvcOA.DALFactory
         /// <summary>
         /// 一个业务中有可能涉及到对多张表的操作，那么可以将操作的数据传递到数据层中相应的方法，打上相应的标记，最后调用该方法。
         /// 将数据一次性递交到数据库中，避免多次链接数据库
+        /// 单元模式---重点
         /// </summary>
         /// <returns></returns>
         public bool SaveChanges()
