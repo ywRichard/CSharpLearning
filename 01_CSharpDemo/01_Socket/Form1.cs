@@ -45,5 +45,10 @@ namespace _01_Socket
             }
 
         }
+
+        private void ShowMsg(string obj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
