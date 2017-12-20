@@ -13,7 +13,9 @@ namespace Charper05_Delegate
         {
             //TryCovariance();
             //TryAnonymousMethod();
-            TryDelegateWithReturn();
+            //TryDelegateWithReturn();
+            //TryEnclosing();
+            TryBadEnclosing();
         }
 
         #region 委托返回类型的协变 covariance
@@ -74,6 +76,67 @@ namespace Charper05_Delegate
             Console.WriteLine(isEven(4));
         }
 
+        #endregion
+
+        #region 闭包 enclosing
+
+        static void TryEnclosing()
+        {
+            var list = new List<Action>();
+            for (int i = 0; i < 5; i++)
+            {
+                var counter = i * 10;
+                list.Add(() =>
+                {
+                    Console.WriteLine(counter);
+                    counter++;
+                });
+
+                //list.Add(() =>
+                //{
+                //    Console.WriteLine(i);
+                //    i++;
+                //});
+            }
+            foreach (var action in list)
+            {
+                action();
+            }
+            list[0]();
+            list[0]();
+            list[0]();
+
+            list[1]();
+        }
+        /// <summary>
+        /// 共享和非共享变量的混合使用
+        /// </summary>
+        static void TryBadEnclosing()
+        {
+            Action[] actions = new Action[2];
+
+            var outside = 0;
+            for (int i = 0; i < 2; i++)
+            {
+                var inside = 0;
+                actions[i] = delegate
+                {
+                    Console.WriteLine($"{outside},{inside}");
+                    outside++;
+                    inside++;
+                };
+            }
+
+            Action first = actions[0];
+            Action second = actions[1];
+
+            first();
+            first();
+            first();
+
+            second();
+            second();
+        }
         #endregion
     }
 }
