@@ -8,6 +8,7 @@ namespace Charper6_Iterator
 {
     /// <summary>
     /// 模拟迭代器迭代的顺序，验证延迟执行的特性
+    /// 延迟特性有yield return 决定
     /// </summary>
     class SimulateIteratorProcess
     {

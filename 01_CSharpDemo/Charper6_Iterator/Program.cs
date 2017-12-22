@@ -16,6 +16,7 @@ namespace Charper6_Iterator
             //TryIterateDateTable();
             //TryReadFileByIterator("");
             //TryIteratorProcess();
+            TryLinqWhere("");
         }
 
         #region IterationSample
@@ -72,7 +73,10 @@ namespace Charper6_Iterator
         #endregion
 
         #region 模拟迭代器块的执行流程
-
+        /// <summary>
+        /// 在第一次调用MoveNext()之前，不会执行SimulateIteratorProcess.CreateEnumerable()方法
+        /// 
+        /// </summary>
         static void TryIteratorProcess()
         {
             IEnumerable<int> iterable = SimulateIteratorProcess.CreateEnumerable();
@@ -89,6 +93,20 @@ namespace Charper6_Iterator
                 }
                 Console.WriteLine("Fetching Current ...");
                 Console.WriteLine($"... Current result={iterator.Current}");
+            }
+        }
+
+        #endregion
+
+        #region Linq where() implement by iterator
+
+        static void TryLinqWhere(string filePath)
+        {
+            IEnumerable<string> lines = LineReader.ReadLines(filePath);
+            Predicate<string> predicate = line => line.StartsWith("using");
+            foreach (var line in LinqWhere.Where(lines, predicate))
+            {
+                Console.WriteLine(line);
             }
         }
 

@@ -361,13 +361,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_ProcessBasic", "01_Proce
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharpInDepth", "CSharpInDepth", "{5B9C831C-CE5D-4EB3-8107-4DBBBB8ADAD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Charper03_Generic", "Charper03_Generic\Charper03_Generic.csproj", "{48289EBE-3969-47AB-BD1C-7EFCD4D9350A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter03_Generic", "Charper03_Generic\Chapter03_Generic.csproj", "{48289EBE-3969-47AB-BD1C-7EFCD4D9350A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Charper04_Nullable", "Charper04_Nullable\Charper04_Nullable.csproj", "{BA603086-5CF8-49F9-95A6-18A7283C3F08}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter04_Nullable", "Charper04_Nullable\Chapter04_Nullable.csproj", "{BA603086-5CF8-49F9-95A6-18A7283C3F08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Charper05_Delegate", "Charper05_Delegate\Charper05_Delegate.csproj", "{57A33EF0-3542-45EE-AD4E-570121771FB8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter05_Delegate", "Charper05_Delegate\Chapter05_Delegate.csproj", "{57A33EF0-3542-45EE-AD4E-570121771FB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Charper6_Iterator", "Charper6_Iterator\Charper6_Iterator.csproj", "{9FE24ED6-9EE2-4A7D-9E37-4AB438F464F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter06_Iterator", "Charper6_Iterator\Chapter06_Iterator.csproj", "{9FE24ED6-9EE2-4A7D-9E37-4AB438F464F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
