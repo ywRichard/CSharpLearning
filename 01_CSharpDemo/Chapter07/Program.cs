@@ -10,12 +10,24 @@ namespace Chapter07
     {
         static void Main(string[] args)
         {
-            TryPartialMethod();
+            //TryPartialMethod();
+            //TryNameSpaceDemo();
+            TryFixedSizeBufferDemo();
         }
 
         static void TryPartialMethod()
         {
             var pm = new PartialMethod();
+        }
+
+        static void TryNameSpaceDemo()
+        {
+            var name = new NameSpaceDemo();
+        }
+
+        static void TryFixedSizeBufferDemo()
+        {
+            FixedSizeBufferDemo.MainDemo();
         }
     }
 }
