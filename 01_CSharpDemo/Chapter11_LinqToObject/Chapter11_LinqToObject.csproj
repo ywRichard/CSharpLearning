@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DateTimeRange.cs" />
+    <Compile Include="LogFile\EntryType.cs" />
+    <Compile Include="LogFile\LogEntry.cs" />
+    <Compile Include="LogFile\LogReader.cs" />
     <Compile Include="Model\Defect.cs" />
     <Compile Include="Model\NotificationSubscription.cs" />
     <Compile Include="Model\Project.cs" />

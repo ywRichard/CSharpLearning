@@ -15,7 +15,15 @@ namespace Chapter11_LinqToObject
             //TryExplicitType();
             //TryLet();
             //TryJoin();
-            TryJoinWhere();
+            //TryJoinWhere();
+
+            //TryJoinInto();
+            //TryJoinInto1();
+
+            //TryCrossJoin();
+
+            //TryGroupBy();
+            TryGroupBy1();
         }
 
         /// <summary>
@@ -64,14 +72,14 @@ namespace Chapter11_LinqToObject
             }
         }
 
-        #region JoinDemo
+        #region join demo
 
         static void TryJoin()
         {
             var result = from defect in SampleData.AllDefects
-                join susbscription in SampleData.AllSubscriptions
-                    on defect.Project equals susbscription.Project
-                select new { defect.Summary, susbscription.EmailAddress };
+                         join susbscription in SampleData.AllSubscriptions
+                             on defect.Project equals susbscription.Project
+                         select new { defect.Summary, susbscription.EmailAddress };
             foreach (var entry in result)
             {
                 Console.WriteLine($"{entry.EmailAddress}: {entry.Summary}");
@@ -86,11 +94,11 @@ namespace Chapter11_LinqToObject
             //    select new {defect.Summary, subscription.EmailAddress};
 
             var result = from subscription in SampleData.AllSubscriptions
-                join defect in (from defect in SampleData.AllDefects
-                        where defect.Status == Status.Closed
-                        select defect)
-                    on subscription.Project equals defect.Project
-                select new { defect.Summary, subscription.EmailAddress };
+                         join defect in (from defect in SampleData.AllDefects
+                                         where defect.Status == Status.Closed
+                                         select defect)
+                             on subscription.Project equals defect.Project
+                         select new { defect.Summary, subscription.EmailAddress };
 
             foreach (var entry in result)
             {
@@ -107,5 +115,112 @@ namespace Chapter11_LinqToObject
 
         #endregion
 
+        #region join into Demo
+
+        static void TryJoinInto()
+        {
+            var result = from defect in SampleData.AllDefects
+                         join subscription in SampleData.AllSubscriptions
+                             on defect.Project equals subscription.Project
+                             into groupSubscriptions
+                         select new { Defect = defect, Subscription = groupSubscriptions };
+
+            foreach (var entry in result)
+            {
+                Console.WriteLine(entry.Defect.Summary);
+                foreach (var subscription in entry.Subscription)
+                {
+                    Console.WriteLine($"{subscription.EmailAddress}");
+                }
+            }
+        }
+        static void TryJoinInto1()
+        {
+            var dates = new DateTimeRange(SampleData.Start, SampleData.End);
+
+            //var result = from date in dates
+            //             join defect in SampleData.AllDefects
+            //                 on date equals defect.Created.Date
+            //                 into joined
+            //             select new { Date = date, Count = joined.Count() };
+
+            var result = dates.GroupJoin(SampleData.AllDefects,
+                date => date,
+                defect => defect.Created.Date,
+                (date, joined) => new { Date = date, Count = joined.Count() });
+
+            foreach (var grouped in result)
+            {
+                Console.WriteLine($"{grouped.Date.ToShortDateString()},{grouped.Count}");
+            }
+        }
+
+        #endregion
+
+        #region cross join
+
+        static void TryCrossJoin()
+        {
+            //var result = from left in Enumerable.Range(1, 4)
+            //             from right in Enumerable.Range(11, left)
+            //             select new { Left = left, Right = right };
+
+            var result = Enumerable.Range(1, 4)
+                .SelectMany(left => Enumerable.Range(11, left),
+                           (left, right) => new { Left = left, Right = right });
+
+            foreach (var item in result)
+            {
+                Console.WriteLine($"Left={item.Left}, Right={item.Right}");
+            }
+        }
+
+        #endregion
+
+        /// <summary>
+        /// 将分组结果按键和值形式保存
+        /// group (value) by (key)
+        /// </summary>
+        static void TryGroupBy()
+        {
+            //var result = from defect in SampleData.AllDefects
+            //             where defect.AssignedTo != null
+            //             group defect by defect.AssignedTo;
+
+            var result = SampleData.AllDefects
+                .Where(defect => defect.AssignedTo != null)
+                .GroupBy(defect => defect.AssignedTo);
+
+            foreach (var entry in result)
+            {
+                Console.WriteLine(entry.Key.Name);
+                foreach (var defect in entry)
+                {
+                    Console.WriteLine($"({defect.Severity}) {defect.Summary}");
+                }
+
+                Console.WriteLine();
+            }
+        }
+
+        static void TryGroupBy1()
+        {
+            //var result = from defect in SampleData.AllDefects
+            //             where defect.AssignedTo != null
+            //             group defect.Summary by defect.AssignedTo;
+
+            var result = SampleData.AllDefects
+                .Where(defect => defect.AssignedTo != null)
+                .GroupBy(defect => defect.AssignedTo, defect => defect.Summary);
+
+            foreach (var entry in result)
+            {
+                Console.WriteLine(entry.Key.Name);
+                foreach (var summary in entry)
+                {
+                    Console.WriteLine($"  {summary}");
+                }
+            }
+        }
     }
 }
