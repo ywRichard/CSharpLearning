@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "200_Combobox", "200_Combobox\200_Combobox.csproj", "{7D87B70B-4207-49A6-9465-4B9121F0F10F}"
 EndProject
@@ -376,6 +376,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter09_Lamda", "Chapter09_Lamda\Chapter09_Lamda.csproj", "{E7131339-99F0-4364-9DFD-DC73474BF148}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter10_ExtensionMethod", "Chapter10_ExtensionMethod\Chapter10_ExtensionMethod.csproj", "{924361B8-4704-464D-B05D-1A2D42C2489F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter11_LinqToObject", "Chapter11_LinqToObject\Chapter11_LinqToObject.csproj", "{EC29CC33-13D6-43FA-9D78-416B00E6ADE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -2123,6 +2125,18 @@ Global
 		{924361B8-4704-464D-B05D-1A2D42C2489F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{924361B8-4704-464D-B05D-1A2D42C2489F}.Release|x86.ActiveCfg = Release|Any CPU
 		{924361B8-4704-464D-B05D-1A2D42C2489F}.Release|x86.Build.0 = Release|Any CPU
+		{EC29CC33-13D6-43FA-9D78-416B00E6ADE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC29CC33-13D6-43FA-9D78-416B00E6ADE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC29CC33-13D6-43FA-9D78-416B00E6ADE8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{EC29CC33-13D6-43FA-9D78-416B00E6ADE8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{EC29CC33-13D6-43FA-9D78-416B00E6ADE8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EC29CC33-13D6-43FA-9D78-416B00E6ADE8}.Debug|x86.Build.0 = Debug|Any CPU
+		{EC29CC33-13D6-43FA-9D78-416B00E6ADE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC29CC33-13D6-43FA-9D78-416B00E6ADE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC29CC33-13D6-43FA-9D78-416B00E6ADE8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{EC29CC33-13D6-43FA-9D78-416B00E6ADE8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{EC29CC33-13D6-43FA-9D78-416B00E6ADE8}.Release|x86.ActiveCfg = Release|Any CPU
+		{EC29CC33-13D6-43FA-9D78-416B00E6ADE8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2295,6 +2309,7 @@ Global
 		{F4C6BC88-8F87-4C94-AB2B-6A3E21341EC7} = {5B9C831C-CE5D-4EB3-8107-4DBBBB8ADAD7}
 		{E7131339-99F0-4364-9DFD-DC73474BF148} = {5B9C831C-CE5D-4EB3-8107-4DBBBB8ADAD7}
 		{924361B8-4704-464D-B05D-1A2D42C2489F} = {5B9C831C-CE5D-4EB3-8107-4DBBBB8ADAD7}
+		{EC29CC33-13D6-43FA-9D78-416B00E6ADE8} = {5B9C831C-CE5D-4EB3-8107-4DBBBB8ADAD7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {272C210B-C101-4AD3-8FC2-162486AA9C10}
