@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EC29CC33-13D6-43FA-9D78-416B00E6ADE8}</ProjectGuid>
+    <ProjectGuid>{0B22342E-A5E4-4548-8F03-760514BBF318}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Chapter11_LinqToObject</RootNamespace>
-    <AssemblyName>Chapter11_LinqToObject</AssemblyName>
+    <RootNamespace>Chapter12_LinqToOther</RootNamespace>
+    <AssemblyName>Chapter12_LinqToOther</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,28 +43,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DateTimeRange.cs" />
-    <Compile Include="LogFile\EntryType.cs" />
-    <Compile Include="LogFile\LogEntry.cs" />
-    <Compile Include="LogFile\LogReader.cs" />
-    <Compile Include="Model\Defect.cs" />
-    <Compile Include="Model\NotificationSubscription.cs" />
-    <Compile Include="Model\Project.cs" />
-    <Compile Include="Model\SampleData.cs" />
-    <Compile Include="Model\Severity.cs" />
-    <Compile Include="Model\StaticCounter.cs" />
-    <Compile Include="Model\Status.cs" />
-    <Compile Include="Model\User.cs" />
-    <Compile Include="Model\UserType.cs" />
+    <Compile Include="DefectModel.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefectModel.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Severity.cs" />
+    <Compile Include="QueryableDemo\FakeQuery.cs" />
+    <Compile Include="QueryableDemo\FakeQueryProvider.cs" />
+    <Compile Include="QueryableDemo\Logger.cs" />
+    <Compile Include="Status.cs" />
+    <Compile Include="UserType.cs" />
+    <Compile Include="XMLDemo\BuildXmlByLinq.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Model\Model.cd" />
+    <None Include="DefectModel.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DefectModel.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DefectModel.dbml.layout">
+      <DependentUpon>DefectModel.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chapter11_LinqToObject\Chapter11_LinqToObject.csproj">
+      <Project>{EC29CC33-13D6-43FA-9D78-416B00E6ADE8}</Project>
+      <Name>Chapter11_LinqToObject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

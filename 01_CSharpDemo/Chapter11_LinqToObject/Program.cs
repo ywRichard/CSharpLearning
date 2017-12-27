@@ -23,7 +23,10 @@ namespace Chapter11_LinqToObject
             //TryCrossJoin();
 
             //TryGroupBy();
-            TryGroupBy1();
+            //TryGroupBy1();
+
+            //TryInto();
+            TryIntoMultiple();
         }
 
         /// <summary>
@@ -202,7 +205,6 @@ namespace Chapter11_LinqToObject
                 Console.WriteLine();
             }
         }
-
         static void TryGroupBy1()
         {
             //var result = from defect in SampleData.AllDefects
@@ -220,6 +222,59 @@ namespace Chapter11_LinqToObject
                 {
                     Console.WriteLine($"  {summary}");
                 }
+            }
+        }
+
+        /// <summary>
+        /// 查询延续
+        /// 把一个查询表达式的结果作为另一个查询表达式的原始序列
+        /// </summary>
+        static void TryInto()
+        {
+            //var result = from defect in SampleData.AllDefects
+            //             where defect.AssignedTo != null
+            //             group defect by defect.AssignedTo
+            //    into grouped
+            //             select new
+            //             {
+            //                 Assignee = grouped.Key,
+            //                 Count = grouped.Count()
+            //             };
+
+            var result = SampleData.AllDefects
+                .Where(defect => defect.AssignedTo != null)
+                .GroupBy(defect => defect.AssignedTo)
+                .Select(grouped => new { Assignee = grouped.Key, Count = grouped.Count() });
+
+            foreach (var entry in result)
+            {
+                Console.WriteLine($"{entry.Assignee.Name}: {entry.Count}");
+            }
+        }
+        static void TryIntoMultiple()
+        {
+            //var result = from defect in SampleData.AllDefects
+            //             where defect.AssignedTo != null
+            //             group defect by defect.AssignedTo
+            //    into grouped
+            //             select new
+            //             {
+            //                 Assignee = grouped.Key,
+            //                 Count = grouped.Count()
+            //             }
+            //    into list
+            //             orderby list.Count descending
+            //             select list;
+
+            var result = SampleData.AllDefects
+                .Where(defect => defect.AssignedTo != null)
+                .GroupBy(defect => defect.AssignedTo)
+                .Select(grouped => new { Assignee = grouped.Key, Count = grouped.Count() })
+                .OrderByDescending(list => list.Count);
+
+            foreach (var entry in result)
+            {
+                Console.WriteLine($"{entry.Assignee.Name}: {entry.Count}");
             }
         }
     }
