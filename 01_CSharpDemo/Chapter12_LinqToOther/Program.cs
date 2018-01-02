@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using Chapter12_LinqToOther.LINQtoRx;
 
 namespace Chapter12_LinqToOther
 {
@@ -17,7 +18,17 @@ namespace Chapter12_LinqToOther
             //TryLINQtoSQLwithJoin();
 
             //TryFakeQuery();
-            TryFakeQuery1();
+            //TryFakeQuery1();
+
+            #region Linq to Rx
+
+            //ObservableDemo.Basic();
+            //ObservableDemo.WhereDemo();
+            //ObservableDemo.GroupDemo();
+            //ObservableDemo.SelectManyDemo();
+            //ObservableDemo.SelectManyWithThreadPool();
+
+            #endregion
         }
 
         #region 输出SQL表达式树
