@@ -14,8 +14,8 @@ namespace Chapter15_Async
             //TryAsyncForm();
             //TryWrappedException();
             //TryArgumentValidation();
-
-            TryAwaitingCancellation();
+            //TryAwaitingCancellation();
+            TryAsyncLamda();
         }
 
         private static void TryAsyncForm()
@@ -36,6 +36,11 @@ namespace Chapter15_Async
         private static void TryAwaitingCancellation()
         {
             AwaitingCancellation.MainAsync();
+        }
+
+        private static void TryAsyncLamda()
+        {
+            AsyncLamda.Demo();
         }
     }
 }

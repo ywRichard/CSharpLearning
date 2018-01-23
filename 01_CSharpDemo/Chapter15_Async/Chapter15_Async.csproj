@@ -52,6 +52,7 @@
     <Compile Include="AsyncForm.Designer.cs">
       <DependentUpon>AsyncForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AsyncLamda.cs" />
     <Compile Include="AwaitingCancellation.cs" />
     <Compile Include="CancellationAsyncDemo.cs" />
     <Compile Include="Program.cs" />
