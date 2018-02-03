@@ -341,7 +341,7 @@ select @@IDENTITY
 insert into DeskInfo(DeskName,DeskNamePinYin,DeskDelFlag,DeskNum)output inserted.DeskId,inserted.DeskName values('特好餐桌','pinyin',0,'123')
 
 
---CASE语句
+--21.switch case语句
 SELECT 
 数学成绩 = 
 CASE
@@ -388,20 +388,16 @@ SELECT
 FROM Sale
 
 
---子查询:就像操作普通表一样，被当做结果集的查询语句都成为子查询。所有可以使用表的地方，几乎都可以使用子查询
-
+--22.子查询:就像操作普通表一样，被当做结果集的查询语句都成为子查询。所有可以使用表的地方，几乎都可以使用子查询
 SELECT * FROM (SELECT * FROM [TABLE] WHERE '条件') AS [Alias]
 -----as的作用，一般是重名列名或者表名；在这里-给查询对象起个别名。
 SELECT * FROM (SELECT TsEnglish FROM TbScore) as t WHERE TSEnglish >90
-
----1、查询出班级中所有24岁的男生（子查询）
+---a、查询出班级中所有24岁的男生（子查询）
 SELECT * FROM (SELECT * FROM Student WHERE TSGender = 1) as stu WHERE TSAge>24
-
----2、查询出所有的黑马一期和黑马二期的学生（子查询）
+---b、查询出所有的黑马一期和黑马二期的学生（子查询）
 SELECT * FROM Student WHERE TClassId in
 (SELECT tclassid FROM TblClass where TClassName = '黑马一期' or TClassName  = '黑马二期')
-
----3、查询出的总人数，男同学多少人,数学平均成绩(子查询)
+---b、查询出的总人数，男同学多少人,数学平均成绩(子查询)
 SELECT
 总人数 = (SELECT COUNT(*) FROM Student),
 男同学多少人 = (SELECT COUNT(*) FROM Student WHERE TSGender = 1),
@@ -414,27 +410,146 @@ SELECT
 --( SELECT TSId FROM Student WHERE TSName = '刘备' OR TSName = '张飞' OR TSName = '关羽' )
 
 
-----分页，每页五条数据，查询第4页。
-
+--23.分页，
+---a.每页五条数据，查询第4页。
 SELECT TOP 5 * FROM CustomerID WHERE NOT IN
 (SELECT TOP (5*4) FROM CustomerID ORDER BY CustomerID)
 ORDER BY CustomerID
-
---每页3条数据，查询3页
+---b.每页3条数据，查询3页
 SELECT TOP 3 * FROM Student WHERE TSID NOT IN
 (SELECT TOP(2*3) TSID FROM Student)
 
---OVER按照那一列进行排序，ROW_NUMBER编号
+--24.开窗函数
+---OVER按照那一列进行排序，ROW_NUMBER编号
 SELECT TSMath,名次=ROW_NUMBER()OVER(ORDER BY TSMath desc) from TbScore
---排名函数RANK,重复的名次相同
+---排名函数RANK,重复的名次相同
 SELECT TSMath,名次=RANK()OVER(ORDER BY TSMath desc)from TbScore
 SELECT *,数学考试排名=RANK()OVER(ORDER BY TSMath DESC) FROM TbScore
 SELECT *,数学考试排名=RANK()OVER(ORDER BY TSMath DESC) FROM TbScore ORDER BY TSId
 
----partition，相同商品名各自排序
+--25.partition，
+---相同商品名各自排序
 SELECT ID, 商品名称,行号=ROW_NUMBER()OVER(PARTITION BY 商品名称 ORDER BY id ASC) FROM MyOrders
-
 ---按编号查询，每页显示3条数据，显示第五页
 SELECT * FROM 
 (SELECT 编号=ROW_NUMBER()OVER(ORDER BY TSMath DESC),* FROM TbScore) AS newStu
 WHERE newStu.编号 BETWEEN (5-1)*3+1 AND 3*5
+
+--26.存储过程;不加exec也可以执行
+exec sp_databases
+exec sp_tables
+sp_columns course
+sp_helptext sp_databases
+---创建存储过程
+----a.两数相加
+create proc usp_Add
+@num1 int,
+@num2 int
+as 
+begin
+	select @num1+@num2
+end
+---执行相加，传参方式
+---方式1
+declare @n1 int=10,@n2 int=12
+exec usp_Add @num1=@n1,@num2=@n2
+---方式2
+exec usp_Add 30,20
+----b.两数相减
+create proc usp_Sub
+@num1 int,
+@num2 int
+as
+begin
+	print @num1-@num2
+end
+---执行相减
+declare @n1 int=10,@n2 int=12
+exec usp_Sub @num1=@n1,@num2=@n2
+---方式2
+exec usp_Sub 30,20
+
+----模糊查询 存储过程  练习
+----参数"姓名，年龄"；返回"满足条数+输出满足条件的数据"
+create proc usp_MySelectByNameandAge
+@name nvarchar(10),--名字
+@age int,--年龄
+@count int output--条数
+as
+begin
+	--条数
+	set @count=(select COUNT(*) from tblStudent where tsName like @name+'%' and tsAge>@age)
+	select * from tblStudent where tsName like @name+'%' and tsAge>@age
+end
+--#######---
+declare @ct int
+exec usp_MySelectByNameandAge '张',20,@ct output
+select @ct
+
+----练习循环提分的存储过程
+-----要求：不及格的人数必须小于总人数的一半
+-----参数1：及格分数线，65；参数2：每次提分的分数，2；参数3：循环提分的次数output参数；
+create proc usp_tblScoreAdd
+@scoreLine int=60,
+@addScore int=2,
+@i int output
+as
+begin
+	set @i=0
+	---总人数
+	declare @sumPerson int=(select COUNT(*) from tblScore)
+	---不及格的人数
+	declare @l int=(select COUNT(*) from tblScore where tmath<@scoreLine)
+	while(@l>@sumPerson/2)
+	begin
+		update tblScore set tmath=tmath+@addScore--提分
+		--再次获取不及格的人数
+		set @l=(select COUNT(*) from tblScore where tmath<@scoreLine)
+		set @i=@i+1
+	end
+end
+
+---分页的存储过程
+create proc usp_PageStudent
+@page int, --页数
+@count int, --条数
+@sumPage int output --总页数
+as
+begin
+	set @sumPage=(CEILING((select COUNT(*) from tblStudent)*1.0/@count))--总页数
+	select * from
+	(select 编号=ROW_NUMBER() over(order by tsid),* from tblStudent) as tstu
+	where tstu.编号 between (@page-1)*@count+1 and @page*@count
+end
+
+declare @t int
+exec usp_pageStudent 4,6,@t output
+select @t
+
+--27.创建触发器，只有after deleted触发器和instead of触发器
+---a.after deleted触发器
+create trigger tr_stuTrigger on student
+after delete
+as
+begin
+	insert into nstu select * from deleted
+end
+
+delete from student where tsName='赵小黑'
+select * from nstu
+---b.inserted触发器
+
+--28.游标
+declare cur_MyStudent cursor fast_forward for select * from tblStudent
+
+open cur_MyStudent
+
+fetch next from cur_MyStudent
+while @@fetch_Status=0
+begin
+	fetch next from cur_MyStudent
+end
+--关闭
+close cur_MyStudent
+--释放
+deallocate cur_MyStudent

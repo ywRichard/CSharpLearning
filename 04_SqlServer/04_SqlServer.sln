@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.10
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_ConnectDB", "01_ConnectDB\01_ConnectDB.csproj", "{2C713BEC-A959-460A-908C-F8DA7AF78DC4}"
 EndProject
@@ -30,6 +30,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_显示学生", "12_显示学生\12_显示学生.csproj", "{0EEEF8C6-B331-49CE-8565-F9EE4173C79E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13_临时数据库", "13_临时数据库\13_临时数据库.csproj", "{4C287AE5-3E9A-4E14-8CF7-64751DB08936}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14_存储过程", "14_存储过程\14_存储过程.csproj", "{B18468CC-3AE4-4E2C-B73B-CB7EBA24089A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -138,6 +140,14 @@ Global
 		{4C287AE5-3E9A-4E14-8CF7-64751DB08936}.Release|Any CPU.ActiveCfg = Release|x86
 		{4C287AE5-3E9A-4E14-8CF7-64751DB08936}.Release|x86.ActiveCfg = Release|x86
 		{4C287AE5-3E9A-4E14-8CF7-64751DB08936}.Release|x86.Build.0 = Release|x86
+		{B18468CC-3AE4-4E2C-B73B-CB7EBA24089A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B18468CC-3AE4-4E2C-B73B-CB7EBA24089A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B18468CC-3AE4-4E2C-B73B-CB7EBA24089A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B18468CC-3AE4-4E2C-B73B-CB7EBA24089A}.Debug|x86.Build.0 = Debug|Any CPU
+		{B18468CC-3AE4-4E2C-B73B-CB7EBA24089A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B18468CC-3AE4-4E2C-B73B-CB7EBA24089A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B18468CC-3AE4-4E2C-B73B-CB7EBA24089A}.Release|x86.ActiveCfg = Release|Any CPU
+		{B18468CC-3AE4-4E2C-B73B-CB7EBA24089A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
